@@ -4,6 +4,11 @@ import { useState, useEffect, useRef } from "react";
 // CONSTANTS & CONFIG
 // ══════════════════════════════════════════════════════════════════════════════
 
+const PROFILES = [
+  { id: "lucas", name: "Lucas", emoji: "⚡", color: "#f5a623" },
+  { id: "namorada", name: "Isadora", emoji: "🌸", color: "#f06292" },
+];
+
 const TRAIN_TYPES = {
   A: { label:"A – Pull", color:"#4fc3f7", emoji:"🔵", muscles:["Costas","Bíceps","Antebraço","Escapular / Mobilidade"] },
   B: { label:"B – Push", color:"#f06292", emoji:"🔴", muscles:["Peito","Ombros","Tríceps"] },
@@ -250,23 +255,7 @@ const MUSCLE_GROUPS = [
   {key:"Panturrilha",label:"Panturrilha",icon:"🦿"},{key:"Core / Abdômen",label:"Core",icon:"🎯"},
 ];
 
-const uid=()=>Math.random().toString(36).slice(2,9);
-const calcVolume=sets=>sets.reduce((a,s)=>a+((+s.reps||0)*(+s.weight||0)),0);
-const fmtDate=d=>{if(!d)return"";const[y,m,day]=d.split("-");return`${day}/${m}/${y}`;};
-const DAYS_PT=["Dom","Seg","Ter","Qua","Qui","Sex","Sáb"];
-const MONTHS_PT=["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"];
-const dayName=d=>DAYS_PT[new Date(d+"T12:00:00").getDay()];
-const detectTrainType=name=>{
-  const n=(name||"").toUpperCase();
-  if(n.includes("TREINO A")||n.includes("PULL"))return"A";
-  if(n.includes("TREINO B")||n.includes("PUSH"))return"B";
-  if((n.includes("TREINO C")||n.includes("QUAD"))&&!n.includes("UPPER"))return"C";
-  if(n.includes("TREINO D")||n.includes("UPPER")||n.includes("SUPERIOR"))return"D";
-  if(n.includes("TREINO E")||n.includes("POST")||n.includes("LOWER"))return"E";
-  return null;
-};
-
-const INITIAL_SESSIONS=[
+const INITIAL_SESSIONS_LUCAS = [
   {id:"s1",date:"2025-04-04",name:"Treino C – Legs (Quadríceps + Panturrilha)",trainType:"C",exercises:[
     {id:"e1",name:"Agachamento livre",category:"Quadríceps",notes:"Última série com isometria 10-15s",sets:[{reps:15,weight:15},{reps:10,weight:30},{reps:12,weight:27.5},{reps:10,weight:25}]},
     {id:"e2",name:"Leg press 45°",category:"Quadríceps",notes:"",sets:[{reps:10,weight:110},{reps:10,weight:100},{reps:10,weight:90}]},
@@ -315,13 +304,77 @@ const INITIAL_SESSIONS=[
   ]},
 ];
 
+const uid=()=>Math.random().toString(36).slice(2,9);
+const calcVolume=sets=>sets.reduce((a,s)=>a+((+s.reps||0)*(+s.weight||0)),0);
+const fmtDate=d=>{if(!d)return"";const[y,m,day]=d.split("-");return`${day}/${m}/${y}`;};
+const DAYS_PT=["Dom","Seg","Ter","Qua","Qui","Sex","Sáb"];
+const MONTHS_PT=["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"];
+const dayName=d=>DAYS_PT[new Date(d+"T12:00:00").getDay()];
+const detectTrainType=name=>{
+  const n=(name||"").toUpperCase();
+  if(n.includes("TREINO A")||n.includes("PULL"))return"A";
+  if(n.includes("TREINO B")||n.includes("PUSH"))return"B";
+  if((n.includes("TREINO C")||n.includes("QUAD"))&&!n.includes("UPPER"))return"C";
+  if(n.includes("TREINO D")||n.includes("UPPER")||n.includes("SUPERIOR"))return"D";
+  if(n.includes("TREINO E")||n.includes("POST")||n.includes("LOWER"))return"E";
+  return null;
+};
+
+// ══════════════════════════════════════════════════════════════════════════════
+// PROFILE SELECTOR
+// ══════════════════════════════════════════════════════════════════════════════
+function ProfileScreen({ onSelect }) {
+  return (
+    <div style={S.app}>
+      <div style={S.grain}/>
+      <div style={{
+        minHeight:"100vh", display:"flex", flexDirection:"column",
+        alignItems:"center", justifyContent:"center", padding:24, gap:32
+      }}>
+        <div style={{textAlign:"center"}}>
+          <div style={S.logo}>⚡ IRON LOG</div>
+          <div style={S.logoSub}>Diário de Hipertrofia</div>
+        </div>
+        <div style={{fontSize:15, color:C.sub, textAlign:"center"}}>Quem vai treinar hoje?</div>
+        <div style={{display:"flex", gap:16, flexWrap:"wrap", justifyContent:"center"}}>
+          {PROFILES.map(p=>(
+            <button key={p.id} onClick={()=>onSelect(p)} style={{
+              background:C.surface, border:`2px solid ${p.color}44`,
+              borderRadius:20, padding:"28px 36px", cursor:"pointer",
+              display:"flex", flexDirection:"column", alignItems:"center", gap:12,
+              transition:"all .2s", minWidth:140,
+            }}
+            onMouseEnter={e=>{e.currentTarget.style.borderColor=p.color; e.currentTarget.style.transform="scale(1.04)";}}
+            onMouseLeave={e=>{e.currentTarget.style.borderColor=`${p.color}44`; e.currentTarget.style.transform="scale(1)";}}>
+              <span style={{fontSize:48}}>{p.emoji}</span>
+              <span style={{fontSize:18, fontWeight:800, color:p.color}}>{p.name}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ══════════════════════════════════════════════════════════════════════════════
 // MAIN APP
 // ══════════════════════════════════════════════════════════════════════════════
 export default function App(){
-  const[sessions,setSessions]=useState(()=>{
-    try{const s=localStorage.getItem("wkv3");return s?JSON.parse(s):INITIAL_SESSIONS;}catch{return INITIAL_SESSIONS;}
+  const[profile, setProfile]=useState(()=>{
+    try{ return JSON.parse(sessionStorage.getItem("ironlog_profile")||"null"); }catch{ return null; }
   });
+
+  const storageKey = profile ? `wkv3_${profile.id}` : null;
+
+  const[sessions,setSessions]=useState(()=>{
+    if(!profile) return [];
+    try{
+      const s=localStorage.getItem(`wkv3_${profile.id}`);
+      if(s) return JSON.parse(s);
+      return profile.id==="lucas" ? INITIAL_SESSIONS_LUCAS : [];
+    }catch{ return profile.id==="lucas" ? INITIAL_SESSIONS_LUCAS : []; }
+  });
+
   const[tab,setTab]=useState("home");
   const[activeSession,setActiveSession]=useState(null);
   const[histEx,setHistEx]=useState(null);
@@ -329,7 +382,34 @@ export default function App(){
   const[calYear,setCalYear]=useState(new Date().getFullYear());
   const prevTab=useRef("home");
 
-  useEffect(()=>{try{localStorage.setItem("wkv3",JSON.stringify(sessions));}catch{}},[sessions]);
+  // Reload sessions when profile changes
+  useEffect(()=>{
+    if(!profile) return;
+    try{
+      const s=localStorage.getItem(`wkv3_${profile.id}`);
+      if(s) setSessions(JSON.parse(s));
+      else setSessions(profile.id==="lucas" ? INITIAL_SESSIONS_LUCAS : []);
+    }catch{ setSessions(profile.id==="lucas" ? INITIAL_SESSIONS_LUCAS : []); }
+  },[profile?.id]);
+
+  useEffect(()=>{
+    if(!profile) return;
+    try{ localStorage.setItem(`wkv3_${profile.id}`,JSON.stringify(sessions)); }catch{}
+  },[sessions, profile?.id]);
+
+  const handleSelectProfile = (p) => {
+    sessionStorage.setItem("ironlog_profile", JSON.stringify(p));
+    setProfile(p);
+    setTab("home");
+  };
+
+  const handleSwitchProfile = () => {
+    sessionStorage.removeItem("ironlog_profile");
+    setProfile(null);
+    setTab("home");
+  };
+
+  if(!profile) return <ProfileScreen onSelect={handleSelectProfile}/>;
 
   const saveSession=s=>setSessions(prev=>{const i=prev.findIndex(x=>x.id===s.id);if(i>=0){const n=[...prev];n[i]=s;return n;}return[s,...prev];});
   const deleteSession=id=>{setSessions(p=>p.filter(s=>s.id!==id));setTab("home");};
@@ -340,12 +420,23 @@ export default function App(){
 
   const goTo=(t,extra={})=>{prevTab.current=tab;if(extra.session!==undefined)setActiveSession(extra.session);if(extra.ex!==undefined)setHistEx(extra.ex);if(extra.swap!==undefined)setSwapEx(extra.swap);setTab(t);};
 
+  const sorted=[...sessions].sort((a,b)=>b.date.localeCompare(a.date));
+  const lastSession = sorted[0] || null;
+
+  const handleRepeatLast = () => {
+    if(!lastSession) return;
+    const newSess = {
+      ...JSON.parse(JSON.stringify(lastSession)),
+      id: uid(),
+      date: new Date().toISOString().slice(0,10),
+    };
+    goTo("session", { session: newSess });
+  };
+
   if(tab==="session"&&activeSession) return <SessionView session={activeSession} isNew={false} onSave={s=>{saveSession(s);setTab("home");}} onDelete={()=>deleteSession(activeSession.id)} onBack={()=>setTab("home")} onHistClick={n=>goTo("ex-hist",{ex:n})} onSwap={ex=>goTo("swap",{swap:ex})} getLastSess={getLastSess}/>;
-  if(tab==="new-session") return <SessionView session={{id:uid(),date:new Date().toISOString().slice(0,10),name:"",trainType:null,exercises:[]}} isNew onSave={s=>{saveSession(s);setTab("home");}} onDelete={null} onBack={()=>setTab("home")} onHistClick={n=>goTo("ex-hist",{ex:n})} onSwap={ex=>goTo("swap",{swap:ex})} getLastSess={getLastSess}/>;
+  if(tab==="new-session") return <SessionView session={{id:uid(),date:new Date().toISOString().slice(0,10),name:"",trainType:null,exercises:[]}} isNew onSave={s=>{saveSession(s);setTab("home");}} onDelete={null} onBack={()=>setTab("home")} onHistClick={n=>goTo("ex-hist",{ex:n})} onSwap={ex=>goTo("swap",{swap:ex})} getLastSess={getLastSess} allSessions={sorted}/>;
   if(tab==="ex-hist") return <HistView exName={histEx} history={getExHist(histEx)} onBack={()=>setTab(prevTab.current)}/>;
   if(tab==="swap") return <SwapView exercise={swapEx} onBack={()=>setTab(prevTab.current)}/>;
-
-  const sorted=[...sessions].sort((a,b)=>b.date.localeCompare(a.date));
 
   return(
     <div style={S.app}>
@@ -353,7 +444,12 @@ export default function App(){
       <header style={S.header}>
         <div style={S.headerInner}>
           <div><div style={S.logo}>⚡ IRON LOG</div><div style={S.logoSub}>Diário de Hipertrofia</div></div>
-          <button style={S.newBtn} onClick={()=>goTo("new-session")}>+ Treino</button>
+          <div style={{display:"flex",alignItems:"center",gap:10}}>
+            <button style={{...S.profileChip, borderColor:`${profile.color}66`, color:profile.color}} onClick={handleSwitchProfile}>
+              {profile.emoji} {profile.name} ↩
+            </button>
+            <button style={S.newBtn} onClick={()=>goTo("new-session")}>+ Treino</button>
+          </div>
         </div>
       </header>
       <div style={S.tabBar}>
@@ -363,7 +459,7 @@ export default function App(){
           </button>
         ))}
       </div>
-      {tab==="home"&&<HomeTab sessions={sorted} onOpen={s=>goTo("session",{session:s})} onHistClick={n=>goTo("ex-hist",{ex:n})} getLastSess={getLastSess}/>}
+      {tab==="home"&&<HomeTab sessions={sorted} onOpen={s=>goTo("session",{session:s})} onHistClick={n=>goTo("ex-hist",{ex:n})} getLastSess={getLastSess} onRepeatLast={handleRepeatLast} lastSession={lastSession}/>}
       {tab==="calendar"&&<CalTab sessions={sessions} year={calYear} setYear={setCalYear} onOpen={s=>goTo("session",{session:s})}/>}
       {tab==="analysis"&&<AnalysisTab sessions={sessions}/>}
     </div>
@@ -371,7 +467,7 @@ export default function App(){
 }
 
 // ── HOME ───────────────────────────────────────────────────────────────────────
-function HomeTab({sessions,onOpen,onHistClick,getLastSess}){
+function HomeTab({sessions,onOpen,onHistClick,getLastSess,onRepeatLast,lastSession}){
   const[q,setQ]=useState("");const[cat,setCat]=useState("Todos");
   const totalVol=sessions.reduce((a,s)=>a+s.exercises.reduce((b,e)=>b+calcVolume(e.sets),0),0);
   const cats=["Todos",...Object.keys(EXERCISE_DB)];
@@ -383,6 +479,20 @@ function HomeTab({sessions,onOpen,onHistClick,getLastSess}){
         <SC icon="🏋️" label="Exercícios" value={new Set(sessions.flatMap(s=>s.exercises.map(e=>e.name))).size}/>
         <SC icon="📊" label="Volume" value={`${(totalVol/1000).toFixed(1)}t`}/>
       </div>
+
+      {lastSession&&(
+        <div style={S.section}>
+          <div style={S.sT}>⚡ Acesso Rápido</div>
+          <button style={S.repeatBtn} onClick={onRepeatLast}>
+            <div style={{flex:1, textAlign:"left"}}>
+              <div style={{fontSize:13, fontWeight:700, color:C.accent, marginBottom:3}}>🔁 Repetir último treino</div>
+              <div style={{fontSize:12, color:C.sub}}>{lastSession.name} · {fmtDate(lastSession.date)}</div>
+            </div>
+            <span style={{color:C.accent, fontSize:20}}>›</span>
+          </button>
+        </div>
+      )}
+
       <div style={S.section}>
         <div style={S.sT}>🔍 Buscar Exercício</div>
         <input style={S.si} placeholder="Nome do exercício..." value={q} onChange={e=>setQ(e.target.value)}/>
@@ -425,7 +535,6 @@ function CalTab({sessions,year,setYear,onOpen}){
   const sMap={};
   sessions.forEach(s=>{if(!sMap[s.date])sMap[s.date]=[];sMap[s.date].push(s);});
 
-  // streak calculation
   const sorted=[...new Set(sessions.map(s=>s.date))].sort();
   let streak=0,cur=new Date().toISOString().slice(0,10);
   for(let i=sorted.length-1;i>=0;i--){
@@ -579,9 +688,10 @@ function AnalysisTab({sessions}){
 }
 
 // ── SESSION VIEW ───────────────────────────────────────────────────────────────
-function SessionView({session,isNew,onSave,onDelete,onBack,onHistClick,onSwap,getLastSess}){
+function SessionView({session,isNew,onSave,onDelete,onBack,onHistClick,onSwap,getLastSess,allSessions}){
   const[data,setData]=useState(()=>JSON.parse(JSON.stringify(session)));
   const[showPicker,setShowPicker]=useState(false);
+  const[showTemplatePicker,setShowTemplatePicker]=useState(false);
   const[q,setQ]=useState("");const[cat,setCat]=useState("Todos");
   const[exp,setExp]=useState(isNew?[]:session.exercises.map(e=>e.id));
   const[confirmDel,setConfirmDel]=useState(false);
@@ -594,6 +704,22 @@ function SessionView({session,isNew,onSave,onDelete,onBack,onHistClick,onSwap,ge
   const updS=(eid,si,f,v)=>mut(d=>{d.exercises.find(e=>e.id===eid).sets[si][f]=v===""?"":(parseFloat(v)||0);});
   const updN=(eid,v)=>mut(d=>{d.exercises.find(e=>e.id===eid).notes=v;});
   const togEx=id=>setExp(p=>p.includes(id)?p.filter(x=>x!==id):[...p,id]);
+
+  // Load from template session
+  const loadFromTemplate = (templateSession) => {
+    const newExercises = templateSession.exercises.map(ex => ({
+      ...JSON.parse(JSON.stringify(ex)),
+      id: uid(),
+      notes: ex.notes || "",
+    }));
+    mut(d => {
+      d.name = templateSession.name;
+      d.trainType = templateSession.trainType;
+      d.exercises = newExercises;
+    });
+    setExp(newExercises.map(e => e.id));
+    setShowTemplatePicker(false);
+  };
 
   const cats=["Todos",...Object.keys(EXERCISE_DB)];
   const filtEx=ALL_EXERCISES.filter(e=>(cat==="Todos"||e.category===cat)&&(q.length<2||e.name.toLowerCase().includes(q.toLowerCase())));
@@ -617,6 +743,13 @@ function SessionView({session,isNew,onSave,onDelete,onBack,onHistClick,onSwap,ge
           {ti&&<div style={{fontSize:11,color:ti.color,marginTop:6}}>{ti.label} · {ti.muscles.join(", ")}</div>}
           <div style={{fontSize:11,color:C.sub,marginTop:8}}>Volume total: <strong style={{color:C.accent}}>{totalVol.toFixed(0)} kg</strong></div>
         </div>
+
+        {/* Template picker for new sessions */}
+        {isNew && allSessions && allSessions.length > 0 && data.exercises.length === 0 && (
+          <button style={S.templateBtn} onClick={()=>setShowTemplatePicker(true)}>
+            📋 Usar treino anterior como base
+          </button>
+        )}
 
         {data.exercises.map(ex=>{
           const last=getLastSess(ex.name);const exVol=calcVolume(ex.sets);const isO=exp.includes(ex.id);const info=findExercise(ex.name);
@@ -665,6 +798,7 @@ function SessionView({session,isNew,onSave,onDelete,onBack,onHistClick,onSwap,ge
         </div>}
       </div>
 
+      {/* Exercise picker modal */}
       {showPicker&&(
         <div style={S.modal} onClick={()=>setShowPicker(false)}>
           <div style={S.mBox} onClick={e=>e.stopPropagation()}>
@@ -678,6 +812,34 @@ function SessionView({session,isNew,onSave,onDelete,onBack,onHistClick,onSwap,ge
                 {ex.desc&&<span style={{fontSize:11,color:C.sub,marginTop:2}}>{ex.desc.slice(0,60)}…</span>}
               </button>))}
               {filtEx.length===0&&<div style={{color:C.sub,padding:16}}>Nenhum resultado</div>}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Template picker modal */}
+      {showTemplatePicker&&(
+        <div style={S.modal} onClick={()=>setShowTemplatePicker(false)}>
+          <div style={S.mBox} onClick={e=>e.stopPropagation()}>
+            <div style={S.mHdr}><span style={{fontWeight:700}}>Usar como base</span><button style={S.mClose} onClick={()=>setShowTemplatePicker(false)}>×</button></div>
+            <div style={{padding:"0 14px 8px",fontSize:12,color:C.sub}}>Selecione um treino anterior para copiar os exercícios e séries</div>
+            <div style={S.mList}>
+              {(allSessions||[]).map(s=>{
+                const tt=s.trainType||detectTrainType(s.name);
+                const ti=tt?TRAIN_TYPES[tt]:null;
+                const vol=s.exercises.reduce((a,e)=>a+calcVolume(e.sets),0);
+                return(
+                  <button key={s.id} style={S.mExI} onClick={()=>loadFromTemplate(s)}>
+                    <div style={{display:"flex",alignItems:"center",gap:8,width:"100%"}}>
+                      {ti&&<div style={{width:8,height:8,borderRadius:"50%",background:ti.color,flexShrink:0}}/>}
+                      <div style={{flex:1}}>
+                        <div style={{fontSize:14,color:C.text,fontWeight:600}}>{s.name||"Treino sem nome"}</div>
+                        <div style={{fontSize:11,color:C.sub,marginTop:2}}>{dayName(s.date)}, {fmtDate(s.date)} · {s.exercises.length} ex · {vol.toFixed(0)} kg</div>
+                      </div>
+                    </div>
+                  </button>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -714,7 +876,7 @@ function SwapView({exercise,onBack}){
             {alt.alts&&alt.alts.length>0&&<div style={{marginTop:6,fontSize:11,color:C.sub}}>Outras opções: {alt.alts.filter(a=>a!==exercise.name).slice(0,2).join(", ")}</div>}
           </div>
         ))}
-        <div style={S.pNote}>💡 Troque exercícios mantendo o padrão de movimento (empurrar vertical → empurrar vertical). Segundo Pacholok, variações devem ocorrer a cada bloco de 4 semanas, não semanalmente. Priorize movimentos compostos para troca de estímulo.</div>
+        <div style={S.pNote}>💡 Troque exercícios mantendo o padrão de movimento. Segundo Pacholok, variações devem ocorrer a cada bloco de 4 semanas. Priorize movimentos compostos para troca de estímulo.</div>
       </div>
     </div>
   );
@@ -798,6 +960,7 @@ const S={
   logo:{fontSize:22,fontWeight:800,letterSpacing:"-.5px",color:C.accent},
   logoSub:{fontSize:11,color:C.sub,letterSpacing:".5px",marginTop:1},
   newBtn:{background:C.accent,color:"#000",border:"none",borderRadius:8,padding:"8px 16px",fontWeight:700,fontSize:13,cursor:"pointer"},
+  profileChip:{background:"transparent",border:`1px solid`,borderRadius:20,padding:"5px 12px",fontSize:12,fontWeight:600,cursor:"pointer"},
   tabBar:{display:"flex",background:C.surface,borderBottom:`1px solid ${C.border}`},
   tab:{flex:1,display:"flex",flexDirection:"column",alignItems:"center",gap:2,padding:"10px 4px",background:"none",border:"none",color:C.sub,cursor:"pointer"},
   tabActive:{color:C.accent,borderBottom:`2px solid ${C.accent}`},
@@ -817,6 +980,7 @@ const S={
   exNm:{fontSize:13,fontWeight:600,color:C.text,marginBottom:3,lineHeight:1.3},
   exDs:{fontSize:10,color:C.sub,lineHeight:1.4,marginBottom:4},
   exLs:{fontSize:10,color:C.sub},
+  repeatBtn:{width:"100%",background:C.surface,border:`1px solid ${C.accent}44`,borderRadius:12,padding:"12px 16px",display:"flex",alignItems:"center",gap:12,cursor:"pointer",textAlign:"left",marginBottom:0},
   sessCard:{background:C.surface,border:`1px solid ${C.border}`,borderRadius:12,padding:"12px 14px",display:"flex",alignItems:"center",gap:12,cursor:"pointer",textAlign:"left",width:"100%",marginBottom:8},
   sessDot:{width:10,height:10,borderRadius:"50%",flexShrink:0},
   sessTop:{display:"flex",alignItems:"center",gap:8,marginBottom:3},
@@ -824,7 +988,6 @@ const S={
   ttBadge:{fontSize:10,fontWeight:700,borderRadius:20,padding:"2px 8px",flexShrink:0},
   sessMt:{fontSize:11,color:C.sub},
   arrow:{fontSize:20,color:C.sub},
-  // Calendar
   yearNav:{display:"flex",alignItems:"center",justifyContent:"center",gap:20,padding:"12px 0"},
   yBtn:{background:"none",border:`1px solid ${C.border}`,borderRadius:8,color:C.text,fontSize:20,width:36,height:36,cursor:"pointer",display:"flex",alignItems:"center",justifyContent:"center"},
   yLbl:{fontSize:20,fontWeight:800,color:C.text},
@@ -834,7 +997,6 @@ const S={
   wkHdr:{display:"grid",gridTemplateColumns:"repeat(7,1fr)",marginBottom:2},
   dGrid:{display:"grid",gridTemplateColumns:"repeat(7,1fr)",gap:1},
   dCell:{aspectRatio:"1",display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",borderRadius:3,background:"none",border:"1px solid transparent",cursor:"pointer",padding:0},
-  // Analysis
   mRow:{display:"flex",alignItems:"center",gap:8,marginBottom:8},
   mLbl:{display:"flex",alignItems:"center",gap:4,width:88,flexShrink:0},
   mBarW:{flex:1,background:C.surface2,borderRadius:4,height:7,overflow:"hidden"},
@@ -847,7 +1009,6 @@ const S={
   tipPh:{fontSize:12,fontWeight:700,color:C.accent,marginBottom:6},
   tipTx:{fontSize:13,color:C.text,lineHeight:1.6},
   pNote:{background:"rgba(245,166,35,.06)",border:"1px solid rgba(245,166,35,.2)",borderRadius:10,padding:"12px",fontSize:12,color:C.sub,lineHeight:1.6,marginTop:12},
-  // Session
   sessHdr:{position:"sticky",top:0,zIndex:100,background:"rgba(10,10,12,.96)",backdropFilter:"blur(14px)",borderBottom:`1px solid ${C.border}`,display:"flex",alignItems:"center",padding:"12px 14px",gap:8},
   back:{background:"none",border:"none",color:C.sub,fontSize:13,cursor:"pointer",padding:"4px 8px"},
   saveB:{background:C.accent,color:"#000",border:"none",borderRadius:8,padding:"7px 14px",fontWeight:700,fontSize:13,cursor:"pointer"},
@@ -855,6 +1016,7 @@ const S={
   mRow2:{display:"flex",alignItems:"center",gap:10,marginBottom:10},
   mLbl2:{fontSize:12,color:C.sub,width:36},
   mIn:{background:C.surface2,border:`1px solid ${C.border}`,borderRadius:8,padding:"8px 12px",color:C.text,fontSize:14,outline:"none"},
+  templateBtn:{display:"block",width:"100%",padding:"12px 14px",background:"rgba(79,195,247,.06)",border:`1px dashed rgba(79,195,247,.3)`,borderRadius:12,color:"#4fc3f7",fontSize:13,fontWeight:600,cursor:"pointer",marginBottom:12,textAlign:"left"},
   exBlk:{background:C.surface,border:`1px solid ${C.border}`,borderRadius:12,marginBottom:10,overflow:"hidden"},
   exBlkH:{display:"flex",alignItems:"center",padding:"12px 14px",cursor:"pointer",gap:8},
   exNm2:{fontSize:15,fontWeight:700,color:C.text},
