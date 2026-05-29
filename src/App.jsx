@@ -4847,7 +4847,7 @@ export default function App(){
 
 
 
-            if (data && data.length > 0) setSessions(data);
+            if (data && data.length > 0) { lastSavedJsonRef.current = JSON.stringify(data); setSessions(data); }
 
 
 
