@@ -2,9 +2,46 @@
   {
     "id": "xakh54s",
     "date": "2026-05-29",
-    "name": "",
-    "trainType": null,
-    "exercises": []
+    "name": "Treino A",
+    "trainType": "A",
+    "exercises": [
+      {
+        "id": "g25zz8g",
+        "name": "Puxada alta com barra triângulo",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      },
+      {
+        "id": "puz5giy",
+        "name": "Barra fixa supinada",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      },
+      {
+        "id": "k5cdsf7",
+        "name": "Remada curvada com barra",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      }
+    ]
   },
   {
     "id": "ha3xt77",
