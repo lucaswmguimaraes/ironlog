@@ -326,7 +326,7 @@ export default function App(){
         currentConfig={profileConfig}
         currentPAT={getPAT(profile.id)}
         onSave={(config) => { saveConfig(profile.id, { ...config, completedOnboarding: true }); setShowSettings(false); }}
-        onSavePAT={(pat) => setPAT(profile.id, pat)}
+        onSavePAT={(pat) => { setPAT(profile.id, pat); setGithubSetupDone(true); }}
         onBack={() => setShowSettings(false)}
       />
     </div>
