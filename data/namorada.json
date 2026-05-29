@@ -1,5 +1,125 @@
 [
   {
+    "id": "xckdsjo",
+    "date": "2026-05-27",
+    "name": "Treino 3 - QUADRÍCEPS",
+    "trainType": "C",
+    "exercises": [
+      {
+        "id": "hxp2nkr",
+        "name": "Agachamento no smith",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 40
+          },
+          {
+            "reps": 8,
+            "weight": 40
+          },
+          {
+            "reps": 8,
+            "weight": 40
+          }
+        ]
+      },
+      {
+        "id": "41gnj0c",
+        "name": "Leg press 45°",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 80
+          },
+          {
+            "reps": 12,
+            "weight": 120
+          },
+          {
+            "reps": 5,
+            "weight": 140
+          },
+          {
+            "reps": 9,
+            "weight": 120
+          },
+          {
+            "reps": 10,
+            "weight": 120
+          }
+        ]
+      },
+      {
+        "id": "gqnk2rh",
+        "name": "Extensora",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 35
+          },
+          {
+            "reps": 10,
+            "weight": 40
+          },
+          {
+            "reps": 10,
+            "weight": 40
+          },
+          {
+            "reps": 6,
+            "weight": 35
+          }
+        ]
+      },
+      {
+        "id": "uhfajjz",
+        "name": "Adutora na máquina",
+        "category": "Adutores / Abdutores",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 35
+          },
+          {
+            "reps": 15,
+            "weight": 40
+          },
+          {
+            "reps": 12,
+            "weight": 45
+          }
+        ]
+      },
+      {
+        "id": "dii3kj3",
+        "name": "Panturrilha sentado (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "la2c44h",
     "date": "2026-05-29",
     "name": "Treino 5 - GLÚTEO/ POSTERIOR",
