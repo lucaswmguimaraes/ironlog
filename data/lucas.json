@@ -1,1 +1,58 @@
-[]
+[
+  {
+    "id": "ikbmtrx",
+    "date": "2026-05-29",
+    "name": "",
+    "trainType": null,
+    "exercises": [
+      {
+        "id": "mmgncrr",
+        "name": "Crucifixo com halteres",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      },
+      {
+        "id": "04x798x",
+        "name": "Supino reto com barra",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      },
+      {
+        "id": "wzjbho4",
+        "name": "Supino reto com halteres",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      },
+      {
+        "id": "pwqgh8z",
+        "name": "Supino reto com halteres",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      }
+    ]
+  }
+]
