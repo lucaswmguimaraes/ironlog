@@ -11,7 +11,7 @@ const logKey = "ironlog_sync_log";
 function addLog(msg) {
   try {
     const logs = JSON.parse(localStorage.getItem(logKey) || "[]");
-    logs.unshift(`${new Date().toISOString().slice(11,19)} ${msg}`);
+    const now = new Date(); const h = String(now.getHours()).padStart(2,'0'); const m = String(now.getMinutes()).padStart(2,'0'); const s = String(now.getSeconds()).padStart(2,'0'); logs.unshift(`${h}:${m}:${s} ${msg}`);
     localStorage.setItem(logKey, JSON.stringify(logs.slice(0, 30)));
   } catch {}
 }
