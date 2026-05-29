@@ -130,49 +130,5 @@
         ]
       }
     ]
-  },
-  {
-    "id": "u6ilpj4",
-    "date": "2026-05-29",
-    "name": "Treino B",
-    "trainType": "B",
-    "exercises": [
-      {
-        "id": "7ytf17s",
-        "name": "Supino reto com barra",
-        "category": "Peito",
-        "notes": "",
-        "sets": [
-          {
-            "reps": "",
-            "weight": ""
-          }
-        ]
-      },
-      {
-        "id": "ooe8jac",
-        "name": "Crucifixo inclinado com halteres",
-        "category": "Peito",
-        "notes": "",
-        "sets": [
-          {
-            "reps": "",
-            "weight": ""
-          }
-        ]
-      },
-      {
-        "id": "fepz8lz",
-        "name": "Pullover com halteres",
-        "category": "Peito",
-        "notes": "",
-        "sets": [
-          {
-            "reps": "",
-            "weight": ""
-          }
-        ]
-      }
-    ]
   }
 ]
