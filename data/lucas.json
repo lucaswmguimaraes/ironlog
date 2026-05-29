@@ -1,1 +1,46 @@
-[]
+[
+  {
+    "id": "oppisr8",
+    "date": "2026-05-29",
+    "name": "Treino C",
+    "trainType": "C",
+    "exercises": [
+      {
+        "id": "ehrbar0",
+        "name": "Agachamento livre",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      },
+      {
+        "id": "ac3v9yg",
+        "name": "Leg press horizontal",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      },
+      {
+        "id": "av7p4hv",
+        "name": "Avanço com barra",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      }
+    ]
+  }
+]
