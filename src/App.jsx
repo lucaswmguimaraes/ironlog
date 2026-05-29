@@ -170,6 +170,9 @@ export default function App(){
   const { profile, selectProfile, getPAT, setPAT, getConfig, saveConfig } = useProfile();
   const { loadFromGitHub, saveToGitHub } = useGitHubStorage();
   const syncTimer = useRef(null);
+  // userChangedRef: só fica true após ação do usuário (add/edit/delete)
+  // fica false durante load do GitHub para impedir save reativo ao load
+  const userChangedRef = useRef(false);
 
   const [sessions, setSessions] = useState(() => {
     if (!profile) return [];
@@ -200,56 +203,57 @@ export default function App(){
   const [showSettings, setShowSettings] = useState(false);
   const prevTab = useRef("home");
 
-  // Persist to localStorage — nunca sobrescreve dados existentes com array vazio
+  // Persist to localStorage
   useEffect(() => {
     if (!profile) return;
-    if (sessions.length === 0) {
-      // Não sobrescreve se já havia dados salvos
-      const existing = localStorage.getItem(`wkv3_${profile.id}`);
-      if (existing && existing !== "[]" && existing !== "null") return;
-    }
     try { localStorage.setItem(`wkv3_${profile.id}`, JSON.stringify(sessions)); } catch {}
   }, [sessions, profile?.id]);
 
-  // Load from GitHub on profile select
+  // Load from GitHub on profile select — bloqueia save durante load
   useEffect(() => {
     if (!profile) return;
     const pat = getPAT(profile.id);
     if (!pat) return;
+    userChangedRef.current = false; // bloqueia save enquanto carrega
     loadFromGitHub(profile.id, pat).then((data) => {
-      if (data && data.length > 0) setSessions(data);
+      if (data && data.length > 0) {
+        setSessions(data);
+      }
+      // só libera save DEPOIS que setSessions foi chamado
+      // setTimeout 0 garante que o save effect com sessions antigas já foi ignorado
+      setTimeout(() => { userChangedRef.current = false; }, 0);
     });
   }, [profile?.id]);
 
-  // Sync to GitHub with debounce — nunca grava array vazio
+  // Sync to GitHub — só salva se foi o usuário que mudou os dados
   useEffect(() => {
     if (!profile) return;
-    if (sessions.length === 0) return; // proteção: nunca sobrescreve dados com vazio
+    if (!userChangedRef.current) return; // ignora mudanças causadas pelo load
     const pat = getPAT(profile.id);
     if (!pat) return;
     clearTimeout(syncTimer.current);
     syncTimer.current = setTimeout(() => {
       saveToGitHub(profile.id, sessions, pat);
-    }, 3000);
+    }, 1500);
     return () => clearTimeout(syncTimer.current);
   }, [sessions, profile?.id]);
 
   // Export/import for ProfileSettings
   window.__ironlog_export = () => sessions;
-  window.__ironlog_import = (data) => setSessions(data);
+  window.__ironlog_import = (data) => { userChangedRef.current = true; setSessions(data); };
 
   const handleSelectProfile = (p) => {
+    userChangedRef.current = false;
     sessionStorage.setItem("ironlog_profile", JSON.stringify(p));
     setTab("home");
-    // Force re-mount with new profile via selectProfile
     selectProfile(p);
-    // Check onboarding for new profile
     const cfg = getConfig(p.id);
     setOnboardingDone(cfg.completedOnboarding);
     setGithubSetupDone(!!getPAT(p.id));
   };
 
   const handleSwitchProfile = () => {
+    userChangedRef.current = false;
     sessionStorage.removeItem("ironlog_profile");
     selectProfile(null);
     setTab("home");
@@ -286,12 +290,19 @@ export default function App(){
     );
   }
 
-  const saveSession = s => setSessions(prev => {
-    const i = prev.findIndex(x => x.id === s.id);
-    if (i >= 0) { const n = [...prev]; n[i] = s; return n; }
-    return [s, ...prev];
-  });
-  const deleteSession = id => { setSessions(p => p.filter(s => s.id !== id)); setTab("home"); };
+  const saveSession = s => {
+    userChangedRef.current = true;
+    setSessions(prev => {
+      const i = prev.findIndex(x => x.id === s.id);
+      if (i >= 0) { const n = [...prev]; n[i] = s; return n; }
+      return [s, ...prev];
+    });
+  };
+  const deleteSession = id => {
+    userChangedRef.current = true;
+    setSessions(p => p.filter(s => s.id !== id));
+    setTab("home");
+  };
   const getExHist = name => sessions
     .filter(s => s.exercises.some(e => e.name === name))
     .map(s => { const ex = s.exercises.find(e => e.name === name); return { date: s.date, sessionName: s.name, sets: ex.sets, notes: ex.notes }; })

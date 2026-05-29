@@ -11,12 +11,13 @@ export function GitHubSetup({ profileId, profileName, onSave, onSkip }) {
     setTesting(true);
     setError(null);
     try {
+      // Verificar se o token é válido consultando a API do usuário autenticado
       const res = await fetch(
-        "https://api.github.com/repos/lucaswmguimaraes/ironlog",
+        "https://api.github.com/user",
         { headers: { Authorization: `token ${pat.trim()}` } }
       );
       if (res.ok) { onSave(pat.trim()); }
-      else { setError("Token inválido ou sem permissão no repositório. Verifique e tente novamente."); }
+      else { setError("Token inválido. Verifique se copiou corretamente e tente novamente."); }
     } catch {
       setError("Erro de conexão. Verifique sua internet e tente novamente.");
     }
