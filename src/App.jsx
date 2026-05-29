@@ -6,7 +6,23 @@ import { useState, useEffect, useRef } from "react";
 
 
 
+
+
+
+
+
+
+
+
 import {
+
+
+
+
+
+
+
+
 
 
 
@@ -22,7 +38,23 @@ import {
 
 
 
+
+
+
+
+
+
+
+
 } from "@dnd-kit/core";
+
+
+
+
+
+
+
+
 
 
 
@@ -38,6 +70,14 @@ import {
 
 
 
+
+
+
+
+
+
+
+
   SortableContext, verticalListSortingStrategy, useSortable, arrayMove,
 
 
@@ -46,7 +86,23 @@ import {
 
 
 
+
+
+
+
+
+
+
+
 } from "@dnd-kit/sortable";
+
+
+
+
+
+
+
+
 
 
 
@@ -70,7 +126,31 @@ import { CSS } from "@dnd-kit/utilities";
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import { EXERCISE_DB, ALL_EXERCISES, findExercise } from "./data/exercises";
+
+
+
+
+
+
+
+
 
 
 
@@ -86,7 +166,23 @@ import {
 
 
 
+
+
+
+
+
+
+
+
   C, PROFILES, TRAIN_TYPES, MUSCLE_GROUPS, MONTHS_PT, PERIODIZATION_TIPS,
+
+
+
+
+
+
+
+
 
 
 
@@ -102,7 +198,23 @@ import {
 
 
 
+
+
+
+
+
+
+
+
 } from "./data/constants";
+
+
+
+
+
+
+
+
 
 
 
@@ -118,7 +230,23 @@ import { useGitHubStorage } from "./hooks/useGitHubStorage";
 
 
 
+
+
+
+
+
+
+
+
 import { useProfile } from "./hooks/useProfile";
+
+
+
+
+
+
+
+
 
 
 
@@ -134,6 +262,14 @@ import { ProfileSetup } from "./components/ProfileSetup";
 
 
 
+
+
+
+
+
+
+
+
 import { GitHubSetup } from "./components/GitHubSetup";
 
 
@@ -142,7 +278,23 @@ import { GitHubSetup } from "./components/GitHubSetup";
 
 
 
+
+
+
+
+
+
+
+
 import { AnalysisTab } from "./components/AnalysisTab";
+
+
+
+
+
+
+
+
 
 
 
@@ -166,7 +318,31 @@ import { ProfileSettings } from "./components/ProfileSettings";
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ── INITIAL DATA ───────────────────────────────────────────────────────────────
+
+
+
+
+
+
+
+
 
 
 
@@ -182,7 +358,23 @@ const INITIAL_SESSIONS_LUCAS = [
 
 
 
+
+
+
+
+
+
+
+
   {id:"s1",date:"2025-04-04",name:"Treino C – Legs (Quadríceps + Panturrilha)",trainType:"C",exercises:[
+
+
+
+
+
+
+
+
 
 
 
@@ -198,7 +390,23 @@ const INITIAL_SESSIONS_LUCAS = [
 
 
 
+
+
+
+
+
+
+
+
     {id:"e2",name:"Leg press 45°",category:"Quadríceps",notes:"",sets:[{reps:10,weight:110},{reps:10,weight:100},{reps:10,weight:90}]},
+
+
+
+
+
+
+
+
 
 
 
@@ -214,7 +422,23 @@ const INITIAL_SESSIONS_LUCAS = [
 
 
 
+
+
+
+
+
+
+
+
     {id:"e4",name:"Agachamento búlgaro com halteres",category:"Quadríceps",notes:"Por perna",sets:[{reps:10,weight:17.5},{reps:8,weight:17.5},{reps:7,weight:16}]},
+
+
+
+
+
+
+
+
 
 
 
@@ -230,6 +454,14 @@ const INITIAL_SESSIONS_LUCAS = [
 
 
 
+
+
+
+
+
+
+
+
     {id:"e6",name:"Panturrilha sentado (máquina)",category:"Panturrilha",notes:"",sets:[{reps:12,weight:100},{reps:15,weight:115},{reps:15,weight:130}]},
 
 
@@ -238,7 +470,23 @@ const INITIAL_SESSIONS_LUCAS = [
 
 
 
+
+
+
+
+
+
+
+
   ]},
+
+
+
+
+
+
+
+
 
 
 
@@ -254,7 +502,23 @@ const INITIAL_SESSIONS_LUCAS = [
 
 
 
+
+
+
+
+
+
+
+
     {id:"e7",name:"Remada cavalinho",category:"Costas",notes:"Pegada aberta",sets:[{reps:12,weight:15},{reps:10,weight:35},{reps:10,weight:30},{reps:10,weight:25}]},
+
+
+
+
+
+
+
+
 
 
 
@@ -270,7 +534,23 @@ const INITIAL_SESSIONS_LUCAS = [
 
 
 
+
+
+
+
+
+
+
+
     {id:"e9",name:"Remada serrote unilateral",category:"Costas",notes:"",sets:[{reps:10,weight:22},{reps:8,weight:22},{reps:10,weight:20}]},
+
+
+
+
+
+
+
+
 
 
 
@@ -286,7 +566,23 @@ const INITIAL_SESSIONS_LUCAS = [
 
 
 
+
+
+
+
+
+
+
+
     {id:"e11",name:"Rosca direta na corda com drops",category:"Bíceps",notes:"2 drops na última série",sets:[{reps:10,weight:31.5},{reps:10,weight:31.5},{reps:10,weight:27}]},
+
+
+
+
+
+
+
+
 
 
 
@@ -302,6 +598,14 @@ const INITIAL_SESSIONS_LUCAS = [
 
 
 
+
+
+
+
+
+
+
+
     {id:"e13",name:"Encolhimento com barra (trapézio)",category:"Ombros",notes:"",sets:[{reps:12,weight:60},{reps:10,weight:60},{reps:8,weight:60}]},
 
 
@@ -310,7 +614,23 @@ const INITIAL_SESSIONS_LUCAS = [
 
 
 
+
+
+
+
+
+
+
+
   ]},
+
+
+
+
+
+
+
+
 
 
 
@@ -326,7 +646,23 @@ const INITIAL_SESSIONS_LUCAS = [
 
 
 
+
+
+
+
+
+
+
+
     {id:"e14",name:"Mesa flexora",category:"Posterior de Coxa",notes:"Última série: isometria + parciais",sets:[{reps:15,weight:18},{reps:10,weight:38.5},{reps:8,weight:38.5},{reps:8,weight:31.5}]},
+
+
+
+
+
+
+
+
 
 
 
@@ -342,7 +678,23 @@ const INITIAL_SESSIONS_LUCAS = [
 
 
 
+
+
+
+
+
+
+
+
     {id:"e16",name:"Leg press 45°",category:"Quadríceps",notes:"Foco glúteo/posterior",sets:[{reps:12,weight:80},{reps:8,weight:80},{reps:10,weight:72.5}]},
+
+
+
+
+
+
+
+
 
 
 
@@ -358,7 +710,23 @@ const INITIAL_SESSIONS_LUCAS = [
 
 
 
+
+
+
+
+
+
+
+
     {id:"e18",name:"Abdutora na máquina",category:"Adutores / Abdutores",notes:"",sets:[{reps:10,weight:120},{reps:10,weight:111},{reps:10,weight:111}]},
+
+
+
+
+
+
+
+
 
 
 
@@ -374,7 +742,23 @@ const INITIAL_SESSIONS_LUCAS = [
 
 
 
+
+
+
+
+
+
+
+
   ]},
+
+
+
+
+
+
+
+
 
 
 
@@ -390,7 +774,23 @@ const INITIAL_SESSIONS_LUCAS = [
 
 
 
+
+
+
+
+
+
+
+
     {id:"e20",name:"Rosca 45° com halteres",category:"Bíceps",notes:"Última série com drop set",sets:[{reps:15,weight:7},{reps:10,weight:12.5},{reps:8,weight:12.5},{reps:9,weight:10}]},
+
+
+
+
+
+
+
+
 
 
 
@@ -406,7 +806,23 @@ const INITIAL_SESSIONS_LUCAS = [
 
 
 
+
+
+
+
+
+
+
+
     {id:"e22",name:"Puxada alta com barra reta",category:"Costas",notes:"Rest-pause na última série",sets:[{reps:9,weight:60},{reps:8,weight:60},{reps:9,weight:50}]},
+
+
+
+
+
+
+
+
 
 
 
@@ -422,7 +838,23 @@ const INITIAL_SESSIONS_LUCAS = [
 
 
 
+
+
+
+
+
+
+
+
     {id:"e24",name:"Remada baixa com triângulo",category:"Costas",notes:"",sets:[{reps:10,weight:60},{reps:7,weight:60},{reps:10,weight:50}]},
+
+
+
+
+
+
+
+
 
 
 
@@ -438,7 +870,23 @@ const INITIAL_SESSIONS_LUCAS = [
 
 
 
+
+
+
+
+
+
+
+
     {id:"e26",name:"Rosca inversa (barra)",category:"Antebraço",notes:"",sets:[{reps:8,weight:40},{reps:10,weight:30},{reps:9,weight:25}]},
+
+
+
+
+
+
+
+
 
 
 
@@ -454,6 +902,14 @@ const INITIAL_SESSIONS_LUCAS = [
 
 
 
+
+
+
+
+
+
+
+
     {id:"e28",name:"Exercício escapular",category:"Escapular / Mobilidade",notes:"",sets:[{reps:12,weight:25},{reps:12,weight:25},{reps:10,weight:25}]},
 
 
@@ -462,7 +918,23 @@ const INITIAL_SESSIONS_LUCAS = [
 
 
 
+
+
+
+
+
+
+
+
   ]},
+
+
+
+
+
+
+
+
 
 
 
@@ -478,7 +950,23 @@ const INITIAL_SESSIONS_LUCAS = [
 
 
 
+
+
+
+
+
+
+
+
     {id:"e29",name:"Supino inclinado com halteres",category:"Peito",notes:"Última série rest-pause",sets:[{reps:15,weight:10},{reps:10,weight:22.5},{reps:8,weight:20},{reps:10,weight:17.5}]},
+
+
+
+
+
+
+
+
 
 
 
@@ -494,7 +982,23 @@ const INITIAL_SESSIONS_LUCAS = [
 
 
 
+
+
+
+
+
+
+
+
     {id:"e31",name:"Desenvolvimento no aparelho",category:"Ombros",notes:"",sets:[{reps:15,weight:9},{reps:10,weight:31.5},{reps:10,weight:27},{reps:10,weight:22.5}]},
+
+
+
+
+
+
+
+
 
 
 
@@ -510,7 +1014,23 @@ const INITIAL_SESSIONS_LUCAS = [
 
 
 
+
+
+
+
+
+
+
+
     {id:"e33",name:"Posterior de ombro no cross",category:"Ombros",notes:"Unilateral",sets:[{reps:10,weight:10},{reps:10,weight:10},{reps:8,weight:10}]},
+
+
+
+
+
+
+
+
 
 
 
@@ -526,7 +1046,23 @@ const INITIAL_SESSIONS_LUCAS = [
 
 
 
+
+
+
+
+
+
+
+
     {id:"e35",name:"Tríceps na polia com corda",category:"Tríceps",notes:"",sets:[{reps:12,weight:30},{reps:10,weight:40},{reps:8,weight:40}]},
+
+
+
+
+
+
+
+
 
 
 
@@ -542,7 +1078,23 @@ const INITIAL_SESSIONS_LUCAS = [
 
 
 
+
+
+
+
+
+
+
+
   ]},
+
+
+
+
+
+
+
+
 
 
 
@@ -566,7 +1118,31 @@ const INITIAL_SESSIONS_LUCAS = [
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ── SORTABLE EXERCISE ITEM (drag & drop) ───────────────────────────────────────
+
+
+
+
+
+
+
+
 
 
 
@@ -582,7 +1158,23 @@ function SortableExerciseItem({ id, children }) {
 
 
 
+
+
+
+
+
+
+
+
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } =
+
+
+
+
+
+
+
+
 
 
 
@@ -598,7 +1190,23 @@ function SortableExerciseItem({ id, children }) {
 
 
 
+
+
+
+
+
+
+
+
   return (
+
+
+
+
+
+
+
+
 
 
 
@@ -614,7 +1222,23 @@ function SortableExerciseItem({ id, children }) {
 
 
 
+
+
+
+
+
+
+
+
       transform: CSS.Transform.toString(transform),
+
+
+
+
+
+
+
+
 
 
 
@@ -630,7 +1254,23 @@ function SortableExerciseItem({ id, children }) {
 
 
 
+
+
+
+
+
+
+
+
       opacity: isDragging ? 0.5 : 1,
+
+
+
+
+
+
+
+
 
 
 
@@ -646,7 +1286,23 @@ function SortableExerciseItem({ id, children }) {
 
 
 
+
+
+
+
+
+
+
+
     }}>
+
+
+
+
+
+
+
+
 
 
 
@@ -662,7 +1318,23 @@ function SortableExerciseItem({ id, children }) {
 
 
 
+
+
+
+
+
+
+
+
         position: "absolute", top: 12, right: 46,
+
+
+
+
+
+
+
+
 
 
 
@@ -678,7 +1350,23 @@ function SortableExerciseItem({ id, children }) {
 
 
 
+
+
+
+
+
+
+
+
         touchAction: "none", zIndex: 10, padding: "4px 8px",
+
+
+
+
+
+
+
+
 
 
 
@@ -694,7 +1382,23 @@ function SortableExerciseItem({ id, children }) {
 
 
 
+
+
+
+
+
+
+
+
       }}>⠿</div>
+
+
+
+
+
+
+
+
 
 
 
@@ -710,7 +1414,23 @@ function SortableExerciseItem({ id, children }) {
 
 
 
+
+
+
+
+
+
+
+
     </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -726,7 +1446,31 @@ function SortableExerciseItem({ id, children }) {
 
 
 
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -750,7 +1494,23 @@ function SortableExerciseItem({ id, children }) {
 
 
 
+
+
+
+
+
+
+
+
 function ProfileScreen({ onSelect }) {
+
+
+
+
+
+
+
+
 
 
 
@@ -766,7 +1526,23 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
     try {
+
+
+
+
+
+
+
+
 
 
 
@@ -782,7 +1558,23 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
       if (!raw || raw === "[]" || raw === "null") {
+
+
+
+
+
+
+
+
 
 
 
@@ -798,6 +1590,14 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
         return;
 
 
@@ -806,7 +1606,23 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
       }
+
+
+
+
+
+
+
+
 
 
 
@@ -822,7 +1638,23 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
       if (!data || data.length === 0) {
+
+
+
+
+
+
+
+
 
 
 
@@ -838,7 +1670,23 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
         return;
+
+
+
+
+
+
+
+
 
 
 
@@ -854,7 +1702,23 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
       const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+
+
+
+
+
+
+
+
 
 
 
@@ -870,7 +1734,23 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
       const a = document.createElement("a");
+
+
+
+
+
+
+
+
 
 
 
@@ -886,7 +1766,23 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
       a.download = `ironlog-backup-${profileId}-${new Date().toISOString().slice(0,10)}.json`;
+
+
+
+
+
+
+
+
 
 
 
@@ -902,7 +1798,23 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
       a.click();
+
+
+
+
+
+
+
+
 
 
 
@@ -918,7 +1830,23 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
       URL.revokeObjectURL(url);
+
+
+
+
+
+
+
+
 
 
 
@@ -934,7 +1862,23 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
     } catch (e) {
+
+
+
+
+
+
+
+
 
 
 
@@ -950,6 +1894,14 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
     }
 
 
@@ -958,7 +1910,31 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
   };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -982,7 +1958,23 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
     <div style={S.app}>
+
+
+
+
+
+
+
+
 
 
 
@@ -998,7 +1990,23 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
       <div style={{
+
+
+
+
+
+
+
+
 
 
 
@@ -1014,7 +2022,23 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
         alignItems:"center", justifyContent:"center", padding:24, gap:32
+
+
+
+
+
+
+
+
 
 
 
@@ -1030,7 +2054,23 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
         <div style={{textAlign:"center"}}>
+
+
+
+
+
+
+
+
 
 
 
@@ -1046,6 +2086,14 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
           <div style={S.logoSub}>Diário de Hipertrofia</div>
 
 
@@ -1054,7 +2102,23 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
         </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -1070,7 +2134,23 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
         <div style={{display:"flex", gap:16, flexWrap:"wrap", justifyContent:"center"}}>
+
+
+
+
+
+
+
+
 
 
 
@@ -1086,7 +2166,23 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
             <button key={p.id} onClick={()=>onSelect(p)} style={{
+
+
+
+
+
+
+
+
 
 
 
@@ -1102,7 +2198,23 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
               borderRadius:20, padding:"28px 36px", cursor:"pointer",
+
+
+
+
+
+
+
+
 
 
 
@@ -1118,7 +2230,23 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
               minWidth:140,
+
+
+
+
+
+
+
+
 
 
 
@@ -1134,7 +2262,23 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
               <span style={{fontSize:48}}>{p.emoji}</span>
+
+
+
+
+
+
+
+
 
 
 
@@ -1150,7 +2294,23 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
             </button>
+
+
+
+
+
+
+
+
 
 
 
@@ -1166,7 +2326,23 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
         </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -1182,7 +2358,23 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
         <div style={{textAlign:"center"}}>
+
+
+
+
+
+
+
+
 
 
 
@@ -1198,7 +2390,23 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
           <div style={{display:"flex", gap:10, justifyContent:"center"}}>
+
+
+
+
+
+
+
+
 
 
 
@@ -1214,7 +2422,23 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
               <button key={p.id} onClick={()=>exportBackup(p.id, p.name)} style={{
+
+
+
+
+
+
+
+
 
 
 
@@ -1230,7 +2454,23 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
                 borderRadius:10, padding:"8px 16px", cursor:"pointer",
+
+
+
+
+
+
+
+
 
 
 
@@ -1246,7 +2486,23 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
               }}>
+
+
+
+
+
+
+
+
 
 
 
@@ -1262,7 +2518,23 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
               </button>
+
+
+
+
+
+
+
+
 
 
 
@@ -1278,7 +2550,23 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
           </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -1294,7 +2582,23 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
       </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -1310,7 +2614,23 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
   );
+
+
+
+
+
+
+
+
 
 
 
@@ -1334,7 +2654,31 @@ function ProfileScreen({ onSelect }) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ── MAIN APP ───────────────────────────────────────────────────────────────────
+
+
+
+
+
+
+
+
 
 
 
@@ -1350,7 +2694,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
   const { profile, selectProfile, getPAT, setPAT, getConfig, saveConfig } = useProfile();
+
+
+
+
+
+
+
+
 
 
 
@@ -1366,13 +2726,40 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
   const syncTimer = useRef(null);
+
+
 
   const sessionsRef = useRef([]);
 
-  const [userChangeCount, setUserChangeCount] = useState(0);
+
 
   const loadedProfileRef = useRef(null);
+  const lastSavedJsonRef = useRef(null);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1396,7 +2783,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
     if (!profile) return [];
+
+
+
+
+
+
+
+
 
 
 
@@ -1412,7 +2815,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
       const s = localStorage.getItem(`wkv3_${profile.id}`);
+
+
+
+
+
+
+
+
 
 
 
@@ -1428,7 +2847,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
       return profile.id === "lucas" ? INITIAL_SESSIONS_LUCAS : [];
+
+
+
+
+
+
+
+
 
 
 
@@ -1444,7 +2879,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
       return profile.id === "lucas" ? INITIAL_SESSIONS_LUCAS : [];
+
+
+
+
+
+
+
+
 
 
 
@@ -1460,7 +2911,31 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1484,7 +2959,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
     if (!profile) return true;
+
+
+
+
+
+
+
+
 
 
 
@@ -1500,7 +2991,31 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
   });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1524,6 +3039,14 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
     if (!profile) return true;
 
 
@@ -1532,7 +3055,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
     return !!getPAT(profile.id);
+
+
+
+
+
+
+
+
 
 
 
@@ -1556,7 +3095,31 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const [tab, setTab] = useState("home");
+
+
+
+
+
+
+
+
 
 
 
@@ -1572,7 +3135,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
   const [histEx, setHistEx] = useState(null);
+
+
+
+
+
+
+
+
 
 
 
@@ -1588,6 +3167,14 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
   const [calYear, setCalYear] = useState(new Date().getFullYear());
 
 
@@ -1596,7 +3183,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
   const [showSettings, setShowSettings] = useState(false);
+
+
+
+
+
+
+
+
 
 
 
@@ -1620,7 +3223,31 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   sessionsRef.current = sessions;
+
+
+
+
+
+
+
+
 
 
 
@@ -1630,79 +3257,93 @@ export default function App(){
 
   // Persist to localStorage on every sessions change
 
+
+
   useEffect(() => {
+
+
 
     if (!profile) return;
 
+
+
     if (sessions.length === 0) {
+
+
 
       const existing = localStorage.getItem(`wkv3_${profile.id}`);
 
+
+
       if (existing && existing !== "[]" && existing !== "null") return;
+
+
 
     }
 
+
+
     try { localStorage.setItem(`wkv3_${profile.id}`, JSON.stringify(sessions)); } catch {}
+
+
 
   }, [sessions, profile?.id]);
 
 
 
-  // Load from GitHub once per profile — sets sessions and marks load complete
 
+
+
+
+  // Load from GitHub once per profile
   useEffect(() => {
-
     if (!profile) return;
-
     const pat = getPAT(profile.id);
-
     if (!pat) return;
-
-    // Prevent double-load if profile didn't actually change
-
     if (loadedProfileRef.current === profile.id) return;
-
     loadedProfileRef.current = profile.id;
-
     loadFromGitHub(profile.id, pat).then((data) => {
-
       if (data && data.length > 0) {
-
-        // Use functional updater to avoid stale closure; do NOT increment userChangeCountRef
-
+        lastSavedJsonRef.current = JSON.stringify(data);
         setSessions(data);
-
       }
-
     });
-
   }, [profile?.id]);
 
-
-
-  // Sync to GitHub — only fires when userChangeCount increments (user actions only)
-
+  // Sync to GitHub — only saves if sessions actually changed from last saved state
   useEffect(() => {
-
     if (!profile) return;
-
-    if (userChangeCount === 0) return;
-
+    if (sessions.length === 0) return;
     const pat = getPAT(profile.id);
-
     if (!pat) return;
-
+    const currentJson = JSON.stringify(sessions);
+    if (currentJson === lastSavedJsonRef.current) return;
     clearTimeout(syncTimer.current);
-
     syncTimer.current = setTimeout(() => {
-
-      saveToGitHub(profile.id, sessionsRef.current, pat);
-
+      const jsonNow = JSON.stringify(sessionsRef.current);
+      if (jsonNow === lastSavedJsonRef.current) return;
+      saveToGitHub(profile.id, sessionsRef.current, pat).then(ok => {
+        if (ok) lastSavedJsonRef.current = jsonNow;
+      });
     }, 1500);
-
     return () => clearTimeout(syncTimer.current);
+  }, [sessions, profile?.id]);
 
-  }, [userChangeCount, profile?.id]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1726,6 +3367,14 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
   window.__ironlog_export = () => sessions;
 
 
@@ -1734,7 +3383,31 @@ export default function App(){
 
 
 
-  window.__ironlog_import = (data) => { setUserChangeCount(c => c + 1); setSessions(data); };
+
+
+
+
+
+
+
+
+  window.__ironlog_import = (data) => { setSessions(data); };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1752,11 +3425,25 @@ export default function App(){
 
   const handleSelectProfile = (p) => {
 
+
+
     loadedProfileRef.current = null;
+
+
 
     setTab("home");
 
+
+
     selectProfile(p);
+
+
+
+
+
+
+
+
 
 
 
@@ -1772,7 +3459,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
     const cfg = getConfig(p.id);
+
+
+
+
+
+
+
+
 
 
 
@@ -1788,6 +3491,14 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
     setGithubSetupDone(!!getPAT(p.id));
 
 
@@ -1796,7 +3507,31 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
   };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1814,9 +3549,15 @@ export default function App(){
 
   const handleSwitchProfile = () => {
 
+
+
     loadedProfileRef.current = null;
 
+
+
     selectProfile(null);
+
+
 
     setTab("home");
 
@@ -1826,7 +3567,31 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
   };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1858,7 +3623,31 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   if (profile && !onboardingDone) {
+
+
+
+
+
+
+
+
 
 
 
@@ -1874,7 +3663,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
       <div style={{ background: C.bg, minHeight: "100vh" }}>
+
+
+
+
+
+
+
+
 
 
 
@@ -1890,7 +3695,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
         <ProfileSetup
+
+
+
+
+
+
+
+
 
 
 
@@ -1906,7 +3727,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
           onComplete={(config) => {
+
+
+
+
+
+
+
+
 
 
 
@@ -1922,7 +3759,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
             setOnboardingDone(true);
+
+
+
+
+
+
+
+
 
 
 
@@ -1938,7 +3791,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
         />
+
+
+
+
+
+
+
+
 
 
 
@@ -1954,6 +3823,14 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
     );
 
 
@@ -1962,7 +3839,31 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1986,7 +3887,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
     return (
+
+
+
+
+
+
+
+
 
 
 
@@ -2002,7 +3919,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
         <div style={S.grain} />
+
+
+
+
+
+
+
+
 
 
 
@@ -2018,7 +3951,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
           profileId={profile.id}
+
+
+
+
+
+
+
+
 
 
 
@@ -2034,7 +3983,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
           onSave={(pat) => {
+
+
+
+
+
+
+
+
 
 
 
@@ -2050,7 +4015,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
             setGithubSetupDone(true);
+
+
+
+
+
+
+
+
 
 
 
@@ -2066,7 +4047,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
               if (data && data.length > 0) setSessions(data);
+
+
+
+
+
+
+
+
 
 
 
@@ -2082,7 +4079,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
           }}
+
+
+
+
+
+
+
+
 
 
 
@@ -2098,7 +4111,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
         />
+
+
+
+
+
+
+
+
 
 
 
@@ -2114,7 +4143,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
     );
+
+
+
+
+
+
+
+
 
 
 
@@ -2138,19 +4183,55 @@ export default function App(){
 
 
 
-  const saveSession = s => { setUserChangeCount(c => c + 1); setSessions(prev => {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  const saveSession = s => { setSessions(prev => {
+
+
 
     const i = prev.findIndex(x => x.id === s.id);
 
+
+
     if (i >= 0) { const n = [...prev]; n[i] = s; return n; }
 
+
+
     return [s, ...prev];
+
+
 
   }); };
 
 
 
-  const deleteSession = id => { setUserChangeCount(c => c + 1); setSessions(p => p.filter(s => s.id !== id)); setTab("home"); };
+
+
+
+
+  const deleteSession = id => { setSessions(p => p.filter(s => s.id !== id)); setTab("home"); };
+
+
+
+
+
+
+
+
 
 
 
@@ -2166,7 +4247,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
     .filter(s => s.exercises.some(e => e.name === name))
+
+
+
+
+
+
+
+
 
 
 
@@ -2182,7 +4279,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
     .sort((a, b) => b.date.localeCompare(a.date));
+
+
+
+
+
+
+
+
 
 
 
@@ -2206,7 +4319,31 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const goTo = (t, extra = {}) => {
+
+
+
+
+
+
+
+
 
 
 
@@ -2222,7 +4359,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
     if (extra.session !== undefined) setActiveSession(extra.session);
+
+
+
+
+
+
+
+
 
 
 
@@ -2238,7 +4391,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
     if (extra.swap !== undefined) setSwapEx(extra.swap);
+
+
+
+
+
+
+
+
 
 
 
@@ -2254,7 +4423,31 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
   };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2278,7 +4471,31 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
   const lastSession = sorted[0] || null;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2302,7 +4519,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
     if (!lastSession) return;
+
+
+
+
+
+
+
+
 
 
 
@@ -2318,6 +4551,14 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
     goTo("session", { session: newSess });
 
 
@@ -2326,7 +4567,31 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
   };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2358,7 +4623,31 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   if (showSettings) return (
+
+
+
+
+
+
+
+
 
 
 
@@ -2374,7 +4663,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
       <div style={S.grain} />
+
+
+
+
+
+
+
+
 
 
 
@@ -2390,7 +4695,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
         profileId={profile.id}
+
+
+
+
+
+
+
+
 
 
 
@@ -2406,7 +4727,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
         currentConfig={profileConfig}
+
+
+
+
+
+
+
+
 
 
 
@@ -2422,7 +4759,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
         onSave={(config) => { saveConfig(profile.id, { ...config, completedOnboarding: true }); setShowSettings(false); }}
+
+
+
+
+
+
+
+
 
 
 
@@ -2438,7 +4791,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
           setPAT(profile.id, pat);
+
+
+
+
+
+
+
+
 
 
 
@@ -2454,7 +4823,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
           loadFromGitHub(profile.id, pat).then((data) => {
+
+
+
+
+
+
+
+
 
 
 
@@ -2470,7 +4855,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
           });
+
+
+
+
+
+
+
+
 
 
 
@@ -2486,7 +4887,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
         onBack={() => setShowSettings(false)}
+
+
+
+
+
+
+
+
 
 
 
@@ -2502,7 +4919,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
       <div style={{ padding: "0 16px 40px", maxWidth: 480, margin: "0 auto" }}>
+
+
+
+
+
+
+
+
 
 
 
@@ -2518,7 +4951,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
           <summary style={{ fontSize: 11, color: "#555", cursor: "pointer", padding: "8px 0" }}>🔍 Debug sync log</summary>
+
+
+
+
+
+
+
+
 
 
 
@@ -2534,7 +4983,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
             {(JSON.parse(localStorage.getItem("ironlog_sync_log") || "[]")).map((l, i) => <div key={i}>{l}</div>)}
+
+
+
+
+
+
+
+
 
 
 
@@ -2550,7 +5015,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
           </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -2566,7 +5047,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
             SHA namorada: {localStorage.getItem("ironlog_sha_namorada")?.slice(0,7) || "none"} |
+
+
+
+
+
+
+
+
 
 
 
@@ -2582,7 +5079,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
           </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -2598,7 +5111,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
         </details>
+
+
+
+
+
+
+
+
 
 
 
@@ -2614,6 +5143,14 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
     </div>
 
 
@@ -2622,7 +5159,31 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
   );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2646,7 +5207,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
     <SessionView session={activeSession} isNew={false}
+
+
+
+
+
+
+
+
 
 
 
@@ -2662,7 +5239,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
       onDelete={() => deleteSession(activeSession.id)}
+
+
+
+
+
+
+
+
 
 
 
@@ -2678,6 +5271,14 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
       onHistClick={n => goTo("ex-hist", { ex: n })}
 
 
@@ -2686,7 +5287,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
       onSwap={ex => goTo("swap", { swap: ex })}
+
+
+
+
+
+
+
+
 
 
 
@@ -2702,7 +5319,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
       profileConfig={profileConfig}
+
+
+
+
+
+
+
+
 
 
 
@@ -2718,7 +5351,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
   );
+
+
+
+
+
+
+
+
 
 
 
@@ -2734,7 +5383,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
     <SessionView
+
+
+
+
+
+
+
+
 
 
 
@@ -2750,7 +5415,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
       isNew onSave={s => { saveSession(s); setTab("home"); }}
+
+
+
+
+
+
+
+
 
 
 
@@ -2766,7 +5447,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
       onHistClick={n => goTo("ex-hist", { ex: n })}
+
+
+
+
+
+
+
+
 
 
 
@@ -2782,7 +5479,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
       getLastSess={getLastSess} allSessions={sorted}
+
+
+
+
+
+
+
+
 
 
 
@@ -2798,7 +5511,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
     />
+
+
+
+
+
+
+
+
 
 
 
@@ -2814,7 +5543,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
   if (tab === "ex-hist") return <HistView exName={histEx} history={getExHist(histEx)} onBack={() => setTab(prevTab.current)} />;
+
+
+
+
+
+
+
+
 
 
 
@@ -2838,7 +5583,31 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   return (
+
+
+
+
+
+
+
+
 
 
 
@@ -2854,7 +5623,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
       <div style={S.grain} />
+
+
+
+
+
+
+
+
 
 
 
@@ -2870,7 +5655,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
         <div style={S.headerInner}>
+
+
+
+
+
+
+
+
 
 
 
@@ -2886,7 +5687,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
           <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+
+
+
+
+
+
+
+
 
 
 
@@ -2902,7 +5719,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
               {profile.emoji} {profile.name} ↩
+
+
+
+
+
+
+
+
 
 
 
@@ -2918,7 +5751,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
             <button style={{ background: "none", border: "none", color: C.sub, fontSize: 18, cursor: "pointer", padding: "4px 6px" }} onClick={() => setShowSettings(true)}>⚙️</button>
+
+
+
+
+
+
+
+
 
 
 
@@ -2934,7 +5783,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
           </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -2950,7 +5815,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
       </header>
+
+
+
+
+
+
+
+
 
 
 
@@ -2966,7 +5847,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
         {[["home", "🏠", "Início"], ["calendar", "📅", "Calendário"], ["analysis", "📊", "Análise"]].map(([t, icon, label]) => (
+
+
+
+
+
+
+
+
 
 
 
@@ -2982,7 +5879,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
             <span style={{ fontSize: 18 }}>{icon}</span><span style={{ fontSize: 10 }}>{label}</span>
+
+
+
+
+
+
+
+
 
 
 
@@ -2998,7 +5911,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
         ))}
+
+
+
+
+
+
+
+
 
 
 
@@ -3014,7 +5943,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
       {tab === "home" && <HomeTab sessions={sorted} onOpen={s => goTo("session", { session: s })} onHistClick={n => goTo("ex-hist", { ex: n })} getLastSess={getLastSess} onRepeatLast={handleRepeatLast} lastSession={lastSession} profileConfig={profileConfig} />}
+
+
+
+
+
+
+
+
 
 
 
@@ -3030,7 +5975,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
       {tab === "analysis" && <AnalysisTab sessions={sessions} profileConfig={profileConfig} />}
+
+
+
+
+
+
+
+
 
 
 
@@ -3046,6 +6007,14 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
   );
 
 
@@ -3054,7 +6023,31 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3078,7 +6071,23 @@ export default function App(){
 
 
 
+
+
+
+
+
+
+
+
 function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, lastSession, profileConfig }) {
+
+
+
+
+
+
+
+
 
 
 
@@ -3094,6 +6103,14 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
   const [cat, setCat] = useState("Todos");
 
 
@@ -3102,7 +6119,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
   const cats = ["Todos", ...Object.keys(EXERCISE_DB)];
+
+
+
+
+
+
+
+
 
 
 
@@ -3126,7 +6159,31 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // New KPIs
+
+
+
+
+
+
+
+
 
 
 
@@ -3142,7 +6199,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
   const thisMonthPrefix = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`;
+
+
+
+
+
+
+
+
 
 
 
@@ -3158,7 +6231,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
   const lastMonthPrefix = `${lastMonthDate.getFullYear()}-${String(lastMonthDate.getMonth() + 1).padStart(2, "0")}`;
+
+
+
+
+
+
+
+
 
 
 
@@ -3174,7 +6263,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
   const lastMonthSessions = sessions.filter(s => s.date.startsWith(lastMonthPrefix));
+
+
+
+
+
+
+
+
 
 
 
@@ -3190,7 +6295,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
   const avgEx = thisMonthSessions.length > 0
+
+
+
+
+
+
+
+
 
 
 
@@ -3206,7 +6327,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
     : 0;
+
+
+
+
+
+
+
+
 
 
 
@@ -3230,7 +6367,31 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const volByMuscle = (sess) => {
+
+
+
+
+
+
+
+
 
 
 
@@ -3246,7 +6407,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
     sess.forEach(s => s.exercises.forEach(e => { r[e.category] = (r[e.category] || 0) + calcVolume(e.sets); }));
+
+
+
+
+
+
+
+
 
 
 
@@ -3262,6 +6439,14 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
   };
 
 
@@ -3270,7 +6455,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
   const thisVol = volByMuscle(thisMonthSessions);
+
+
+
+
+
+
+
+
 
 
 
@@ -3294,7 +6495,31 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   return (
+
+
+
+
+
+
+
+
 
 
 
@@ -3310,7 +6535,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
       {/* New KPI cards */}
+
+
+
+
+
+
+
+
 
 
 
@@ -3326,7 +6567,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
         <div style={{ flex: 1, background: C.surface, border: `1px solid ${C.border}`, borderRadius: 12, padding: 14 }}>
+
+
+
+
+
+
+
+
 
 
 
@@ -3342,6 +6599,14 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
           <div style={{ fontSize: 28, fontWeight: 800, color: C.accent }}>{sessionsThisMonth}</div>
 
 
@@ -3350,7 +6615,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
         </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -3366,7 +6647,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
           <div style={{ fontSize: 10, color: C.sub, marginBottom: 4 }}>🏋️ Exercícios/treino</div>
+
+
+
+
+
+
+
+
 
 
 
@@ -3382,6 +6679,14 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
         </div>
 
 
@@ -3390,7 +6695,31 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3414,7 +6743,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
         <div style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: 12, padding: 14, marginBottom: 12 }}>
+
+
+
+
+
+
+
+
 
 
 
@@ -3430,7 +6775,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
           {focalGroups.map(g => {
+
+
+
+
+
+
+
+
 
 
 
@@ -3446,7 +6807,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
             const prev = lastVol[g] || 0;
+
+
+
+
+
+
+
+
 
 
 
@@ -3462,7 +6839,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
             const maxVal = Math.max(curr, prev, 1);
+
+
+
+
+
+
+
+
 
 
 
@@ -3478,7 +6871,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
               <div key={g} style={{ marginBottom: 10 }}>
+
+
+
+
+
+
+
+
 
 
 
@@ -3494,7 +6903,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
                   <span style={{ fontSize: 12, color: C.text }}>{g}</span>
+
+
+
+
+
+
+
+
 
 
 
@@ -3510,7 +6935,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
                     {delta !== null ? `${delta >= 0 ? "+" : ""}${delta.toFixed(0)}%` : "—"}
+
+
+
+
+
+
+
+
 
 
 
@@ -3526,7 +6967,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
                 </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -3542,7 +6999,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
                   <div style={{ flex: prev / maxVal, background: C.border, borderRadius: 3 }} />
+
+
+
+
+
+
+
+
 
 
 
@@ -3558,7 +7031,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
                 </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -3574,7 +7063,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
                   <span style={{ fontSize: 9, color: C.sub }}>{(prev / 1000).toFixed(1)}t ant.</span>
+
+
+
+
+
+
+
+
 
 
 
@@ -3590,7 +7095,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
                 </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -3606,7 +7127,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
             );
+
+
+
+
+
+
+
+
 
 
 
@@ -3622,6 +7159,14 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
         </div>
 
 
@@ -3630,7 +7175,31 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
       )}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3654,7 +7223,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
         <div style={S.section}>
+
+
+
+
+
+
+
+
 
 
 
@@ -3670,7 +7255,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
           <button style={S.repeatBtn} onClick={onRepeatLast}>
+
+
+
+
+
+
+
+
 
 
 
@@ -3686,7 +7287,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
               <div style={{ fontSize: 13, fontWeight: 700, color: C.accent, marginBottom: 3 }}>🔁 Repetir último treino</div>
+
+
+
+
+
+
+
+
 
 
 
@@ -3702,7 +7319,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
             </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -3718,6 +7351,14 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
           </button>
 
 
@@ -3726,7 +7367,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
         </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -3750,7 +7407,31 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <div style={S.section}>
+
+
+
+
+
+
+
+
 
 
 
@@ -3766,7 +7447,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
         <input style={S.si} placeholder="Nome do exercício..." value={q} onChange={e => setQ(e.target.value)} />
+
+
+
+
+
+
+
+
 
 
 
@@ -3782,7 +7479,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
         {hits.length > 0 && <div style={S.exGrid}>{hits.map(ex => {
+
+
+
+
+
+
+
+
 
 
 
@@ -3798,7 +7511,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
           return (
+
+
+
+
+
+
+
+
 
 
 
@@ -3814,7 +7543,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
               <div style={S.exCat}>{ex.category}</div>
+
+
+
+
+
+
+
+
 
 
 
@@ -3830,7 +7575,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
               <div style={S.exDs}>{ex.desc.slice(0, 55)}{ex.desc.length > 55 ? "…" : ""}</div>
+
+
+
+
+
+
+
+
 
 
 
@@ -3846,7 +7607,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
             </button>
+
+
+
+
+
+
+
+
 
 
 
@@ -3862,6 +7639,14 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
         })}</div>}
 
 
@@ -3870,7 +7655,31 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3894,7 +7703,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
         <div style={S.sT}>📋 Treinos Recentes</div>
+
+
+
+
+
+
+
+
 
 
 
@@ -3910,7 +7735,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
           const vol = s.exercises.reduce((a, e) => a + calcVolume(e.sets), 0);
+
+
+
+
+
+
+
+
 
 
 
@@ -3926,7 +7767,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
           const ti = tt ? TRAIN_TYPES[tt] : null;
+
+
+
+
+
+
+
+
 
 
 
@@ -3942,7 +7799,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
             <button key={s.id} style={S.sessCard} onClick={() => onOpen(s)}>
+
+
+
+
+
+
+
+
 
 
 
@@ -3958,7 +7831,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
               <div style={{ flex: 1, minWidth: 0 }}>
+
+
+
+
+
+
+
+
 
 
 
@@ -3974,7 +7863,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
                   <span style={S.sessNm}>{s.name || "Treino sem nome"}</span>
+
+
+
+
+
+
+
+
 
 
 
@@ -3990,7 +7895,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
                 </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -4006,7 +7927,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
               </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -4022,7 +7959,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
             </button>
+
+
+
+
+
+
+
+
 
 
 
@@ -4038,7 +7991,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
         })}
+
+
+
+
+
+
+
+
 
 
 
@@ -4054,6 +8023,14 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
     </div>
 
 
@@ -4062,7 +8039,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
   );
+
+
+
+
+
+
+
+
 
 
 
@@ -4086,7 +8079,31 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ── CALENDAR ───────────────────────────────────────────────────────────────────
+
+
+
+
+
+
+
+
 
 
 
@@ -4102,6 +8119,14 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
   const [selDay, setSelDay] = useState(null);
 
 
@@ -4110,7 +8135,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
   const sMap = {};
+
+
+
+
+
+
+
+
 
 
 
@@ -4134,7 +8175,31 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const sorted = [...new Set(sessions.map(s => s.date))].sort();
+
+
+
+
+
+
+
+
 
 
 
@@ -4150,7 +8215,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
   for (let i = sorted.length - 1; i >= 0; i--) {
+
+
+
+
+
+
+
+
 
 
 
@@ -4166,7 +8247,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
     const diff = Math.round((new Date(cur + "T12:00:00") - new Date(d + "T12:00:00")) / 864e5);
+
+
+
+
+
+
+
+
 
 
 
@@ -4182,7 +8279,31 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4214,7 +8335,31 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   return (
+
+
+
+
+
+
+
+
 
 
 
@@ -4230,7 +8375,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
       <div style={S.yearNav}>
+
+
+
+
+
+
+
+
 
 
 
@@ -4246,7 +8407,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
         <span style={S.yLbl}>{year}</span>
+
+
+
+
+
+
+
+
 
 
 
@@ -4262,7 +8439,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
       </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -4278,7 +8471,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
         {Object.entries(TRAIN_TYPES).map(([k, v]) => (
+
+
+
+
+
+
+
+
 
 
 
@@ -4294,7 +8503,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
             <div style={{ width: 8, height: 8, borderRadius: "50%", background: v.color }} />
+
+
+
+
+
+
+
+
 
 
 
@@ -4310,7 +8535,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
           </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -4326,7 +8567,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
       </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -4342,7 +8599,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
       <div style={S.monthsGrid}>
+
+
+
+
+
+
+
+
 
 
 
@@ -4358,7 +8631,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
           const firstDay = new Date(year, m, 1).getDay();
+
+
+
+
+
+
+
+
 
 
 
@@ -4374,7 +8663,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
           return (
+
+
+
+
+
+
+
+
 
 
 
@@ -4390,7 +8695,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
               <div style={S.mLabel}>{MONTHS_PT[m]}</div>
+
+
+
+
+
+
+
+
 
 
 
@@ -4406,7 +8727,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
               <div style={S.dGrid}>
+
+
+
+
+
+
+
+
 
 
 
@@ -4422,7 +8759,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
                 {Array.from({ length: days }, (_, i) => {
+
+
+
+
+
+
+
+
 
 
 
@@ -4438,7 +8791,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
                   const ds = `${year}-${String(m + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+
+
+
+
+
+
+
+
 
 
 
@@ -4454,7 +8823,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
                   const today = new Date().toISOString().slice(0, 10);
+
+
+
+
+
+
+
+
 
 
 
@@ -4470,7 +8855,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
                   const col = tt ? TRAIN_TYPES[tt]?.color : null;
+
+
+
+
+
+
+
+
 
 
 
@@ -4486,7 +8887,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
                   return (
+
+
+
+
+
+
+
+
 
 
 
@@ -4502,7 +8919,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
                       <span style={{ fontSize: 9, color: col || C.sub, lineHeight: 1 }}>{day}</span>
+
+
+
+
+
+
+
+
 
 
 
@@ -4518,7 +8951,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
                     </button>
+
+
+
+
+
+
+
+
 
 
 
@@ -4534,7 +8983,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
                 })}
+
+
+
+
+
+
+
+
 
 
 
@@ -4550,7 +9015,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
             </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -4566,6 +9047,14 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
         })}
 
 
@@ -4574,7 +9063,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
       </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -4590,7 +9095,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
         <div style={S.section}>
+
+
+
+
+
+
+
+
 
 
 
@@ -4606,7 +9127,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
           {selSessions.length === 0
+
+
+
+
+
+
+
+
 
 
 
@@ -4622,7 +9159,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
             : selSessions.map(s => {
+
+
+
+
+
+
+
+
 
 
 
@@ -4638,7 +9191,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
               const ti = tt ? TRAIN_TYPES[tt] : null;
+
+
+
+
+
+
+
+
 
 
 
@@ -4654,7 +9223,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
               return (
+
+
+
+
+
+
+
+
 
 
 
@@ -4670,7 +9255,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}>
+
+
+
+
+
+
+
+
 
 
 
@@ -4686,7 +9287,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
                       <div style={{ fontSize: 14, fontWeight: 700, color: C.text }}>{s.name}</div>
+
+
+
+
+
+
+
+
 
 
 
@@ -4702,7 +9319,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
                     </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -4718,7 +9351,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
                       Editar
+
+
+
+
+
+
+
+
 
 
 
@@ -4734,7 +9383,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
                   </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -4750,7 +9415,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
                     <div key={e.id} style={{ padding: "8px 0", borderTop: `1px solid ${C.border}` }}>
+
+
+
+
+
+
+
+
 
 
 
@@ -4766,7 +9447,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
                         {ei + 1}. {e.name}
+
+
+
+
+
+
+
+
 
 
 
@@ -4782,7 +9479,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
                       </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -4798,7 +9511,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
                         {e.sets.map((set, si) => (
+
+
+
+
+
+
+
+
 
 
 
@@ -4814,7 +9543,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
                             {set.reps}×{set.weight}kg
+
+
+
+
+
+
+
+
 
 
 
@@ -4830,7 +9575,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
                         ))}
+
+
+
+
+
+
+
+
 
 
 
@@ -4846,7 +9607,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
                     </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -4862,7 +9639,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
                 </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -4878,6 +9671,14 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
             })}
 
 
@@ -4886,7 +9687,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
         </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -4902,7 +9719,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
       <div style={S.section}>
+
+
+
+
+
+
+
+
 
 
 
@@ -4918,7 +9751,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
         <div style={S.statsBar}>
+
+
+
+
+
+
+
+
 
 
 
@@ -4934,7 +9783,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
           <SC icon="🔥" label="Streak" value={`${streak}x`} />
+
+
+
+
+
+
+
+
 
 
 
@@ -4950,7 +9815,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
         </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -4966,7 +9847,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
     </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -4982,7 +9879,31 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5006,7 +9927,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 
 
 
+
+
+
+
+
+
+
+
 function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, onSwap, getLastSess, allSessions, profileConfig }) {
+
+
+
+
+
+
+
+
 
 
 
@@ -5022,7 +9959,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
   const [showPicker, setShowPicker] = useState(false);
+
+
+
+
+
+
+
+
 
 
 
@@ -5038,6 +9991,14 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
   const [q, setQ] = useState(""); const [cat, setCat] = useState("Todos");
 
 
@@ -5046,7 +10007,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
   const [exp, setExp] = useState(isNew ? [] : session.exercises.map(e => e.id));
+
+
+
+
+
+
+
+
 
 
 
@@ -5070,7 +10047,31 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const sensors = useSensors(
+
+
+
+
+
+
+
+
 
 
 
@@ -5086,6 +10087,14 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
     useSensor(TouchSensor, { activationConstraint: { delay: 200, tolerance: 8 } })
 
 
@@ -5094,7 +10103,31 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
   );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5118,7 +10151,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
   const addEx = ex => { const id = uid(); mut(d => d.exercises.push({ id, name: ex.name, category: ex.category, notes: "", sets: [{ reps: "", weight: "" }] })); setExp(p => [...p, id]); setShowPicker(false); setQ(""); };
+
+
+
+
+
+
+
+
 
 
 
@@ -5134,7 +10183,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
   const addSet = eid => mut(d => { const ex = d.exercises.find(e => e.id === eid); const l = ex.sets[ex.sets.length - 1] || { reps: "", weight: "" }; ex.sets.push({ reps: l.reps, weight: l.weight }); });
+
+
+
+
+
+
+
+
 
 
 
@@ -5150,6 +10215,14 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
   const updS = (eid, si, f, v) => mut(d => { d.exercises.find(e => e.id === eid).sets[si][f] = v === "" ? "" : (parseFloat(v) || 0); });
 
 
@@ -5158,7 +10231,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
   const updN = (eid, v) => mut(d => { d.exercises.find(e => e.id === eid).notes = v; });
+
+
+
+
+
+
+
+
 
 
 
@@ -5182,7 +10271,31 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const handleDragEnd = (event) => {
+
+
+
+
+
+
+
+
 
 
 
@@ -5198,7 +10311,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
     if (!over || active.id === over.id) return;
+
+
+
+
+
+
+
+
 
 
 
@@ -5214,7 +10343,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
       const oldIndex = d.exercises.findIndex(e => e.id === active.id);
+
+
+
+
+
+
+
+
 
 
 
@@ -5230,7 +10375,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
       d.exercises = arrayMove(d.exercises, oldIndex, newIndex);
+
+
+
+
+
+
+
+
 
 
 
@@ -5246,7 +10407,31 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
   };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5270,7 +10455,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
   const loadFromTemplate = (templateSession) => {
+
+
+
+
+
+
+
+
 
 
 
@@ -5286,7 +10487,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
     const rawExercises = templateSession.exercises.map(ex => ({
+
+
+
+
+
+
+
+
 
 
 
@@ -5302,7 +10519,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
     }));
+
+
+
+
+
+
+
+
 
 
 
@@ -5318,7 +10551,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
     const rest = rawExercises.filter(e => !focalGroups.includes(e.category));
+
+
+
+
+
+
+
+
 
 
 
@@ -5334,7 +10583,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
     mut(d => { d.name = templateSession.name; d.trainType = templateSession.trainType; d.exercises = reordered; });
+
+
+
+
+
+
+
+
 
 
 
@@ -5350,7 +10615,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
     setShowTemplatePicker(false);
+
+
+
+
+
+
+
+
 
 
 
@@ -5374,7 +10655,31 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const cats = ["Todos", ...Object.keys(EXERCISE_DB)];
+
+
+
+
+
+
+
+
 
 
 
@@ -5390,6 +10695,14 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
   const totalVol = data.exercises.reduce((a, e) => a + calcVolume(e.sets), 0);
 
 
@@ -5398,7 +10711,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
   const tt = data.trainType || detectTrainType(data.name);
+
+
+
+
+
+
+
+
 
 
 
@@ -5422,7 +10751,31 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   // Autosave before navigation
+
+
+
+
+
+
+
+
 
 
 
@@ -5446,7 +10799,31 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   return (
+
+
+
+
+
+
+
+
 
 
 
@@ -5462,7 +10839,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
       <div style={S.grain} />
+
+
+
+
+
+
+
+
 
 
 
@@ -5478,7 +10871,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
         <button style={S.back} onClick={() => saveAndNavigate(onBack)}>← Voltar</button>
+
+
+
+
+
+
+
+
 
 
 
@@ -5494,7 +10903,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
         <button style={S.saveB} onClick={() => onSave(data)}>✓ Salvar</button>
+
+
+
+
+
+
+
+
 
 
 
@@ -5510,7 +10935,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
       <div style={S.body}>
+
+
+
+
+
+
+
+
 
 
 
@@ -5526,7 +10967,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
           <div style={S.mRow2}><label style={S.mLbl2}>Data</label><input type="date" style={S.mIn} value={data.date} onChange={e => mut(d => d.date = e.target.value)} /></div>
+
+
+
+
+
+
+
+
 
 
 
@@ -5542,7 +10999,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
           <div style={S.cRow}>{Object.entries(TRAIN_TYPES).map(([k, v]) => <button key={k} style={{ ...S.chip, fontSize: 11, ...(data.trainType === k ? { background: `${v.color}22`, borderColor: v.color, color: v.color } : {}) }} onClick={() => mut(d => d.trainType = k)}>{v.emoji} {k}</button>)}</div>
+
+
+
+
+
+
+
+
 
 
 
@@ -5558,6 +11031,14 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
           <div style={{ fontSize: 11, color: C.sub, marginTop: 8 }}>Volume total: <strong style={{ color: C.accent }}>{totalVol.toFixed(0)} kg</strong></div>
 
 
@@ -5566,7 +11047,31 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5590,7 +11095,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
           <button style={S.templateBtn} onClick={() => setShowTemplatePicker(true)}>
+
+
+
+
+
+
+
+
 
 
 
@@ -5606,6 +11127,14 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
           </button>
 
 
@@ -5614,7 +11143,31 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
         )}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5638,7 +11191,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
           <SortableContext items={data.exercises.map(e => e.id)} strategy={verticalListSortingStrategy}>
+
+
+
+
+
+
+
+
 
 
 
@@ -5654,7 +11223,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
               const last = getLastSess(ex.name);
+
+
+
+
+
+
+
+
 
 
 
@@ -5670,7 +11255,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
               const isO = exp.includes(ex.id);
+
+
+
+
+
+
+
+
 
 
 
@@ -5686,7 +11287,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
               return (
+
+
+
+
+
+
+
+
 
 
 
@@ -5702,7 +11319,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
                   <div style={S.exBlk}>
+
+
+
+
+
+
+
+
 
 
 
@@ -5718,7 +11351,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
                       <div style={{ flex: 1, minWidth: 0 }}><div style={S.exCat}>{ex.category}</div><div style={S.exNm2}>{ex.name}</div></div>
+
+
+
+
+
+
+
+
 
 
 
@@ -5734,7 +11383,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
                       <span style={{ color: C.sub, fontSize: 11 }}>{isO ? "▲" : "▼"}</span>
+
+
+
+
+
+
+
+
 
 
 
@@ -5750,7 +11415,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
                     {isO && (<>
+
+
+
+
+
+
+
+
 
 
 
@@ -5766,7 +11447,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
                       {last && <button style={S.lastH} onClick={() => saveAndNavigate(() => onHistClick(ex.name))}>
+
+
+
+
+
+
+
+
 
 
 
@@ -5782,7 +11479,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
                         <div>
+
+
+
+
+
+
+
+
 
 
 
@@ -5798,6 +11511,14 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
                           <div style={{ fontSize: 11, color: C.sub, marginTop: 1 }}>{last.sets.map(s => `${s.reps}×${s.weight}kg`).join(" · ")}</div>
 
 
@@ -5806,7 +11527,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
                         </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -5822,7 +11559,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
                       </button>}
+
+
+
+
+
+
+
+
 
 
 
@@ -5838,7 +11591,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
                       <input style={S.noteIn} placeholder="Observações..." value={ex.notes} onChange={e => updN(ex.id, e.target.value)} />
+
+
+
+
+
+
+
+
 
 
 
@@ -5854,7 +11623,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
                         <span style={{ width: 24, color: C.sub, fontSize: 11, textAlign: "center" }}>#</span>
+
+
+
+
+
+
+
+
 
 
 
@@ -5870,7 +11655,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
                         <span style={{ flex: 1, color: C.sub, fontSize: 11, textAlign: "center" }}>Peso kg</span>
+
+
+
+
+
+
+
+
 
 
 
@@ -5886,6 +11687,14 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
                         <span style={{ width: 24 }} />
 
 
@@ -5894,7 +11703,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
                       </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -5910,7 +11735,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
                         <div key={si} style={S.sRow}>
+
+
+
+
+
+
+
+
 
 
 
@@ -5926,7 +11767,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
                           <input style={S.sIn} type="number" placeholder="0" value={s.reps} onChange={e => updS(ex.id, si, "reps", e.target.value)} />
+
+
+
+
+
+
+
+
 
 
 
@@ -5942,7 +11799,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
                           <span style={S.sVol}>{((+s.reps || 0) * (+s.weight || 0)).toFixed(0)}</span>
+
+
+
+
+
+
+
+
 
 
 
@@ -5958,7 +11831,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
                         </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -5974,7 +11863,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
                       <div style={S.sActs}>
+
+
+
+
+
+
+
+
 
 
 
@@ -5990,7 +11895,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
                         <button style={S.rmExB} onClick={() => rmEx(ex.id)}>Remover</button>
+
+
+
+
+
+
+
+
 
 
 
@@ -6006,7 +11927,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
                     </>)}
+
+
+
+
+
+
+
+
 
 
 
@@ -6022,7 +11959,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
                 </SortableExerciseItem>
+
+
+
+
+
+
+
+
 
 
 
@@ -6038,6 +11991,14 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
             })}
 
 
@@ -6046,7 +12007,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
           </SortableContext>
+
+
+
+
+
+
+
+
 
 
 
@@ -6070,7 +12047,31 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <button style={S.addExB} onClick={() => setShowPicker(true)}>+ Adicionar Exercício</button>
+
+
+
+
+
+
+
+
 
 
 
@@ -6086,7 +12087,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
           {!confirmDel
+
+
+
+
+
+
+
+
 
 
 
@@ -6102,7 +12119,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
             : <div>
+
+
+
+
+
+
+
+
 
 
 
@@ -6118,7 +12151,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
               <button style={{ ...S.dangerB, marginRight: 8 }} onClick={onDelete}>Sim</button>
+
+
+
+
+
+
+
+
 
 
 
@@ -6134,7 +12183,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
             </div>}
+
+
+
+
+
+
+
+
 
 
 
@@ -6150,7 +12215,31 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6174,7 +12263,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
         <div style={S.modal} onClick={() => setShowPicker(false)}>
+
+
+
+
+
+
+
+
 
 
 
@@ -6190,7 +12295,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
             <div style={S.mHdr}><span style={{ fontWeight: 700 }}>Escolher Exercício</span><button style={S.mClose} onClick={() => setShowPicker(false)}>×</button></div>
+
+
+
+
+
+
+
+
 
 
 
@@ -6206,7 +12327,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
             <div style={{ ...S.cScroll, padding: "0 14px 8px" }}>{cats.map(c => <button key={c} style={{ ...S.chip, ...(cat === c ? S.chipA : {}) }} onClick={() => setCat(c)}>{c}</button>)}</div>
+
+
+
+
+
+
+
+
 
 
 
@@ -6222,7 +12359,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
               <button key={ex.name} style={S.mExI} onClick={() => addEx(ex)}>
+
+
+
+
+
+
+
+
 
 
 
@@ -6238,7 +12391,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
                 <span style={{ fontSize: 14, color: C.text }}>{ex.name}</span>
+
+
+
+
+
+
+
+
 
 
 
@@ -6254,7 +12423,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
               </button>
+
+
+
+
+
+
+
+
 
 
 
@@ -6270,7 +12455,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
               {filtEx.length === 0 && <div style={{ color: C.sub, padding: 16 }}>Nenhum resultado</div>}
+
+
+
+
+
+
+
+
 
 
 
@@ -6286,7 +12487,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
           </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -6302,7 +12519,31 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
       )}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6326,7 +12567,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
         <div style={S.modal} onClick={() => setShowTemplatePicker(false)}>
+
+
+
+
+
+
+
+
 
 
 
@@ -6342,7 +12599,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
             <div style={S.mHdr}><span style={{ fontWeight: 700 }}>Usar como base</span><button style={S.mClose} onClick={() => setShowTemplatePicker(false)}>×</button></div>
+
+
+
+
+
+
+
+
 
 
 
@@ -6358,7 +12631,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
             <div style={S.mList}>
+
+
+
+
+
+
+
+
 
 
 
@@ -6374,7 +12663,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
                 const tt = s.trainType || detectTrainType(s.name);
+
+
+
+
+
+
+
+
 
 
 
@@ -6390,7 +12695,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
                 const vol = s.exercises.reduce((a, e) => a + calcVolume(e.sets), 0);
+
+
+
+
+
+
+
+
 
 
 
@@ -6406,7 +12727,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
                   <button key={s.id} style={S.mExI} onClick={() => loadFromTemplate(s)}>
+
+
+
+
+
+
+
+
 
 
 
@@ -6422,7 +12759,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
                       {ti && <div style={{ width: 8, height: 8, borderRadius: "50%", background: ti.color, flexShrink: 0 }} />}
+
+
+
+
+
+
+
+
 
 
 
@@ -6438,7 +12791,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
                         <div style={{ fontSize: 14, color: C.text, fontWeight: 600 }}>{s.name || "Treino sem nome"}</div>
+
+
+
+
+
+
+
+
 
 
 
@@ -6454,7 +12823,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
                       </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -6470,7 +12855,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
                   </button>
+
+
+
+
+
+
+
+
 
 
 
@@ -6486,7 +12887,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
               })}
+
+
+
+
+
+
+
+
 
 
 
@@ -6502,7 +12919,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
           </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -6518,7 +12951,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
       )}
+
+
+
+
+
+
+
+
 
 
 
@@ -6534,6 +12983,14 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
   );
 
 
@@ -6542,7 +12999,31 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6566,7 +13047,23 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
 
 
 
+
+
+
+
+
+
+
+
 function SwapView({ exercise, onBack }) {
+
+
+
+
+
+
+
+
 
 
 
@@ -6582,7 +13079,23 @@ function SwapView({ exercise, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
   const alts = (exercise.alts || []).map(name => findExercise(name)).filter(e => e.name);
+
+
+
+
+
+
+
+
 
 
 
@@ -6598,7 +13111,23 @@ function SwapView({ exercise, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
     <div style={S.app}>
+
+
+
+
+
+
+
+
 
 
 
@@ -6614,7 +13143,23 @@ function SwapView({ exercise, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
       <header style={S.sessHdr}>
+
+
+
+
+
+
+
+
 
 
 
@@ -6630,7 +13175,23 @@ function SwapView({ exercise, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
         <div style={{ flex: 1, textAlign: "center", fontSize: 13, fontWeight: 700, color: C.text }}>Exercícios Similares</div>
+
+
+
+
+
+
+
+
 
 
 
@@ -6646,7 +13207,23 @@ function SwapView({ exercise, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
       </header>
+
+
+
+
+
+
+
+
 
 
 
@@ -6662,7 +13239,23 @@ function SwapView({ exercise, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
         <div style={{ marginBottom: 16 }}>
+
+
+
+
+
+
+
+
 
 
 
@@ -6678,7 +13271,23 @@ function SwapView({ exercise, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
           <div style={{ fontSize: 18, fontWeight: 800, color: C.text, marginBottom: 6 }}>{exercise.name}</div>
+
+
+
+
+
+
+
+
 
 
 
@@ -6694,7 +13303,23 @@ function SwapView({ exercise, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
         </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -6710,7 +13335,23 @@ function SwapView({ exercise, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
         {alts.length === 0 && <div style={{ color: C.sub }}>Sem alternativas cadastradas.</div>}
+
+
+
+
+
+
+
+
 
 
 
@@ -6726,7 +13367,23 @@ function SwapView({ exercise, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
           <div key={i} style={S.altCard}>
+
+
+
+
+
+
+
+
 
 
 
@@ -6742,7 +13399,23 @@ function SwapView({ exercise, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
             <div style={{ fontSize: 15, fontWeight: 700, color: C.text, marginBottom: 4 }}>{alt.name}</div>
+
+
+
+
+
+
+
+
 
 
 
@@ -6758,7 +13431,23 @@ function SwapView({ exercise, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
             {alt.alts && alt.alts.length > 0 && <div style={{ marginTop: 6, fontSize: 11, color: C.sub }}>Outras opções: {alt.alts.filter(a => a !== exercise.name).slice(0, 2).join(", ")}</div>}
+
+
+
+
+
+
+
+
 
 
 
@@ -6774,7 +13463,23 @@ function SwapView({ exercise, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
         ))}
+
+
+
+
+
+
+
+
 
 
 
@@ -6790,7 +13495,23 @@ function SwapView({ exercise, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
       </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -6806,6 +13527,14 @@ function SwapView({ exercise, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
   );
 
 
@@ -6814,7 +13543,31 @@ function SwapView({ exercise, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6838,7 +13591,23 @@ function SwapView({ exercise, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
 function HistView({ exName, history, onBack }) {
+
+
+
+
+
+
+
+
 
 
 
@@ -6854,7 +13623,23 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
   const maxV = Math.max(...vols.map(v => v.vol), 1);
+
+
+
+
+
+
+
+
 
 
 
@@ -6870,7 +13655,23 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
   return (
+
+
+
+
+
+
+
+
 
 
 
@@ -6886,7 +13687,23 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
       <div style={S.grain} />
+
+
+
+
+
+
+
+
 
 
 
@@ -6902,7 +13719,23 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
         <button style={S.back} onClick={onBack}>← Voltar</button>
+
+
+
+
+
+
+
+
 
 
 
@@ -6918,7 +13751,23 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
         <div style={{ width: 70 }} />
+
+
+
+
+
+
+
+
 
 
 
@@ -6934,7 +13783,23 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
       <div style={S.body}>
+
+
+
+
+
+
+
+
 
 
 
@@ -6950,7 +13815,23 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
         {info.desc && <div style={{ fontSize: 12, color: C.sub, marginBottom: 14, lineHeight: 1.5 }}>{info.desc}</div>}
+
+
+
+
+
+
+
+
 
 
 
@@ -6966,7 +13847,23 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
         {vols.length > 1 && (
+
+
+
+
+
+
+
+
 
 
 
@@ -6982,7 +13879,23 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
             <div style={S.sT}>📈 Progressão de Volume</div>
+
+
+
+
+
+
+
+
 
 
 
@@ -6998,7 +13911,23 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
               {vols.map((v, i) => (
+
+
+
+
+
+
+
+
 
 
 
@@ -7014,7 +13943,23 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
                   <span style={{ fontSize: 9, color: C.accent, marginBottom: 2 }}>{v.vol.toFixed(0)}</span>
+
+
+
+
+
+
+
+
 
 
 
@@ -7030,7 +13975,23 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
                   <span style={{ fontSize: 8, color: C.sub, marginTop: 3 }}>{fmtDate(v.date).slice(0, 5)}</span>
+
+
+
+
+
+
+
+
 
 
 
@@ -7046,6 +14007,14 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
               ))}
 
 
@@ -7054,7 +14023,23 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
             </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -7070,7 +14055,23 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
         )}
+
+
+
+
+
+
+
+
 
 
 
@@ -7086,7 +14087,23 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
           const vol = calcVolume(h.sets); const best = h.sets.reduce((a, s) => Math.max(a, +s.weight || 0), 0);
+
+
+
+
+
+
+
+
 
 
 
@@ -7102,7 +14119,23 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
             <div key={i} style={S.hCard}>
+
+
+
+
+
+
+
+
 
 
 
@@ -7118,7 +14151,23 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
                 <div><div style={{ fontSize: 13, fontWeight: 700, color: C.text }}>{dayName(h.date)}, {fmtDate(h.date)}</div><div style={{ fontSize: 11, color: C.sub, marginTop: 2 }}>{h.sessionName}</div></div>
+
+
+
+
+
+
+
+
 
 
 
@@ -7134,7 +14183,23 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
               </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -7150,7 +14215,23 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
               <div style={S.sHdr}>
+
+
+
+
+
+
+
+
 
 
 
@@ -7166,7 +14247,23 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
                 <span style={{ flex: 1, color: C.sub, fontSize: 11, textAlign: "center" }}>Reps</span>
+
+
+
+
+
+
+
+
 
 
 
@@ -7182,6 +14279,14 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
                 <span style={{ flex: 1, color: C.sub, fontSize: 11, textAlign: "center" }}>Vol</span>
 
 
@@ -7190,7 +14295,23 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
               </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -7206,7 +14327,23 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
                 <div key={si} style={{ ...S.sRow, cursor: "default" }}>
+
+
+
+
+
+
+
+
 
 
 
@@ -7222,7 +14359,23 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
                   <span style={{ flex: 1, textAlign: "center", fontSize: 13, color: C.text }}>{s.reps}</span>
+
+
+
+
+
+
+
+
 
 
 
@@ -7238,7 +14391,23 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
                   <span style={S.sVol}>{((+s.reps || 0) * (+s.weight || 0)).toFixed(0)}</span>
+
+
+
+
+
+
+
+
 
 
 
@@ -7254,7 +14423,23 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
               ))}
+
+
+
+
+
+
+
+
 
 
 
@@ -7270,7 +14455,23 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
                 <span>💪 Carga máx: <strong style={{ color: C.accent }}>{best}kg</strong></span>
+
+
+
+
+
+
+
+
 
 
 
@@ -7286,7 +14487,23 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
               </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -7302,7 +14519,23 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
           );
+
+
+
+
+
+
+
+
 
 
 
@@ -7318,7 +14551,23 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
       </div>
+
+
+
+
+
+
+
+
 
 
 
@@ -7334,6 +14583,14 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
   );
 
 
@@ -7342,7 +14599,31 @@ function HistView({ exName, history, onBack }) {
 
 
 
+
+
+
+
+
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -7366,7 +14647,23 @@ function SC({ icon, label, value }) {
 
 
 
+
+
+
+
+
+
+
+
   return (
+
+
+
+
+
+
+
+
 
 
 
@@ -7382,7 +14679,23 @@ function SC({ icon, label, value }) {
 
 
 
+
+
+
+
+
+
+
+
       <div style={{ fontSize: 20 }}>{icon}</div>
+
+
+
+
+
+
+
+
 
 
 
@@ -7398,7 +14711,23 @@ function SC({ icon, label, value }) {
 
 
 
+
+
+
+
+
+
+
+
       <div style={{ fontSize: 10, color: C.sub, marginTop: 1 }}>{label}</div>
+
+
+
+
+
+
+
+
 
 
 
@@ -7414,7 +14743,23 @@ function SC({ icon, label, value }) {
 
 
 
+
+
+
+
+
+
+
+
   );
+
+
+
+
+
+
+
+
 
 
 
@@ -7438,7 +14783,31 @@ function SC({ icon, label, value }) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ══════════════════════════════════════════════════════════════════════════════
+
+
+
+
+
+
+
+
 
 
 
@@ -7454,7 +14823,23 @@ function SC({ icon, label, value }) {
 
 
 
+
+
+
+
+
+
+
+
 // ══════════════════════════════════════════════════════════════════════════════
+
+
+
+
+
+
+
+
 
 
 
@@ -7470,7 +14855,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   app: { minHeight: "100vh", background: C.bg, fontFamily: "'DM Sans','Segoe UI',sans-serif", color: C.text, maxWidth: 680, margin: "0 auto", position: "relative" },
+
+
+
+
+
+
+
+
 
 
 
@@ -7486,7 +14887,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   header: { position: "sticky", top: 0, zIndex: 100, background: "rgba(10,10,12,.96)", backdropFilter: "blur(14px)", borderBottom: `1px solid ${C.border}`, padding: "12px 18px" },
+
+
+
+
+
+
+
+
 
 
 
@@ -7502,7 +14919,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   logo: { fontSize: 22, fontWeight: 800, letterSpacing: "-.5px", color: C.accent },
+
+
+
+
+
+
+
+
 
 
 
@@ -7518,7 +14951,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   newBtn: { background: C.accent, color: "#000", border: "none", borderRadius: 8, padding: "8px 16px", fontWeight: 700, fontSize: 13, cursor: "pointer" },
+
+
+
+
+
+
+
+
 
 
 
@@ -7534,7 +14983,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   tabBar: { display: "flex", background: C.surface, borderBottom: `1px solid ${C.border}` },
+
+
+
+
+
+
+
+
 
 
 
@@ -7550,7 +15015,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   tabActive: { color: C.accent, borderBottom: `2px solid ${C.accent}` },
+
+
+
+
+
+
+
+
 
 
 
@@ -7566,7 +15047,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   statsBar: { display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10, marginBottom: 16 },
+
+
+
+
+
+
+
+
 
 
 
@@ -7582,7 +15079,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   section: { marginBottom: 20 },
+
+
+
+
+
+
+
+
 
 
 
@@ -7598,7 +15111,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   si: { width: "100%", boxSizing: "border-box", background: C.surface, border: `1px solid ${C.border}`, borderRadius: 10, padding: "10px 14px", color: C.text, fontSize: 15, outline: "none", marginBottom: 8 },
+
+
+
+
+
+
+
+
 
 
 
@@ -7614,7 +15143,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   cRow: { display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 8 },
+
+
+
+
+
+
+
+
 
 
 
@@ -7630,7 +15175,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   chipA: { background: C.accentD, borderColor: C.accent, color: C.accent },
+
+
+
+
+
+
+
+
 
 
 
@@ -7646,7 +15207,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   exCard: { background: C.surface, border: `1px solid ${C.border}`, borderRadius: 12, padding: "10px", textAlign: "left", cursor: "pointer" },
+
+
+
+
+
+
+
+
 
 
 
@@ -7662,7 +15239,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   exNm: { fontSize: 13, fontWeight: 600, color: C.text, marginBottom: 3, lineHeight: 1.3 },
+
+
+
+
+
+
+
+
 
 
 
@@ -7678,7 +15271,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   exLs: { fontSize: 10, color: C.sub },
+
+
+
+
+
+
+
+
 
 
 
@@ -7694,7 +15303,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   sessCard: { background: C.surface, border: `1px solid ${C.border}`, borderRadius: 12, padding: "12px 14px", display: "flex", alignItems: "center", gap: 12, cursor: "pointer", textAlign: "left", width: "100%", marginBottom: 8 },
+
+
+
+
+
+
+
+
 
 
 
@@ -7710,7 +15335,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   sessTop: { display: "flex", alignItems: "center", gap: 8, marginBottom: 3 },
+
+
+
+
+
+
+
+
 
 
 
@@ -7726,7 +15367,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   ttBadge: { fontSize: 10, fontWeight: 700, borderRadius: 20, padding: "2px 8px", flexShrink: 0 },
+
+
+
+
+
+
+
+
 
 
 
@@ -7742,7 +15399,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   arrow: { fontSize: 20, color: C.sub },
+
+
+
+
+
+
+
+
 
 
 
@@ -7758,7 +15431,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   yBtn: { background: "none", border: `1px solid ${C.border}`, borderRadius: 8, color: C.text, fontSize: 20, width: 36, height: 36, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center" },
+
+
+
+
+
+
+
+
 
 
 
@@ -7774,7 +15463,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   monthsGrid: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10, marginBottom: 16 },
+
+
+
+
+
+
+
+
 
 
 
@@ -7790,7 +15495,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   mLabel: { fontSize: 11, fontWeight: 700, color: C.text, marginBottom: 4, textAlign: "center" },
+
+
+
+
+
+
+
+
 
 
 
@@ -7806,7 +15527,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   dGrid: { display: "grid", gridTemplateColumns: "repeat(7,1fr)", gap: 1 },
+
+
+
+
+
+
+
+
 
 
 
@@ -7822,7 +15559,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   mRow: { display: "flex", alignItems: "center", gap: 8, marginBottom: 8 },
+
+
+
+
+
+
+
+
 
 
 
@@ -7838,7 +15591,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   mBarW: { flex: 1, background: C.surfaceHigh, borderRadius: 4, height: 7, overflow: "hidden" },
+
+
+
+
+
+
+
+
 
 
 
@@ -7854,7 +15623,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   mSets: { width: 28, textAlign: "right", fontSize: 12, color: C.accent, fontWeight: 600 },
+
+
+
+
+
+
+
+
 
 
 
@@ -7870,7 +15655,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   alertW: { background: "rgba(255,183,77,.1)", border: "1px solid rgba(255,183,77,.3)", color: "#ffb74d" },
+
+
+
+
+
+
+
+
 
 
 
@@ -7886,7 +15687,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   tipCard: { background: C.surfaceHigh, border: `1px solid ${C.border}`, borderRadius: 10, padding: "12px", marginBottom: 10 },
+
+
+
+
+
+
+
+
 
 
 
@@ -7902,7 +15719,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   tipTx: { fontSize: 13, color: C.text, lineHeight: 1.6 },
+
+
+
+
+
+
+
+
 
 
 
@@ -7918,7 +15751,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   sessHdr: { position: "sticky", top: 0, zIndex: 100, background: "rgba(10,10,12,.96)", backdropFilter: "blur(14px)", borderBottom: `1px solid ${C.border}`, display: "flex", alignItems: "center", padding: "12px 14px", gap: 8 },
+
+
+
+
+
+
+
+
 
 
 
@@ -7934,7 +15783,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   saveB: { background: C.accent, color: "#000", border: "none", borderRadius: 8, padding: "7px 14px", fontWeight: 700, fontSize: 13, cursor: "pointer" },
+
+
+
+
+
+
+
+
 
 
 
@@ -7950,7 +15815,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   mRow2: { display: "flex", alignItems: "center", gap: 10, marginBottom: 10 },
+
+
+
+
+
+
+
+
 
 
 
@@ -7966,7 +15847,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   mIn: { background: C.surfaceHigh, border: `1px solid ${C.border}`, borderRadius: 8, padding: "8px 12px", color: C.text, fontSize: 14, outline: "none" },
+
+
+
+
+
+
+
+
 
 
 
@@ -7982,7 +15879,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   exBlk: { background: C.surface, border: `1px solid ${C.border}`, borderRadius: 12, marginBottom: 10, overflow: "hidden" },
+
+
+
+
+
+
+
+
 
 
 
@@ -7998,7 +15911,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   exNm2: { fontSize: 15, fontWeight: 700, color: C.text },
+
+
+
+
+
+
+
+
 
 
 
@@ -8014,7 +15943,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   exDsB: { fontSize: 12, color: C.sub, lineHeight: 1.5, padding: "0 14px 10px", fontStyle: "italic" },
+
+
+
+
+
+
+
+
 
 
 
@@ -8030,7 +15975,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   swapB: { display: "block", margin: "0 14px 10px", background: "rgba(79,195,247,.08)", border: "1px solid rgba(79,195,247,.25)", borderRadius: 8, padding: "7px 12px", fontSize: 12, color: "#4fc3f7", cursor: "pointer", textAlign: "left" },
+
+
+
+
+
+
+
+
 
 
 
@@ -8046,7 +16007,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   sHdr: { display: "flex", alignItems: "center", gap: 6, padding: "4px 14px 6px" },
+
+
+
+
+
+
+
+
 
 
 
@@ -8062,7 +16039,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   sNum: { width: 24, textAlign: "center", fontSize: 12, color: C.sub, flexShrink: 0 },
+
+
+
+
+
+
+
+
 
 
 
@@ -8078,7 +16071,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   sVol: { flex: 1, textAlign: "center", fontSize: 13, color: C.accent, fontWeight: 600 },
+
+
+
+
+
+
+
+
 
 
 
@@ -8094,7 +16103,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   sActs: { display: "flex", justifyContent: "space-between", padding: "10px 14px 12px" },
+
+
+
+
+
+
+
+
 
 
 
@@ -8110,7 +16135,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   rmExB: { background: "transparent", border: "1px solid rgba(255,68,85,.3)", borderRadius: 8, padding: "6px 12px", color: C.danger, fontSize: 12, cursor: "pointer" },
+
+
+
+
+
+
+
+
 
 
 
@@ -8126,7 +16167,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   dangerB: { background: "transparent", border: "1px solid rgba(255,68,85,.4)", borderRadius: 8, padding: "8px 18px", color: C.danger, fontSize: 13, cursor: "pointer" },
+
+
+
+
+
+
+
+
 
 
 
@@ -8142,7 +16199,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   modal: { position: "fixed", inset: 0, background: "rgba(0,0,0,.8)", zIndex: 200, display: "flex", alignItems: "flex-end" },
+
+
+
+
+
+
+
+
 
 
 
@@ -8158,7 +16231,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   mHdr: { display: "flex", justifyContent: "space-between", alignItems: "center", padding: "16px 18px 10px" },
+
+
+
+
+
+
+
+
 
 
 
@@ -8174,7 +16263,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   mSearch: { margin: "0 16px 10px", background: C.surfaceHigh, border: `1px solid ${C.border}`, borderRadius: 10, padding: "10px 14px", color: C.text, fontSize: 15, outline: "none" },
+
+
+
+
+
+
+
+
 
 
 
@@ -8190,7 +16295,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   mExI: { display: "flex", flexDirection: "column", alignItems: "flex-start", width: "100%", padding: "10px 18px", border: "none", borderTop: `1px solid ${C.border}`, background: "transparent", cursor: "pointer", textAlign: "left" },
+
+
+
+
+
+
+
+
 
 
 
@@ -8206,7 +16327,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
   hCard: { background: C.surface, border: `1px solid ${C.border}`, borderRadius: 12, padding: "14px", marginBottom: 10 },
+
+
+
+
+
+
+
+
 
 
 
@@ -8222,7 +16359,23 @@ const S = {
 
 
 
+
+
+
+
+
+
+
+
 };
+
+
+
+
+
+
+
+
 
 
 
