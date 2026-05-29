@@ -214,21 +214,36 @@ export default function App(){
     if (!profile) return;
     const pat = getPAT(profile.id);
     if (!pat) return;
-    userChangedRef.current = false; // bloqueia save enquanto carrega
+    userChangedRef.current = false;
     loadFromGitHub(profile.id, pat).then((data) => {
-      if (data && data.length > 0) {
+      if (data !== null) {
         setSessions(data);
       }
-      // só libera save DEPOIS que setSessions foi chamado
-      // setTimeout 0 garante que o save effect com sessions antigas já foi ignorado
       setTimeout(() => { userChangedRef.current = false; }, 0);
     });
+  }, [profile?.id]);
+
+  // Re-sync from GitHub when app returns to foreground (PWA resume)
+  useEffect(() => {
+    const onVisible = () => {
+      if (document.visibilityState === "visible" && profile) {
+        const pat = getPAT(profile.id);
+        if (!pat) return;
+        userChangedRef.current = false;
+        loadFromGitHub(profile.id, pat).then((data) => {
+          if (data !== null) setSessions(data);
+          setTimeout(() => { userChangedRef.current = false; }, 0);
+        });
+      }
+    };
+    document.addEventListener("visibilitychange", onVisible);
+    return () => document.removeEventListener("visibilitychange", onVisible);
   }, [profile?.id]);
 
   // Sync to GitHub — só salva se foi o usuário que mudou os dados
   useEffect(() => {
     if (!profile) return;
-    if (!userChangedRef.current) return; // ignora mudanças causadas pelo load
+    if (!userChangedRef.current) return;
     const pat = getPAT(profile.id);
     if (!pat) return;
     clearTimeout(syncTimer.current);
@@ -236,6 +251,26 @@ export default function App(){
       saveToGitHub(profile.id, sessions, pat);
     }, 1500);
     return () => clearTimeout(syncTimer.current);
+  }, [sessions, profile?.id]);
+
+  // Save immediately when app goes to background (prevents data loss on fast close)
+  useEffect(() => {
+    const flush = () => {
+      if (userChangedRef.current && profile) {
+        const pat = getPAT(profile.id);
+        if (!pat) return;
+        clearTimeout(syncTimer.current);
+        saveToGitHub(profile.id, sessions, pat);
+        userChangedRef.current = false;
+      }
+    };
+    const onVisChange = () => { if (document.visibilityState === "hidden") flush(); };
+    document.addEventListener("visibilitychange", onVisChange);
+    window.addEventListener("pagehide", flush);
+    return () => {
+      document.removeEventListener("visibilitychange", onVisChange);
+      window.removeEventListener("pagehide", flush);
+    };
   }, [sessions, profile?.id]);
 
   // Export/import for ProfileSettings
