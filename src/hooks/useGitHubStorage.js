@@ -1,13 +1,13 @@
 // src/hooks/useGitHubStorage.js
-import { useCallback, useRef } from "react";
+import { useCallback } from "react";
 
 const REPO_OWNER = "lucaswmguimaraes";
 const REPO_NAME = "ironlog";
 const BRANCH = "main";
 
-export function useGitHubStorage() {
-  const shaRef = useRef({});
+const shaKey = (profileId) => `ironlog_sha_${profileId}`;
 
+export function useGitHubStorage() {
   const getHeaders = (pat) => ({
     Authorization: `token ${pat}`,
     "Content-Type": "application/json",
@@ -24,8 +24,9 @@ export function useGitHubStorage() {
       if (res.status === 404) return [];
       if (!res.ok) return null;
       const json = await res.json();
-      shaRef.current[profileId] = json.sha;
-      return JSON.parse(atob(json.content.replace(/\n/g, "")));
+      localStorage.setItem(shaKey(profileId), json.sha);
+      return JSON.parse(atob(json.content.replace(/
+/g, "")));
     } catch {
       return null;
     }
@@ -35,11 +36,12 @@ export function useGitHubStorage() {
     if (!pat) return false;
     try {
       const content = btoa(unescape(encodeURIComponent(JSON.stringify(sessions, null, 2))));
+      const sha = localStorage.getItem(shaKey(profileId));
       const body = {
         message: `chore: sync ${profileId} sessions`,
         content,
         branch: BRANCH,
-        ...(shaRef.current[profileId] ? { sha: shaRef.current[profileId] } : {}),
+        ...(sha ? { sha } : {}),
       };
       const res = await fetch(
         `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/data/${profileId}.json`,
@@ -47,7 +49,7 @@ export function useGitHubStorage() {
       );
       if (!res.ok) return false;
       const json = await res.json();
-      shaRef.current[profileId] = json.content.sha;
+      localStorage.setItem(shaKey(profileId), json.content.sha);
       return true;
     } catch {
       return false;
