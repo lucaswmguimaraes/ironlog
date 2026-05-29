@@ -1,1 +1,46 @@
-[]
+[
+  {
+    "id": "1srt48j",
+    "date": "2026-05-29",
+    "name": "Treino A",
+    "trainType": "A",
+    "exercises": [
+      {
+        "id": "fo8gfxe",
+        "name": "Puxada alta com barra triângulo",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      },
+      {
+        "id": "bo2247b",
+        "name": "Barra fixa supinada",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      },
+      {
+        "id": "beaqpc5",
+        "name": "Remada curvada com halteres",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      }
+    ]
+  }
+]

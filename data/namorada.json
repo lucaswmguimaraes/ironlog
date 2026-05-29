@@ -1,0 +1,4090 @@
+[
+  {
+    "id": "y72ii48",
+    "date": "2026-05-28",
+    "name": "Treino 1 - PEITO + TRÍCEPS + OMBRO",
+    "trainType": "B",
+    "exercises": [
+      {
+        "id": "9fm4qb1",
+        "name": "Posterior de ombro no cross",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 8,
+            "weight": 2.5
+          },
+          {
+            "reps": 10,
+            "weight": 1.25
+          },
+          {
+            "reps": 10,
+            "weight": 1.25
+          }
+        ]
+      },
+      {
+        "id": "90pazg0",
+        "name": "Elevação lateral com halteres",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 4
+          },
+          {
+            "reps": 10,
+            "weight": 4
+          },
+          {
+            "reps": 10,
+            "weight": 4
+          }
+        ]
+      },
+      {
+        "id": "08j2zhx",
+        "name": "Tríceps na polia com corda",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 8,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 8.125
+          },
+          {
+            "reps": 7,
+            "weight": 8.125
+          }
+        ]
+      },
+      {
+        "id": "j43vp2z",
+        "name": "Tríceps francês no cross com corda",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 2.5
+          },
+          {
+            "reps": 10,
+            "weight": 2.5
+          }
+        ]
+      },
+      {
+        "id": "vozeq6o",
+        "name": "Tríceps testa na polia unilateral",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 2.5
+          },
+          {
+            "reps": 10,
+            "weight": 3.125
+          },
+          {
+            "reps": 10,
+            "weight": 3.125
+          }
+        ]
+      },
+      {
+        "id": "r13tnvj",
+        "name": "Crucifixo no cross (cabo baixo)",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 2.5
+          },
+          {
+            "reps": 11,
+            "weight": 2.5
+          },
+          {
+            "reps": 10,
+            "weight": 2.5
+          }
+        ]
+      },
+      {
+        "id": "axkebrt",
+        "name": "Supino reto com halteres",
+        "category": "Peito",
+        "notes": "máquina",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 25
+          },
+          {
+            "reps": 10,
+            "weight": 25
+          },
+          {
+            "reps": 8,
+            "weight": 20
+          }
+        ]
+      },
+      {
+        "id": "z6ka83n",
+        "name": "Desenvolvimento no aparelho",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 2.5
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 8,
+            "weight": 7.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "xv7aoqm",
+    "date": "2026-05-26",
+    "name": "Treino 2 - COSTAS + BÍCEPS",
+    "trainType": "A",
+    "exercises": [
+      {
+        "id": "e0703sn",
+        "name": "Puxada alta com barra reta",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 8,
+            "weight": 25
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 5,
+            "weight": 20
+          }
+        ]
+      },
+      {
+        "id": "obrwx63",
+        "name": "Remada baixa com triângulo",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 55
+          },
+          {
+            "reps": 10,
+            "weight": 60
+          },
+          {
+            "reps": 10,
+            "weight": 60
+          }
+        ]
+      },
+      {
+        "id": "kun8eyu",
+        "name": "Rosca 45° com halteres",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 4
+          },
+          {
+            "reps": 8,
+            "weight": 6
+          },
+          {
+            "reps": 8,
+            "weight": 5
+          },
+          {
+            "reps": 4,
+            "weight": 4
+          }
+        ]
+      },
+      {
+        "id": "rsa64vu",
+        "name": "Remada curvada com barra",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 12,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          }
+        ]
+      },
+      {
+        "id": "tx9ymdx",
+        "name": "Rosca Scott com barra W",
+        "category": "Bíceps",
+        "notes": "máquina",
+        "sets": [
+          {
+            "reps": 5,
+            "weight": 10
+          },
+          {
+            "reps": 6,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "id": "3b01dj0",
+        "name": "Rosca Scott com barra W",
+        "category": "Bíceps",
+        "notes": "barra",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 14
+          },
+          {
+            "reps": 9,
+            "weight": 14
+          },
+          {
+            "reps": 8,
+            "weight": 14
+          },
+          {
+            "reps": 5,
+            "weight": 12
+          }
+        ]
+      },
+      {
+        "id": "p6swodw",
+        "name": "Rosca inversa (barra)",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 12,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "1yfzga3",
+    "date": "2026-05-18",
+    "name": "Treino 3 - QUADRÍCEPS",
+    "trainType": "C",
+    "exercises": [
+      {
+        "id": "wnjvo7e",
+        "name": "Agachamento no smith",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 40
+          },
+          {
+            "reps": 8,
+            "weight": 40
+          },
+          {
+            "reps": 8,
+            "weight": 40
+          }
+        ]
+      },
+      {
+        "id": "4vqsa4r",
+        "name": "Leg press 45°",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 80
+          },
+          {
+            "reps": 12,
+            "weight": 120
+          },
+          {
+            "reps": 5,
+            "weight": 140
+          },
+          {
+            "reps": 9,
+            "weight": 120
+          },
+          {
+            "reps": 10,
+            "weight": 120
+          }
+        ]
+      },
+      {
+        "id": "sjnsltu",
+        "name": "Extensora",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 35
+          },
+          {
+            "reps": 10,
+            "weight": 40
+          },
+          {
+            "reps": 10,
+            "weight": 40
+          },
+          {
+            "reps": 6,
+            "weight": 35
+          }
+        ]
+      },
+      {
+        "id": "otw91jm",
+        "name": "Adutora na máquina",
+        "category": "Adutores / Abdutores",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 35
+          },
+          {
+            "reps": 15,
+            "weight": 40
+          },
+          {
+            "reps": 12,
+            "weight": 45
+          }
+        ]
+      },
+      {
+        "id": "4rtytjt",
+        "name": "Panturrilha sentado (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "m6h2l1e",
+    "date": "2026-05-15",
+    "name": "Treino 1 - PEITO + TRÍCEPS + OMBRO",
+    "trainType": "B",
+    "exercises": [
+      {
+        "id": "rjo3wrz",
+        "name": "Posterior de ombro no cross",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 4.5
+          },
+          {
+            "reps": 9,
+            "weight": 4.5
+          },
+          {
+            "reps": 6,
+            "weight": 4.5
+          }
+        ]
+      },
+      {
+        "id": "g6mzrge",
+        "name": "Elevação lateral com halteres",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          },
+          {
+            "reps": "",
+            "weight": ""
+          },
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      },
+      {
+        "id": "i1nte9v",
+        "name": "Desenvolvimento no aparelho",
+        "category": "Ombros",
+        "notes": "Drop na última série (10s de descanso)",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 4.5
+          },
+          {
+            "reps": 9,
+            "weight": 13.5
+          },
+          {
+            "reps": 8,
+            "weight": 13.5
+          },
+          {
+            "reps": 10,
+            "weight": 9
+          },
+          {
+            "reps": 8,
+            "weight": 4.5
+          }
+        ]
+      },
+      {
+        "id": "je9wefa",
+        "name": "Supino reto com halteres",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 7
+          },
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "id": "56v8rs7",
+        "name": "Tríceps na polia com corda",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 18
+          },
+          {
+            "reps": 8,
+            "weight": 18
+          },
+          {
+            "reps": 6,
+            "weight": 18
+          }
+        ]
+      },
+      {
+        "id": "16f7n1o",
+        "name": "Tríceps francês no cross com corda",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "id": "0pyf2iy",
+        "name": "Tríceps testa na polia unilateral",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 4.5
+          },
+          {
+            "reps": 12,
+            "weight": 4.5
+          },
+          {
+            "reps": 10,
+            "weight": 4.5
+          }
+        ]
+      },
+      {
+        "id": "n69tf2n",
+        "name": "Crucifixo no cross (cabo baixo)",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 4.5
+          },
+          {
+            "reps": 12,
+            "weight": 4.5
+          },
+          {
+            "reps": 12,
+            "weight": 4.5
+          }
+        ]
+      },
+      {
+        "id": "9pijuyu",
+        "name": "Elevação frontal na polia",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 9
+          },
+          {
+            "reps": 10,
+            "weight": 9
+          },
+          {
+            "reps": 10,
+            "weight": 9
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mgmc0mx",
+    "date": "2026-05-14",
+    "name": "Treino 4 - SUPERIORES GERAL",
+    "trainType": "D",
+    "exercises": [
+      {
+        "id": "ly417km",
+        "name": "Elevação lateral + frontal alternadas",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 4
+          },
+          {
+            "reps": 10,
+            "weight": 3
+          },
+          {
+            "reps": 10,
+            "weight": 4
+          },
+          {
+            "reps": 10,
+            "weight": 3
+          },
+          {
+            "reps": 10,
+            "weight": 4
+          },
+          {
+            "reps": 9,
+            "weight": 3
+          }
+        ]
+      },
+      {
+        "id": "19w1ipg",
+        "name": "Rosca na corda",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 18
+          },
+          {
+            "reps": 11,
+            "weight": 18
+          },
+          {
+            "reps": 10,
+            "weight": 18
+          },
+          {
+            "reps": 10,
+            "weight": 13.5
+          }
+        ]
+      },
+      {
+        "id": "buomut6",
+        "name": "Peck deck",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 17,
+            "weight": 18
+          },
+          {
+            "reps": 18,
+            "weight": 18
+          },
+          {
+            "reps": 18,
+            "weight": 18
+          }
+        ]
+      },
+      {
+        "id": "dfny8qp",
+        "name": "Supino reto com barra",
+        "category": "Peito",
+        "notes": "maquina",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 15
+          },
+          {
+            "reps": 12,
+            "weight": 20
+          },
+          {
+            "reps": 12,
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "id": "lbmazst",
+        "name": "Remada baixa com barra",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 12.5
+          },
+          {
+            "reps": 10,
+            "weight": 12.5
+          },
+          {
+            "reps": 10,
+            "weight": 12.5
+          }
+        ]
+      },
+      {
+        "id": "hes1otv",
+        "name": "Encolhimento com barra (trapézio)",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          }
+        ]
+      },
+      {
+        "id": "5zmskkt",
+        "name": "Remada serrote unilateral",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 12.5
+          },
+          {
+            "reps": 10,
+            "weight": 12.5
+          },
+          {
+            "reps": 10,
+            "weight": 12.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "6lxm72v",
+    "date": "2026-05-12",
+    "name": "Treino 5 - GLÚTEO/ POSTERIOR",
+    "trainType": "E",
+    "exercises": [
+      {
+        "id": "dm01259",
+        "name": "Mesa flexora",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 11
+          },
+          {
+            "reps": 3,
+            "weight": 31.5
+          },
+          {
+            "reps": 5,
+            "weight": 25
+          },
+          {
+            "reps": 11,
+            "weight": 18
+          },
+          {
+            "reps": 10,
+            "weight": 18
+          },
+          {
+            "reps": 6,
+            "weight": 11
+          }
+        ]
+      },
+      {
+        "id": "emlmhjw",
+        "name": "Stiff com barra",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 8,
+            "weight": 40
+          },
+          {
+            "reps": 9,
+            "weight": 40
+          },
+          {
+            "reps": 8,
+            "weight": 40
+          },
+          {
+            "reps": 10,
+            "weight": 40
+          }
+        ]
+      },
+      {
+        "id": "1ku7bk0",
+        "name": "Cadeira flexora",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 38.5
+          },
+          {
+            "reps": 10,
+            "weight": 38.5
+          },
+          {
+            "reps": 12,
+            "weight": 38.5
+          }
+        ]
+      },
+      {
+        "id": "evvkgr4",
+        "name": "Abdutora na máquina",
+        "category": "Glúteos",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 84
+          },
+          {
+            "reps": 12,
+            "weight": 93
+          },
+          {
+            "reps": 12,
+            "weight": 102
+          }
+        ]
+      },
+      {
+        "id": "8ndpecx",
+        "name": "Panturrilha sentado (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 36.5
+          },
+          {
+            "reps": 12,
+            "weight": 36.5
+          },
+          {
+            "reps": 13,
+            "weight": 36.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "s99k1fw",
+    "date": "2026-05-09",
+    "name": "Treino 2 - COSTAS + BÍCEPS",
+    "trainType": "A",
+    "exercises": [
+      {
+        "id": "rjgi66p",
+        "name": "Puxada alta com barra reta",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 25
+          },
+          {
+            "reps": 12,
+            "weight": 25
+          },
+          {
+            "reps": 22,
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "id": "3f3uy2p",
+        "name": "Remada baixa com triângulo",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 27
+          },
+          {
+            "reps": 12,
+            "weight": 27
+          },
+          {
+            "reps": 12,
+            "weight": 27
+          },
+          {
+            "reps": 10,
+            "weight": 27
+          }
+        ]
+      },
+      {
+        "id": "sb6oe3k",
+        "name": "Rosca 45° com halteres",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 6,
+            "weight": 6
+          },
+          {
+            "reps": 7,
+            "weight": 6
+          },
+          {
+            "reps": 8,
+            "weight": 5
+          },
+          {
+            "reps": 4,
+            "weight": 4
+          }
+        ]
+      },
+      {
+        "id": "nk6awx2",
+        "name": "Remada curvada com barra",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 25
+          },
+          {
+            "reps": 10,
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "id": "pmx6ad2",
+        "name": "Rosca Scott com barra W",
+        "category": "Bíceps",
+        "notes": "máquina",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 6,
+            "weight": 12.5
+          },
+          {
+            "reps": 7,
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "id": "r9vvw2b",
+        "name": "Rosca Scott com barra W",
+        "category": "Bíceps",
+        "notes": "barra",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          },
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      },
+      {
+        "id": "yksqggv",
+        "name": "Rosca inversa (barra)",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 9
+          },
+          {
+            "reps": 10,
+            "weight": 9
+          },
+          {
+            "reps": 10,
+            "weight": 9
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "x1ikoiq",
+    "date": "2026-05-06",
+    "name": "Treino 1 - PEITO + TRÍCEPS + OMBRO",
+    "trainType": "B",
+    "exercises": [
+      {
+        "id": "tctpgej",
+        "name": "Posterior de ombro no cross",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 5
+          },
+          {
+            "reps": 12,
+            "weight": 5
+          },
+          {
+            "reps": 12,
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "id": "pkdgei2",
+        "name": "Elevação lateral com halteres",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "id": "2bs74ir",
+        "name": "Desenvolvimento no aparelho",
+        "category": "Ombros",
+        "notes": "Drop na última série (10s de descanso)",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 4.5
+          },
+          {
+            "reps": 9,
+            "weight": 13.5
+          },
+          {
+            "reps": 7,
+            "weight": 13.5
+          },
+          {
+            "reps": 10,
+            "weight": 9
+          },
+          {
+            "reps": 7,
+            "weight": 4.5
+          }
+        ]
+      },
+      {
+        "id": "22bys0n",
+        "name": "Supino reto com halteres",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 7
+          },
+          {
+            "reps": 11,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "id": "p7g9551",
+        "name": "Tríceps na polia com corda",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 15
+          },
+          {
+            "reps": 12,
+            "weight": 15
+          },
+          {
+            "reps": 12,
+            "weight": 15
+          }
+        ]
+      },
+      {
+        "id": "imx3mai",
+        "name": "Tríceps francês no cross com corda",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "id": "vpz7evw",
+        "name": "Tríceps testa na polia unilateral",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 5
+          },
+          {
+            "reps": 12,
+            "weight": 5
+          },
+          {
+            "reps": 12,
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "id": "m11cjr8",
+        "name": "Crucifixo no cross (cabo baixo)",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 4.5
+          },
+          {
+            "reps": 10,
+            "weight": 4.5
+          },
+          {
+            "reps": 10,
+            "weight": 4.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "zlchdhp",
+    "date": "2026-05-05",
+    "name": "Treino 3 - QUADRÍCEPS",
+    "trainType": "C",
+    "exercises": [
+      {
+        "id": "9ezchhg",
+        "name": "Agachamento no smith",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 45
+          },
+          {
+            "reps": 8,
+            "weight": 50
+          },
+          {
+            "reps": 10,
+            "weight": 45
+          }
+        ]
+      },
+      {
+        "id": "8c4veqk",
+        "name": "Leg press 45°",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 11,
+            "weight": 180
+          },
+          {
+            "reps": 9,
+            "weight": 180
+          },
+          {
+            "reps": 9,
+            "weight": 180
+          }
+        ]
+      },
+      {
+        "id": "0id1ibz",
+        "name": "Extensora",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 38.5
+          },
+          {
+            "reps": 9,
+            "weight": 38.5
+          },
+          {
+            "reps": 19,
+            "weight": 38.5
+          }
+        ]
+      },
+      {
+        "id": "8vy2eyi",
+        "name": "Adutora na máquina",
+        "category": "Adutores / Abdutores",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 14,
+            "weight": 75
+          },
+          {
+            "reps": 14,
+            "weight": 75
+          },
+          {
+            "reps": 12,
+            "weight": 75
+          }
+        ]
+      },
+      {
+        "id": "jd0owz8",
+        "name": "Panturrilha sentado (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 45.5
+          },
+          {
+            "reps": 7,
+            "weight": 45.5
+          },
+          {
+            "reps": 9,
+            "weight": 45.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "nfimh24",
+    "date": "2026-05-01",
+    "name": "Treino 4 - SUPERIORES GERAL",
+    "trainType": "D",
+    "exercises": [
+      {
+        "id": "4et5l04",
+        "name": "Elevação lateral + frontal alternadas",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 4
+          },
+          {
+            "reps": 10,
+            "weight": 3
+          },
+          {
+            "reps": 10,
+            "weight": 4
+          },
+          {
+            "reps": 10,
+            "weight": 3
+          },
+          {
+            "reps": 10,
+            "weight": 4
+          },
+          {
+            "reps": 8,
+            "weight": 3
+          }
+        ]
+      },
+      {
+        "id": "6an69ud",
+        "name": "Rosca na corda",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "id": "tfebq4w",
+        "name": "Peck deck",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 8,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 14
+          },
+          {
+            "reps": 10,
+            "weight": 12
+          }
+        ]
+      },
+      {
+        "id": "3fbtyb9",
+        "name": "Supino reto com barra",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 11,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "id": "522g42i",
+        "name": "Remada serrote unilateral",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 12
+          },
+          {
+            "reps": 12,
+            "weight": 12
+          },
+          {
+            "reps": 12,
+            "weight": 12
+          }
+        ]
+      },
+      {
+        "id": "71h220x",
+        "name": "Remada baixa com barra",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 11,
+            "weight": 30
+          },
+          {
+            "reps": 10,
+            "weight": 30
+          }
+        ]
+      },
+      {
+        "id": "llkf7pe",
+        "name": "Encolhimento com barra (trapézio)",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          },
+          {
+            "reps": 12,
+            "weight": 15
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "n5tghjp",
+    "date": "2026-04-30",
+    "name": "Treino 5 - GLÚTEO/ POSTERIOR",
+    "trainType": "E",
+    "exercises": [
+      {
+        "id": "szgoon3",
+        "name": "Mesa flexora",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 15
+          },
+          {
+            "reps": 12,
+            "weight": 25
+          },
+          {
+            "reps": 10,
+            "weight": 30
+          },
+          {
+            "reps": 10,
+            "weight": 25
+          },
+          {
+            "reps": 7,
+            "weight": 15
+          }
+        ]
+      },
+      {
+        "id": "9rqk4oc",
+        "name": "Stiff com barra",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 35
+          },
+          {
+            "reps": 12,
+            "weight": 35
+          },
+          {
+            "reps": 12,
+            "weight": 30
+          }
+        ]
+      },
+      {
+        "id": "cje6o4v",
+        "name": "Leg press 45°",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 140
+          },
+          {
+            "reps": 10,
+            "weight": 140
+          },
+          {
+            "reps": 10,
+            "weight": 140
+          }
+        ]
+      },
+      {
+        "id": "ifqjfqo",
+        "name": "Panturrilha em pé (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 40
+          },
+          {
+            "reps": 10,
+            "weight": 40
+          },
+          {
+            "reps": 10,
+            "weight": 40
+          }
+        ]
+      },
+      {
+        "id": "ya7no9y",
+        "name": "Abdutora na máquina",
+        "category": "Glúteos",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 45
+          },
+          {
+            "reps": 12,
+            "weight": 50
+          },
+          {
+            "reps": 12,
+            "weight": 55
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "qwsxx1g",
+    "date": "2026-04-29",
+    "name": "Treino 1 - PEITO + TRÍCEPS + OMBRO",
+    "trainType": "B",
+    "exercises": [
+      {
+        "id": "endgunk",
+        "name": "Crucifixo no cross (cabo alto)",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 4,
+            "weight": 10
+          },
+          {
+            "reps": 8,
+            "weight": 6.5
+          },
+          {
+            "reps": 9,
+            "weight": 6.5
+          }
+        ]
+      },
+      {
+        "id": "8631vvb",
+        "name": "Posterior de ombro no cross",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 5
+          },
+          {
+            "reps": 12,
+            "weight": 5
+          },
+          {
+            "reps": 12,
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "id": "nz3m61x",
+        "name": "Elevação lateral com halteres",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 6,
+            "weight": 6
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "id": "mf123ws",
+        "name": "Desenvolvimento no aparelho",
+        "category": "Ombros",
+        "notes": "Drop na última série (10s de descanso)",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 15
+          },
+          {
+            "reps": 12,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          }
+        ]
+      },
+      {
+        "id": "p64f5id",
+        "name": "Supino reto com halteres",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 7
+          },
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "id": "uf1qwe9",
+        "name": "Tríceps na polia com corda",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 15
+          },
+          {
+            "reps": 7,
+            "weight": 20
+          },
+          {
+            "reps": 9,
+            "weight": 15
+          }
+        ]
+      },
+      {
+        "id": "g01uu7a",
+        "name": "Tríceps francês no cross com corda",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hcipe6j",
+    "date": "2026-04-27",
+    "name": "Treino 2 - COSTAS + BÍCEPS",
+    "trainType": "A",
+    "exercises": [
+      {
+        "id": "sr19t8r",
+        "name": "Puxada alta com barra reta",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 25
+          },
+          {
+            "reps": 10,
+            "weight": 25
+          },
+          {
+            "reps": 8,
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "id": "4gsevab",
+        "name": "Remada baixa com triângulo",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 25
+          },
+          {
+            "reps": 10,
+            "weight": 25
+          },
+          {
+            "reps": 10,
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "id": "pqu6u93",
+        "name": "Rosca Scott com barra W",
+        "category": "Bíceps",
+        "notes": "+ 10kg da barra",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 7,
+            "weight": 10
+          },
+          {
+            "reps": 9,
+            "weight": 10
+          },
+          {
+            "reps": 8,
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "id": "x1s363k",
+        "name": "Rosca 45° com halteres",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 4
+          },
+          {
+            "reps": 8,
+            "weight": 6
+          },
+          {
+            "reps": 6,
+            "weight": 7
+          },
+          {
+            "reps": 10,
+            "weight": 6
+          }
+        ]
+      },
+      {
+        "id": "zo41ee0",
+        "name": "Rosca Scott com barra W",
+        "category": "Bíceps",
+        "notes": "sentado com barra",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "id": "vmcon7n",
+        "name": "Remada curvada com barra",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 9,
+            "weight": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "vv8jg41",
+    "date": "2026-04-26",
+    "name": "Treino 3 - QUADRÍCEPS",
+    "trainType": "C",
+    "exercises": [
+      {
+        "id": "ntiv68w",
+        "name": "Agachamento no smith",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 11,
+            "weight": 50
+          },
+          {
+            "reps": 10,
+            "weight": 40
+          },
+          {
+            "reps": 10,
+            "weight": 40
+          }
+        ]
+      },
+      {
+        "id": "a01xlu6",
+        "name": "Leg press 45°",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 60
+          },
+          {
+            "reps": 10,
+            "weight": 180
+          },
+          {
+            "reps": 10,
+            "weight": 180
+          },
+          {
+            "reps": 12,
+            "weight": 160
+          }
+        ]
+      },
+      {
+        "id": "5lh0egm",
+        "name": "Extensora",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 31.5
+          },
+          {
+            "reps": 10,
+            "weight": 38.5
+          },
+          {
+            "reps": 13,
+            "weight": 38.5
+          }
+        ]
+      },
+      {
+        "id": "ecyht6p",
+        "name": "Adutora na máquina",
+        "category": "Adutores / Abdutores",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 75
+          },
+          {
+            "reps": 10,
+            "weight": 75
+          },
+          {
+            "reps": 10,
+            "weight": 75
+          }
+        ]
+      },
+      {
+        "id": "ro4hzzp",
+        "name": "Panturrilha em pé (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 41
+          },
+          {
+            "reps": 12,
+            "weight": 41
+          },
+          {
+            "reps": 12,
+            "weight": 41
+          }
+        ]
+      },
+      {
+        "id": "1hv9akm",
+        "name": "Agachamento sumo",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 24
+          },
+          {
+            "reps": 12,
+            "weight": 24
+          },
+          {
+            "reps": 12,
+            "weight": 24
+          },
+          {
+            "reps": 12,
+            "weight": 24
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fda2rv4",
+    "date": "2026-04-24",
+    "name": "Treino 4 - SUPERIORES GERAL",
+    "trainType": "D",
+    "exercises": [
+      {
+        "id": "a88ldlj",
+        "name": "Remada cavalinho",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "id": "8ri486u",
+        "name": "Elevação lateral + frontal alternadas",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 4
+          },
+          {
+            "reps": 10,
+            "weight": 3
+          },
+          {
+            "reps": 10,
+            "weight": 4
+          },
+          {
+            "reps": 10,
+            "weight": 3
+          },
+          {
+            "reps": 10,
+            "weight": 4
+          },
+          {
+            "reps": 7,
+            "weight": 3
+          }
+        ]
+      },
+      {
+        "id": "w5op3fv",
+        "name": "Rosca na corda",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 5,
+            "weight": 20
+          },
+          {
+            "reps": 5,
+            "weight": 15
+          },
+          {
+            "reps": 12,
+            "weight": 15
+          }
+        ]
+      },
+      {
+        "id": "vhc22u4",
+        "name": "Supino reto com halteres",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 7
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "id": "r3al3y0",
+        "name": "Peck deck",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "7wamtvi",
+    "date": "2026-04-23",
+    "name": "Treino 5 - GLÚTEO/ POSTERIOR",
+    "trainType": "E",
+    "exercises": [
+      {
+        "id": "trs1jbo",
+        "name": "Stiff com barra",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 35
+          },
+          {
+            "reps": 10,
+            "weight": 35
+          },
+          {
+            "reps": 10,
+            "weight": 29
+          }
+        ]
+      },
+      {
+        "id": "bdlab7c",
+        "name": "Leg press 45°",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 120
+          },
+          {
+            "reps": 10,
+            "weight": 90
+          },
+          {
+            "reps": 10,
+            "weight": 80
+          }
+        ]
+      },
+      {
+        "id": "2pwuphz",
+        "name": "Panturrilha em pé (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 22,
+            "weight": 20
+          },
+          {
+            "reps": 20,
+            "weight": 30
+          },
+          {
+            "reps": 20,
+            "weight": 30
+          }
+        ]
+      },
+      {
+        "id": "rr07ekr",
+        "name": "Abdutora na máquina",
+        "category": "Glúteos",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 70
+          },
+          {
+            "reps": 12,
+            "weight": 70
+          },
+          {
+            "reps": 12,
+            "weight": 70
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "xfmdbp7",
+    "date": "2026-04-22",
+    "name": "Treino 1 - PEITO + TRÍCEPS + OMBRO",
+    "trainType": "B",
+    "exercises": [
+      {
+        "id": "l0h54bj",
+        "name": "Supino inclinado com halteres",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 7
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 9
+          },
+          {
+            "reps": 12,
+            "weight": 9
+          }
+        ]
+      },
+      {
+        "id": "fxxlic2",
+        "name": "Crucifixo no cross (cabo alto)",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 4,
+            "weight": 10
+          },
+          {
+            "reps": 8,
+            "weight": 6.5
+          },
+          {
+            "reps": 9,
+            "weight": 6.5
+          }
+        ]
+      },
+      {
+        "id": "yl7mghh",
+        "name": "Posterior de ombro no cross",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 6
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 12,
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "id": "n79i4cj",
+        "name": "Elevação lateral com halteres",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 12,
+            "weight": 4
+          },
+          {
+            "reps": 12,
+            "weight": 4
+          }
+        ]
+      },
+      {
+        "id": "ffa7n4h",
+        "name": "Desenvolvimento no aparelho",
+        "category": "Ombros",
+        "notes": "Drop na última série (10s de descanso)",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 8
+          },
+          {
+            "reps": 10,
+            "weight": 8
+          },
+          {
+            "reps": 12,
+            "weight": 7
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tpm2323",
+    "date": "2026-04-21",
+    "name": "Treino 2 - COSTAS + BÍCEPS",
+    "trainType": "A",
+    "exercises": [
+      {
+        "id": "6vor4l9",
+        "name": "Puxada alta com barra reta",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 25
+          },
+          {
+            "reps": 12,
+            "weight": 25
+          },
+          {
+            "reps": 12,
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "id": "dzoccn3",
+        "name": "Remada baixa com triângulo",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 25
+          },
+          {
+            "reps": 12,
+            "weight": 25
+          },
+          {
+            "reps": 12,
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "id": "26uga17",
+        "name": "Rosca Scott com barra W",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 7,
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "id": "z5iyu17",
+        "name": "Rosca 45° com halteres",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 7
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "id": "ivlfsh9",
+        "name": "Rosca Scott com barra W",
+        "category": "Bíceps",
+        "notes": "máquina",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 5,
+            "weight": 15
+          },
+          {
+            "reps": 5,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 8,
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "id": "rfis6np",
+        "name": "Remada curvada com barra",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "b1y9qk7",
+    "date": "2026-04-19",
+    "name": "Treino 3 - QUADRÍCEPS",
+    "trainType": "C",
+    "exercises": [
+      {
+        "id": "rgat72d",
+        "name": "Agachamento no smith",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 20
+          },
+          {
+            "reps": 12,
+            "weight": 34
+          },
+          {
+            "reps": 10,
+            "weight": 40
+          },
+          {
+            "reps": 10,
+            "weight": 44
+          }
+        ]
+      },
+      {
+        "id": "8z1nt83",
+        "name": "Leg press 45°",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 140
+          },
+          {
+            "reps": 12,
+            "weight": 140
+          },
+          {
+            "reps": 10,
+            "weight": 140
+          }
+        ]
+      },
+      {
+        "id": "4xfodyy",
+        "name": "Extensora",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 29
+          },
+          {
+            "reps": 12,
+            "weight": 29
+          },
+          {
+            "reps": 19,
+            "weight": 31.5
+          }
+        ]
+      },
+      {
+        "id": "3gmps1c",
+        "name": "Adutora na máquina",
+        "category": "Adutores / Abdutores",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 18
+          },
+          {
+            "reps": 10,
+            "weight": 18
+          },
+          {
+            "reps": 10,
+            "weight": 18
+          }
+        ]
+      },
+      {
+        "id": "tf4c5nc",
+        "name": "Panturrilha em pé (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 40
+          },
+          {
+            "reps": 12,
+            "weight": 40
+          },
+          {
+            "reps": 12,
+            "weight": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "jilol2f",
+    "date": "2026-04-18",
+    "name": "Treino 4 - SUPERIORES GERAL",
+    "trainType": "D",
+    "exercises": [
+      {
+        "id": "6af9ik5",
+        "name": "Remada cavalinho",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "id": "2fe3qkx",
+        "name": "Elevação lateral + frontal alternadas",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 4
+          },
+          {
+            "reps": 10,
+            "weight": 3
+          },
+          {
+            "reps": 10,
+            "weight": 4
+          },
+          {
+            "reps": 8,
+            "weight": 3
+          },
+          {
+            "reps": 10,
+            "weight": 4
+          },
+          {
+            "reps": 7,
+            "weight": 3
+          }
+        ]
+      },
+      {
+        "id": "4q5i218",
+        "name": "Rosca na corda",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "id": "64tg77n",
+        "name": "Supino reto com halteres",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 8
+          },
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "id": "gdz6zsu",
+        "name": "Remada baixa com barra",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 23
+          },
+          {
+            "reps": 12,
+            "weight": 23
+          },
+          {
+            "reps": 12,
+            "weight": 23
+          }
+        ]
+      },
+      {
+        "id": "wpxbxep",
+        "name": "Peck deck",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 15
+          },
+          {
+            "reps": 8,
+            "weight": 15
+          },
+          {
+            "reps": 12,
+            "weight": 15
+          },
+          {
+            "reps": 8,
+            "weight": 15
+          },
+          {
+            "reps": 8,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          }
+        ]
+      },
+      {
+        "id": "52hf3cq",
+        "name": "Encolhimento com barra (trapézio)",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 14
+          },
+          {
+            "reps": 12,
+            "weight": 14
+          },
+          {
+            "reps": 10,
+            "weight": 14
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "acowff9",
+    "date": "2026-04-15",
+    "name": "Treino 5 - GLÚTEO/ POSTERIOR",
+    "trainType": "E",
+    "exercises": [
+      {
+        "id": "3tpw6ye",
+        "name": "Mesa flexora",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 15
+          },
+          {
+            "reps": 12,
+            "weight": 20
+          },
+          {
+            "reps": 12,
+            "weight": 25
+          },
+          {
+            "reps": 12,
+            "weight": 25
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          }
+        ]
+      },
+      {
+        "id": "lhgh648",
+        "name": "Stiff com barra",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 40
+          },
+          {
+            "reps": 10,
+            "weight": 40
+          },
+          {
+            "reps": 10,
+            "weight": 30
+          }
+        ]
+      },
+      {
+        "id": "6ilyet1",
+        "name": "Leg press 45°",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 40
+          },
+          {
+            "reps": 12,
+            "weight": 70
+          },
+          {
+            "reps": 12,
+            "weight": 60
+          }
+        ]
+      },
+      {
+        "id": "kcnnsvr",
+        "name": "Panturrilha em pé (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 18,
+            "weight": 40
+          },
+          {
+            "reps": 18,
+            "weight": 40
+          },
+          {
+            "reps": 18,
+            "weight": 40
+          }
+        ]
+      },
+      {
+        "id": "0nnwr1v",
+        "name": "Abdutora na máquina",
+        "category": "Glúteos",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 40
+          },
+          {
+            "reps": 12,
+            "weight": 45
+          },
+          {
+            "reps": 12,
+            "weight": 45
+          }
+        ]
+      },
+      {
+        "id": "n7g3w66",
+        "name": "Cadeira flexora",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 38.5
+          },
+          {
+            "reps": "",
+            "weight": ""
+          },
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "tpk19xx",
+    "date": "2026-04-15",
+    "name": "Treino 2 - COSTAS + BÍCEPS",
+    "trainType": "A",
+    "exercises": [
+      {
+        "id": "gpkd8jf",
+        "name": "Puxada alta com barra reta",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 31.5
+          },
+          {
+            "reps": 12,
+            "weight": 25
+          },
+          {
+            "reps": 18,
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "id": "9lwmrzd",
+        "name": "Remada baixa com triângulo",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 31.5
+          },
+          {
+            "reps": 12,
+            "weight": 31.5
+          },
+          {
+            "reps": 178,
+            "weight": 31.5
+          }
+        ]
+      },
+      {
+        "id": "3ijwecm",
+        "name": "Rosca Scott com barra W",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 15
+          },
+          {
+            "reps": 12,
+            "weight": 15
+          },
+          {
+            "reps": 12,
+            "weight": 15
+          }
+        ]
+      },
+      {
+        "id": "kdjmz2r",
+        "name": "Rosca 45° com halteres",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 6
+          },
+          {
+            "reps": 10,
+            "weight": 6
+          },
+          {
+            "reps": 8,
+            "weight": 3
+          }
+        ]
+      },
+      {
+        "id": "jgc6d0x",
+        "name": "Pullover com corda na polia",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 12,
+            "weight": 25
+          },
+          {
+            "reps": 12,
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "id": "8ygolrd",
+        "name": "Rosca inversa (barra)",
+        "category": "Antebraço",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "id": "xfariog",
+        "name": "Remada curvada com barra",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 30
+          },
+          {
+            "reps": 10,
+            "weight": 30
+          },
+          {
+            "reps": 10,
+            "weight": 30
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "k9oxt8c",
+    "date": "2026-04-12",
+    "name": "Treino 1 - PEITO + TRÍCEPS + OMBRO",
+    "trainType": "B",
+    "exercises": [
+      {
+        "id": "9fxjcob",
+        "name": "Supino inclinado com halteres",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 7
+          },
+          {
+            "reps": 12,
+            "weight": 9
+          },
+          {
+            "reps": 12,
+            "weight": 9
+          },
+          {
+            "reps": 10,
+            "weight": 9
+          }
+        ]
+      },
+      {
+        "id": "p3y3r5n",
+        "name": "Crucifixo no cross (cabo alto)",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "id": "qdkld9v",
+        "name": "Posterior de ombro no cross",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 5
+          },
+          {
+            "reps": 12,
+            "weight": 5
+          },
+          {
+            "reps": 12,
+            "weight": 4.5
+          }
+        ]
+      },
+      {
+        "id": "fjxmp65",
+        "name": "Elevação lateral com halteres",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 12,
+            "weight": 4
+          }
+        ]
+      },
+      {
+        "id": "e8gnwoz",
+        "name": "Tríceps na polia com corda",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 15
+          },
+          {
+            "reps": 12,
+            "weight": 15
+          },
+          {
+            "reps": 12,
+            "weight": 15
+          }
+        ]
+      },
+      {
+        "id": "8lef6nl",
+        "name": "Desenvolvimento no aparelho",
+        "category": "Ombros",
+        "notes": "Drop na última série (10s de descanso)",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 4.5
+          },
+          {
+            "reps": 10,
+            "weight": 9
+          },
+          {
+            "reps": 12,
+            "weight": 9
+          },
+          {
+            "reps": 10,
+            "weight": 9
+          },
+          {
+            "reps": 8,
+            "weight": 4.5
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bwgwupf",
+    "date": "2026-04-11",
+    "name": "Treino 3 - QUADRÍCEPS",
+    "trainType": "C",
+    "exercises": [
+      {
+        "id": "lg1tnz4",
+        "name": "Agachamento no smith",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 20
+          },
+          {
+            "reps": 12,
+            "weight": 35
+          },
+          {
+            "reps": 12,
+            "weight": 45
+          },
+          {
+            "reps": 12,
+            "weight": 42.5
+          }
+        ]
+      },
+      {
+        "id": "239ubhd",
+        "name": "Leg press 45°",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 180
+          },
+          {
+            "reps": 10,
+            "weight": 180
+          },
+          {
+            "reps": 12,
+            "weight": 170
+          }
+        ]
+      },
+      {
+        "id": "mwdh1lm",
+        "name": "Extensora",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 31.5
+          },
+          {
+            "reps": 12,
+            "weight": 31.5
+          },
+          {
+            "reps": 19,
+            "weight": 31.5
+          }
+        ]
+      },
+      {
+        "id": "37lx50h",
+        "name": "Panturrilha sentado (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 36.5
+          },
+          {
+            "reps": 15,
+            "weight": 36.5
+          },
+          {
+            "reps": 15,
+            "weight": 36.5
+          }
+        ]
+      },
+      {
+        "id": "np3spvv",
+        "name": "Abdutora na máquina",
+        "category": "Adutores / Abdutores",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 84
+          },
+          {
+            "reps": 12,
+            "weight": 93
+          },
+          {
+            "reps": 10,
+            "weight": 84
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2pyz3sq",
+    "date": "2026-04-10",
+    "name": "Treino 4 - SUPERIORES GERAL",
+    "trainType": "D",
+    "exercises": [
+      {
+        "id": "1pgx2qp",
+        "name": "Desenvolvimento com halteres",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 7
+          },
+          {
+            "reps": 12,
+            "weight": 7
+          },
+          {
+            "reps": 12,
+            "weight": 7
+          }
+        ]
+      },
+      {
+        "id": "xqba3nw",
+        "name": "Posterior de ombro no cross",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 5
+          },
+          {
+            "reps": 12,
+            "weight": 5
+          },
+          {
+            "reps": 12,
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "id": "whop5kn",
+        "name": "Tríceps na polia com corda",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 15
+          },
+          {
+            "reps": 12,
+            "weight": 15
+          },
+          {
+            "reps": 12,
+            "weight": 15
+          }
+        ]
+      },
+      {
+        "id": "mn7slx2",
+        "name": "Remada cavalinho",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "id": "z3houic",
+        "name": "Elevação lateral + frontal alternadas",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 4
+          },
+          {
+            "reps": 10,
+            "weight": 3
+          },
+          {
+            "reps": 10,
+            "weight": 4
+          },
+          {
+            "reps": 10,
+            "weight": 3
+          },
+          {
+            "reps": 10,
+            "weight": 4
+          },
+          {
+            "reps": 7,
+            "weight": 3
+          }
+        ]
+      },
+      {
+        "id": "i4auwrg",
+        "name": "Rosca na corda",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 20
+          },
+          {
+            "reps": 12,
+            "weight": 20
+          },
+          {
+            "reps": 12,
+            "weight": 20
+          }
+        ]
+      },
+      {
+        "id": "oxujdmf",
+        "name": "Encolhimento com barra (trapézio)",
+        "category": "Ombros",
+        "notes": "Remada alta",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          },
+          {
+            "reps": 12,
+            "weight": 15
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fir3ywt",
+    "date": "2026-04-09",
+    "name": "Treino 5 - GLÚTEO/ POSTERIOR",
+    "trainType": "E",
+    "exercises": [
+      {
+        "id": "oh72cuf",
+        "name": "Mesa flexora",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 18
+          },
+          {
+            "reps": 10,
+            "weight": 25
+          },
+          {
+            "reps": 12,
+            "weight": 18
+          }
+        ]
+      },
+      {
+        "id": "d3do41y",
+        "name": "Stiff com barra",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 30
+          },
+          {
+            "reps": 12,
+            "weight": 30
+          },
+          {
+            "reps": 10,
+            "weight": 30
+          }
+        ]
+      },
+      {
+        "id": "8rjn703",
+        "name": "Leg press 45°",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 70
+          },
+          {
+            "reps": 12,
+            "weight": 65
+          },
+          {
+            "reps": 12,
+            "weight": 60
+          }
+        ]
+      },
+      {
+        "id": "gjasro6",
+        "name": "Panturrilha em pé (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 31.5
+          },
+          {
+            "reps": 12,
+            "weight": 38.5
+          },
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      },
+      {
+        "id": "h88i8e8",
+        "name": "Abdutora na máquina",
+        "category": "Glúteos",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 84
+          },
+          {
+            "reps": 12,
+            "weight": 84
+          },
+          {
+            "reps": 12,
+            "weight": 84
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "01d8o1x",
+    "date": "2026-04-06",
+    "name": "Treino 1 - PEITO + TRÍCEPS + OMBRO",
+    "trainType": "B",
+    "exercises": [
+      {
+        "id": "jmklt49",
+        "name": "Supino inclinado com halteres",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 7
+          },
+          {
+            "reps": 12,
+            "weight": 9
+          },
+          {
+            "reps": 12,
+            "weight": 9
+          },
+          {
+            "reps": 12,
+            "weight": 9
+          }
+        ]
+      },
+      {
+        "id": "s5lg65o",
+        "name": "Crucifixo no cross (cabo alto)",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 9
+          },
+          {
+            "reps": 12,
+            "weight": 9
+          },
+          {
+            "reps": 12,
+            "weight": 9
+          }
+        ]
+      },
+      {
+        "id": "cpvxg9v",
+        "name": "Posterior de ombro no cross",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 4.5
+          },
+          {
+            "reps": 12,
+            "weight": 4.5
+          },
+          {
+            "reps": 12,
+            "weight": 4.5
+          }
+        ]
+      },
+      {
+        "id": "euxr34g",
+        "name": "Elevação lateral com halteres",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 12,
+            "weight": 4
+          }
+        ]
+      },
+      {
+        "id": "njmtpr6",
+        "name": "Tríceps testa na polia unilateral",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 4.5
+          },
+          {
+            "reps": 12,
+            "weight": 4.5
+          },
+          {
+            "reps": 12,
+            "weight": 4.5
+          }
+        ]
+      },
+      {
+        "id": "jtyd6aq",
+        "name": "Tríceps na polia com corda",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 13.5
+          },
+          {
+            "reps": 10,
+            "weight": 18
+          },
+          {
+            "reps": 8,
+            "weight": 18
+          }
+        ]
+      },
+      {
+        "id": "fg3wlat",
+        "name": "Desenvolvimento no aparelho",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 9
+          },
+          {
+            "reps": 10,
+            "weight": 9
+          },
+          {
+            "reps": 10,
+            "weight": 9
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "um42ql1",
+    "date": "2026-04-04",
+    "name": "Treino 3 - QUADRÍCEPS",
+    "trainType": "C",
+    "exercises": [
+      {
+        "id": "eau3zk8",
+        "name": "Agachamento no smith",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 25
+          },
+          {
+            "reps": 12,
+            "weight": 35
+          },
+          {
+            "reps": 12,
+            "weight": 40
+          },
+          {
+            "reps": 12,
+            "weight": 45
+          }
+        ]
+      },
+      {
+        "id": "s8zq9jn",
+        "name": "Leg press 45°",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 160
+          },
+          {
+            "reps": 12,
+            "weight": 160
+          },
+          {
+            "reps": 12,
+            "weight": 140
+          }
+        ]
+      },
+      {
+        "id": "a5z4z4b",
+        "name": "Extensora",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 59
+          },
+          {
+            "reps": 12,
+            "weight": 52
+          },
+          {
+            "reps": 12,
+            "weight": 32.5
+          }
+        ]
+      },
+      {
+        "id": "yfzanvy",
+        "name": "Panturrilha sentado (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 31.5
+          },
+          {
+            "reps": 15,
+            "weight": 31.5
+          },
+          {
+            "reps": 15,
+            "weight": 31.5
+          }
+        ]
+      },
+      {
+        "id": "ila3qwf",
+        "name": "Abdutora na máquina",
+        "category": "Adutores / Abdutores",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 93
+          },
+          {
+            "reps": 12,
+            "weight": 93
+          },
+          {
+            "reps": 10,
+            "weight": 84
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "vktrp0r",
+    "date": "2026-04-06",
+    "name": "Treino 2 - COSTAS + BÍCEPS",
+    "trainType": "A",
+    "exercises": [
+      {
+        "id": "g5lgcbg",
+        "name": "Puxada alta com barra reta",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 25
+          },
+          {
+            "reps": 10,
+            "weight": 31.5
+          },
+          {
+            "reps": 10,
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "id": "e0noep8",
+        "name": "Remada baixa com triângulo",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 31.5
+          },
+          {
+            "reps": 12,
+            "weight": 31.5
+          },
+          {
+            "reps": 12,
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "id": "ni3okzg",
+        "name": "Rosca Scott com barra W",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 15
+          },
+          {
+            "reps": 12,
+            "weight": 15
+          },
+          {
+            "reps": 12,
+            "weight": 15
+          }
+        ]
+      },
+      {
+        "id": "3g7wqgh",
+        "name": "Rosca 45° com halteres",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 6
+          },
+          {
+            "reps": 12,
+            "weight": 5
+          },
+          {
+            "reps": 12,
+            "weight": 5
+          },
+          {
+            "reps": 12,
+            "weight": 4
+          }
+        ]
+      },
+      {
+        "id": "9q501lg",
+        "name": "Pullover com corda na polia",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 22.5
+          },
+          {
+            "reps": 12,
+            "weight": 27
+          },
+          {
+            "reps": 12,
+            "weight": 27
+          }
+        ]
+      },
+      {
+        "id": "bebveds",
+        "name": "Rosca inversa (barra)",
+        "category": "Antebraço",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 9
+          },
+          {
+            "reps": 10,
+            "weight": 9
+          },
+          {
+            "reps": 10,
+            "weight": 9
+          }
+        ]
+      }
+    ]
+  }
+]
