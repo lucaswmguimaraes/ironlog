@@ -170,6 +170,7 @@ export default function App(){
   const { profile, selectProfile, getPAT, setPAT, getConfig, saveConfig } = useProfile();
   const { loadFromGitHub, saveToGitHub } = useGitHubStorage();
   const syncTimer = useRef(null);
+  const isLoadingFromGitHub = useRef(false);
 
   const [sessions, setSessions] = useState(() => {
     if (!profile) return [];
@@ -200,34 +201,41 @@ export default function App(){
   const [showSettings, setShowSettings] = useState(false);
   const prevTab = useRef("home");
 
-  // Persist to localStorage — nunca sobrescreve dados existentes com array vazio
+  // Persist to localStorage
   useEffect(() => {
     if (!profile) return;
     if (sessions.length === 0) {
-      // Não sobrescreve se já havia dados salvos
       const existing = localStorage.getItem(`wkv3_${profile.id}`);
       if (existing && existing !== "[]" && existing !== "null") return;
     }
     try { localStorage.setItem(`wkv3_${profile.id}`, JSON.stringify(sessions)); } catch {}
   }, [sessions, profile?.id]);
 
-  // Load from GitHub on profile select
+  // Load from GitHub on profile mount — flag blocks save during load
   useEffect(() => {
     if (!profile) return;
     const pat = getPAT(profile.id);
     if (!pat) return;
+    isLoadingFromGitHub.current = true;
     loadFromGitHub(profile.id, pat).then((data) => {
       if (data && data.length > 0) setSessions(data);
+      // Small delay to ensure setSessions render completes before allowing saves
+      setTimeout(() => { isLoadingFromGitHub.current = false; }, 500);
     });
   }, [profile?.id]);
 
-  // Sync to GitHub — salva imediatamente após qualquer mudança
+  // Sync to GitHub — only when user makes changes, not during load
   useEffect(() => {
     if (!profile) return;
     if (sessions.length === 0) return;
+    if (isLoadingFromGitHub.current) return;
     const pat = getPAT(profile.id);
     if (!pat) return;
-    saveToGitHub(profile.id, sessions, pat);
+    clearTimeout(syncTimer.current);
+    syncTimer.current = setTimeout(() => {
+      saveToGitHub(profile.id, sessions, pat);
+    }, 1500);
+    return () => clearTimeout(syncTimer.current);
   }, [sessions, profile?.id]);
 
   // Export/import for ProfileSettings
