@@ -1,1 +1,62 @@
-[]
+[
+  {
+    "id": "a5cvgmt",
+    "date": "2026-05-29",
+    "name": "Treino A",
+    "trainType": "A",
+    "exercises": [
+      {
+        "id": "ub8wr4v",
+        "name": "Pullover com halteres",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          },
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      },
+      {
+        "id": "l2hrbxf",
+        "name": "Rosca concentrada",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      },
+      {
+        "id": "yrwj7vg",
+        "name": "Rosca 45° com halteres",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      },
+      {
+        "id": "85ooisn",
+        "name": "Rosca 45° com halteres",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      }
+    ]
+  }
+]
