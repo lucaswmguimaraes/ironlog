@@ -1,12 +1,12 @@
 [
   {
-    "id": "j9j0m7n",
-    "date": "2026-05-28",
+    "id": "u6ilpj4",
+    "date": "2026-05-29",
     "name": "Treino B",
     "trainType": "B",
     "exercises": [
       {
-        "id": "3u7ugl9",
+        "id": "7ytf17s",
         "name": "Supino reto com barra",
         "category": "Peito",
         "notes": "",
@@ -18,8 +18,8 @@
         ]
       },
       {
-        "id": "zeeqo4j",
-        "name": "Supino declinado com barra",
+        "id": "ooe8jac",
+        "name": "Crucifixo inclinado com halteres",
         "category": "Peito",
         "notes": "",
         "sets": [
@@ -28,43 +28,11 @@
             "weight": ""
           }
         ]
-      }
-    ]
-  },
-  {
-    "id": "yncu8tc",
-    "date": "2026-05-29",
-    "name": "Treino C",
-    "trainType": "C",
-    "exercises": [
-      {
-        "id": "9xiad8r",
-        "name": "Agachamento búlgaro com barra",
-        "category": "Quadríceps",
-        "notes": "",
-        "sets": [
-          {
-            "reps": "",
-            "weight": ""
-          }
-        ]
       },
       {
-        "id": "myl54px",
-        "name": "Leg press horizontal",
-        "category": "Quadríceps",
-        "notes": "",
-        "sets": [
-          {
-            "reps": "",
-            "weight": ""
-          }
-        ]
-      },
-      {
-        "id": "6ida0tz",
-        "name": "Afundo",
-        "category": "Quadríceps",
+        "id": "fepz8lz",
+        "name": "Pullover com halteres",
+        "category": "Peito",
         "notes": "",
         "sets": [
           {
