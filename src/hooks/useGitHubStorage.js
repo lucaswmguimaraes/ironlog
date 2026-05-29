@@ -1,18 +1,17 @@
 // src/hooks/useGitHubStorage.js
-import { useCallback } from "react";
+import { useCallback, useRef } from "react";
 
 const REPO_OWNER = "lucaswmguimaraes";
 const REPO_NAME = "ironlog";
 const BRANCH = "main";
 
-const shaKey = (profileId) => `ironlog_sha_${profileId}`;
 const logKey = "ironlog_sync_log";
 
 function addLog(msg) {
   try {
     const logs = JSON.parse(localStorage.getItem(logKey) || "[]");
     const now = new Date(); const h = String(now.getHours()).padStart(2,'0'); const m = String(now.getMinutes()).padStart(2,'0'); const s = String(now.getSeconds()).padStart(2,'0'); logs.unshift(`${h}:${m}:${s} ${msg}`);
-    localStorage.setItem(logKey, JSON.stringify(logs.slice(0, 30)));
+    localStorage.setItem(logKey, JSON.stringify(logs.slice(0, 50)));
   } catch {}
 }
 
@@ -32,6 +31,11 @@ function decodeContent(b64) {
 }
 
 export function useGitHubStorage() {
+  // savingRef: impede dois saves simultâneos. Se um save já está em andamento,
+  // o próximo aguarda ele terminar antes de começar.
+  const savingRef = useRef(false);
+  const pendingRef = useRef(null); // última sessão pendente enquanto save está em curso
+
   const getHeaders = (pat) => ({
     Authorization: `token ${pat}`,
     "Content-Type": "application/json",
@@ -43,13 +47,12 @@ export function useGitHubStorage() {
     try {
       addLog(`LOAD ${profileId}: iniciando`);
       const res = await fetch(
-        `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/data/${profileId}.json?ref=${BRANCH}`,
-        { headers: getHeaders(pat) }
+        `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/data/${profileId}.json?ref=${BRANCH}&t=${Date.now()}`,
+        { headers: getHeaders(pat), cache: "no-store" }
       );
       if (res.status === 404) { addLog(`LOAD ${profileId}: 404`); return []; }
       if (!res.ok) { addLog(`LOAD ${profileId}: erro HTTP ${res.status}`); return null; }
       const json = await res.json();
-      localStorage.setItem(shaKey(profileId), json.sha);
       const data = decodeContent(json.content);
       addLog(`LOAD ${profileId}: ok, ${data.length} treinos, sha=${json.sha.slice(0,7)}`);
       return data;
@@ -59,21 +62,21 @@ export function useGitHubStorage() {
     }
   }, []);
 
-  const saveToGitHub = useCallback(async (profileId, sessions, pat) => {
-    if (!pat) { addLog(`SAVE ${profileId}: sem PAT`); return false; }
+  const doSave = useCallback(async (profileId, sessions, pat) => {
     try {
-      // Sempre busca o SHA mais recente do GitHub antes de salvar
+      // Sempre busca SHA atual do GitHub — fonte da verdade
+      addLog(`SAVE ${profileId}: ${sessions.length} treinos, buscando sha atual`);
       const headRes = await fetch(
-        `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/data/${profileId}.json?ref=${BRANCH}`,
-        { headers: getHeaders(pat) }
+        `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/data/${profileId}.json?ref=${BRANCH}&t=${Date.now()}`,
+        { headers: getHeaders(pat), cache: "no-store" }
       );
-      let sha = localStorage.getItem(shaKey(profileId));
+      let sha = null;
       if (headRes.ok) {
         const headJson = await headRes.json();
         sha = headJson.sha;
-        localStorage.setItem(shaKey(profileId), sha);
       }
-      addLog(`SAVE ${profileId}: ${sessions.length} treinos, sha=${sha ? sha.slice(0,7) : "NENHUM"}`);
+      addLog(`SAVE ${profileId}: sha atual=${sha ? sha.slice(0,7) : "NENHUM (arquivo novo)"}`);
+
       const content = encodeContent(sessions);
       const body = {
         message: `chore: sync ${profileId} sessions`,
@@ -91,7 +94,6 @@ export function useGitHubStorage() {
         return false;
       }
       const json = await res.json();
-      localStorage.setItem(shaKey(profileId), json.content.sha);
       addLog(`SAVE ${profileId}: ok, novo sha=${json.content.sha.slice(0,7)}`);
       return true;
     } catch (e) {
@@ -99,6 +101,33 @@ export function useGitHubStorage() {
       return false;
     }
   }, []);
+
+  const saveToGitHub = useCallback(async (profileId, sessions, pat) => {
+    if (!pat) { addLog(`SAVE ${profileId}: sem PAT`); return false; }
+
+    // Se já há um save em andamento, registra como pendente e aguarda
+    if (savingRef.current) {
+      addLog(`SAVE ${profileId}: save em andamento, registrando como pendente`);
+      pendingRef.current = { profileId, sessions, pat };
+      return false;
+    }
+
+    savingRef.current = true;
+    pendingRef.current = null;
+
+    const result = await doSave(profileId, sessions, pat);
+    savingRef.current = false;
+
+    // Se chegou uma requisição pendente durante o save, executa agora
+    if (pendingRef.current) {
+      const p = pendingRef.current;
+      pendingRef.current = null;
+      addLog(`SAVE ${p.profileId}: executando save pendente (${p.sessions.length} treinos)`);
+      saveToGitHub(p.profileId, p.sessions, p.pat);
+    }
+
+    return result;
+  }, [doSave]);
 
   return { loadFromGitHub, saveToGitHub };
 }
