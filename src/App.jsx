@@ -239,24 +239,6 @@ export default function App(){
     });
   }, [profile?.id]);
 
-  // Re-sync from GitHub when app returns to foreground (PWA resume)
-  useEffect(() => {
-    const onVisible = () => {
-      if (document.visibilityState === "visible" && profile) {
-        const pat = getPAT(profile.id);
-        if (!pat) return;
-        appLog(`RESUME ${profile.id}: app voltou ao foreground, recarregando GitHub`);
-        userChangedRef.current = false;
-        loadFromGitHub(profile.id, pat).then((data) => {
-          appLog(`RESUME ${profile.id}: resultado=${data === null ? "null" : data.length + " treinos"}`);
-          if (data !== null) setSessions(data);
-          setTimeout(() => { userChangedRef.current = false; }, 0);
-        });
-      }
-    };
-    document.addEventListener("visibilitychange", onVisible);
-    return () => document.removeEventListener("visibilitychange", onVisible);
-  }, [profile?.id]);
 
   // Sync to GitHub — só salva se foi o usuário que mudou os dados
   useEffect(() => {
