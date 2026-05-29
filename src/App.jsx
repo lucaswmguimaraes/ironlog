@@ -16,6 +16,8 @@ import { useGitHubStorage } from "./hooks/useGitHubStorage";
 import { useProfile } from "./hooks/useProfile";
 import { ProfileSetup } from "./components/ProfileSetup";
 import { GitHubSetup } from "./components/GitHubSetup";
+import { AnalysisTab } from "./components/AnalysisTab";
+import { ProfileSettings } from "./components/ProfileSettings";
 
 // ── INITIAL DATA ───────────────────────────────────────────────────────────────
 const INITIAL_SESSIONS_LUCAS = [
@@ -153,6 +155,7 @@ export default function App(){
   const [histEx, setHistEx] = useState(null);
   const [swapEx, setSwapEx] = useState(null);
   const [calYear, setCalYear] = useState(new Date().getFullYear());
+  const [showSettings, setShowSettings] = useState(false);
   const prevTab = useRef("home");
 
   // Persist to localStorage
@@ -266,6 +269,21 @@ export default function App(){
 
   const profileConfig = getConfig(profile.id);
 
+  if (showSettings) return (
+    <div style={{ background: C.bg, minHeight: "100vh" }}>
+      <div style={S.grain} />
+      <ProfileSettings
+        profileId={profile.id}
+        profileName={profile.name}
+        currentConfig={profileConfig}
+        currentPAT={getPAT(profile.id)}
+        onSave={(config) => { saveConfig(profile.id, { ...config, completedOnboarding: true }); setShowSettings(false); }}
+        onSavePAT={(pat) => setPAT(profile.id, pat)}
+        onBack={() => setShowSettings(false)}
+      />
+    </div>
+  );
+
   if (tab === "session" && activeSession) return (
     <SessionView session={activeSession} isNew={false}
       onSave={s => { saveSession(s); setTab("home"); }}
@@ -301,6 +319,7 @@ export default function App(){
             <button style={{ ...S.profileChip, borderColor: `${profile.color}66`, color: profile.color }} onClick={handleSwitchProfile}>
               {profile.emoji} {profile.name} ↩
             </button>
+            <button style={{ background: "none", border: "none", color: C.sub, fontSize: 18, cursor: "pointer", padding: "4px 6px" }} onClick={() => setShowSettings(true)}>⚙️</button>
             <button style={S.newBtn} onClick={() => goTo("new-session")}>+ Treino</button>
           </div>
         </div>
@@ -555,82 +574,6 @@ function CalTab({ sessions, year, setYear, onOpen }) {
           <SC icon="🔥" label="Streak" value={`${streak}x`} />
           <SC icon="💪" label="Esta semana" value={`${sessions.filter(s => { const d = new Date(s.date + "T12:00:00"), n = new Date(); return (n - d) / 864e5 < 7; }).length}x`} />
         </div>
-      </div>
-    </div>
-  );
-}
-
-// ── ANALYSIS ───────────────────────────────────────────────────────────────────
-function AnalysisTab({ sessions, profileConfig }) {
-  const [period, setPeriod] = useState(30);
-  const [selTT, setSelTT] = useState("A");
-  const cutoff = new Date(); cutoff.setDate(cutoff.getDate() - period);
-  const recent = sessions.filter(s => new Date(s.date + "T12:00:00") >= cutoff);
-  const mSets = {}, mVol = {};
-  MUSCLE_GROUPS.forEach(m => { mSets[m.key] = 0; mVol[m.key] = 0; });
-  recent.forEach(s => s.exercises.forEach(e => {
-    if (mSets[e.category] !== undefined) { mSets[e.category] += e.sets.length; mVol[e.category] += calcVolume(e.sets); }
-  }));
-  const maxS = Math.max(...MUSCLE_GROUPS.map(m => mSets[m.key]), 1);
-  const alerts = [];
-  [["Peito", "Costas"], ["Bíceps", "Tríceps"], ["Quadríceps", "Posterior de Coxa"]].forEach(([a, b]) => {
-    const sa = mSets[a] || 0, sb = mSets[b] || 0;
-    if (sa + sb > 0) {
-      const r = sa / (sa + sb);
-      if (r > 0.65) alerts.push({ msg: `${a} com muito mais volume que ${b} (${sa}s vs ${sb}s). Equilíbrio push/pull recomendado.`, level: "warn" });
-      else if (r < 0.35) alerts.push({ msg: `${b} com muito mais volume que ${a} (${sb}s vs ${sa}s). Equilíbrio push/pull recomendado.`, level: "warn" });
-    }
-  });
-  MUSCLE_GROUPS.forEach(m => { if (mSets[m.key] === 0) alerts.push({ msg: `${m.label} não foi treinado nos últimos ${period} dias!`, level: "error" }); });
-  const ttCount = {}; recent.forEach(s => { const tt = s.trainType || detectTrainType(s.name) || "?"; ttCount[tt] = (ttCount[tt] || 0) + 1; });
-
-  return (
-    <div style={S.body}>
-      <div style={S.section}>
-        <div style={S.sT}>⏱ Período</div>
-        <div style={S.cRow}>{[7, 14, 30, 60, 90].map(d => <button key={d} style={{ ...S.chip, ...(period === d ? S.chipA : {}) }} onClick={() => setPeriod(d)}>{d}d</button>)}</div>
-      </div>
-      {alerts.length > 0 && (
-        <div style={S.section}>
-          <div style={S.sT}>⚠️ Alertas de Equilíbrio</div>
-          {alerts.map((al, i) => <div key={i} style={{ ...S.alertBox, ...(al.level === "error" ? S.alertE : S.alertW) }}>{al.level === "error" ? "🚨" : "⚠️"} {al.msg}</div>)}
-        </div>
-      )}
-      <div style={S.section}>
-        <div style={S.sT}>💪 Volume por Grupamento</div>
-        {MUSCLE_GROUPS.map(m => {
-          const s = mSets[m.key]; const p = maxS > 0 ? s / maxS : 0;
-          return (
-            <div key={m.key} style={S.mRow}>
-              <div style={S.mLbl}><span>{m.icon}</span><span style={{ fontSize: 11 }}>{m.label}</span></div>
-              <div style={S.mBarW}><div style={{ ...S.mBar, width: `${p * 100}%`, background: p > 0.6 ? C.accent : p > 0.3 ? "#4fc3f7" : "#3a3a55" }} /></div>
-              <div style={S.mSets}>{s}s</div>
-            </div>
-          );
-        })}
-      </div>
-      <div style={S.section}>
-        <div style={S.sT}>🔄 Distribuição ABCDE</div>
-        <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-          {Object.entries(TRAIN_TYPES).map(([k, v]) => (
-            <div key={k} style={{ background: C.surface, border: `1px solid ${v.color}55`, borderRadius: 10, padding: "10px 14px", textAlign: "center", minWidth: 56 }}>
-              <div style={{ fontSize: 18 }}>{v.emoji}</div>
-              <div style={{ fontSize: 22, fontWeight: 800, color: v.color }}>{ttCount[k] || 0}</div>
-              <div style={{ fontSize: 10, color: C.sub }}>{k}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div style={S.section}>
-        <div style={S.sT}>📚 Periodização — Fabrício Pacholok</div>
-        <div style={S.cRow}>{["A", "B", "C", "D", "E"].map(t => <button key={t} style={{ ...S.chip, ...(selTT === t ? { ...S.chipA, background: `${TRAIN_TYPES[t].color}22`, borderColor: TRAIN_TYPES[t].color, color: TRAIN_TYPES[t].color } : {}) }} onClick={() => setSelTT(t)}>{TRAIN_TYPES[t].emoji} {t}</button>)}</div>
-        <div style={{ marginTop: 10 }}>{PERIODIZATION_TIPS[selTT].map((tip, i) => (
-          <div key={i} style={S.tipCard}>
-            <div style={S.tipPh}>{tip.phase}</div>
-            <div style={S.tipTx}>{tip.tip}</div>
-          </div>
-        ))}</div>
-        <div style={S.pNote}>💡 Periodização ondulatória: Acumulação → Intensificação → Realização. Cada bloco de 4 semanas tem objetivo distinto. Baseado nos princípios de Fabrício Pacholok para hipertrofia avançada.</div>
       </div>
     </div>
   );
