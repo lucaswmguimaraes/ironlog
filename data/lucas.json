@@ -1,37 +1,37 @@
 [
   {
-    "id": "jz5tlga",
+    "id": "prdsn6r",
     "date": "2026-05-29",
-    "name": "treino A",
-    "trainType": "A",
+    "name": "Treino b",
+    "trainType": "B",
     "exercises": [
       {
-        "id": "2puc1uh",
-        "name": "Supino reto com halteres",
-        "category": "Peito",
-        "notes": "",
-        "sets": [
-          {
-            "reps": "",
-            "weight": ""
-          }
-        ]
-      },
-      {
-        "id": "laaakb2",
-        "name": "Supino reto com halteres",
-        "category": "Peito",
-        "notes": "",
-        "sets": [
-          {
-            "reps": "",
-            "weight": ""
-          }
-        ]
-      },
-      {
-        "id": "nxvnm13",
+        "id": "oc10eqh",
         "name": "Supino reto com barra",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      },
+      {
+        "id": "w3u0g8r",
+        "name": "Supino reto com halteres",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      },
+      {
+        "id": "qsgylu1",
+        "name": "Supino inclinado com halteres",
         "category": "Peito",
         "notes": "",
         "sets": [
