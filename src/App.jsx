@@ -222,17 +222,37 @@ export default function App(){
   }, [profile?.id]);
 
   // Sync to GitHub with debounce — nunca grava array vazio
+  const sessionsRef = useRef(sessions);
+  useEffect(() => { sessionsRef.current = sessions; }, [sessions]);
+
   useEffect(() => {
     if (!profile) return;
-    if (sessions.length === 0) return; // proteção: nunca sobrescreve dados com vazio
+    if (sessions.length === 0) return;
     const pat = getPAT(profile.id);
     if (!pat) return;
     clearTimeout(syncTimer.current);
     syncTimer.current = setTimeout(() => {
       saveToGitHub(profile.id, sessions, pat);
-    }, 3000);
+    }, 800);
     return () => clearTimeout(syncTimer.current);
   }, [sessions, profile?.id]);
+
+  // Save imediato ao fechar o app
+  useEffect(() => {
+    if (!profile) return;
+    const handler = () => {
+      const pat = getPAT(profile.id);
+      if (!pat || sessionsRef.current.length === 0) return;
+      saveToGitHub(profile.id, sessionsRef.current, pat);
+    };
+    window.addEventListener("beforeunload", handler);
+    window.addEventListener("visibilitychange", () => {
+      if (document.visibilityState === "hidden") handler();
+    });
+    return () => {
+      window.removeEventListener("beforeunload", handler);
+    };
+  }, [profile?.id]);
 
   // Export/import for ProfileSettings
   window.__ironlog_export = () => sessions;
