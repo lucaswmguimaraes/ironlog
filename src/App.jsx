@@ -228,11 +228,12 @@ export default function App(){
   useEffect(() => {
     if (!profile) return;
     if (sessions.length === 0) return;
-    if (isLoadingFromGitHub.current) return;
     const pat = getPAT(profile.id);
     if (!pat) return;
     clearTimeout(syncTimer.current);
     syncTimer.current = setTimeout(() => {
+      // Check inside timeout so even if re-render is slow, we skip saves triggered by load
+      if (isLoadingFromGitHub.current) return;
       saveToGitHub(profile.id, sessions, pat);
     }, 1500);
     return () => clearTimeout(syncTimer.current);
@@ -243,9 +244,7 @@ export default function App(){
   window.__ironlog_import = (data) => setSessions(data);
 
   const handleSelectProfile = (p) => {
-    sessionStorage.setItem("ironlog_profile", JSON.stringify(p));
     setTab("home");
-    // Force re-mount with new profile via selectProfile
     selectProfile(p);
     // Check onboarding for new profile
     const cfg = getConfig(p.id);
@@ -254,7 +253,6 @@ export default function App(){
   };
 
   const handleSwitchProfile = () => {
-    sessionStorage.removeItem("ironlog_profile");
     selectProfile(null);
     setTab("home");
   };
