@@ -16,6 +16,21 @@ function addLog(msg) {
   } catch {}
 }
 
+function encodeContent(data) {
+  const json = JSON.stringify(data, null, 2);
+  const bytes = new TextEncoder().encode(json);
+  let binary = "";
+  bytes.forEach((b) => { binary += String.fromCharCode(b); });
+  return btoa(binary);
+}
+
+function decodeContent(b64) {
+  const binary = atob(b64.replace(/\n/g, ""));
+  const bytes = new Uint8Array(binary.length);
+  for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+  return JSON.parse(new TextDecoder().decode(bytes));
+}
+
 export function useGitHubStorage() {
   const getHeaders = (pat) => ({
     Authorization: `token ${pat}`,
@@ -31,11 +46,11 @@ export function useGitHubStorage() {
         `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/data/${profileId}.json?ref=${BRANCH}`,
         { headers: getHeaders(pat) }
       );
-      if (res.status === 404) { addLog(`LOAD ${profileId}: 404 arquivo não existe`); return []; }
+      if (res.status === 404) { addLog(`LOAD ${profileId}: 404`); return []; }
       if (!res.ok) { addLog(`LOAD ${profileId}: erro HTTP ${res.status}`); return null; }
       const json = await res.json();
       localStorage.setItem(shaKey(profileId), json.sha);
-      const data = JSON.parse(atob(json.content.replace(/\n/g, "")));
+      const data = decodeContent(json.content);
       addLog(`LOAD ${profileId}: ok, ${data.length} treinos, sha=${json.sha.slice(0,7)}`);
       return data;
     } catch (e) {
@@ -47,9 +62,19 @@ export function useGitHubStorage() {
   const saveToGitHub = useCallback(async (profileId, sessions, pat) => {
     if (!pat) { addLog(`SAVE ${profileId}: sem PAT`); return false; }
     try {
-      const sha = localStorage.getItem(shaKey(profileId));
+      // Sempre busca o SHA mais recente do GitHub antes de salvar
+      const headRes = await fetch(
+        `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/data/${profileId}.json?ref=${BRANCH}`,
+        { headers: getHeaders(pat) }
+      );
+      let sha = localStorage.getItem(shaKey(profileId));
+      if (headRes.ok) {
+        const headJson = await headRes.json();
+        sha = headJson.sha;
+        localStorage.setItem(shaKey(profileId), sha);
+      }
       addLog(`SAVE ${profileId}: ${sessions.length} treinos, sha=${sha ? sha.slice(0,7) : "NENHUM"}`);
-      const content = btoa(unescape(encodeURIComponent(JSON.stringify(sessions, null, 2))));
+      const content = encodeContent(sessions);
       const body = {
         message: `chore: sync ${profileId} sessions`,
         content,
@@ -62,7 +87,7 @@ export function useGitHubStorage() {
       );
       if (!res.ok) {
         const errBody = await res.text();
-        addLog(`SAVE ${profileId}: ERRO ${res.status} — ${errBody.slice(0, 100)}`);
+        addLog(`SAVE ${profileId}: ERRO ${res.status} — ${errBody.slice(0, 120)}`);
         return false;
       }
       const json = await res.json();
