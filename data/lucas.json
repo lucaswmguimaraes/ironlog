@@ -1,14 +1,14 @@
 [
   {
-    "id": "7nel7pp",
+    "id": "mwcu2fi",
     "date": "2026-05-29",
-    "name": "Treino B - Push",
-    "trainType": "B",
+    "name": "Treino C - Quads",
+    "trainType": "C",
     "exercises": [
       {
-        "id": "50u1itr",
-        "name": "Supino reto com barra",
-        "category": "Peito",
+        "id": "nrzuuf6",
+        "name": "Agachamento livre",
+        "category": "Quadríceps",
         "notes": "",
         "sets": [
           {
@@ -18,9 +18,9 @@
         ]
       },
       {
-        "id": "5k8qh71",
-        "name": "Supino reto com halteres",
-        "category": "Peito",
+        "id": "capxrmt",
+        "name": "Agachamento búlgaro com halteres",
+        "category": "Quadríceps",
         "notes": "",
         "sets": [
           {
@@ -30,33 +30,9 @@
         ]
       },
       {
-        "id": "zz7qlzd",
-        "name": "Supino inclinado com halteres",
-        "category": "Peito",
-        "notes": "",
-        "sets": [
-          {
-            "reps": "",
-            "weight": ""
-          }
-        ]
-      },
-      {
-        "id": "yco4qij",
-        "name": "Supino reto com halteres",
-        "category": "Peito",
-        "notes": "",
-        "sets": [
-          {
-            "reps": "",
-            "weight": ""
-          }
-        ]
-      },
-      {
-        "id": "94jvl1w",
-        "name": "Crucifixo com halteres",
-        "category": "Peito",
+        "id": "kskxx5h",
+        "name": "Leg press horizontal",
+        "category": "Quadríceps",
         "notes": "",
         "sets": [
           {
