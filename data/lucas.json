@@ -1,31 +1,12 @@
 [
   {
-    "id": "dxdv5g3",
+    "id": "7nel7pp",
     "date": "2026-05-29",
-    "name": "",
-    "trainType": null,
-    "exercises": []
-  },
-  {
-    "id": "ikbmtrx",
-    "date": "2026-05-29",
-    "name": "",
-    "trainType": null,
+    "name": "Treino B - Push",
+    "trainType": "B",
     "exercises": [
       {
-        "id": "mmgncrr",
-        "name": "Crucifixo com halteres",
-        "category": "Peito",
-        "notes": "",
-        "sets": [
-          {
-            "reps": "",
-            "weight": ""
-          }
-        ]
-      },
-      {
-        "id": "04x798x",
+        "id": "50u1itr",
         "name": "Supino reto com barra",
         "category": "Peito",
         "notes": "",
@@ -37,7 +18,7 @@
         ]
       },
       {
-        "id": "wzjbho4",
+        "id": "5k8qh71",
         "name": "Supino reto com halteres",
         "category": "Peito",
         "notes": "",
@@ -49,8 +30,32 @@
         ]
       },
       {
-        "id": "pwqgh8z",
+        "id": "zz7qlzd",
+        "name": "Supino inclinado com halteres",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      },
+      {
+        "id": "yco4qij",
         "name": "Supino reto com halteres",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      },
+      {
+        "id": "94jvl1w",
+        "name": "Crucifixo com halteres",
         "category": "Peito",
         "notes": "",
         "sets": [
