@@ -25,8 +25,7 @@ export function useGitHubStorage() {
       if (!res.ok) return null;
       const json = await res.json();
       localStorage.setItem(shaKey(profileId), json.sha);
-      return JSON.parse(atob(json.content.replace(/
-/g, "")));
+      return JSON.parse(atob(json.content.replace(/\n/g, "")));
     } catch {
       return null;
     }
