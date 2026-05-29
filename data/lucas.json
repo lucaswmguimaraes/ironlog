@@ -44,50 +44,6 @@
     ]
   },
   {
-    "id": "ha3xt77",
-    "date": "2026-05-18",
-    "name": "Treino D",
-    "trainType": "D",
-    "exercises": [
-      {
-        "id": "ea5lvtl",
-        "name": "Puxada alta com barra triângulo",
-        "category": "Costas",
-        "notes": "",
-        "sets": [
-          {
-            "reps": "",
-            "weight": ""
-          }
-        ]
-      },
-      {
-        "id": "73uogzy",
-        "name": "Desenvolvimento no aparelho",
-        "category": "Ombros",
-        "notes": "",
-        "sets": [
-          {
-            "reps": "",
-            "weight": ""
-          }
-        ]
-      },
-      {
-        "id": "kn37brm",
-        "name": "Rosca alternada com halteres",
-        "category": "Bíceps",
-        "notes": "",
-        "sets": [
-          {
-            "reps": "",
-            "weight": ""
-          }
-        ]
-      }
-    ]
-  },
-  {
     "id": "k1bfixs",
     "date": "2026-05-26",
     "name": "Treino B",
