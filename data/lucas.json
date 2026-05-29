@@ -1,12 +1,24 @@
 [
   {
-    "id": "yncu8tc",
+    "id": "zyhj740",
     "date": "2026-05-29",
     "name": "Treino C",
     "trainType": "C",
     "exercises": [
       {
-        "id": "9xiad8r",
+        "id": "ijhc2pv",
+        "name": "Agachamento no smith",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      },
+      {
+        "id": "frj6zvr",
         "name": "Agachamento búlgaro com barra",
         "category": "Quadríceps",
         "notes": "",
@@ -16,11 +28,67 @@
             "weight": ""
           }
         ]
+      }
+    ]
+  },
+  {
+    "id": "36y28xb",
+    "date": "2026-05-29",
+    "name": "Treino D",
+    "trainType": "D",
+    "exercises": [
+      {
+        "id": "kli6oc9",
+        "name": "Supino reto com barra",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 3,
+            "weight": 20
+          }
+        ]
       },
       {
-        "id": "myl54px",
-        "name": "Leg press horizontal",
-        "category": "Quadríceps",
+        "id": "dhoz4k2",
+        "name": "Desenvolvimento no aparelho",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 2,
+            "weight": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "a5cvgmt",
+    "date": "2026-05-29",
+    "name": "Treino A",
+    "trainType": "A",
+    "exercises": [
+      {
+        "id": "ub8wr4v",
+        "name": "Pullover com halteres",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          },
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      },
+      {
+        "id": "l2hrbxf",
+        "name": "Rosca concentrada",
+        "category": "Bíceps",
         "notes": "",
         "sets": [
           {
@@ -30,9 +98,21 @@
         ]
       },
       {
-        "id": "6ida0tz",
-        "name": "Afundo",
-        "category": "Quadríceps",
+        "id": "yrwj7vg",
+        "name": "Rosca 45° com halteres",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      },
+      {
+        "id": "85ooisn",
+        "name": "Rosca 45° com halteres",
+        "category": "Bíceps",
         "notes": "",
         "sets": [
           {
