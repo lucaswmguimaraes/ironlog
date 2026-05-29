@@ -42,49 +42,5 @@
         ]
       }
     ]
-  },
-  {
-    "id": "k1bfixs",
-    "date": "2026-05-26",
-    "name": "Treino B",
-    "trainType": "B",
-    "exercises": [
-      {
-        "id": "lvv4zki",
-        "name": "Supino reto com halteres",
-        "category": "Peito",
-        "notes": "",
-        "sets": [
-          {
-            "reps": "",
-            "weight": ""
-          }
-        ]
-      },
-      {
-        "id": "a7ui0dd",
-        "name": "Crucifixo com halteres",
-        "category": "Peito",
-        "notes": "",
-        "sets": [
-          {
-            "reps": "",
-            "weight": ""
-          }
-        ]
-      },
-      {
-        "id": "elpbk3y",
-        "name": "Peck deck",
-        "category": "Peito",
-        "notes": "",
-        "sets": [
-          {
-            "reps": "",
-            "weight": ""
-          }
-        ]
-      }
-    ]
   }
 ]
