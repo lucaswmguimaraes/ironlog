@@ -165,6 +165,17 @@ function ProfileScreen({ onSelect }) {
   );
 }
 
+// ── APP LOG ────────────────────────────────────────────────────────────────────
+function appLog(msg) {
+  try {
+    const logs = JSON.parse(localStorage.getItem("ironlog_sync_log") || "[]");
+    const now = new Date();
+    const ts = `${String(now.getHours()).padStart(2,"0")}:${String(now.getMinutes()).padStart(2,"0")}:${String(now.getSeconds()).padStart(2,"0")}`;
+    logs.unshift(`${ts} ${msg}`);
+    localStorage.setItem("ironlog_sync_log", JSON.stringify(logs.slice(0, 50)));
+  } catch {}
+}
+
 // ── MAIN APP ───────────────────────────────────────────────────────────────────
 export default function App(){
   const { profile, selectProfile, getPAT, setPAT, getConfig, saveConfig } = useProfile();
@@ -206,16 +217,21 @@ export default function App(){
   // Persist to localStorage
   useEffect(() => {
     if (!profile) return;
-    try { localStorage.setItem(`wkv3_${profile.id}`, JSON.stringify(sessions)); } catch {}
+    try {
+      localStorage.setItem(`wkv3_${profile.id}`, JSON.stringify(sessions));
+      appLog(`LS_WRITE ${profile.id}: ${sessions.length} treinos | userChanged=${userChangedRef.current}`);
+    } catch {}
   }, [sessions, profile?.id]);
 
   // Load from GitHub on profile select — bloqueia save durante load
   useEffect(() => {
     if (!profile) return;
     const pat = getPAT(profile.id);
-    if (!pat) return;
+    if (!pat) { appLog(`LOAD_INIT ${profile.id}: sem PAT, pulando`); return; }
+    appLog(`LOAD_INIT ${profile.id}: iniciando load do GitHub`);
     userChangedRef.current = false;
     loadFromGitHub(profile.id, pat).then((data) => {
+      appLog(`LOAD_INIT ${profile.id}: resultado=${data === null ? "null" : data.length + " treinos"}`);
       if (data !== null) {
         setSessions(data);
       }
@@ -229,8 +245,10 @@ export default function App(){
       if (document.visibilityState === "visible" && profile) {
         const pat = getPAT(profile.id);
         if (!pat) return;
+        appLog(`RESUME ${profile.id}: app voltou ao foreground, recarregando GitHub`);
         userChangedRef.current = false;
         loadFromGitHub(profile.id, pat).then((data) => {
+          appLog(`RESUME ${profile.id}: resultado=${data === null ? "null" : data.length + " treinos"}`);
           if (data !== null) setSessions(data);
           setTimeout(() => { userChangedRef.current = false; }, 0);
         });
@@ -243,11 +261,13 @@ export default function App(){
   // Sync to GitHub — só salva se foi o usuário que mudou os dados
   useEffect(() => {
     if (!profile) return;
-    if (!userChangedRef.current) return;
+    if (!userChangedRef.current) { appLog(`SYNC_SKIP ${profile.id}: ${sessions.length} treinos | userChanged=false, ignorado`); return; }
     const pat = getPAT(profile.id);
     if (!pat) return;
+    appLog(`SYNC_QUEUE ${profile.id}: ${sessions.length} treinos, aguardando 1500ms`);
     clearTimeout(syncTimer.current);
     syncTimer.current = setTimeout(() => {
+      appLog(`SYNC_FIRE ${profile.id}: disparando save para GitHub`);
       saveToGitHub(profile.id, sessions, pat);
     }, 1500);
     return () => clearTimeout(syncTimer.current);
@@ -259,9 +279,12 @@ export default function App(){
       if (userChangedRef.current && profile) {
         const pat = getPAT(profile.id);
         if (!pat) return;
+        appLog(`FLUSH ${profile.id}: app indo para background, salvando imediatamente ${sessions.length} treinos`);
         clearTimeout(syncTimer.current);
         saveToGitHub(profile.id, sessions, pat);
         userChangedRef.current = false;
+      } else if (profile) {
+        appLog(`FLUSH ${profile.id}: app indo para background, sem mudanças pendentes`);
       }
     };
     const onVisChange = () => { if (document.visibilityState === "hidden") flush(); };
