@@ -93,6 +93,33 @@ function SortableExerciseItem({ id, children }) {
 
 // ── PROFILE SELECTOR ───────────────────────────────────────────────────────────
 function ProfileScreen({ onSelect }) {
+  const exportBackup = (profileId, profileName) => {
+    try {
+      const raw = localStorage.getItem(`wkv3_${profileId}`);
+      if (!raw || raw === "[]" || raw === "null") {
+        alert(`Nenhum dado encontrado para ${profileName} neste dispositivo.`);
+        return;
+      }
+      const data = JSON.parse(raw);
+      if (!data || data.length === 0) {
+        alert(`Nenhum treino encontrado para ${profileName} neste dispositivo.`);
+        return;
+      }
+      const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = `ironlog-backup-${profileId}-${new Date().toISOString().slice(0,10)}.json`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      alert(`✅ Backup de ${profileName} exportado com ${data.length} treinos!`);
+    } catch (e) {
+      alert(`Erro ao exportar: ${e.message}`);
+    }
+  };
+
   return (
     <div style={S.app}>
       <div style={S.grain}/>
@@ -117,6 +144,21 @@ function ProfileScreen({ onSelect }) {
               <span style={{fontSize:18, fontWeight:800, color:p.color}}>{p.name}</span>
             </button>
           ))}
+        </div>
+        {/* Botão de emergência para exportar dados antes do onboarding */}
+        <div style={{textAlign:"center"}}>
+          <div style={{fontSize:12, color:C.sub, marginBottom:10}}>💾 Exportar backup deste dispositivo</div>
+          <div style={{display:"flex", gap:10, justifyContent:"center"}}>
+            {PROFILES.map(p=>(
+              <button key={p.id} onClick={()=>exportBackup(p.id, p.name)} style={{
+                background:"transparent", border:`1px solid ${C.border}`,
+                borderRadius:10, padding:"8px 16px", cursor:"pointer",
+                fontSize:12, color:C.sub,
+              }}>
+                ⬇️ {p.name}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
     </div>
@@ -158,9 +200,14 @@ export default function App(){
   const [showSettings, setShowSettings] = useState(false);
   const prevTab = useRef("home");
 
-  // Persist to localStorage
+  // Persist to localStorage — nunca sobrescreve dados existentes com array vazio
   useEffect(() => {
     if (!profile) return;
+    if (sessions.length === 0) {
+      // Não sobrescreve se já havia dados salvos
+      const existing = localStorage.getItem(`wkv3_${profile.id}`);
+      if (existing && existing !== "[]" && existing !== "null") return;
+    }
     try { localStorage.setItem(`wkv3_${profile.id}`, JSON.stringify(sessions)); } catch {}
   }, [sessions, profile?.id]);
 
@@ -174,9 +221,10 @@ export default function App(){
     });
   }, [profile?.id]);
 
-  // Sync to GitHub with debounce
+  // Sync to GitHub with debounce — nunca grava array vazio
   useEffect(() => {
     if (!profile) return;
+    if (sessions.length === 0) return; // proteção: nunca sobrescreve dados com vazio
     const pat = getPAT(profile.id);
     if (!pat) return;
     clearTimeout(syncTimer.current);
