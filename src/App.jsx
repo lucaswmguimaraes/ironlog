@@ -3391,7 +3391,7 @@ export default function App(){
 
 
 
-  window.__ironlog_import = (data) => { setSessions(data); };
+  window.__ironlog_import = (data) => { lastSavedJsonRef.current = null; setSessions(data); };
 
 
 
@@ -4055,7 +4055,7 @@ export default function App(){
 
 
 
-              if (data && data.length > 0) setSessions(data);
+              if (data && data.length > 0) { lastSavedJsonRef.current = JSON.stringify(data); setSessions(data); }
 
 
 
