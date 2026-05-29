@@ -1,5 +1,133 @@
 [
   {
+    "id": "e0vhv5i",
+    "date": "2026-05-29",
+    "name": "Treino 5 - GLÚTEO/ POSTERIOR",
+    "trainType": "E",
+    "exercises": [
+      {
+        "id": "b36fsp7",
+        "name": "Cadeira flexora",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 35
+          },
+          {
+            "reps": 10,
+            "weight": 30
+          },
+          {
+            "reps": 12,
+            "weight": 38.5
+          }
+        ]
+      },
+      {
+        "id": "gxowy7n",
+        "name": "Mesa flexora",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 11
+          },
+          {
+            "reps": 3,
+            "weight": 31.5
+          },
+          {
+            "reps": 5,
+            "weight": 25
+          },
+          {
+            "reps": 11,
+            "weight": 18
+          },
+          {
+            "reps": 10,
+            "weight": 18
+          },
+          {
+            "reps": 6,
+            "weight": 11
+          }
+        ]
+      },
+      {
+        "id": "ifqd4gm",
+        "name": "Stiff com barra",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 8,
+            "weight": 40
+          },
+          {
+            "reps": 9,
+            "weight": 40
+          },
+          {
+            "reps": 8,
+            "weight": 40
+          },
+          {
+            "reps": 10,
+            "weight": 40
+          }
+        ]
+      },
+      {
+        "id": "fusxj8x",
+        "name": "Abdutora na máquina",
+        "category": "Glúteos",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 84
+          },
+          {
+            "reps": 12,
+            "weight": 93
+          },
+          {
+            "reps": 12,
+            "weight": 102
+          }
+        ]
+      },
+      {
+        "id": "lpggma7",
+        "name": "Panturrilha sentado (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 36.5
+          },
+          {
+            "reps": 12,
+            "weight": 36.5
+          },
+          {
+            "reps": 13,
+            "weight": 36.5
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "y72ii48",
     "date": "2026-05-28",
     "name": "Treino 1 - PEITO + TRÍCEPS + OMBRO",
