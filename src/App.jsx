@@ -299,7 +299,13 @@ export default function App(){
         <GitHubSetup
           profileId={profile.id}
           profileName={profile.name}
-          onSave={(pat) => { setPAT(profile.id, pat); setGithubSetupDone(true); }}
+          onSave={(pat) => {
+            setPAT(profile.id, pat);
+            setGithubSetupDone(true);
+            loadFromGitHub(profile.id, pat).then((data) => {
+              if (data && data.length > 0) setSessions(data);
+            });
+          }}
           onSkip={() => setGithubSetupDone(true)}
         />
       </div>
@@ -346,7 +352,13 @@ export default function App(){
         currentConfig={profileConfig}
         currentPAT={getPAT(profile.id)}
         onSave={(config) => { saveConfig(profile.id, { ...config, completedOnboarding: true }); setShowSettings(false); }}
-        onSavePAT={(pat) => { setPAT(profile.id, pat); setGithubSetupDone(true); }}
+        onSavePAT={(pat) => {
+          setPAT(profile.id, pat);
+          setGithubSetupDone(true);
+          loadFromGitHub(profile.id, pat).then((data) => {
+            if (data && data.length > 0) setSessions(data);
+          });
+        }}
         onBack={() => setShowSettings(false)}
       />
       <div style={{ padding: "0 16px 40px", maxWidth: 480, margin: "0 auto" }}>
