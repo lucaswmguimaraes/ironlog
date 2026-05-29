@@ -1,5 +1,49 @@
 [
   {
+    "id": "sgz8tyl",
+    "date": "2026-05-27",
+    "name": "Treino C",
+    "trainType": "C",
+    "exercises": [
+      {
+        "id": "7u20osn",
+        "name": "Agachamento livre",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      },
+      {
+        "id": "e3qd9vl",
+        "name": "Leg press horizontal",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      },
+      {
+        "id": "611slic",
+        "name": "Hack squat",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "u6ilpj4",
     "date": "2026-05-29",
     "name": "Treino B",
