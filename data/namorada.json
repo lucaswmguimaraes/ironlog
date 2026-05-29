@@ -1,132 +1,8 @@
 [
   {
-    "id": "t1lrrc3",
-    "date": "2026-05-29",
-    "name": "Treino 5 - GLÃÂTEO/ POSTERIOR",
-    "trainType": "E",
-    "exercises": [
-      {
-        "id": "q1wg2hf",
-        "name": "Mesa flexora",
-        "category": "Posterior de Coxa",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 11
-          },
-          {
-            "reps": 3,
-            "weight": 31.5
-          },
-          {
-            "reps": 5,
-            "weight": 25
-          },
-          {
-            "reps": 11,
-            "weight": 18
-          },
-          {
-            "reps": 10,
-            "weight": 18
-          },
-          {
-            "reps": 6,
-            "weight": 11
-          }
-        ]
-      },
-      {
-        "id": "riiand1",
-        "name": "Stiff com barra",
-        "category": "Posterior de Coxa",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 8,
-            "weight": 40
-          },
-          {
-            "reps": 9,
-            "weight": 40
-          },
-          {
-            "reps": 8,
-            "weight": 40
-          },
-          {
-            "reps": 10,
-            "weight": 40
-          }
-        ]
-      },
-      {
-        "id": "yzy2hbz",
-        "name": "Cadeira flexora",
-        "category": "Posterior de Coxa",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 38.5
-          },
-          {
-            "reps": 10,
-            "weight": 38.5
-          },
-          {
-            "reps": 12,
-            "weight": 38.5
-          }
-        ]
-      },
-      {
-        "id": "ay7z8tp",
-        "name": "Abdutora na mÃÂ¡quina",
-        "category": "GlÃÂºteos",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 84
-          },
-          {
-            "reps": 12,
-            "weight": 93
-          },
-          {
-            "reps": 12,
-            "weight": 102
-          }
-        ]
-      },
-      {
-        "id": "xhyrtr5",
-        "name": "Panturrilha sentado (mÃÂ¡quina)",
-        "category": "Panturrilha",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 36.5
-          },
-          {
-            "reps": 12,
-            "weight": 36.5
-          },
-          {
-            "reps": 13,
-            "weight": 36.5
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "y72ii48",
+    "id": "xv7aoqm",
     "date": "2026-05-28",
-    "name": "Treino 1 - PEITO + TRÃÂCEPS + OMBRO",
+    "name": "Treino 1 - PEITO + TRÍCEPS + OMBRO",
     "trainType": "B",
     "exercises": [
       {
@@ -151,7 +27,7 @@
       },
       {
         "id": "90pazg0",
-        "name": "ElevaÃÂ§ÃÂ£o lateral com halteres",
+        "name": "Elevação lateral com halteres",
         "category": "Ombros",
         "notes": "",
         "sets": [
@@ -171,8 +47,8 @@
       },
       {
         "id": "08j2zhx",
-        "name": "TrÃÂ­ceps na polia com corda",
-        "category": "TrÃÂ­ceps",
+        "name": "Tríceps na polia com corda",
+        "category": "Tríceps",
         "notes": "",
         "sets": [
           {
@@ -191,8 +67,8 @@
       },
       {
         "id": "j43vp2z",
-        "name": "TrÃÂ­ceps francÃÂªs no cross com corda",
-        "category": "TrÃÂ­ceps",
+        "name": "Tríceps francês no cross com corda",
+        "category": "Tríceps",
         "notes": "",
         "sets": [
           {
@@ -207,8 +83,8 @@
       },
       {
         "id": "vozeq6o",
-        "name": "TrÃÂ­ceps testa na polia unilateral",
-        "category": "TrÃÂ­ceps",
+        "name": "Tríceps testa na polia unilateral",
+        "category": "Tríceps",
         "notes": "",
         "sets": [
           {
@@ -249,7 +125,7 @@
         "id": "axkebrt",
         "name": "Supino reto com halteres",
         "category": "Peito",
-        "notes": "mÃÂ¡quina",
+        "notes": "máquina",
         "sets": [
           {
             "reps": 12,
@@ -304,9 +180,9 @@
     ]
   },
   {
-    "id": "xv7aoqm",
+    "id": "1yfzga3",
     "date": "2026-05-26",
-    "name": "Treino 2 - COSTAS + BÃÂCEPS",
+    "name": "Treino 2 - COSTAS + BÍCEPS",
     "trainType": "A",
     "exercises": [
       {
@@ -335,7 +211,7 @@
       },
       {
         "id": "obrwx63",
-        "name": "Remada baixa com triÃÂ¢ngulo",
+        "name": "Remada baixa com triângulo",
         "category": "Costas",
         "notes": "",
         "sets": [
@@ -355,8 +231,8 @@
       },
       {
         "id": "kun8eyu",
-        "name": "Rosca 45ÃÂ° com halteres",
-        "category": "BÃÂ­ceps",
+        "name": "Rosca 45° com halteres",
+        "category": "Bíceps",
         "notes": "",
         "sets": [
           {
@@ -400,8 +276,8 @@
       {
         "id": "tx9ymdx",
         "name": "Rosca Scott com barra W",
-        "category": "BÃÂ­ceps",
-        "notes": "mÃÂ¡quina",
+        "category": "Bíceps",
+        "notes": "máquina",
         "sets": [
           {
             "reps": 5,
@@ -420,7 +296,7 @@
       {
         "id": "3b01dj0",
         "name": "Rosca Scott com barra W",
-        "category": "BÃÂ­ceps",
+        "category": "Bíceps",
         "notes": "barra",
         "sets": [
           {
@@ -444,7 +320,7 @@
       {
         "id": "p6swodw",
         "name": "Rosca inversa (barra)",
-        "category": "BÃÂ­ceps",
+        "category": "Bíceps",
         "notes": "",
         "sets": [
           {
@@ -464,15 +340,15 @@
     ]
   },
   {
-    "id": "1yfzga3",
+    "id": "m6h2l1e",
     "date": "2026-05-18",
-    "name": "Treino 3 - QUADRÃÂCEPS",
+    "name": "Treino 3 - QUADRÍCEPS",
     "trainType": "C",
     "exercises": [
       {
         "id": "wnjvo7e",
         "name": "Agachamento no smith",
-        "category": "QuadrÃÂ­ceps",
+        "category": "Quadríceps",
         "notes": "",
         "sets": [
           {
@@ -491,8 +367,8 @@
       },
       {
         "id": "4vqsa4r",
-        "name": "Leg press 45ÃÂ°",
-        "category": "QuadrÃÂ­ceps",
+        "name": "Leg press 45°",
+        "category": "Quadríceps",
         "notes": "",
         "sets": [
           {
@@ -520,7 +396,7 @@
       {
         "id": "sjnsltu",
         "name": "Extensora",
-        "category": "QuadrÃÂ­ceps",
+        "category": "Quadríceps",
         "notes": "",
         "sets": [
           {
@@ -543,7 +419,7 @@
       },
       {
         "id": "otw91jm",
-        "name": "Adutora na mÃÂ¡quina",
+        "name": "Adutora na máquina",
         "category": "Adutores / Abdutores",
         "notes": "",
         "sets": [
@@ -563,7 +439,7 @@
       },
       {
         "id": "4rtytjt",
-        "name": "Panturrilha sentado (mÃÂ¡quina)",
+        "name": "Panturrilha sentado (máquina)",
         "category": "Panturrilha",
         "notes": "",
         "sets": [
@@ -584,9 +460,9 @@
     ]
   },
   {
-    "id": "m6h2l1e",
+    "id": "mgmc0mx",
     "date": "2026-05-15",
-    "name": "Treino 1 - PEITO + TRÃÂCEPS + OMBRO",
+    "name": "Treino 1 - PEITO + TRÍCEPS + OMBRO",
     "trainType": "B",
     "exercises": [
       {
@@ -610,30 +486,10 @@
         ]
       },
       {
-        "id": "g6mzrge",
-        "name": "ElevaÃÂ§ÃÂ£o lateral com halteres",
-        "category": "Ombros",
-        "notes": "",
-        "sets": [
-          {
-            "reps": "",
-            "weight": ""
-          },
-          {
-            "reps": "",
-            "weight": ""
-          },
-          {
-            "reps": "",
-            "weight": ""
-          }
-        ]
-      },
-      {
         "id": "i1nte9v",
         "name": "Desenvolvimento no aparelho",
         "category": "Ombros",
-        "notes": "Drop na ÃÂºltima sÃÂ©rie (10s de descanso)",
+        "notes": "Drop na última série (10s de descanso)",
         "sets": [
           {
             "reps": 10,
@@ -683,8 +539,8 @@
       },
       {
         "id": "56v8rs7",
-        "name": "TrÃÂ­ceps na polia com corda",
-        "category": "TrÃÂ­ceps",
+        "name": "Tríceps na polia com corda",
+        "category": "Tríceps",
         "notes": "",
         "sets": [
           {
@@ -703,8 +559,8 @@
       },
       {
         "id": "16f7n1o",
-        "name": "TrÃÂ­ceps francÃÂªs no cross com corda",
-        "category": "TrÃÂ­ceps",
+        "name": "Tríceps francês no cross com corda",
+        "category": "Tríceps",
         "notes": "",
         "sets": [
           {
@@ -719,8 +575,8 @@
       },
       {
         "id": "0pyf2iy",
-        "name": "TrÃÂ­ceps testa na polia unilateral",
-        "category": "TrÃÂ­ceps",
+        "name": "Tríceps testa na polia unilateral",
+        "category": "Tríceps",
         "notes": "",
         "sets": [
           {
@@ -759,7 +615,7 @@
       },
       {
         "id": "9pijuyu",
-        "name": "ElevaÃÂ§ÃÂ£o frontal na polia",
+        "name": "Elevação frontal na polia",
         "category": "Ombros",
         "notes": "",
         "sets": [
@@ -780,14 +636,14 @@
     ]
   },
   {
-    "id": "mgmc0mx",
+    "id": "6lxm72v",
     "date": "2026-05-14",
     "name": "Treino 4 - SUPERIORES GERAL",
     "trainType": "D",
     "exercises": [
       {
         "id": "ly417km",
-        "name": "ElevaÃÂ§ÃÂ£o lateral + frontal alternadas",
+        "name": "Elevação lateral + frontal alternadas",
         "category": "Ombros",
         "notes": "",
         "sets": [
@@ -820,7 +676,7 @@
       {
         "id": "19w1ipg",
         "name": "Rosca na corda",
-        "category": "BÃÂ­ceps",
+        "category": "Bíceps",
         "notes": "",
         "sets": [
           {
@@ -911,7 +767,7 @@
       },
       {
         "id": "hes1otv",
-        "name": "Encolhimento com barra (trapÃÂ©zio)",
+        "name": "Encolhimento com barra (trapézio)",
         "category": "Ombros",
         "notes": "",
         "sets": [
@@ -952,13 +808,13 @@
     ]
   },
   {
-    "id": "6lxm72v",
+    "id": "s99k1fw",
     "date": "2026-05-12",
-    "name": "Treino 5 - GLÃÂTEO/ POSTERIOR",
+    "name": "Treino 5 - GLÚTEO/ POSTERIOR",
     "trainType": "E",
     "exercises": [
       {
-        "id": "dm01259",
+        "id": "dm01259x",
         "name": "Mesa flexora",
         "category": "Posterior de Coxa",
         "notes": "",
@@ -990,7 +846,7 @@
         ]
       },
       {
-        "id": "emlmhjw",
+        "id": "emlmhjwx",
         "name": "Stiff com barra",
         "category": "Posterior de Coxa",
         "notes": "",
@@ -1014,7 +870,7 @@
         ]
       },
       {
-        "id": "1ku7bk0",
+        "id": "1ku7bk0x",
         "name": "Cadeira flexora",
         "category": "Posterior de Coxa",
         "notes": "",
@@ -1034,9 +890,9 @@
         ]
       },
       {
-        "id": "evvkgr4",
-        "name": "Abdutora na mÃÂ¡quina",
-        "category": "GlÃÂºteos",
+        "id": "evvkgr4x",
+        "name": "Abdutora na máquina",
+        "category": "Glúteos",
         "notes": "",
         "sets": [
           {
@@ -1054,8 +910,8 @@
         ]
       },
       {
-        "id": "8ndpecx",
-        "name": "Panturrilha sentado (mÃÂ¡quina)",
+        "id": "8ndpecxx",
+        "name": "Panturrilha sentado (máquina)",
         "category": "Panturrilha",
         "notes": "",
         "sets": [
@@ -1076,9 +932,9 @@
     ]
   },
   {
-    "id": "s99k1fw",
+    "id": "x1ikoiq",
     "date": "2026-05-09",
-    "name": "Treino 2 - COSTAS + BÃÂCEPS",
+    "name": "Treino 2 - COSTAS + BÍCEPS",
     "trainType": "A",
     "exercises": [
       {
@@ -1103,7 +959,7 @@
       },
       {
         "id": "3f3uy2p",
-        "name": "Remada baixa com triÃÂ¢ngulo",
+        "name": "Remada baixa com triângulo",
         "category": "Costas",
         "notes": "",
         "sets": [
@@ -1127,8 +983,8 @@
       },
       {
         "id": "sb6oe3k",
-        "name": "Rosca 45ÃÂ° com halteres",
-        "category": "BÃÂ­ceps",
+        "name": "Rosca 45° com halteres",
+        "category": "Bíceps",
         "notes": "",
         "sets": [
           {
@@ -1172,8 +1028,8 @@
       {
         "id": "pmx6ad2",
         "name": "Rosca Scott com barra W",
-        "category": "BÃÂ­ceps",
-        "notes": "mÃÂ¡quina",
+        "category": "Bíceps",
+        "notes": "máquina",
         "sets": [
           {
             "reps": 10,
@@ -1196,7 +1052,7 @@
       {
         "id": "r9vvw2b",
         "name": "Rosca Scott com barra W",
-        "category": "BÃÂ­ceps",
+        "category": "Bíceps",
         "notes": "barra",
         "sets": [
           {
@@ -1206,17 +1062,13 @@
           {
             "reps": 10,
             "weight": 15
-          },
-          {
-            "reps": "",
-            "weight": ""
           }
         ]
       },
       {
         "id": "yksqggv",
         "name": "Rosca inversa (barra)",
-        "category": "BÃÂ­ceps",
+        "category": "Bíceps",
         "notes": "",
         "sets": [
           {
@@ -1236,9 +1088,9 @@
     ]
   },
   {
-    "id": "x1ikoiq",
+    "id": "zlchdhp",
     "date": "2026-05-06",
-    "name": "Treino 1 - PEITO + TRÃÂCEPS + OMBRO",
+    "name": "Treino 1 - PEITO + TRÍCEPS + OMBRO",
     "trainType": "B",
     "exercises": [
       {
@@ -1263,7 +1115,7 @@
       },
       {
         "id": "pkdgei2",
-        "name": "ElevaÃÂ§ÃÂ£o lateral com halteres",
+        "name": "Elevação lateral com halteres",
         "category": "Ombros",
         "notes": "",
         "sets": [
@@ -1285,7 +1137,7 @@
         "id": "2bs74ir",
         "name": "Desenvolvimento no aparelho",
         "category": "Ombros",
-        "notes": "Drop na ÃÂºltima sÃÂ©rie (10s de descanso)",
+        "notes": "Drop na última série (10s de descanso)",
         "sets": [
           {
             "reps": 12,
@@ -1335,8 +1187,8 @@
       },
       {
         "id": "p7g9551",
-        "name": "TrÃÂ­ceps na polia com corda",
-        "category": "TrÃÂ­ceps",
+        "name": "Tríceps na polia com corda",
+        "category": "Tríceps",
         "notes": "",
         "sets": [
           {
@@ -1355,8 +1207,8 @@
       },
       {
         "id": "imx3mai",
-        "name": "TrÃÂ­ceps francÃÂªs no cross com corda",
-        "category": "TrÃÂ­ceps",
+        "name": "Tríceps francês no cross com corda",
+        "category": "Tríceps",
         "notes": "",
         "sets": [
           {
@@ -1371,8 +1223,8 @@
       },
       {
         "id": "vpz7evw",
-        "name": "TrÃÂ­ceps testa na polia unilateral",
-        "category": "TrÃÂ­ceps",
+        "name": "Tríceps testa na polia unilateral",
+        "category": "Tríceps",
         "notes": "",
         "sets": [
           {
@@ -1412,15 +1264,15 @@
     ]
   },
   {
-    "id": "zlchdhp",
+    "id": "nfimh24",
     "date": "2026-05-05",
-    "name": "Treino 3 - QUADRÃÂCEPS",
+    "name": "Treino 3 - QUADRÍCEPS",
     "trainType": "C",
     "exercises": [
       {
         "id": "9ezchhg",
         "name": "Agachamento no smith",
-        "category": "QuadrÃÂ­ceps",
+        "category": "Quadríceps",
         "notes": "",
         "sets": [
           {
@@ -1443,8 +1295,8 @@
       },
       {
         "id": "8c4veqk",
-        "name": "Leg press 45ÃÂ°",
-        "category": "QuadrÃÂ­ceps",
+        "name": "Leg press 45°",
+        "category": "Quadríceps",
         "notes": "",
         "sets": [
           {
@@ -1464,7 +1316,7 @@
       {
         "id": "0id1ibz",
         "name": "Extensora",
-        "category": "QuadrÃÂ­ceps",
+        "category": "Quadríceps",
         "notes": "",
         "sets": [
           {
@@ -1483,7 +1335,7 @@
       },
       {
         "id": "8vy2eyi",
-        "name": "Adutora na mÃÂ¡quina",
+        "name": "Adutora na máquina",
         "category": "Adutores / Abdutores",
         "notes": "",
         "sets": [
@@ -1503,7 +1355,7 @@
       },
       {
         "id": "jd0owz8",
-        "name": "Panturrilha sentado (mÃÂ¡quina)",
+        "name": "Panturrilha sentado (máquina)",
         "category": "Panturrilha",
         "notes": "",
         "sets": [
@@ -1524,14 +1376,14 @@
     ]
   },
   {
-    "id": "nfimh24",
+    "id": "qwsxx1g",
     "date": "2026-05-01",
     "name": "Treino 4 - SUPERIORES GERAL",
     "trainType": "D",
     "exercises": [
       {
         "id": "4et5l04",
-        "name": "ElevaÃÂ§ÃÂ£o lateral + frontal alternadas",
+        "name": "Elevação lateral + frontal alternadas",
         "category": "Ombros",
         "notes": "",
         "sets": [
@@ -1564,7 +1416,7 @@
       {
         "id": "6an69ud",
         "name": "Rosca na corda",
-        "category": "BÃÂ­ceps",
+        "category": "Bíceps",
         "notes": "",
         "sets": [
           {
@@ -1675,7 +1527,7 @@
       },
       {
         "id": "llkf7pe",
-        "name": "Encolhimento com barra (trapÃÂ©zio)",
+        "name": "Encolhimento com barra (trapézio)",
         "category": "Ombros",
         "notes": "",
         "sets": [
@@ -1696,9 +1548,9 @@
     ]
   },
   {
-    "id": "n5tghjp",
+    "id": "hcipe6j",
     "date": "2026-04-30",
-    "name": "Treino 5 - GLÃÂTEO/ POSTERIOR",
+    "name": "Treino 5 - GLÚTEO/ POSTERIOR",
     "trainType": "E",
     "exercises": [
       {
@@ -1751,8 +1603,8 @@
       },
       {
         "id": "cje6o4v",
-        "name": "Leg press 45ÃÂ°",
-        "category": "QuadrÃÂ­ceps",
+        "name": "Leg press 45°",
+        "category": "Quadríceps",
         "notes": "",
         "sets": [
           {
@@ -1771,7 +1623,7 @@
       },
       {
         "id": "ifqjfqo",
-        "name": "Panturrilha em pÃÂ© (mÃÂ¡quina)",
+        "name": "Panturrilha em pé (máquina)",
         "category": "Panturrilha",
         "notes": "",
         "sets": [
@@ -1791,8 +1643,8 @@
       },
       {
         "id": "ya7no9y",
-        "name": "Abdutora na mÃÂ¡quina",
-        "category": "GlÃÂºteos",
+        "name": "Abdutora na máquina",
+        "category": "Glúteos",
         "notes": "",
         "sets": [
           {
@@ -1812,9 +1664,9 @@
     ]
   },
   {
-    "id": "qwsxx1g",
+    "id": "vv8jg41",
     "date": "2026-04-29",
-    "name": "Treino 1 - PEITO + TRÃÂCEPS + OMBRO",
+    "name": "Treino 1 - PEITO + TRÍCEPS + OMBRO",
     "trainType": "B",
     "exercises": [
       {
@@ -1863,7 +1715,7 @@
       },
       {
         "id": "nz3m61x",
-        "name": "ElevaÃÂ§ÃÂ£o lateral com halteres",
+        "name": "Elevação lateral com halteres",
         "category": "Ombros",
         "notes": "",
         "sets": [
@@ -1885,7 +1737,7 @@
         "id": "mf123ws",
         "name": "Desenvolvimento no aparelho",
         "category": "Ombros",
-        "notes": "Drop na ÃÂºltima sÃÂ©rie (10s de descanso)",
+        "notes": "Drop na última série (10s de descanso)",
         "sets": [
           {
             "reps": 10,
@@ -1927,8 +1779,8 @@
       },
       {
         "id": "uf1qwe9",
-        "name": "TrÃÂ­ceps na polia com corda",
-        "category": "TrÃÂ­ceps",
+        "name": "Tríceps na polia com corda",
+        "category": "Tríceps",
         "notes": "",
         "sets": [
           {
@@ -1947,8 +1799,8 @@
       },
       {
         "id": "g01uu7a",
-        "name": "TrÃÂ­ceps francÃÂªs no cross com corda",
-        "category": "TrÃÂ­ceps",
+        "name": "Tríceps francês no cross com corda",
+        "category": "Tríceps",
         "notes": "",
         "sets": [
           {
@@ -1964,9 +1816,9 @@
     ]
   },
   {
-    "id": "hcipe6j",
+    "id": "fda2rv4",
     "date": "2026-04-27",
-    "name": "Treino 2 - COSTAS + BÃÂCEPS",
+    "name": "Treino 2 - COSTAS + BÍCEPS",
     "trainType": "A",
     "exercises": [
       {
@@ -1991,7 +1843,7 @@
       },
       {
         "id": "4gsevab",
-        "name": "Remada baixa com triÃÂ¢ngulo",
+        "name": "Remada baixa com triângulo",
         "category": "Costas",
         "notes": "",
         "sets": [
@@ -2012,7 +1864,7 @@
       {
         "id": "pqu6u93",
         "name": "Rosca Scott com barra W",
-        "category": "BÃÂ­ceps",
+        "category": "Bíceps",
         "notes": "+ 10kg da barra",
         "sets": [
           {
@@ -2035,8 +1887,8 @@
       },
       {
         "id": "x1s363k",
-        "name": "Rosca 45ÃÂ° com halteres",
-        "category": "BÃÂ­ceps",
+        "name": "Rosca 45° com halteres",
+        "category": "Bíceps",
         "notes": "",
         "sets": [
           {
@@ -2060,7 +1912,7 @@
       {
         "id": "zo41ee0",
         "name": "Rosca Scott com barra W",
-        "category": "BÃÂ­ceps",
+        "category": "Bíceps",
         "notes": "sentado com barra",
         "sets": [
           {
@@ -2100,15 +1952,15 @@
     ]
   },
   {
-    "id": "vv8jg41",
+    "id": "7wamtvi",
     "date": "2026-04-26",
-    "name": "Treino 3 - QUADRÃÂCEPS",
+    "name": "Treino 3 - QUADRÍCEPS",
     "trainType": "C",
     "exercises": [
       {
         "id": "ntiv68w",
         "name": "Agachamento no smith",
-        "category": "QuadrÃÂ­ceps",
+        "category": "Quadríceps",
         "notes": "",
         "sets": [
           {
@@ -2127,8 +1979,8 @@
       },
       {
         "id": "a01xlu6",
-        "name": "Leg press 45ÃÂ°",
-        "category": "QuadrÃÂ­ceps",
+        "name": "Leg press 45°",
+        "category": "Quadríceps",
         "notes": "",
         "sets": [
           {
@@ -2152,7 +2004,7 @@
       {
         "id": "5lh0egm",
         "name": "Extensora",
-        "category": "QuadrÃÂ­ceps",
+        "category": "Quadríceps",
         "notes": "",
         "sets": [
           {
@@ -2171,7 +2023,7 @@
       },
       {
         "id": "ecyht6p",
-        "name": "Adutora na mÃÂ¡quina",
+        "name": "Adutora na máquina",
         "category": "Adutores / Abdutores",
         "notes": "",
         "sets": [
@@ -2191,7 +2043,7 @@
       },
       {
         "id": "ro4hzzp",
-        "name": "Panturrilha em pÃÂ© (mÃÂ¡quina)",
+        "name": "Panturrilha em pé (máquina)",
         "category": "Panturrilha",
         "notes": "",
         "sets": [
@@ -2212,7 +2064,7 @@
       {
         "id": "1hv9akm",
         "name": "Agachamento sumo",
-        "category": "QuadrÃÂ­ceps",
+        "category": "Quadríceps",
         "notes": "",
         "sets": [
           {
@@ -2236,7 +2088,7 @@
     ]
   },
   {
-    "id": "fda2rv4",
+    "id": "xfmdbp7",
     "date": "2026-04-24",
     "name": "Treino 4 - SUPERIORES GERAL",
     "trainType": "D",
@@ -2263,7 +2115,7 @@
       },
       {
         "id": "8ri486u",
-        "name": "ElevaÃÂ§ÃÂ£o lateral + frontal alternadas",
+        "name": "Elevação lateral + frontal alternadas",
         "category": "Ombros",
         "notes": "",
         "sets": [
@@ -2296,7 +2148,7 @@
       {
         "id": "w5op3fv",
         "name": "Rosca na corda",
-        "category": "BÃÂ­ceps",
+        "category": "Bíceps",
         "notes": "",
         "sets": [
           {
@@ -2364,9 +2216,9 @@
     ]
   },
   {
-    "id": "7wamtvi",
+    "id": "tpm2323",
     "date": "2026-04-23",
-    "name": "Treino 5 - GLÃÂTEO/ POSTERIOR",
+    "name": "Treino 5 - GLÚTEO/ POSTERIOR",
     "trainType": "E",
     "exercises": [
       {
@@ -2391,8 +2243,8 @@
       },
       {
         "id": "bdlab7c",
-        "name": "Leg press 45ÃÂ°",
-        "category": "QuadrÃÂ­ceps",
+        "name": "Leg press 45°",
+        "category": "Quadríceps",
         "notes": "",
         "sets": [
           {
@@ -2411,7 +2263,7 @@
       },
       {
         "id": "2pwuphz",
-        "name": "Panturrilha em pÃÂ© (mÃÂ¡quina)",
+        "name": "Panturrilha em pé (máquina)",
         "category": "Panturrilha",
         "notes": "",
         "sets": [
@@ -2431,8 +2283,8 @@
       },
       {
         "id": "rr07ekr",
-        "name": "Abdutora na mÃÂ¡quina",
-        "category": "GlÃÂºteos",
+        "name": "Abdutora na máquina",
+        "category": "Glúteos",
         "notes": "",
         "sets": [
           {
@@ -2452,9 +2304,9 @@
     ]
   },
   {
-    "id": "xfmdbp7",
+    "id": "b1y9qk7",
     "date": "2026-04-22",
-    "name": "Treino 1 - PEITO + TRÃÂCEPS + OMBRO",
+    "name": "Treino 1 - PEITO + TRÍCEPS + OMBRO",
     "trainType": "B",
     "exercises": [
       {
@@ -2527,7 +2379,7 @@
       },
       {
         "id": "n79i4cj",
-        "name": "ElevaÃÂ§ÃÂ£o lateral com halteres",
+        "name": "Elevação lateral com halteres",
         "category": "Ombros",
         "notes": "",
         "sets": [
@@ -2549,7 +2401,7 @@
         "id": "ffa7n4h",
         "name": "Desenvolvimento no aparelho",
         "category": "Ombros",
-        "notes": "Drop na ÃÂºltima sÃÂ©rie (10s de descanso)",
+        "notes": "Drop na última série (10s de descanso)",
         "sets": [
           {
             "reps": 10,
@@ -2568,9 +2420,9 @@
     ]
   },
   {
-    "id": "tpm2323",
+    "id": "jilol2f",
     "date": "2026-04-21",
-    "name": "Treino 2 - COSTAS + BÃÂCEPS",
+    "name": "Treino 2 - COSTAS + BÍCEPS",
     "trainType": "A",
     "exercises": [
       {
@@ -2595,7 +2447,7 @@
       },
       {
         "id": "dzoccn3",
-        "name": "Remada baixa com triÃÂ¢ngulo",
+        "name": "Remada baixa com triângulo",
         "category": "Costas",
         "notes": "",
         "sets": [
@@ -2616,7 +2468,7 @@
       {
         "id": "26uga17",
         "name": "Rosca Scott com barra W",
-        "category": "BÃÂ­ceps",
+        "category": "Bíceps",
         "notes": "",
         "sets": [
           {
@@ -2639,8 +2491,8 @@
       },
       {
         "id": "z5iyu17",
-        "name": "Rosca 45ÃÂ° com halteres",
-        "category": "BÃÂ­ceps",
+        "name": "Rosca 45° com halteres",
+        "category": "Bíceps",
         "notes": "",
         "sets": [
           {
@@ -2664,8 +2516,8 @@
       {
         "id": "ivlfsh9",
         "name": "Rosca Scott com barra W",
-        "category": "BÃÂ­ceps",
-        "notes": "mÃÂ¡quina",
+        "category": "Bíceps",
+        "notes": "máquina",
         "sets": [
           {
             "reps": 10,
@@ -2712,15 +2564,15 @@
     ]
   },
   {
-    "id": "b1y9qk7",
+    "id": "acowff9",
     "date": "2026-04-19",
-    "name": "Treino 3 - QUADRÃÂCEPS",
+    "name": "Treino 3 - QUADRÍCEPS",
     "trainType": "C",
     "exercises": [
       {
         "id": "rgat72d",
         "name": "Agachamento no smith",
-        "category": "QuadrÃÂ­ceps",
+        "category": "Quadríceps",
         "notes": "",
         "sets": [
           {
@@ -2743,8 +2595,8 @@
       },
       {
         "id": "8z1nt83",
-        "name": "Leg press 45ÃÂ°",
-        "category": "QuadrÃÂ­ceps",
+        "name": "Leg press 45°",
+        "category": "Quadríceps",
         "notes": "",
         "sets": [
           {
@@ -2764,7 +2616,7 @@
       {
         "id": "4xfodyy",
         "name": "Extensora",
-        "category": "QuadrÃÂ­ceps",
+        "category": "Quadríceps",
         "notes": "",
         "sets": [
           {
@@ -2783,7 +2635,7 @@
       },
       {
         "id": "3gmps1c",
-        "name": "Adutora na mÃÂ¡quina",
+        "name": "Adutora na máquina",
         "category": "Adutores / Abdutores",
         "notes": "",
         "sets": [
@@ -2803,7 +2655,7 @@
       },
       {
         "id": "tf4c5nc",
-        "name": "Panturrilha em pÃÂ© (mÃÂ¡quina)",
+        "name": "Panturrilha em pé (máquina)",
         "category": "Panturrilha",
         "notes": "",
         "sets": [
@@ -2824,7 +2676,7 @@
     ]
   },
   {
-    "id": "jilol2f",
+    "id": "2pyz3sq",
     "date": "2026-04-18",
     "name": "Treino 4 - SUPERIORES GERAL",
     "trainType": "D",
@@ -2851,7 +2703,7 @@
       },
       {
         "id": "2fe3qkx",
-        "name": "ElevaÃÂ§ÃÂ£o lateral + frontal alternadas",
+        "name": "Elevação lateral + frontal alternadas",
         "category": "Ombros",
         "notes": "",
         "sets": [
@@ -2884,7 +2736,7 @@
       {
         "id": "4q5i218",
         "name": "Rosca na corda",
-        "category": "BÃÂ­ceps",
+        "category": "Bíceps",
         "notes": "",
         "sets": [
           {
@@ -2987,7 +2839,7 @@
       },
       {
         "id": "52hf3cq",
-        "name": "Encolhimento com barra (trapÃÂ©zio)",
+        "name": "Encolhimento com barra (trapézio)",
         "category": "Ombros",
         "notes": "",
         "sets": [
@@ -3008,9 +2860,9 @@
     ]
   },
   {
-    "id": "acowff9",
+    "id": "fir3ywt",
     "date": "2026-04-15",
-    "name": "Treino 5 - GLÃÂTEO/ POSTERIOR",
+    "name": "Treino 5 - GLÚTEO/ POSTERIOR",
     "trainType": "E",
     "exercises": [
       {
@@ -3063,8 +2915,8 @@
       },
       {
         "id": "6ilyet1",
-        "name": "Leg press 45ÃÂ°",
-        "category": "QuadrÃÂ­ceps",
+        "name": "Leg press 45°",
+        "category": "Quadríceps",
         "notes": "",
         "sets": [
           {
@@ -3083,7 +2935,7 @@
       },
       {
         "id": "kcnnsvr",
-        "name": "Panturrilha em pÃÂ© (mÃÂ¡quina)",
+        "name": "Panturrilha em pé (máquina)",
         "category": "Panturrilha",
         "notes": "",
         "sets": [
@@ -3103,8 +2955,8 @@
       },
       {
         "id": "0nnwr1v",
-        "name": "Abdutora na mÃÂ¡quina",
-        "category": "GlÃÂºteos",
+        "name": "Abdutora na máquina",
+        "category": "Glúteos",
         "notes": "",
         "sets": [
           {
@@ -3120,185 +2972,13 @@
             "weight": 45
           }
         ]
-      },
-      {
-        "id": "n7g3w66",
-        "name": "Cadeira flexora",
-        "category": "Posterior de Coxa",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 38.5
-          },
-          {
-            "reps": "",
-            "weight": ""
-          },
-          {
-            "reps": "",
-            "weight": ""
-          }
-        ]
       }
     ]
   },
   {
-    "id": "tpk19xx",
-    "date": "2026-04-15",
-    "name": "Treino 2 - COSTAS + BÃÂCEPS",
-    "trainType": "A",
-    "exercises": [
-      {
-        "id": "gpkd8jf",
-        "name": "Puxada alta com barra reta",
-        "category": "Costas",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 31.5
-          },
-          {
-            "reps": 12,
-            "weight": 25
-          },
-          {
-            "reps": 18,
-            "weight": 25
-          }
-        ]
-      },
-      {
-        "id": "9lwmrzd",
-        "name": "Remada baixa com triÃÂ¢ngulo",
-        "category": "Costas",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 31.5
-          },
-          {
-            "reps": 12,
-            "weight": 31.5
-          },
-          {
-            "reps": 178,
-            "weight": 31.5
-          }
-        ]
-      },
-      {
-        "id": "3ijwecm",
-        "name": "Rosca Scott com barra W",
-        "category": "BÃÂ­ceps",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 15
-          },
-          {
-            "reps": 12,
-            "weight": 15
-          },
-          {
-            "reps": 12,
-            "weight": 15
-          }
-        ]
-      },
-      {
-        "id": "kdjmz2r",
-        "name": "Rosca 45ÃÂ° com halteres",
-        "category": "BÃÂ­ceps",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 5
-          },
-          {
-            "reps": 10,
-            "weight": 6
-          },
-          {
-            "reps": 10,
-            "weight": 6
-          },
-          {
-            "reps": 8,
-            "weight": 3
-          }
-        ]
-      },
-      {
-        "id": "jgc6d0x",
-        "name": "Pullover com corda na polia",
-        "category": "Costas",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 20
-          },
-          {
-            "reps": 12,
-            "weight": 25
-          },
-          {
-            "reps": 12,
-            "weight": 25
-          }
-        ]
-      },
-      {
-        "id": "8ygolrd",
-        "name": "Rosca inversa (barra)",
-        "category": "AntebraÃÂ§o",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 10
-          },
-          {
-            "reps": 12,
-            "weight": 10
-          },
-          {
-            "reps": 12,
-            "weight": 10
-          }
-        ]
-      },
-      {
-        "id": "xfariog",
-        "name": "Remada curvada com barra",
-        "category": "Costas",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 30
-          },
-          {
-            "reps": 10,
-            "weight": 30
-          },
-          {
-            "reps": 10,
-            "weight": 30
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "k9oxt8c",
+    "id": "01d8o1x",
     "date": "2026-04-12",
-    "name": "Treino 1 - PEITO + TRÃÂCEPS + OMBRO",
+    "name": "Treino 1 - PEITO + TRÍCEPS + OMBRO",
     "trainType": "B",
     "exercises": [
       {
@@ -3367,7 +3047,7 @@
       },
       {
         "id": "fjxmp65",
-        "name": "ElevaÃÂ§ÃÂ£o lateral com halteres",
+        "name": "Elevação lateral com halteres",
         "category": "Ombros",
         "notes": "",
         "sets": [
@@ -3387,8 +3067,8 @@
       },
       {
         "id": "e8gnwoz",
-        "name": "TrÃÂ­ceps na polia com corda",
-        "category": "TrÃÂ­ceps",
+        "name": "Tríceps na polia com corda",
+        "category": "Tríceps",
         "notes": "",
         "sets": [
           {
@@ -3409,7 +3089,7 @@
         "id": "8lef6nl",
         "name": "Desenvolvimento no aparelho",
         "category": "Ombros",
-        "notes": "Drop na ÃÂºltima sÃÂ©rie (10s de descanso)",
+        "notes": "Drop na última série (10s de descanso)",
         "sets": [
           {
             "reps": 12,
@@ -3436,15 +3116,15 @@
     ]
   },
   {
-    "id": "bwgwupf",
+    "id": "um42ql1",
     "date": "2026-04-11",
-    "name": "Treino 3 - QUADRÃÂCEPS",
+    "name": "Treino 3 - QUADRÍCEPS",
     "trainType": "C",
     "exercises": [
       {
         "id": "lg1tnz4",
         "name": "Agachamento no smith",
-        "category": "QuadrÃÂ­ceps",
+        "category": "Quadríceps",
         "notes": "",
         "sets": [
           {
@@ -3467,8 +3147,8 @@
       },
       {
         "id": "239ubhd",
-        "name": "Leg press 45ÃÂ°",
-        "category": "QuadrÃÂ­ceps",
+        "name": "Leg press 45°",
+        "category": "Quadríceps",
         "notes": "",
         "sets": [
           {
@@ -3488,7 +3168,7 @@
       {
         "id": "mwdh1lm",
         "name": "Extensora",
-        "category": "QuadrÃÂ­ceps",
+        "category": "Quadríceps",
         "notes": "",
         "sets": [
           {
@@ -3507,7 +3187,7 @@
       },
       {
         "id": "37lx50h",
-        "name": "Panturrilha sentado (mÃÂ¡quina)",
+        "name": "Panturrilha sentado (máquina)",
         "category": "Panturrilha",
         "notes": "",
         "sets": [
@@ -3527,7 +3207,7 @@
       },
       {
         "id": "np3spvv",
-        "name": "Abdutora na mÃÂ¡quina",
+        "name": "Abdutora na máquina",
         "category": "Adutores / Abdutores",
         "notes": "",
         "sets": [
@@ -3548,7 +3228,7 @@
     ]
   },
   {
-    "id": "2pyz3sq",
+    "id": "2pyz3sq2",
     "date": "2026-04-10",
     "name": "Treino 4 - SUPERIORES GERAL",
     "trainType": "D",
@@ -3595,8 +3275,8 @@
       },
       {
         "id": "whop5kn",
-        "name": "TrÃÂ­ceps na polia com corda",
-        "category": "TrÃÂ­ceps",
+        "name": "Tríceps na polia com corda",
+        "category": "Tríceps",
         "notes": "",
         "sets": [
           {
@@ -3635,7 +3315,7 @@
       },
       {
         "id": "z3houic",
-        "name": "ElevaÃÂ§ÃÂ£o lateral + frontal alternadas",
+        "name": "Elevação lateral + frontal alternadas",
         "category": "Ombros",
         "notes": "",
         "sets": [
@@ -3668,7 +3348,7 @@
       {
         "id": "i4auwrg",
         "name": "Rosca na corda",
-        "category": "BÃÂ­ceps",
+        "category": "Bíceps",
         "notes": "",
         "sets": [
           {
@@ -3687,7 +3367,7 @@
       },
       {
         "id": "oxujdmf",
-        "name": "Encolhimento com barra (trapÃÂ©zio)",
+        "name": "Encolhimento com barra (trapézio)",
         "category": "Ombros",
         "notes": "Remada alta",
         "sets": [
@@ -3708,9 +3388,9 @@
     ]
   },
   {
-    "id": "fir3ywt",
+    "id": "fir3ywt2",
     "date": "2026-04-09",
-    "name": "Treino 5 - GLÃÂTEO/ POSTERIOR",
+    "name": "Treino 5 - GLÚTEO/ POSTERIOR",
     "trainType": "E",
     "exercises": [
       {
@@ -3755,8 +3435,8 @@
       },
       {
         "id": "8rjn703",
-        "name": "Leg press 45ÃÂ°",
-        "category": "QuadrÃÂ­ceps",
+        "name": "Leg press 45°",
+        "category": "Quadríceps",
         "notes": "",
         "sets": [
           {
@@ -3775,7 +3455,7 @@
       },
       {
         "id": "gjasro6",
-        "name": "Panturrilha em pÃÂ© (mÃÂ¡quina)",
+        "name": "Panturrilha em pé (máquina)",
         "category": "Panturrilha",
         "notes": "",
         "sets": [
@@ -3786,17 +3466,13 @@
           {
             "reps": 12,
             "weight": 38.5
-          },
-          {
-            "reps": "",
-            "weight": ""
           }
         ]
       },
       {
         "id": "h88i8e8",
-        "name": "Abdutora na mÃÂ¡quina",
-        "category": "GlÃÂºteos",
+        "name": "Abdutora na máquina",
+        "category": "Glúteos",
         "notes": "",
         "sets": [
           {
@@ -3816,9 +3492,9 @@
     ]
   },
   {
-    "id": "01d8o1x",
+    "id": "01d8o1x2",
     "date": "2026-04-06",
-    "name": "Treino 1 - PEITO + TRÃÂCEPS + OMBRO",
+    "name": "Treino 1 - PEITO + TRÍCEPS + OMBRO",
     "trainType": "B",
     "exercises": [
       {
@@ -3887,7 +3563,7 @@
       },
       {
         "id": "euxr34g",
-        "name": "ElevaÃÂ§ÃÂ£o lateral com halteres",
+        "name": "Elevação lateral com halteres",
         "category": "Ombros",
         "notes": "",
         "sets": [
@@ -3907,8 +3583,8 @@
       },
       {
         "id": "njmtpr6",
-        "name": "TrÃÂ­ceps testa na polia unilateral",
-        "category": "TrÃÂ­ceps",
+        "name": "Tríceps testa na polia unilateral",
+        "category": "Tríceps",
         "notes": "",
         "sets": [
           {
@@ -3927,8 +3603,8 @@
       },
       {
         "id": "jtyd6aq",
-        "name": "TrÃÂ­ceps na polia com corda",
-        "category": "TrÃÂ­ceps",
+        "name": "Tríceps na polia com corda",
+        "category": "Tríceps",
         "notes": "",
         "sets": [
           {
@@ -3968,15 +3644,15 @@
     ]
   },
   {
-    "id": "um42ql1",
+    "id": "um42ql12",
     "date": "2026-04-04",
-    "name": "Treino 3 - QUADRÃÂCEPS",
+    "name": "Treino 3 - QUADRÍCEPS",
     "trainType": "C",
     "exercises": [
       {
         "id": "eau3zk8",
         "name": "Agachamento no smith",
-        "category": "QuadrÃÂ­ceps",
+        "category": "Quadríceps",
         "notes": "",
         "sets": [
           {
@@ -3999,8 +3675,8 @@
       },
       {
         "id": "s8zq9jn",
-        "name": "Leg press 45ÃÂ°",
-        "category": "QuadrÃÂ­ceps",
+        "name": "Leg press 45°",
+        "category": "Quadríceps",
         "notes": "",
         "sets": [
           {
@@ -4020,7 +3696,7 @@
       {
         "id": "a5z4z4b",
         "name": "Extensora",
-        "category": "QuadrÃÂ­ceps",
+        "category": "Quadríceps",
         "notes": "",
         "sets": [
           {
@@ -4039,7 +3715,7 @@
       },
       {
         "id": "yfzanvy",
-        "name": "Panturrilha sentado (mÃÂ¡quina)",
+        "name": "Panturrilha sentado (máquina)",
         "category": "Panturrilha",
         "notes": "",
         "sets": [
@@ -4059,7 +3735,7 @@
       },
       {
         "id": "ila3qwf",
-        "name": "Abdutora na mÃÂ¡quina",
+        "name": "Abdutora na máquina",
         "category": "Adutores / Abdutores",
         "notes": "",
         "sets": [
@@ -4074,138 +3750,6 @@
           {
             "reps": 10,
             "weight": 84
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "vktrp0r",
-    "date": "2026-04-06",
-    "name": "Treino 2 - COSTAS + BÃÂCEPS",
-    "trainType": "A",
-    "exercises": [
-      {
-        "id": "g5lgcbg",
-        "name": "Puxada alta com barra reta",
-        "category": "Costas",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 25
-          },
-          {
-            "reps": 10,
-            "weight": 31.5
-          },
-          {
-            "reps": 10,
-            "weight": 25
-          }
-        ]
-      },
-      {
-        "id": "e0noep8",
-        "name": "Remada baixa com triÃÂ¢ngulo",
-        "category": "Costas",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 31.5
-          },
-          {
-            "reps": 12,
-            "weight": 31.5
-          },
-          {
-            "reps": 12,
-            "weight": 25
-          }
-        ]
-      },
-      {
-        "id": "ni3okzg",
-        "name": "Rosca Scott com barra W",
-        "category": "BÃÂ­ceps",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 15
-          },
-          {
-            "reps": 12,
-            "weight": 15
-          },
-          {
-            "reps": 12,
-            "weight": 15
-          }
-        ]
-      },
-      {
-        "id": "3g7wqgh",
-        "name": "Rosca 45ÃÂ° com halteres",
-        "category": "BÃÂ­ceps",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 6
-          },
-          {
-            "reps": 12,
-            "weight": 5
-          },
-          {
-            "reps": 12,
-            "weight": 5
-          },
-          {
-            "reps": 12,
-            "weight": 4
-          }
-        ]
-      },
-      {
-        "id": "9q501lg",
-        "name": "Pullover com corda na polia",
-        "category": "Costas",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 22.5
-          },
-          {
-            "reps": 12,
-            "weight": 27
-          },
-          {
-            "reps": 12,
-            "weight": 27
-          }
-        ]
-      },
-      {
-        "id": "bebveds",
-        "name": "Rosca inversa (barra)",
-        "category": "AntebraÃÂ§o",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 9
-          },
-          {
-            "reps": 10,
-            "weight": 9
-          },
-          {
-            "reps": 10,
-            "weight": 9
           }
         ]
       }
