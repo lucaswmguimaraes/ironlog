@@ -187,6 +187,51 @@ export function ProfileSettings({ profileId, profileName, currentConfig, current
         </label>
         {importError && <div style={{ color: C.error, fontSize: 12, marginTop: 8 }}>{importError}</div>}
       </div>
+
+      {/* Log de sincronização */}
+      <SyncLog profileId={profileId} />
+    </div>
+  );
+}
+
+function SyncLog({ profileId }) {
+  const [logs, setLogs] = useState([]);
+  const [open, setOpen] = useState(false);
+
+  const refresh = () => {
+    try {
+      const raw = localStorage.getItem("ironlog_sync_log") || "[]";
+      setLogs(JSON.parse(raw));
+    } catch { setLogs([]); }
+  };
+
+  const clear = () => {
+    localStorage.removeItem("ironlog_sync_log");
+    setLogs([]);
+  };
+
+  return (
+    <div style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: 12, padding: 16, marginBottom: 40 }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 8 }}>
+        <div style={{ fontSize: 13, fontWeight: 700, color: C.text }}>🔍 Log de sincronização</div>
+        <div style={{ display: "flex", gap: 8 }}>
+          <button onClick={() => { refresh(); setOpen(true); }} style={{ fontSize: 11, color: C.accent, background: "none", border: `1px solid ${C.accent}44`, borderRadius: 6, padding: "4px 10px", cursor: "pointer" }}>Ver</button>
+          <button onClick={clear} style={{ fontSize: 11, color: C.sub, background: "none", border: `1px solid ${C.border}`, borderRadius: 6, padding: "4px 10px", cursor: "pointer" }}>Limpar</button>
+        </div>
+      </div>
+      <div style={{ fontSize: 11, color: C.sub }}>Registra cada save/load com hora e quantidade de treinos</div>
+      {open && (
+        <div style={{ marginTop: 12, maxHeight: 300, overflowY: "auto" }}>
+          {logs.length === 0
+            ? <div style={{ fontSize: 11, color: C.sub }}>Nenhum registro ainda.</div>
+            : logs.map((l, i) => (
+              <div key={i} style={{ fontSize: 11, color: l.includes("ERRO") || l.includes("exception") ? "#ff5555" : l.includes("ok") ? "#2ecc71" : C.sub, padding: "3px 0", borderBottom: `1px solid ${C.border}`, fontFamily: "monospace" }}>
+                {l}
+              </div>
+            ))
+          }
+        </div>
+      )}
     </div>
   );
 }
