@@ -3,15 +3,17 @@ import { useState, useCallback } from "react";
 
 const PAT_KEY = (profileId) => `ironlog_pat_${profileId}`;
 const CONFIG_KEY = (profileId) => `ironlog_config_${profileId}`;
+const PROFILE_KEY = "ironlog_profile";
 
 export function useProfile() {
   const [profile, setProfile] = useState(() => {
-    try { return JSON.parse(sessionStorage.getItem("ironlog_profile") || "null"); }
+    try { return JSON.parse(localStorage.getItem(PROFILE_KEY) || "null"); }
     catch { return null; }
   });
 
   const selectProfile = useCallback((p) => {
-    sessionStorage.setItem("ironlog_profile", JSON.stringify(p));
+    if (p) localStorage.setItem(PROFILE_KEY, JSON.stringify(p));
+    else localStorage.removeItem(PROFILE_KEY);
     setProfile(p);
   }, []);
 
