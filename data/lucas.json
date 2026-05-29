@@ -1,30 +1,46 @@
 [
   {
-    "id": "a5cvgmt",
+    "id": "7vl4nfb",
     "date": "2026-05-29",
-    "name": "Treino A",
-    "trainType": "A",
+    "name": "Treino D",
+    "trainType": "D",
     "exercises": [
       {
-        "id": "ub8wr4v",
-        "name": "Pullover com halteres",
+        "id": "uqyntmj",
+        "name": "Supino reto com barra",
         "category": "Peito",
         "notes": "",
         "sets": [
           {
             "reps": "",
             "weight": ""
-          },
+          }
+        ]
+      },
+      {
+        "id": "4glmjat",
+        "name": "Posterior de ombro com halteres",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
           {
             "reps": "",
             "weight": ""
           }
         ]
-      },
+      }
+    ]
+  },
+  {
+    "id": "yncu8tc",
+    "date": "2026-05-29",
+    "name": "Treino C",
+    "trainType": "C",
+    "exercises": [
       {
-        "id": "l2hrbxf",
-        "name": "Rosca concentrada",
-        "category": "Bíceps",
+        "id": "9xiad8r",
+        "name": "Agachamento búlgaro com barra",
+        "category": "Quadríceps",
         "notes": "",
         "sets": [
           {
@@ -34,9 +50,9 @@
         ]
       },
       {
-        "id": "yrwj7vg",
-        "name": "Rosca 45° com halteres",
-        "category": "Bíceps",
+        "id": "myl54px",
+        "name": "Leg press horizontal",
+        "category": "Quadríceps",
         "notes": "",
         "sets": [
           {
@@ -46,9 +62,9 @@
         ]
       },
       {
-        "id": "85ooisn",
-        "name": "Rosca 45° com halteres",
-        "category": "Bíceps",
+        "id": "6ida0tz",
+        "name": "Afundo",
+        "category": "Quadríceps",
         "notes": "",
         "sets": [
           {
