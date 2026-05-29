@@ -1,5 +1,129 @@
 [
   {
+    "id": "f7rj07s",
+    "date": "2026-05-29",
+    "name": "Treino 5 - GLÚTEO/ POSTERIOR ",
+    "trainType": "E",
+    "exercises": [
+      {
+        "id": "fbxurii",
+        "name": "Mesa flexora",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 11
+          },
+          {
+            "reps": 3,
+            "weight": 31.5
+          },
+          {
+            "reps": 5,
+            "weight": 25
+          },
+          {
+            "reps": 11,
+            "weight": 18
+          },
+          {
+            "reps": 10,
+            "weight": 18
+          },
+          {
+            "reps": 6,
+            "weight": 11
+          }
+        ]
+      },
+      {
+        "id": "md4sawk",
+        "name": "Stiff com barra",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 8,
+            "weight": 40
+          },
+          {
+            "reps": 9,
+            "weight": 40
+          },
+          {
+            "reps": 8,
+            "weight": 40
+          },
+          {
+            "reps": 10,
+            "weight": 40
+          }
+        ]
+      },
+      {
+        "id": "l2qe8pb",
+        "name": "Cadeira flexora",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 38.5
+          },
+          {
+            "reps": 10,
+            "weight": 38.5
+          },
+          {
+            "reps": 12,
+            "weight": 38.5
+          }
+        ]
+      },
+      {
+        "id": "05lr72o",
+        "name": "Abdutora na máquina",
+        "category": "Glúteos",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 84
+          },
+          {
+            "reps": 12,
+            "weight": 93
+          },
+          {
+            "reps": 12,
+            "weight": 102
+          }
+        ]
+      },
+      {
+        "id": "ipygxe4",
+        "name": "Panturrilha sentado (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 36.5
+          },
+          {
+            "reps": 12,
+            "weight": 36.5
+          },
+          {
+            "reps": 13,
+            "weight": 36.5
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "y72ii48",
     "date": "2026-05-28",
     "name": "Treino 1 - PEITO + TRÍCEPS + OMBRO",
@@ -830,7 +954,7 @@
   {
     "id": "6lxm72v",
     "date": "2026-05-12",
-    "name": "Treino 5 - GLÚTEO/ POSTERIOR",
+    "name": "Treino 5 - GLÚTEO/ POSTERIOR ",
     "trainType": "E",
     "exercises": [
       {
@@ -1574,7 +1698,7 @@
   {
     "id": "n5tghjp",
     "date": "2026-04-30",
-    "name": "Treino 5 - GLÚTEO/ POSTERIOR",
+    "name": "Treino 5 - GLÚTEO/ POSTERIOR ",
     "trainType": "E",
     "exercises": [
       {
@@ -1889,7 +2013,7 @@
         "id": "pqu6u93",
         "name": "Rosca Scott com barra W",
         "category": "Bíceps",
-        "notes": "+ 10kg da barra",
+        "notes": "+ 10kg da barra ",
         "sets": [
           {
             "reps": 10,
@@ -1937,7 +2061,7 @@
         "id": "zo41ee0",
         "name": "Rosca Scott com barra W",
         "category": "Bíceps",
-        "notes": "sentado com barra",
+        "notes": "sentado com barra ",
         "sets": [
           {
             "reps": 12,
@@ -2242,7 +2366,7 @@
   {
     "id": "7wamtvi",
     "date": "2026-04-23",
-    "name": "Treino 5 - GLÚTEO/ POSTERIOR",
+    "name": "Treino 5 - GLÚTEO/ POSTERIOR ",
     "trainType": "E",
     "exercises": [
       {
@@ -2541,7 +2665,7 @@
         "id": "ivlfsh9",
         "name": "Rosca Scott com barra W",
         "category": "Bíceps",
-        "notes": "máquina",
+        "notes": "máquina ",
         "sets": [
           {
             "reps": 10,
@@ -2886,7 +3010,7 @@
   {
     "id": "acowff9",
     "date": "2026-04-15",
-    "name": "Treino 5 - GLÚTEO/ POSTERIOR",
+    "name": "Treino 5 - GLÚTEO/ POSTERIOR ",
     "trainType": "E",
     "exercises": [
       {
@@ -3586,7 +3710,7 @@
   {
     "id": "fir3ywt",
     "date": "2026-04-09",
-    "name": "Treino 5 - GLÚTEO/ POSTERIOR",
+    "name": "Treino 5 - GLÚTEO/ POSTERIOR ",
     "trainType": "E",
     "exercises": [
       {
