@@ -349,6 +349,20 @@ export default function App(){
         onSavePAT={(pat) => { setPAT(profile.id, pat); setGithubSetupDone(true); }}
         onBack={() => setShowSettings(false)}
       />
+      <div style={{ padding: "0 16px 40px", maxWidth: 480, margin: "0 auto" }}>
+        <details>
+          <summary style={{ fontSize: 11, color: "#555", cursor: "pointer", padding: "8px 0" }}>🔍 Debug sync log</summary>
+          <div style={{ fontSize: 10, fontFamily: "monospace", background: "#111", color: "#0f0", borderRadius: 8, padding: 12, marginTop: 8, maxHeight: 300, overflowY: "auto" }}>
+            {(JSON.parse(localStorage.getItem("ironlog_sync_log") || "[]")).map((l, i) => <div key={i}>{l}</div>)}
+            {JSON.parse(localStorage.getItem("ironlog_sync_log") || "[]").length === 0 && <div>sem logs ainda</div>}
+          </div>
+          <div style={{ fontSize: 10, color: "#555", marginTop: 6 }}>
+            SHA namorada: {localStorage.getItem("ironlog_sha_namorada")?.slice(0,7) || "none"} |
+            SHA lucas: {localStorage.getItem("ironlog_sha_lucas")?.slice(0,7) || "none"}
+          </div>
+          <button onClick={() => { localStorage.removeItem("ironlog_sync_log"); window.location.reload(); }} style={{ marginTop: 8, fontSize: 11, padding: "4px 10px", borderRadius: 6, border: "1px solid #555", background: "transparent", color: "#888", cursor: "pointer" }}>Limpar logs</button>
+        </details>
+      </div>
     </div>
   );
 
