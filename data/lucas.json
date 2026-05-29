@@ -1,37 +1,5 @@
 [
   {
-    "id": "lf191r8",
-    "date": "2026-05-29",
-    "name": "Treino C",
-    "trainType": "C",
-    "exercises": [
-      {
-        "id": "9tvmt82",
-        "name": "Agachamento no smith",
-        "category": "Quadríceps",
-        "notes": "",
-        "sets": [
-          {
-            "reps": "",
-            "weight": ""
-          }
-        ]
-      },
-      {
-        "id": "pdgxcrp",
-        "name": "Agachamento búlgaro com barra",
-        "category": "Quadríceps",
-        "notes": "",
-        "sets": [
-          {
-            "reps": "",
-            "weight": ""
-          }
-        ]
-      }
-    ]
-  },
-  {
     "id": "1srt48j",
     "date": "2026-05-29",
     "name": "Treino A",
