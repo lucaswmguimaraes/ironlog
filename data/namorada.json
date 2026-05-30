@@ -1,5 +1,177 @@
 [
   {
+    "id": "tuo6egm",
+    "date": "2026-05-30",
+    "name": "Treino 4 - SUPERIORES GERAL",
+    "trainType": "D",
+    "exercises": [
+      {
+        "id": "7wqp9u6",
+        "name": "Remada baixa com barra",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 12.5
+          },
+          {
+            "reps": 10,
+            "weight": 12.5
+          },
+          {
+            "reps": 10,
+            "weight": 12.5
+          }
+        ]
+      },
+      {
+        "id": "n6rbb8l",
+        "name": "Remada serrote unilateral",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 12.5
+          },
+          {
+            "reps": 10,
+            "weight": 12.5
+          },
+          {
+            "reps": 10,
+            "weight": 12.5
+          }
+        ]
+      },
+      {
+        "id": "ge7weez",
+        "name": "Elevação lateral + frontal alternadas",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 4
+          },
+          {
+            "reps": 10,
+            "weight": 3
+          },
+          {
+            "reps": 10,
+            "weight": 4
+          },
+          {
+            "reps": 10,
+            "weight": 3
+          },
+          {
+            "reps": 10,
+            "weight": 4
+          },
+          {
+            "reps": 9,
+            "weight": 3
+          }
+        ]
+      },
+      {
+        "id": "0htnkfs",
+        "name": "Rosca na corda",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 18
+          },
+          {
+            "reps": 11,
+            "weight": 18
+          },
+          {
+            "reps": 10,
+            "weight": 18
+          },
+          {
+            "reps": 10,
+            "weight": 13.5
+          }
+        ]
+      },
+      {
+        "id": "3lm95g0",
+        "name": "Peck deck",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 17,
+            "weight": 18
+          },
+          {
+            "reps": 18,
+            "weight": 18
+          },
+          {
+            "reps": 18,
+            "weight": 18
+          }
+        ]
+      },
+      {
+        "id": "rh5lwd4",
+        "name": "Supino reto com barra",
+        "category": "Peito",
+        "notes": "maquina",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 15
+          },
+          {
+            "reps": 12,
+            "weight": 20
+          },
+          {
+            "reps": 12,
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "id": "38ufzhj",
+        "name": "Encolhimento com barra (trapézio)",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "e0vhv5i",
     "date": "2026-05-29",
     "name": "Treino 5 - GLÚTEO/ POSTERIOR",
