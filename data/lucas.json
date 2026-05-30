@@ -1,5 +1,201 @@
 [
   {
+    "id": "fm2zxmm",
+    "date": "2026-05-30",
+    "name": "Treino D - Superiores",
+    "trainType": "D",
+    "exercises": [
+      {
+        "id": "5yvo9yi",
+        "name": "Crucifixo no cross (cabo alto)",
+        "category": "Peito",
+        "notes": "Parciais após cada série",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 17.5
+          },
+          {
+            "reps": 6,
+            "weight": 17.5
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          },
+          {
+            "reps": 6,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 12.5
+          },
+          {
+            "reps": 6,
+            "weight": 12.5
+          }
+        ]
+      },
+      {
+        "id": "bdkhlpf",
+        "name": "Remada cavalinho",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 15
+          },
+          {
+            "reps": 12,
+            "weight": 37.5
+          },
+          {
+            "reps": 10,
+            "weight": 42.5
+          },
+          {
+            "reps": 9,
+            "weight": 42.5
+          }
+        ]
+      },
+      {
+        "id": "tas6m53",
+        "name": "Fly na máquina",
+        "category": "Peito",
+        "notes": "Concentrada após cada série",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 65
+          },
+          {
+            "reps": 12,
+            "weight": 50
+          },
+          {
+            "reps": 9,
+            "weight": 65
+          },
+          {
+            "reps": 10,
+            "weight": 50
+          },
+          {
+            "reps": 9,
+            "weight": 55
+          },
+          {
+            "reps": 10,
+            "weight": 45
+          }
+        ]
+      },
+      {
+        "id": "6p72gxx",
+        "name": "Remada serrote unilateral",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 22
+          },
+          {
+            "reps": 10,
+            "weight": 22
+          },
+          {
+            "reps": 9,
+            "weight": 22
+          }
+        ]
+      },
+      {
+        "id": "7h1p4r1",
+        "name": "Elevação lateral + frontal alternadas",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 9
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 9,
+            "weight": 9
+          },
+          {
+            "reps": 8,
+            "weight": 5
+          },
+          {
+            "reps": 8,
+            "weight": 9
+          },
+          {
+            "reps": 9,
+            "weight": 4
+          }
+        ]
+      },
+      {
+        "id": "bcaywwy",
+        "name": "Encolhimento com barra (trapézio)",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 70
+          },
+          {
+            "reps": 10,
+            "weight": 70
+          },
+          {
+            "reps": 10,
+            "weight": 65
+          }
+        ]
+      },
+      {
+        "id": "xwjcv02",
+        "name": "Rosca na corda",
+        "category": "Bíceps",
+        "notes": "Drop na última série",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 25
+          },
+          {
+            "reps": 9,
+            "weight": 22.5
+          },
+          {
+            "reps": 10,
+            "weight": 17.5
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "5m0e7c7",
     "date": "2026-05-29",
     "name": "Treino E - Posteriores",
