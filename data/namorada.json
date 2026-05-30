@@ -24,32 +24,52 @@
             "weight": 7.5
           },
           {
-            "reps": "",
-            "weight": ""
+            "reps": 10,
+            "weight": 5.625
           }
         ]
       },
       {
-        "id": "nc0cifa",
-        "name": "Remada baixa com barra",
+        "id": "efk3uql",
+        "name": "Remada cavalinho",
         "category": "Costas",
         "notes": "",
         "sets": [
           {
             "reps": 10,
-            "weight": 5
+            "weight": 10
           },
           {
-            "reps": 10,
-            "weight": 12.5
+            "reps": 11,
+            "weight": 17.5
           },
           {
-            "reps": 10,
-            "weight": 12.5
+            "reps": 12,
+            "weight": 17.5
           },
           {
-            "reps": 10,
-            "weight": 12.5
+            "reps": 9,
+            "weight": 17.5
+          }
+        ]
+      },
+      {
+        "id": "qbnzjuq",
+        "name": "Fly na máquina",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 15
+          },
+          {
+            "reps": 14,
+            "weight": 15
+          },
+          {
+            "reps": 17,
+            "weight": 15
           }
         ]
       },
@@ -61,15 +81,15 @@
         "sets": [
           {
             "reps": 10,
-            "weight": 12.5
+            "weight": 12
           },
           {
             "reps": 10,
-            "weight": 12.5
+            "weight": 12
           },
           {
             "reps": 10,
-            "weight": 12.5
+            "weight": 12
           }
         ]
       },
@@ -126,50 +146,6 @@
           {
             "reps": 10,
             "weight": 13.5
-          }
-        ]
-      },
-      {
-        "id": "brac024",
-        "name": "Peck deck",
-        "category": "Peito",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 17,
-            "weight": 18
-          },
-          {
-            "reps": 18,
-            "weight": 18
-          },
-          {
-            "reps": 18,
-            "weight": 18
-          }
-        ]
-      },
-      {
-        "id": "47pz72a",
-        "name": "Supino reto com barra",
-        "category": "Peito",
-        "notes": "maquina",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 10
-          },
-          {
-            "reps": 12,
-            "weight": 15
-          },
-          {
-            "reps": 12,
-            "weight": 20
-          },
-          {
-            "reps": 12,
-            "weight": 25
           }
         ]
       },
