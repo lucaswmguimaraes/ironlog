@@ -54,6 +54,26 @@
         ]
       },
       {
+        "id": "zdl0p4n",
+        "name": "Remada baixa com triângulo",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 22.5
+          },
+          {
+            "reps": 10,
+            "weight": 60
+          }
+        ]
+      },
+      {
         "id": "lre061f",
         "name": "Puxada alta com barra reta",
         "category": "Costas",
@@ -74,26 +94,6 @@
           {
             "reps": 5,
             "weight": 20
-          }
-        ]
-      },
-      {
-        "id": "zdl0p4n",
-        "name": "Remada baixa com triângulo",
-        "category": "Costas",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 55
-          },
-          {
-            "reps": 10,
-            "weight": 60
-          },
-          {
-            "reps": 10,
-            "weight": 60
           }
         ]
       },
