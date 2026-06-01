@@ -120,16 +120,12 @@
         "notes": "",
         "sets": [
           {
-            "reps": 10,
-            "weight": 4
-          },
-          {
-            "reps": 8,
-            "weight": 6
-          },
-          {
             "reps": 8,
             "weight": 5
+          },
+          {
+            "reps": 8,
+            "weight": 4
           },
           {
             "reps": 4,
