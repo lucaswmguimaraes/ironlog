@@ -1,5 +1,169 @@
 [
   {
+    "id": "yzi0td4",
+    "date": "2026-06-01",
+    "name": "Treino 2 - COSTAS + BÍCEPS",
+    "trainType": "A",
+    "exercises": [
+      {
+        "id": "2r0ht4m",
+        "name": "Rosca Scott com barra W",
+        "category": "Bíceps",
+        "notes": "máquina ",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 8,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "id": "v1eghs9",
+        "name": "Rosca alternada com halteres",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 9,
+            "weight": 10
+          },
+          {
+            "reps": 9,
+            "weight": 10
+          },
+          {
+            "reps": 8,
+            "weight": 10
+          },
+          {
+            "reps": 8,
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "id": "lre061f",
+        "name": "Puxada alta com barra reta",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 8,
+            "weight": 25
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 5,
+            "weight": 20
+          }
+        ]
+      },
+      {
+        "id": "zdl0p4n",
+        "name": "Remada baixa com triângulo",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 55
+          },
+          {
+            "reps": 10,
+            "weight": 60
+          },
+          {
+            "reps": 10,
+            "weight": 60
+          }
+        ]
+      },
+      {
+        "id": "lhxly4r",
+        "name": "Remada curvada com barra",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 12,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          }
+        ]
+      },
+      {
+        "id": "qs13qs2",
+        "name": "Rosca 45° com halteres",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 4
+          },
+          {
+            "reps": 8,
+            "weight": 6
+          },
+          {
+            "reps": 8,
+            "weight": 5
+          },
+          {
+            "reps": 4,
+            "weight": 4
+          }
+        ]
+      },
+      {
+        "id": "dea264x",
+        "name": "Rosca inversa (barra)",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 12,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "m3z7euy",
     "date": "2026-05-30",
     "name": "Treino 4 - SUPERIORES GERAL",
