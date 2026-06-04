@@ -30,30 +30,22 @@
         ]
       },
       {
-        "id": "vv6r9xn",
-        "name": "Leg press 45°",
+        "id": "yyoz8pb",
+        "name": "Leg Press 45°",
         "category": "Quadríceps",
         "notes": "",
         "sets": [
           {
-            "reps": 12,
-            "weight": 80
-          },
-          {
-            "reps": 12,
-            "weight": 120
-          },
-          {
-            "reps": 5,
-            "weight": 140
-          },
-          {
-            "reps": 9,
+            "reps": 10,
             "weight": 120
           },
           {
             "reps": 10,
-            "weight": 120
+            "weight": 140
+          },
+          {
+            "reps": 10,
+            "weight": 130
           }
         ]
       },
@@ -63,10 +55,6 @@
         "category": "Quadríceps",
         "notes": "",
         "sets": [
-          {
-            "reps": 12,
-            "weight": 35
-          },
           {
             "reps": 10,
             "weight": 40
@@ -88,16 +76,20 @@
         "notes": "",
         "sets": [
           {
-            "reps": 12,
-            "weight": 35
+            "reps": 8,
+            "weight": 30
           },
           {
-            "reps": 15,
-            "weight": 40
+            "reps": 10,
+            "weight": 25
           },
           {
-            "reps": 12,
-            "weight": 45
+            "reps": 10,
+            "weight": 25
+          },
+          {
+            "reps": 10,
+            "weight": 20
           }
         ]
       },
