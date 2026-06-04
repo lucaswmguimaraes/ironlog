@@ -105,14 +105,14 @@
         "sets": [
           {
             "reps": 10,
-            "weight": 4
+            "weight": 5
           },
           {
             "reps": 10,
-            "weight": 4
+            "weight": 5
           },
           {
-            "reps": 10,
+            "reps": 12,
             "weight": 4
           }
         ]
@@ -124,36 +124,36 @@
         "notes": "",
         "sets": [
           {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 8.125
+          }
+        ]
+      },
+      {
+        "id": "c7t8g4t",
+        "name": "Tríceps testa com barra",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
             "reps": 8,
             "weight": 10
           },
           {
             "reps": 10,
             "weight": 8.125
-          },
-          {
-            "reps": 7,
-            "weight": 8.125
-          }
-        ]
-      },
-      {
-        "id": "xc5cpc8",
-        "name": "Tríceps testa na polia unilateral",
-        "category": "Tríceps",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 2.5
-          },
-          {
-            "reps": 10,
-            "weight": 3.125
-          },
-          {
-            "reps": 10,
-            "weight": 3.125
           }
         ]
       },
@@ -164,12 +164,12 @@
         "notes": "",
         "sets": [
           {
-            "reps": 10,
-            "weight": 2.5
+            "reps": 12,
+            "weight": 3.125
           },
           {
             "reps": 10,
-            "weight": 2.5
+            "weight": 3.125
           }
         ]
       }
