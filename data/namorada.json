@@ -56,26 +56,6 @@
         "notes": "",
         "sets": [
           {
-            "reps": 10,
-            "weight": 40
-          },
-          {
-            "reps": 10,
-            "weight": 40
-          },
-          {
-            "reps": 6,
-            "weight": 35
-          }
-        ]
-      },
-      {
-        "id": "y5fgkff",
-        "name": "Adutora na máquina",
-        "category": "Adutores / Abdutores",
-        "notes": "",
-        "sets": [
-          {
             "reps": 8,
             "weight": 30
           },
@@ -88,8 +68,28 @@
             "weight": 25
           },
           {
-            "reps": 10,
+            "reps": 8,
             "weight": 20
+          }
+        ]
+      },
+      {
+        "id": "y5fgkff",
+        "name": "Adutora na máquina",
+        "category": "Adutores / Abdutores",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 30
+          },
+          {
+            "reps": 13,
+            "weight": 30
+          },
+          {
+            "reps": 10,
+            "weight": 30
           }
         ]
       },
