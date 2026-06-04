@@ -1,5 +1,181 @@
 [
   {
+    "id": "xayig7h",
+    "date": "2026-06-04",
+    "name": "Treino B - Push",
+    "trainType": "B",
+    "exercises": [
+      {
+        "id": "xybapij",
+        "name": "Chest Press máquina",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 20
+          },
+          {
+            "reps": 12,
+            "weight": 55
+          },
+          {
+            "reps": 10,
+            "weight": 65
+          },
+          {
+            "reps": 8,
+            "weight": 70
+          }
+        ]
+      },
+      {
+        "id": "jhww3dx",
+        "name": "Desenvolvimento máquina",
+        "category": "Ombros",
+        "notes": "Drop na última série",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 15
+          },
+          {
+            "reps": 8,
+            "weight": 45
+          },
+          {
+            "reps": 8,
+            "weight": 40
+          },
+          {
+            "reps": 9,
+            "weight": 30
+          },
+          {
+            "reps": 6,
+            "weight": 17.5
+          }
+        ]
+      },
+      {
+        "id": "p5djkjg",
+        "name": "Crucifixo no cross (cabo baixo)",
+        "category": "Peito",
+        "notes": "Peso = soma dos dois lados",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 11.25
+          },
+          {
+            "reps": 9,
+            "weight": 11.25
+          },
+          {
+            "reps": 9,
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "id": "lsnjryy",
+        "name": "Posterior de ombro no cross",
+        "category": "Ombros",
+        "notes": "Bilateral e peso = soma dos dois lados",
+        "sets": [
+          {
+            "reps": 8,
+            "weight": 10
+          },
+          {
+            "reps": 8,
+            "weight": 8.75
+          },
+          {
+            "reps": 10,
+            "weight": 7.5
+          }
+        ]
+      },
+      {
+        "id": "73l2sqr",
+        "name": "Elevação lateral com halteres",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 9,
+            "weight": 10
+          },
+          {
+            "reps": 9,
+            "weight": 9
+          },
+          {
+            "reps": 8,
+            "weight": 9
+          }
+        ]
+      },
+      {
+        "id": "86nx8nt",
+        "name": "Tríceps na polia com corda",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 27.5
+          },
+          {
+            "reps": 9,
+            "weight": 27.5
+          },
+          {
+            "reps": 9,
+            "weight": 22.5
+          }
+        ]
+      },
+      {
+        "id": "18ovt8b",
+        "name": "Tríceps testa com barra",
+        "category": "Tríceps",
+        "notes": "No cross",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 22.5
+          },
+          {
+            "reps": 10,
+            "weight": 22.5
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          }
+        ]
+      },
+      {
+        "id": "e5pphf9",
+        "name": "Tríceps francês no cross com corda",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 8,
+            "weight": 12.5
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "wfz3t2j",
     "date": "2026-06-04",
     "name": "Treino C - Quadríceps",
