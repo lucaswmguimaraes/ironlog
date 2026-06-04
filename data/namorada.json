@@ -94,22 +94,22 @@
         ]
       },
       {
-        "id": "s6zy52y",
-        "name": "Panturrilha sentado (máquina)",
+        "id": "r55jc7q",
+        "name": "Panturrilha em pé (máquina)",
         "category": "Panturrilha",
         "notes": "",
         "sets": [
           {
             "reps": 10,
-            "weight": 20
+            "weight": 60
           },
           {
             "reps": 10,
-            "weight": 20
+            "weight": 60
           },
           {
-            "reps": 10,
-            "weight": 20
+            "reps": 8,
+            "weight": 60
           }
         ]
       }
