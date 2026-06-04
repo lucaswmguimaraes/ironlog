@@ -112,6 +112,26 @@
             "weight": 60
           }
         ]
+      },
+      {
+        "id": "xb7x7ed",
+        "name": "Abdominal supra",
+        "category": "Core / Abdômen",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 8,
+            "weight": ""
+          },
+          {
+            "reps": 8,
+            "weight": ""
+          },
+          {
+            "reps": 8,
+            "weight": ""
+          }
+        ]
       }
     ]
   },
