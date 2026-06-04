@@ -1,5 +1,129 @@
 [
   {
+    "id": "jdmwihv",
+    "date": "2026-06-04",
+    "name": "Treino 3 - QUADRÍCEPS",
+    "trainType": "C",
+    "exercises": [
+      {
+        "id": "odvrjuv",
+        "name": "Agachamento no smith",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 45
+          },
+          {
+            "reps": 10,
+            "weight": 45
+          },
+          {
+            "reps": 8,
+            "weight": 40
+          }
+        ]
+      },
+      {
+        "id": "vv6r9xn",
+        "name": "Leg press 45°",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 80
+          },
+          {
+            "reps": 12,
+            "weight": 120
+          },
+          {
+            "reps": 5,
+            "weight": 140
+          },
+          {
+            "reps": 9,
+            "weight": 120
+          },
+          {
+            "reps": 10,
+            "weight": 120
+          }
+        ]
+      },
+      {
+        "id": "tmjcqby",
+        "name": "Extensora",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 35
+          },
+          {
+            "reps": 10,
+            "weight": 40
+          },
+          {
+            "reps": 10,
+            "weight": 40
+          },
+          {
+            "reps": 6,
+            "weight": 35
+          }
+        ]
+      },
+      {
+        "id": "y5fgkff",
+        "name": "Adutora na máquina",
+        "category": "Adutores / Abdutores",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 35
+          },
+          {
+            "reps": 15,
+            "weight": 40
+          },
+          {
+            "reps": 12,
+            "weight": 45
+          }
+        ]
+      },
+      {
+        "id": "s6zy52y",
+        "name": "Panturrilha sentado (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "yzi0td4",
     "date": "2026-06-01",
     "name": "Treino 2 - COSTAS + BÍCEPS",
