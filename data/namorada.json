@@ -12,20 +12,60 @@
         "notes": "máquina ",
         "sets": [
           {
+            "reps": 15,
+            "weight": 4.5
+          },
+          {
+            "reps": 12,
+            "weight": 18
+          },
+          {
+            "reps": 12,
+            "weight": 18
+          },
+          {
+            "reps": 11,
+            "weight": 18
+          }
+        ]
+      },
+      {
+        "id": "o3djo9n",
+        "name": "Rosca na polia (cabo baixo)",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
             "reps": 10,
             "weight": 5
           },
           {
-            "reps": 8,
-            "weight": 10
+            "reps": 12,
+            "weight": 5
+          },
+          {
+            "reps": 12,
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "id": "xzd2gfz",
+        "name": "Puxada alta com barra reta",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 20
+          },
+          {
+            "reps": "",
+            "weight": 20
           },
           {
             "reps": 10,
-            "weight": 10
-          },
-          {
-            "reps": 10,
-            "weight": 10
+            "weight": 20
           }
         ]
       },
@@ -46,26 +86,6 @@
           {
             "reps": 10,
             "weight": 22.5
-          }
-        ]
-      },
-      {
-        "id": "xzd2gfz",
-        "name": "Puxada alta com barra reta",
-        "category": "Costas",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 9,
-            "weight": 15
-          },
-          {
-            "reps": 8,
-            "weight": 15
-          },
-          {
-            "reps": 10,
-            "weight": 15
           }
         ]
       },
@@ -110,26 +130,6 @@
           {
             "reps": 8,
             "weight": 5
-          }
-        ]
-      },
-      {
-        "id": "0332t39",
-        "name": "Rosca 45° com halteres",
-        "category": "Bíceps",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 7,
-            "weight": 5
-          },
-          {
-            "reps": 8,
-            "weight": 4
-          },
-          {
-            "reps": 8,
-            "weight": 4
           }
         ]
       },
