@@ -600,26 +600,6 @@
             "weight": 4
           }
         ]
-      },
-      {
-        "id": "dea264x",
-        "name": "Rosca inversa (barra)",
-        "category": "Bíceps",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 5
-          },
-          {
-            "reps": 12,
-            "weight": 5
-          },
-          {
-            "reps": 10,
-            "weight": 5
-          }
-        ]
       }
     ]
   },
