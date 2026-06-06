@@ -1,5 +1,149 @@
 [
   {
+    "id": "r82thti",
+    "date": "2026-06-05",
+    "name": "Treino A - Pull",
+    "trainType": "A",
+    "exercises": [
+      {
+        "id": "odd9rmz",
+        "name": "Rosca Scott com barra W",
+        "category": "Bíceps",
+        "notes": "Na máquina scott + drop",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 18
+          },
+          {
+            "reps": 10,
+            "weight": 43
+          },
+          {
+            "reps": 10,
+            "weight": 36
+          },
+          {
+            "reps": 9,
+            "weight": 36
+          },
+          {
+            "reps": 8,
+            "weight": 24
+          }
+        ]
+      },
+      {
+        "id": "1gkdaxz",
+        "name": "Rosca na polia (cabo baixo)",
+        "category": "Bíceps",
+        "notes": "Unilateral",
+        "sets": [
+          {
+            "reps": 14,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 9,
+            "weight": 20
+          }
+        ]
+      },
+      {
+        "id": "py1owtq",
+        "name": "Puxada alta com barra reta",
+        "category": "Costas",
+        "notes": "Drop na última",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 60
+          },
+          {
+            "reps": 8,
+            "weight": 60
+          },
+          {
+            "reps": 10,
+            "weight": 50
+          },
+          {
+            "reps": 6,
+            "weight": 50
+          }
+        ]
+      },
+      {
+        "id": "81ia2uy",
+        "name": "Remada baixa com triângulo",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 8,
+            "weight": 50
+          },
+          {
+            "reps": 10,
+            "weight": 43
+          },
+          {
+            "reps": 10,
+            "weight": 38.3
+          }
+        ]
+      },
+      {
+        "id": "z8f6uw3",
+        "name": "Remada curvada com barra",
+        "category": "Costas",
+        "notes": "No smith (sem contar a barra)",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 38
+          },
+          {
+            "reps": 9,
+            "weight": 38
+          },
+          {
+            "reps": 10,
+            "weight": 36
+          }
+        ]
+      },
+      {
+        "id": "a3twbw2",
+        "name": "Rosca inversa (barra)",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 35
+          },
+          {
+            "reps": 7,
+            "weight": 35
+          },
+          {
+            "reps": 7,
+            "weight": 30
+          },
+          {
+            "reps": 6,
+            "weight": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "xayig7h",
     "date": "2026-06-04",
     "name": "Treino B - Push",
