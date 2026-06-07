@@ -100,16 +100,36 @@
         "notes": "",
         "sets": [
           {
-            "reps": 7,
-            "weight": 75
-          },
-          {
             "reps": 10,
-            "weight": 75
+            "weight": 60
           },
           {
             "reps": 8,
-            "weight": 75
+            "weight": 60
+          },
+          {
+            "reps": 8,
+            "weight": 60
+          }
+        ]
+      },
+      {
+        "id": "ptsggm1",
+        "name": "Kickback na polia",
+        "category": "Glúteos",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 8,
+            "weight": 20
           }
         ]
       }
