@@ -1,5 +1,149 @@
 [
   {
+    "id": "y3mbbsa",
+    "date": "2026-06-07",
+    "name": "Treino 5 - GLÚTEO/ POSTERIOR",
+    "trainType": "E",
+    "exercises": [
+      {
+        "id": "p8p3nsv",
+        "name": "Mesa flexora",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 14
+          },
+          {
+            "reps": 10,
+            "weight": 23
+          },
+          {
+            "reps": 10,
+            "weight": 24.1
+          },
+          {
+            "reps": 10,
+            "weight": 23
+          },
+          {
+            "reps": 10,
+            "weight": 23
+          }
+        ]
+      },
+      {
+        "id": "zhg6sp7",
+        "name": "Cadeira flexora",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 35
+          },
+          {
+            "reps": 10,
+            "weight": 30
+          },
+          {
+            "reps": 10,
+            "weight": 30
+          }
+        ]
+      },
+      {
+        "id": "9zg7rib",
+        "name": "Stiff com barra",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 7,
+            "weight": 35
+          },
+          {
+            "reps": 8,
+            "weight": 35
+          },
+          {
+            "reps": 7,
+            "weight": 35
+          },
+          {
+            "reps": 7,
+            "weight": 35
+          }
+        ]
+      },
+      {
+        "id": "jdmu91w",
+        "name": "Abdutora na máquina",
+        "category": "Glúteos",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 55
+          },
+          {
+            "reps": 10,
+            "weight": 60
+          },
+          {
+            "reps": 8,
+            "weight": 55
+          }
+        ]
+      },
+      {
+        "id": "k9fgcx1",
+        "name": "Panturrilha sentado (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 7,
+            "weight": 75
+          },
+          {
+            "reps": 10,
+            "weight": 75
+          },
+          {
+            "reps": 8,
+            "weight": 75
+          }
+        ]
+      },
+      {
+        "id": "iker7wx",
+        "name": "Hip thrust na máquina",
+        "category": "Glúteos",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 30
+          },
+          {
+            "reps": 10,
+            "weight": 40
+          },
+          {
+            "reps": 12,
+            "weight": 40
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "7ipygad",
     "date": "2026-06-05",
     "name": "Treino 2 - COSTAS + BÍCEPS",
