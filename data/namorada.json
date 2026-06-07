@@ -28,8 +28,8 @@
             "weight": 23
           },
           {
-            "reps": 10,
-            "weight": 23
+            "reps": 6,
+            "weight": 18
           }
         ]
       },
@@ -39,10 +39,6 @@
         "category": "Posterior de Coxa",
         "notes": "",
         "sets": [
-          {
-            "reps": 12,
-            "weight": 15
-          },
           {
             "reps": 10,
             "weight": 35
