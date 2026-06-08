@@ -62,6 +62,26 @@
         ]
       },
       {
+        "id": "c6a17u1",
+        "name": "Crucifixo no cross (cabo alto)",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 7.5
+          },
+          {
+            "reps": 12,
+            "weight": 7.5
+          },
+          {
+            "reps": 10,
+            "weight": 5.625
+          }
+        ]
+      },
+      {
         "id": "qnme7rj",
         "name": "Remada serrote unilateral",
         "category": "Costas",
@@ -78,30 +98,6 @@
           {
             "reps": 12,
             "weight": 12
-          }
-        ]
-      },
-      {
-        "id": "c6a17u1",
-        "name": "Crucifixo no cross (cabo alto)",
-        "category": "Peito",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 5
-          },
-          {
-            "reps": 10,
-            "weight": 7.5
-          },
-          {
-            "reps": 9,
-            "weight": 7.5
-          },
-          {
-            "reps": 10,
-            "weight": 5.625
           }
         ]
       },
