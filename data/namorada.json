@@ -140,20 +140,20 @@
         "notes": "",
         "sets": [
           {
-            "reps": 10,
-            "weight": 18
+            "reps": 12,
+            "weight": 7.5
           },
           {
             "reps": 11,
-            "weight": 18
+            "weight": 7.5
           },
           {
             "reps": 10,
-            "weight": 18
+            "weight": 7.5
           },
           {
             "reps": 10,
-            "weight": 13.5
+            "weight": 5
           }
         ]
       },
