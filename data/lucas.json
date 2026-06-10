@@ -1,5 +1,201 @@
 [
   {
+    "id": "kq4xcug",
+    "date": "2026-06-08",
+    "name": "Treino D - Superiores",
+    "trainType": "D",
+    "exercises": [
+      {
+        "id": "2t2jp73",
+        "name": "Fly na máquina",
+        "category": "Peito",
+        "notes": "Concentrada após cada série",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 65
+          },
+          {
+            "reps": 12,
+            "weight": 50
+          },
+          {
+            "reps": 9,
+            "weight": 65
+          },
+          {
+            "reps": 10,
+            "weight": 50
+          },
+          {
+            "reps": 9,
+            "weight": 55
+          },
+          {
+            "reps": 10,
+            "weight": 45
+          }
+        ]
+      },
+      {
+        "id": "oklv0de",
+        "name": "Remada cavalinho",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 15
+          },
+          {
+            "reps": 12,
+            "weight": 37.5
+          },
+          {
+            "reps": 10,
+            "weight": 42.5
+          },
+          {
+            "reps": 9,
+            "weight": 42.5
+          }
+        ]
+      },
+      {
+        "id": "pwxawtx",
+        "name": "Crucifixo no cross (cabo alto)",
+        "category": "Peito",
+        "notes": "Parciais após cada série",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 17.5
+          },
+          {
+            "reps": 6,
+            "weight": 17.5
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          },
+          {
+            "reps": 6,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 12.5
+          },
+          {
+            "reps": 6,
+            "weight": 12.5
+          }
+        ]
+      },
+      {
+        "id": "o0o4zo9",
+        "name": "Remada serrote unilateral",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 22
+          },
+          {
+            "reps": 10,
+            "weight": 22
+          },
+          {
+            "reps": 9,
+            "weight": 22
+          }
+        ]
+      },
+      {
+        "id": "w8p0fno",
+        "name": "Elevação lateral + frontal alternadas",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 9
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 9,
+            "weight": 9
+          },
+          {
+            "reps": 8,
+            "weight": 5
+          },
+          {
+            "reps": 8,
+            "weight": 9
+          },
+          {
+            "reps": 9,
+            "weight": 4
+          }
+        ]
+      },
+      {
+        "id": "uzpzxtn",
+        "name": "Rosca na corda",
+        "category": "Bíceps",
+        "notes": "Drop na última série",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 25
+          },
+          {
+            "reps": 9,
+            "weight": 22.5
+          },
+          {
+            "reps": 10,
+            "weight": 17.5
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "id": "l01cvkp",
+        "name": "Encolhimento com barra (trapézio)",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 70
+          },
+          {
+            "reps": 10,
+            "weight": 70
+          },
+          {
+            "reps": 10,
+            "weight": 65
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "s4rn411",
     "date": "2026-06-10",
     "name": "Treino C - Quadríceps",
