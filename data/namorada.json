@@ -1,5 +1,141 @@
 [
   {
+    "id": "kzx24b1",
+    "date": "2026-06-10",
+    "name": "Treino 3 - QUADRÍCEPS",
+    "trainType": "C",
+    "exercises": [
+      {
+        "id": "et84hce",
+        "name": "Agachamento no smith",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 45
+          },
+          {
+            "reps": 10,
+            "weight": 45
+          },
+          {
+            "reps": 8,
+            "weight": 40
+          }
+        ]
+      },
+      {
+        "id": "7hero4x",
+        "name": "Leg Press 45°",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 120
+          },
+          {
+            "reps": 10,
+            "weight": 140
+          },
+          {
+            "reps": 10,
+            "weight": 130
+          }
+        ]
+      },
+      {
+        "id": "29exevq",
+        "name": "Extensora",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 8,
+            "weight": 30
+          },
+          {
+            "reps": 10,
+            "weight": 25
+          },
+          {
+            "reps": 10,
+            "weight": 25
+          },
+          {
+            "reps": 8,
+            "weight": 20
+          }
+        ]
+      },
+      {
+        "id": "mywykfm",
+        "name": "Adutora na máquina",
+        "category": "Adutores / Abdutores",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 30
+          },
+          {
+            "reps": 13,
+            "weight": 30
+          },
+          {
+            "reps": 10,
+            "weight": 30
+          }
+        ]
+      },
+      {
+        "id": "hz394jp",
+        "name": "Panturrilha em pé (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 60
+          },
+          {
+            "reps": 10,
+            "weight": 60
+          },
+          {
+            "reps": 8,
+            "weight": 60
+          }
+        ]
+      },
+      {
+        "id": "mwm20ur",
+        "name": "Abdominal supra",
+        "category": "Core / Abdômen",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 8,
+            "weight": ""
+          },
+          {
+            "reps": 8,
+            "weight": ""
+          },
+          {
+            "reps": 8,
+            "weight": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "luxj220",
     "date": "2026-06-08",
     "name": "Treino 4 - SUPERIORES GERAL",
