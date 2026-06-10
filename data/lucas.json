@@ -212,36 +212,16 @@
             "weight": 30
           },
           {
-            "reps": 10,
-            "weight": 60
+            "reps": 12,
+            "weight": 50
           },
           {
             "reps": 10,
             "weight": 55
           },
           {
-            "reps": 10,
+            "reps": 11,
             "weight": 50
-          }
-        ]
-      },
-      {
-        "id": "p6nzct3",
-        "name": "Leg Press 45°",
-        "category": "Quadríceps",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 200
-          },
-          {
-            "reps": 9,
-            "weight": 200
-          },
-          {
-            "reps": 9,
-            "weight": 180
           }
         ]
       },
@@ -252,20 +232,40 @@
         "notes": "Drop na última série",
         "sets": [
           {
-            "reps": 12,
-            "weight": 55
+            "reps": 11,
+            "weight": 66
           },
           {
             "reps": 10,
-            "weight": 55
+            "weight": 59
           },
           {
             "reps": 9,
-            "weight": 50
+            "weight": 52
           },
           {
             "reps": 8,
-            "weight": 35
+            "weight": 38.5
+          }
+        ]
+      },
+      {
+        "id": "p6nzct3",
+        "name": "Leg Press 45°",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 9,
+            "weight": 220
+          },
+          {
+            "reps": 10,
+            "weight": 200
+          },
+          {
+            "reps": 9,
+            "weight": 180
           }
         ]
       },
@@ -277,15 +277,15 @@
         "sets": [
           {
             "reps": 12,
-            "weight": 75
+            "weight": 102
+          },
+          {
+            "reps": 10,
+            "weight": 111
           },
           {
             "reps": 9,
-            "weight": 80
-          },
-          {
-            "reps": 9,
-            "weight": 75
+            "weight": 111
           }
         ]
       },
@@ -296,16 +296,16 @@
         "notes": "",
         "sets": [
           {
+            "reps": 16,
+            "weight": 66
+          },
+          {
             "reps": 12,
-            "weight": 60
+            "weight": 79
           },
           {
-            "reps": 10,
-            "weight": 60
-          },
-          {
-            "reps": 10,
-            "weight": 60
+            "reps": 9,
+            "weight": 86
           }
         ]
       },
@@ -313,19 +313,19 @@
         "id": "z9uwpoc",
         "name": "Abdominal supra",
         "category": "Core / Abdômen",
-        "notes": "Prancha declinado com anilha",
+        "notes": "Prancha declinado com halter",
         "sets": [
           {
-            "reps": 12,
-            "weight": 10
+            "reps": 10,
+            "weight": 14
           },
           {
-            "reps": 10,
-            "weight": 10
+            "reps": 9,
+            "weight": 14
           },
           {
-            "reps": 10,
-            "weight": 10
+            "reps": 8,
+            "weight": 12
           }
         ]
       }
