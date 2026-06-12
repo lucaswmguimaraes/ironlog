@@ -1,5 +1,181 @@
 [
   {
+    "id": "6e6iyzk",
+    "date": "2026-06-12",
+    "name": "Treino 1 - PEITO + TRÍCEPS + OMBRO",
+    "trainType": "B",
+    "exercises": [
+      {
+        "id": "0yzcjqw",
+        "name": "Tríceps na polia com corda",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 8.125
+          }
+        ]
+      },
+      {
+        "id": "xefxrlo",
+        "name": "Tríceps testa com barra",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 8,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 8.125
+          }
+        ]
+      },
+      {
+        "id": "yrjqaj3",
+        "name": "Tríceps francês no cross com corda",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 3.125
+          },
+          {
+            "reps": 9,
+            "weight": 3.75
+          }
+        ]
+      },
+      {
+        "id": "rcyhvgf",
+        "name": "Chest Press máquina",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 25
+          },
+          {
+            "reps": 9,
+            "weight": 30
+          },
+          {
+            "reps": 10,
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "id": "4phb9vw",
+        "name": "Desenvolvimento máquina",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 2.5
+          },
+          {
+            "reps": 8,
+            "weight": 12.5
+          },
+          {
+            "reps": 9,
+            "weight": 10
+          },
+          {
+            "reps": 6,
+            "weight": 10
+          },
+          {
+            "reps": 5,
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "id": "1u5xw1n",
+        "name": "Crucifixo no cross (cabo baixo)",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 2.5
+          },
+          {
+            "reps": 11,
+            "weight": 2.5
+          },
+          {
+            "reps": 11,
+            "weight": 2.5
+          }
+        ]
+      },
+      {
+        "id": "23cxwvz",
+        "name": "Posterior de ombro no cross",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 11,
+            "weight": 1.875
+          },
+          {
+            "reps": 12,
+            "weight": 1.875
+          },
+          {
+            "reps": 10,
+            "weight": 1.875
+          }
+        ]
+      },
+      {
+        "id": "djbwh8v",
+        "name": "Elevação lateral com halteres",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 12,
+            "weight": 4
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "kzx24b1",
     "date": "2026-06-10",
     "name": "Treino 3 - QUADRÍCEPS",
