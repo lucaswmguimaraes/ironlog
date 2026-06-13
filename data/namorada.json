@@ -114,30 +114,6 @@
         ]
       },
       {
-        "id": "tq9kem4",
-        "name": "Rosca alternada com halteres",
-        "category": "Bíceps",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 9,
-            "weight": 10
-          },
-          {
-            "reps": 9,
-            "weight": 10
-          },
-          {
-            "reps": 8,
-            "weight": 10
-          },
-          {
-            "reps": 8,
-            "weight": 5
-          }
-        ]
-      },
-      {
         "id": "eb2afwa",
         "name": "Rosca inversa (barra)",
         "category": "Bíceps",
@@ -145,15 +121,15 @@
         "sets": [
           {
             "reps": 10,
-            "weight": 5
+            "weight": 9
           },
           {
             "reps": 12,
-            "weight": 5
+            "weight": 9
           },
           {
             "reps": 12,
-            "weight": 5
+            "weight": 9
           }
         ]
       }
