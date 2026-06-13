@@ -77,19 +77,19 @@
         "id": "di263gb",
         "name": "Rosca na polia (cabo baixo)",
         "category": "Bíceps",
-        "notes": "",
+        "notes": "unilateral",
         "sets": [
           {
             "reps": 10,
-            "weight": 5
+            "weight": 9
           },
           {
             "reps": 12,
-            "weight": 5
+            "weight": 9
           },
           {
             "reps": 12,
-            "weight": 5
+            "weight": 9
           }
         ]
       },
