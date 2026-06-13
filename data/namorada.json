@@ -24,8 +24,28 @@
             "weight": 10
           },
           {
-            "reps": 10,
-            "weight": 10
+            "reps": 11,
+            "weight": 9
+          }
+        ]
+      },
+      {
+        "id": "j2iqj0n",
+        "name": "Tríceps testa com barra",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 13.5
+          },
+          {
+            "reps": "",
+            "weight": ""
+          },
+          {
+            "reps": "",
+            "weight": ""
           }
         ]
       }
