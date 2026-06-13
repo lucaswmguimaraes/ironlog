@@ -68,6 +68,26 @@
             "weight": 13.5
           }
         ]
+      },
+      {
+        "id": "a2k9vzv",
+        "name": "Supino inclinado com halteres",
+        "category": "Peito",
+        "notes": "máquina ",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 15
+          },
+          {
+            "reps": "",
+            "weight": ""
+          },
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
       }
     ]
   },
