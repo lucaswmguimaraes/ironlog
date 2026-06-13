@@ -44,8 +44,28 @@
             "weight": 18
           },
           {
-            "reps": "",
+            "reps": 10,
             "weight": 18
+          }
+        ]
+      },
+      {
+        "id": "pfq4hpu",
+        "name": "Tríceps na polia com corda",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          },
+          {
+            "reps": "",
+            "weight": ""
+          },
+          {
+            "reps": "",
+            "weight": ""
           }
         ]
       }
