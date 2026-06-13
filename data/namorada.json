@@ -84,6 +84,26 @@
             "weight": 15
           },
           {
+            "reps": 10,
+            "weight": 15
+          }
+        ]
+      },
+      {
+        "id": "bu7q7qa",
+        "name": "Desenvolvimento no aparelho",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 13.5
+          },
+          {
+            "reps": 8,
+            "weight": 13.5
+          },
+          {
             "reps": "",
             "weight": ""
           }
