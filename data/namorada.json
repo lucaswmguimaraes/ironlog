@@ -1,5 +1,165 @@
 [
   {
+    "id": "d2md41f",
+    "date": "2026-06-13",
+    "name": "Treino 2 - COSTAS + BÍCEPS",
+    "trainType": "A",
+    "exercises": [
+      {
+        "id": "tfo1v4u",
+        "name": "Rosca Scott com barra W",
+        "category": "Bíceps",
+        "notes": "máquina ",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 7.5
+          },
+          {
+            "reps": 10,
+            "weight": 7.5
+          },
+          {
+            "reps": 10,
+            "weight": 7.5
+          },
+          {
+            "reps": 7,
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "id": "7loy4ig",
+        "name": "Puxada alta com barra reta",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 25
+          },
+          {
+            "reps": 12,
+            "weight": 25
+          },
+          {
+            "reps": 24,
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "id": "uff7cj5",
+        "name": "Remada baixa com triângulo",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 23
+          },
+          {
+            "reps": 13,
+            "weight": 23
+          },
+          {
+            "reps": 14,
+            "weight": 23
+          }
+        ]
+      },
+      {
+        "id": "v1q43ic",
+        "name": "Remada curvada com barra",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 16
+          },
+          {
+            "reps": 12,
+            "weight": 16
+          },
+          {
+            "reps": 10,
+            "weight": 16
+          }
+        ]
+      },
+      {
+        "id": "di263gb",
+        "name": "Rosca na polia (cabo baixo)",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 12,
+            "weight": 5
+          },
+          {
+            "reps": 12,
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "id": "tq9kem4",
+        "name": "Rosca alternada com halteres",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 9,
+            "weight": 10
+          },
+          {
+            "reps": 9,
+            "weight": 10
+          },
+          {
+            "reps": 8,
+            "weight": 10
+          },
+          {
+            "reps": 8,
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "id": "eb2afwa",
+        "name": "Rosca inversa (barra)",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 12,
+            "weight": 5
+          },
+          {
+            "reps": 12,
+            "weight": 5
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "amjmmem",
     "date": "2026-06-12",
     "name": "Treino 1 - PEITO + TRÍCEPS + OMBRO",
