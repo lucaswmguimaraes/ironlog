@@ -1,5 +1,185 @@
 [
   {
+    "id": "gkvza9r",
+    "date": "2026-06-16",
+    "name": "Treino 4 - SUPERIORES GERAL",
+    "trainType": "D",
+    "exercises": [
+      {
+        "id": "d45u7bm",
+        "name": "Remada cavalinho",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 11,
+            "weight": 17.5
+          },
+          {
+            "reps": 10,
+            "weight": 17.5
+          },
+          {
+            "reps": 10,
+            "weight": 17.5
+          }
+        ]
+      },
+      {
+        "id": "tl4t8vb",
+        "name": "Remada serrote unilateral",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 12
+          },
+          {
+            "reps": 12,
+            "weight": 12
+          },
+          {
+            "reps": 12,
+            "weight": 12
+          }
+        ]
+      },
+      {
+        "id": "tday742",
+        "name": "Fly na máquina",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 20
+          },
+          {
+            "reps": 12,
+            "weight": 20
+          },
+          {
+            "reps": 8,
+            "weight": 15
+          },
+          {
+            "reps": 9,
+            "weight": 20
+          },
+          {
+            "reps": 9,
+            "weight": 15
+          }
+        ]
+      },
+      {
+        "id": "12xm90d",
+        "name": "Crucifixo no cross (cabo alto)",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 7.5
+          },
+          {
+            "reps": 12,
+            "weight": 7.5
+          },
+          {
+            "reps": 10,
+            "weight": 7.5
+          }
+        ]
+      },
+      {
+        "id": "y78yqpv",
+        "name": "Elevação lateral + frontal alternadas",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 3
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 3
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 8,
+            "weight": 3
+          }
+        ]
+      },
+      {
+        "id": "fpffitt",
+        "name": "Rosca na corda",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 7.5
+          },
+          {
+            "reps": 12,
+            "weight": 7.5
+          },
+          {
+            "reps": 12,
+            "weight": 7.5
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "id": "jg4lmbl",
+        "name": "Encolhimento com barra (trapézio)",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "p8crfj0",
     "date": "2026-06-16",
     "name": "Treino 5 - GLÚTEO/ POSTERIOR",
