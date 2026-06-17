@@ -50,6 +50,26 @@
         ]
       },
       {
+        "id": "zds5zvu",
+        "name": "Supino declinado com halteres",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 7.5
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": "",
+            "weight": 10
+          }
+        ]
+      },
+      {
         "id": "tl4t8vb",
         "name": "Remada serrote unilateral",
         "category": "Costas",
@@ -66,26 +86,6 @@
           {
             "reps": 12,
             "weight": 12
-          }
-        ]
-      },
-      {
-        "id": "zds5zvu",
-        "name": "Supino declinado com halteres",
-        "category": "Peito",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 7.5
-          },
-          {
-            "reps": "",
-            "weight": 7.5
-          },
-          {
-            "reps": "",
-            "weight": 7.5
           }
         ]
       },
