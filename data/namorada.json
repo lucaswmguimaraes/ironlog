@@ -4038,6 +4038,26 @@
         ]
       },
       {
+        "id": "r3al3y0",
+        "name": "Peck deck",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          }
+        ]
+      },
+      {
         "id": "8ri486u",
         "name": "Elevação lateral + frontal alternadas",
         "category": "Ombros",
@@ -4114,26 +4134,6 @@
           {
             "reps": 10,
             "weight": 10
-          }
-        ]
-      },
-      {
-        "id": "r3al3y0",
-        "name": "Peck deck",
-        "category": "Peito",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 20
-          },
-          {
-            "reps": 10,
-            "weight": 20
-          },
-          {
-            "reps": 10,
-            "weight": 20
           }
         ]
       }
