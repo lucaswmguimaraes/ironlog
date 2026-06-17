@@ -122,6 +122,26 @@
         ]
       },
       {
+        "id": "jg4lmbl",
+        "name": "Encolhimento com barra (trapézio)",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          }
+        ]
+      },
+      {
         "id": "fpffitt",
         "name": "Rosca na corda",
         "category": "Bíceps",
@@ -142,26 +162,6 @@
           {
             "reps": 10,
             "weight": 5
-          }
-        ]
-      },
-      {
-        "id": "jg4lmbl",
-        "name": "Encolhimento com barra (trapézio)",
-        "category": "Ombros",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 15
-          },
-          {
-            "reps": 10,
-            "weight": 15
-          },
-          {
-            "reps": 10,
-            "weight": 15
           }
         ]
       }
