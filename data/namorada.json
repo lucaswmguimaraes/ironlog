@@ -24,8 +24,32 @@
             "weight": 17.5
           },
           {
-            "reps": 10,
-            "weight": 17.5
+            "reps": 12,
+            "weight": 15
+          }
+        ]
+      },
+      {
+        "id": "tday742",
+        "name": "Fly na máquina",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 16,
+            "weight": 25
+          },
+          {
+            "reps": 12,
+            "weight": 25
+          },
+          {
+            "reps": 8,
+            "weight": 15
+          },
+          {
+            "reps": 9,
+            "weight": 20
           }
         ]
       },
@@ -46,38 +70,6 @@
           {
             "reps": 12,
             "weight": 12
-          }
-        ]
-      },
-      {
-        "id": "tday742",
-        "name": "Fly na máquina",
-        "category": "Peito",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 15,
-            "weight": 10
-          },
-          {
-            "reps": 12,
-            "weight": 20
-          },
-          {
-            "reps": 12,
-            "weight": 20
-          },
-          {
-            "reps": 8,
-            "weight": 15
-          },
-          {
-            "reps": 9,
-            "weight": 20
-          },
-          {
-            "reps": 9,
-            "weight": 15
           }
         ]
       },
