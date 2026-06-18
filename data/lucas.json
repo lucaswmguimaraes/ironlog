@@ -1,5 +1,137 @@
 [
   {
+    "id": "s0x02p8",
+    "date": "2026-06-18",
+    "name": "Treino C - Quadríceps",
+    "trainType": "C",
+    "exercises": [
+      {
+        "id": "8o29d1i",
+        "name": "Hack squat",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 20
+          },
+          {
+            "reps": 12,
+            "weight": 50
+          },
+          {
+            "reps": 12,
+            "weight": 50
+          },
+          {
+            "reps": 10,
+            "weight": 40
+          }
+        ]
+      },
+      {
+        "id": "t50grxl",
+        "name": "Leg press horizontal",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 20,
+            "weight": 75
+          },
+          {
+            "reps": 10,
+            "weight": 93
+          },
+          {
+            "reps": 10,
+            "weight": 84
+          }
+        ]
+      },
+      {
+        "id": "kac5ipj",
+        "name": "Adutora na máquina",
+        "category": "Adutores / Abdutores",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 111
+          },
+          {
+            "reps": 10,
+            "weight": 111
+          },
+          {
+            "reps": 9,
+            "weight": 111
+          }
+        ]
+      },
+      {
+        "id": "a8ne3oj",
+        "name": "Extensora unilateral",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          }
+        ]
+      },
+      {
+        "id": "54rzz3i",
+        "name": "Panturrilha em pé (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 13,
+            "weight": 86
+          },
+          {
+            "reps": 10,
+            "weight": 86
+          },
+          {
+            "reps": 10,
+            "weight": 86
+          }
+        ]
+      },
+      {
+        "id": "yvngavc",
+        "name": "Abdominal supra",
+        "category": "Core / Abdômen",
+        "notes": "Banco declinado com halter",
+        "sets": [
+          {
+            "reps": 11,
+            "weight": 14
+          },
+          {
+            "reps": 9,
+            "weight": 14
+          },
+          {
+            "reps": 9,
+            "weight": 12
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "0r7e58o",
     "date": "2026-06-16",
     "name": "Treino D - Superiores",
