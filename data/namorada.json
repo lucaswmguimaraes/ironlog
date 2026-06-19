@@ -85,14 +85,14 @@
         "sets": [
           {
             "reps": 12,
-            "weight": 13.5
+            "weight": 18
           },
           {
             "reps": 12,
             "weight": 18
           },
           {
-            "reps": 10,
+            "reps": 8,
             "weight": 18
           }
         ]
