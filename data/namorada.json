@@ -1,5 +1,121 @@
 [
   {
+    "id": "n3404j6",
+    "date": "2026-06-19",
+    "name": "Treino 1 - PEITO + TRÍCEPS + OMBRO",
+    "trainType": "B",
+    "exercises": [
+      {
+        "id": "5fohdzm",
+        "name": "Desenvolvimento no aparelho",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 4.5
+          },
+          {
+            "reps": 8,
+            "weight": 13.5
+          },
+          {
+            "reps": 10,
+            "weight": 13.5
+          },
+          {
+            "reps": 10,
+            "weight": 9
+          }
+        ]
+      },
+      {
+        "id": "8etcu42",
+        "name": "Tríceps testa com barra",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 13.5
+          },
+          {
+            "reps": 12,
+            "weight": 18
+          },
+          {
+            "reps": 10,
+            "weight": 18
+          }
+        ]
+      },
+      {
+        "id": "f6o4rqs",
+        "name": "Tríceps na polia com corda",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 13.5
+          },
+          {
+            "reps": 9,
+            "weight": 13.5
+          },
+          {
+            "reps": 8,
+            "weight": 13.5
+          }
+        ]
+      },
+      {
+        "id": "qucqk1s",
+        "name": "Supino reto com halteres",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 7
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 11,
+            "weight": 9
+          }
+        ]
+      },
+      {
+        "id": "50tc6bi",
+        "name": "Supino inclinado com halteres",
+        "category": "Peito",
+        "notes": "máquina ",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "9waj9ic",
     "date": "2026-06-18",
     "name": "Treino 3 - QUADRÍCEPS",
