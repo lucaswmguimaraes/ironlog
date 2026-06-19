@@ -6,26 +6,54 @@
     "trainType": "B",
     "exercises": [
       {
-        "id": "c2jqiyw",
-        "name": "Supino reto com barra",
+        "id": "oze99ax",
+        "name": "Desenvolvimento máquina",
+        "category": "Ombros",
+        "notes": "Drop na última série",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 18
+          },
+          {
+            "reps": 12,
+            "weight": 31.5
+          },
+          {
+            "reps": 10,
+            "weight": 36.5
+          },
+          {
+            "reps": 10,
+            "weight": 31.5
+          },
+          {
+            "reps": 10,
+            "weight": 18
+          }
+        ]
+      },
+      {
+        "id": "60e3hj9",
+        "name": "Chest Press máquina",
         "category": "Peito",
         "notes": "",
         "sets": [
           {
             "reps": 15,
-            "weight": 40
-          },
-          {
-            "reps": 8,
-            "weight": 75
-          },
-          {
-            "reps": 9,
-            "weight": 65
+            "weight": 18
           },
           {
             "reps": 10,
-            "weight": 55
+            "weight": 66
+          },
+          {
+            "reps": 10,
+            "weight": 59
+          },
+          {
+            "reps": 10,
+            "weight": 59
           }
         ]
       },
@@ -86,34 +114,6 @@
           {
             "reps": 8,
             "weight": 41
-          }
-        ]
-      },
-      {
-        "id": "oze99ax",
-        "name": "Desenvolvimento máquina",
-        "category": "Ombros",
-        "notes": "Drop na última série",
-        "sets": [
-          {
-            "reps": 15,
-            "weight": 18
-          },
-          {
-            "reps": 7,
-            "weight": 31.5
-          },
-          {
-            "reps": 6,
-            "weight": 27
-          },
-          {
-            "reps": 8,
-            "weight": 22.5
-          },
-          {
-            "reps": 6,
-            "weight": 13.5
           }
         ]
       }
