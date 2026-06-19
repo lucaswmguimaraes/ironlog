@@ -118,25 +118,29 @@
         ]
       },
       {
-        "id": "drsrsqi",
-        "name": "Tríceps francês no cross com corda",
-        "category": "Tríceps",
+        "id": "3li3k9r",
+        "name": "Posterior de ombro no cross",
+        "category": "Ombros",
         "notes": "",
         "sets": [
           {
-            "reps": 9,
-            "weight": 31.5
+            "reps": 12,
+            "weight": 13.5
+          },
+          {
+            "reps": 10,
+            "weight": 13.5
           },
           {
             "reps": 8,
-            "weight": 27
+            "weight": 13.5
           }
         ]
       },
       {
-        "id": "22o2po5",
-        "name": "Posterior de ombro no cross",
-        "category": "Ombros",
+        "id": "drsrsqi",
+        "name": "Tríceps francês no cross com corda",
+        "category": "Tríceps",
         "notes": "",
         "sets": [
           {
