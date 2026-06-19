@@ -136,6 +136,22 @@
             "weight": 4.5
           }
         ]
+      },
+      {
+        "id": "yl2z2ov",
+        "name": "Tríceps francês no cross com corda",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 8,
+            "weight": 9
+          },
+          {
+            "reps": 8,
+            "weight": 9
+          }
+        ]
       }
     ]
   },
