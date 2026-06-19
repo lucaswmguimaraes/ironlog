@@ -34,6 +34,30 @@
         ]
       },
       {
+        "id": "lc3tdge",
+        "name": "Chest Press máquina",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 4
+          },
+          {
+            "reps": "",
+            "weight": 11
+          },
+          {
+            "reps": "",
+            "weight": ""
+          },
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      },
+      {
         "id": "8etcu42",
         "name": "Tríceps testa com barra",
         "category": "Tríceps",
