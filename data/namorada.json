@@ -48,12 +48,32 @@
             "weight": 11
           },
           {
-            "reps": "",
-            "weight": ""
+            "reps": 12,
+            "weight": 11
           },
           {
-            "reps": "",
-            "weight": ""
+            "reps": 12,
+            "weight": 11
+          }
+        ]
+      },
+      {
+        "id": "50tc6bi",
+        "name": "Supino inclinado com halteres",
+        "category": "Peito",
+        "notes": "máquina ",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 15
           }
         ]
       },
@@ -94,50 +114,6 @@
           {
             "reps": 8,
             "weight": 13.5
-          }
-        ]
-      },
-      {
-        "id": "qucqk1s",
-        "name": "Supino reto com halteres",
-        "category": "Peito",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 7
-          },
-          {
-            "reps": 10,
-            "weight": 10
-          },
-          {
-            "reps": 10,
-            "weight": 10
-          },
-          {
-            "reps": 11,
-            "weight": 9
-          }
-        ]
-      },
-      {
-        "id": "50tc6bi",
-        "name": "Supino inclinado com halteres",
-        "category": "Peito",
-        "notes": "máquina ",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 15
-          },
-          {
-            "reps": 10,
-            "weight": 15
-          },
-          {
-            "reps": 10,
-            "weight": 15
           }
         ]
       }
