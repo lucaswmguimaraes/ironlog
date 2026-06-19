@@ -1,5 +1,125 @@
 [
   {
+    "id": "4t2f2h2",
+    "date": "2026-06-19",
+    "name": "Treino B - Push",
+    "trainType": "B",
+    "exercises": [
+      {
+        "id": "c2jqiyw",
+        "name": "Supino reto com barra",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 40
+          },
+          {
+            "reps": 8,
+            "weight": 75
+          },
+          {
+            "reps": 9,
+            "weight": 65
+          },
+          {
+            "reps": 10,
+            "weight": 55
+          }
+        ]
+      },
+      {
+        "id": "9eeu86c",
+        "name": "Supino inclinado com halteres",
+        "category": "Peito",
+        "notes": "Máquina",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 50
+          },
+          {
+            "reps": 8,
+            "weight": 55
+          },
+          {
+            "reps": 8,
+            "weight": 45
+          }
+        ]
+      },
+      {
+        "id": "laxw98f",
+        "name": "Tríceps testa com barra",
+        "category": "Tríceps",
+        "notes": "No cross",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 41
+          },
+          {
+            "reps": 9,
+            "weight": 45.5
+          },
+          {
+            "reps": 8,
+            "weight": 41
+          }
+        ]
+      },
+      {
+        "id": "uaqy0ru",
+        "name": "Tríceps na polia com corda",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 45.5
+          },
+          {
+            "reps": 8,
+            "weight": 45.5
+          },
+          {
+            "reps": 8,
+            "weight": 41
+          }
+        ]
+      },
+      {
+        "id": "oze99ax",
+        "name": "Desenvolvimento máquina",
+        "category": "Ombros",
+        "notes": "Drop na última série",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 18
+          },
+          {
+            "reps": 7,
+            "weight": 31.5
+          },
+          {
+            "reps": 6,
+            "weight": 27
+          },
+          {
+            "reps": 8,
+            "weight": 22.5
+          },
+          {
+            "reps": 6,
+            "weight": 13.5
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "s0x02p8",
     "date": "2026-06-18",
     "name": "Treino C - Quadríceps",
