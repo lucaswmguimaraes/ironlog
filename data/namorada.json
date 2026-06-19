@@ -112,8 +112,28 @@
             "weight": 13.5
           },
           {
-            "reps": 8,
+            "reps": 9,
             "weight": 13.5
+          }
+        ]
+      },
+      {
+        "id": "ldwesvc",
+        "name": "Posterior de ombro no cross",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 4.5
+          },
+          {
+            "reps": 10,
+            "weight": 4.5
+          },
+          {
+            "reps": "",
+            "weight": 4.5
           }
         ]
       }
