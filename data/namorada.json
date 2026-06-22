@@ -54,6 +54,26 @@
         ]
       },
       {
+        "id": "4agvtt0",
+        "name": "Remada curvada com barra",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 7,
+            "weight": 30
+          },
+          {
+            "reps": 12,
+            "weight": 25
+          },
+          {
+            "reps": 10,
+            "weight": 25
+          }
+        ]
+      },
+      {
         "id": "f86jp70",
         "name": "Puxada alta com barra reta",
         "category": "Costas",
@@ -89,26 +109,6 @@
           },
           {
             "reps": 12,
-            "weight": 25
-          }
-        ]
-      },
-      {
-        "id": "4agvtt0",
-        "name": "Remada curvada com barra",
-        "category": "Costas",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 7,
-            "weight": 30
-          },
-          {
-            "reps": 12,
-            "weight": 25
-          },
-          {
-            "reps": 10,
             "weight": 25
           }
         ]
