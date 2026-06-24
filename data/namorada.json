@@ -100,16 +100,36 @@
         "notes": "",
         "sets": [
           {
-            "reps": 10,
+            "reps": 15,
             "weight": 36.5
           },
           {
-            "reps": 10,
+            "reps": 15,
             "weight": 36.5
           },
           {
-            "reps": 10,
+            "reps": 15,
             "weight": 36.5
+          }
+        ]
+      },
+      {
+        "id": "qc3ql97",
+        "name": "Leg press horizontal",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 66
+          },
+          {
+            "reps": "",
+            "weight": 66
+          },
+          {
+            "reps": "",
+            "weight": 66
           }
         ]
       }
