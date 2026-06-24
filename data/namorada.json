@@ -1,5 +1,121 @@
 [
   {
+    "id": "q9k3co6",
+    "date": "2026-06-24",
+    "name": "Treino 5 - GLÚTEO/ POSTERIOR",
+    "trainType": "E",
+    "exercises": [
+      {
+        "id": "d0h9lh2",
+        "name": "Mesa flexora",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 11
+          },
+          {
+            "reps": 12,
+            "weight": 18
+          },
+          {
+            "reps": 10,
+            "weight": 25
+          },
+          {
+            "reps": 10,
+            "weight": 25
+          },
+          {
+            "reps": 9,
+            "weight": 11
+          }
+        ]
+      },
+      {
+        "id": "hi0q8wa",
+        "name": "Stiff com barra",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 35
+          },
+          {
+            "reps": 11,
+            "weight": 35
+          },
+          {
+            "reps": 10,
+            "weight": 35
+          }
+        ]
+      },
+      {
+        "id": "myrsb7d",
+        "name": "Cadeira flexora",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 38.5
+          },
+          {
+            "reps": 11,
+            "weight": 38.5
+          },
+          {
+            "reps": 12,
+            "weight": 38.5
+          }
+        ]
+      },
+      {
+        "id": "v6io2ws",
+        "name": "Abdutora na máquina",
+        "category": "Glúteos",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 93
+          },
+          {
+            "reps": 10,
+            "weight": 93
+          },
+          {
+            "reps": 10,
+            "weight": 93
+          }
+        ]
+      },
+      {
+        "id": "yre7zjd",
+        "name": "Panturrilha sentado (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 36.5
+          },
+          {
+            "reps": 10,
+            "weight": 36.5
+          },
+          {
+            "reps": 10,
+            "weight": 36.5
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "2bevgqv",
     "date": "2026-06-22",
     "name": "Treino 2 - COSTAS + BÍCEPS",
