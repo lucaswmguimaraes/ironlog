@@ -74,26 +74,6 @@
         ]
       },
       {
-        "id": "giu8btt",
-        "name": "Supino declinado com halteres",
-        "category": "Peito",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 7.5
-          },
-          {
-            "reps": 10,
-            "weight": 10
-          },
-          {
-            "reps": 12,
-            "weight": 10
-          }
-        ]
-      },
-      {
         "id": "b0n9y1s",
         "name": "Elevação lateral + frontal alternadas",
         "category": "Ombros",
@@ -122,6 +102,26 @@
           {
             "reps": 8,
             "weight": 3
+          }
+        ]
+      },
+      {
+        "id": "giu8btt",
+        "name": "Supino declinado com halteres",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 7.5
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 10
           }
         ]
       },
