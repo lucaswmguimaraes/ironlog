@@ -136,16 +136,16 @@
             "weight": 18
           },
           {
-            "reps": 12,
-            "weight": 18
-          },
-          {
-            "reps": 12,
+            "reps": 10,
             "weight": 18
           },
           {
             "reps": 10,
-            "weight": 5
+            "weight": 18
+          },
+          {
+            "reps": 10,
+            "weight": 9
           }
         ]
       },
@@ -156,7 +156,7 @@
         "notes": "",
         "sets": [
           {
-            "reps": 12,
+            "reps": 10,
             "weight": 15
           },
           {
