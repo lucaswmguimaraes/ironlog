@@ -120,28 +120,8 @@
             "weight": 12.5
           },
           {
-            "reps": 12,
-            "weight": 12.5
-          }
-        ]
-      },
-      {
-        "id": "9pmy70j",
-        "name": "Encolhimento com barra (trapézio)",
-        "category": "Ombros",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 15
-          },
-          {
-            "reps": 12,
-            "weight": 15
-          },
-          {
             "reps": 10,
-            "weight": 15
+            "weight": 12.5
           }
         ]
       },
@@ -166,6 +146,26 @@
           {
             "reps": 10,
             "weight": 5
+          }
+        ]
+      },
+      {
+        "id": "9pmy70j",
+        "name": "Encolhimento com barra (trapézio)",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 15
+          },
+          {
+            "reps": 12,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 15
           }
         ]
       }
