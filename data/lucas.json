@@ -121,19 +121,19 @@
         "id": "0bdutgi",
         "name": "Supino declinado com halteres",
         "category": "Peito",
-        "notes": "",
+        "notes": "Máquina",
         "sets": [
           {
+            "reps": 12,
+            "weight": 25
+          },
+          {
             "reps": 10,
-            "weight": 25
+            "weight": 27.5
           },
           {
             "reps": 9,
-            "weight": 25
-          },
-          {
-            "reps": 9,
-            "weight": 22.5
+            "weight": 27.5
           }
         ]
       },
@@ -152,11 +152,11 @@
             "weight": 45.5
           },
           {
-            "reps": 8,
+            "reps": 9,
             "weight": 41
           },
           {
-            "reps": 8,
+            "reps": 9,
             "weight": 27
           }
         ]
@@ -168,16 +168,16 @@
         "notes": "",
         "sets": [
           {
-            "reps": 12,
-            "weight": 70
+            "reps": 10,
+            "weight": 75
+          },
+          {
+            "reps": 10,
+            "weight": 75
           },
           {
             "reps": 10,
             "weight": 70
-          },
-          {
-            "reps": 10,
-            "weight": 65
           }
         ]
       }
