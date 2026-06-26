@@ -1,5 +1,189 @@
 [
   {
+    "id": "baag2jv",
+    "date": "2026-06-25",
+    "name": "Treino D - Superiores",
+    "trainType": "D",
+    "exercises": [
+      {
+        "id": "14bvhpz",
+        "name": "Fly na máquina",
+        "category": "Peito",
+        "notes": "Concentrada após cada série",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 18
+          },
+          {
+            "reps": 10,
+            "weight": 59
+          },
+          {
+            "reps": 10,
+            "weight": 59
+          },
+          {
+            "reps": 9,
+            "weight": 59
+          },
+          {
+            "reps": 9,
+            "weight": 59
+          },
+          {
+            "reps": 8,
+            "weight": 52
+          },
+          {
+            "reps": 8,
+            "weight": 52
+          }
+        ]
+      },
+      {
+        "id": "fmmej82",
+        "name": "Remada cavalinho",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 45
+          },
+          {
+            "reps": 8,
+            "weight": 42.5
+          },
+          {
+            "reps": 8,
+            "weight": 37.5
+          }
+        ]
+      },
+      {
+        "id": "fjue23u",
+        "name": "Remada serrote unilateral",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 26
+          },
+          {
+            "reps": 9,
+            "weight": 26
+          },
+          {
+            "reps": 9,
+            "weight": 24
+          }
+        ]
+      },
+      {
+        "id": "9zaglao",
+        "name": "Elevação lateral + frontal alternadas",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 9,
+            "weight": 10
+          },
+          {
+            "reps": 9,
+            "weight": 5
+          },
+          {
+            "reps": 8,
+            "weight": 10
+          },
+          {
+            "reps": 8,
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "id": "0bdutgi",
+        "name": "Supino declinado com halteres",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 25
+          },
+          {
+            "reps": 9,
+            "weight": 25
+          },
+          {
+            "reps": 9,
+            "weight": 22.5
+          }
+        ]
+      },
+      {
+        "id": "ojwtz8w",
+        "name": "Rosca na corda",
+        "category": "Bíceps",
+        "notes": "Drop na última série",
+        "sets": [
+          {
+            "reps": 9,
+            "weight": 50
+          },
+          {
+            "reps": 9,
+            "weight": 45.5
+          },
+          {
+            "reps": 8,
+            "weight": 41
+          },
+          {
+            "reps": 8,
+            "weight": 27
+          }
+        ]
+      },
+      {
+        "id": "hyk7fdg",
+        "name": "Encolhimento com barra (trapézio)",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 70
+          },
+          {
+            "reps": 10,
+            "weight": 70
+          },
+          {
+            "reps": 10,
+            "weight": 65
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "fw8cc1v",
     "date": "2026-06-24",
     "name": "Treino E - Posteriores",
