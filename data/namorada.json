@@ -30,22 +30,22 @@
         ]
       },
       {
-        "id": "zq9mnnc",
-        "name": "Leg Press 45°",
-        "category": "Quadríceps",
+        "id": "1n7zt2f",
+        "name": "Adutora na máquina",
+        "category": "Adutores / Abdutores",
         "notes": "",
         "sets": [
           {
-            "reps": 12,
-            "weight": 140
-          },
-          {
-            "reps": 11,
-            "weight": 150
+            "reps": 10,
+            "weight": 75
           },
           {
             "reps": 10,
-            "weight": 150
+            "weight": 75
+          },
+          {
+            "reps": 10,
+            "weight": 75
           }
         ]
       },
@@ -70,42 +70,22 @@
         ]
       },
       {
-        "id": "1n7zt2f",
-        "name": "Adutora na máquina",
-        "category": "Adutores / Abdutores",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 75
-          },
-          {
-            "reps": 10,
-            "weight": 75
-          },
-          {
-            "reps": 10,
-            "weight": 75
-          }
-        ]
-      },
-      {
-        "id": "78nlszf",
-        "name": "Abdutora na máquina",
-        "category": "Glúteos",
+        "id": "zq9mnnc",
+        "name": "Leg Press 45°",
+        "category": "Quadríceps",
         "notes": "",
         "sets": [
           {
             "reps": 12,
-            "weight": 93
+            "weight": 140
           },
           {
-            "reps": 12,
-            "weight": 93
+            "reps": 11,
+            "weight": 150
           },
           {
             "reps": 10,
-            "weight": 93
+            "weight": 150
           }
         ]
       }
