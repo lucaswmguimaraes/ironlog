@@ -88,6 +88,26 @@
             "weight": 10
           }
         ]
+      },
+      {
+        "id": "gspfm39",
+        "name": "Panturrilha sentado (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          },
+          {
+            "reps": "",
+            "weight": ""
+          },
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
       }
     ]
   },
