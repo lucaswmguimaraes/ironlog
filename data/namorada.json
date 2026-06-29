@@ -36,7 +36,7 @@
         "notes": "",
         "sets": [
           {
-            "reps": 10,
+            "reps": 12,
             "weight": 75
           },
           {
@@ -46,6 +46,26 @@
           {
             "reps": 10,
             "weight": 75
+          }
+        ]
+      },
+      {
+        "id": "c5ybm3r",
+        "name": "Leg press horizontal",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 75
+          },
+          {
+            "reps": 11,
+            "weight": 75
+          },
+          {
+            "reps": "",
+            "weight": ""
           }
         ]
       },
@@ -66,26 +86,6 @@
           {
             "reps": 10,
             "weight": 38.5
-          }
-        ]
-      },
-      {
-        "id": "zq9mnnc",
-        "name": "Leg Press 45°",
-        "category": "Quadríceps",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 140
-          },
-          {
-            "reps": 11,
-            "weight": 150
-          },
-          {
-            "reps": 10,
-            "weight": 150
           }
         ]
       }
