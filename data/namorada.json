@@ -30,6 +30,54 @@
         ]
       },
       {
+        "id": "fc7wjfe",
+        "name": "Supino inclinado com halteres",
+        "category": "Peito",
+        "notes": "máquina ",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 16
+          },
+          {
+            "reps": 11,
+            "weight": 16
+          },
+          {
+            "reps": 11,
+            "weight": 16
+          }
+        ]
+      },
+      {
+        "id": "5cyki2z",
+        "name": "Desenvolvimento no aparelho",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 11,
+            "weight": 9
+          },
+          {
+            "reps": 8,
+            "weight": 13.5
+          },
+          {
+            "reps": 9,
+            "weight": 13.5
+          },
+          {
+            "reps": 8,
+            "weight": 13.5
+          },
+          {
+            "reps": 6,
+            "weight": 9
+          }
+        ]
+      },
+      {
         "id": "j96nm72",
         "name": "Tríceps testa com barra",
         "category": "Tríceps",
@@ -82,54 +130,6 @@
           {
             "reps": 8,
             "weight": 9
-          }
-        ]
-      },
-      {
-        "id": "5cyki2z",
-        "name": "Desenvolvimento no aparelho",
-        "category": "Ombros",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 11,
-            "weight": 9
-          },
-          {
-            "reps": 8,
-            "weight": 13.5
-          },
-          {
-            "reps": 9,
-            "weight": 13.5
-          },
-          {
-            "reps": 8,
-            "weight": 13.5
-          },
-          {
-            "reps": 6,
-            "weight": 9
-          }
-        ]
-      },
-      {
-        "id": "fc7wjfe",
-        "name": "Supino inclinado com halteres",
-        "category": "Peito",
-        "notes": "máquina ",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 15
-          },
-          {
-            "reps": 10,
-            "weight": 15
-          },
-          {
-            "reps": 10,
-            "weight": 15
           }
         ]
       },
