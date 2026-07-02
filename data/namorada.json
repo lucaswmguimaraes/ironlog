@@ -34,6 +34,26 @@
         ]
       },
       {
+        "id": "7oqxsio",
+        "name": "Rosca na polia (cabo baixo)",
+        "category": "Bíceps",
+        "notes": "unilateral",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 9
+          },
+          {
+            "reps": 10,
+            "weight": 9
+          },
+          {
+            "reps": 10,
+            "weight": 9
+          }
+        ]
+      },
+      {
         "id": "8qnzr1u",
         "name": "Remada curvada com barra",
         "category": "Costas",
@@ -90,26 +110,6 @@
           {
             "reps": 12,
             "weight": 25
-          }
-        ]
-      },
-      {
-        "id": "7oqxsio",
-        "name": "Rosca na polia (cabo baixo)",
-        "category": "Bíceps",
-        "notes": "unilateral",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 9
-          },
-          {
-            "reps": 10,
-            "weight": 9
-          },
-          {
-            "reps": 10,
-            "weight": 9
           }
         ]
       },
