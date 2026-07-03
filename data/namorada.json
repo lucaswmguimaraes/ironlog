@@ -100,16 +100,16 @@
         "notes": "",
         "sets": [
           {
-            "reps": 10,
-            "weight": 25
+            "reps": 12,
+            "weight": 30
           },
           {
             "reps": 11,
-            "weight": 25
+            "weight": 30
           },
           {
             "reps": 10,
-            "weight": 25
+            "weight": 30
           }
         ]
       },
