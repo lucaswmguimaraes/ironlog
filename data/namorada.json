@@ -60,16 +60,36 @@
         "notes": "",
         "sets": [
           {
-            "reps": 14,
-            "weight": 25
-          },
-          {
             "reps": 12,
             "weight": 25
           },
           {
             "reps": 12,
             "weight": 25
+          },
+          {
+            "reps": 10,
+            "weight": 31.5
+          }
+        ]
+      },
+      {
+        "id": "hnf6pwo",
+        "name": "Remada baixa com triângulo",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 27
+          },
+          {
+            "reps": 12,
+            "weight": 27
+          },
+          {
+            "reps": 12,
+            "weight": 27
           }
         ]
       },
@@ -89,26 +109,6 @@
           },
           {
             "reps": 10,
-            "weight": 25
-          }
-        ]
-      },
-      {
-        "id": "hnf6pwo",
-        "name": "Remada baixa com triângulo",
-        "category": "Costas",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 25
-          },
-          {
-            "reps": 12,
-            "weight": 25
-          },
-          {
-            "reps": 12,
             "weight": 25
           }
         ]
