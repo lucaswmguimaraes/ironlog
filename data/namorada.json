@@ -48,28 +48,8 @@
             "weight": 13.5
           },
           {
-            "reps": 10,
-            "weight": 9
-          }
-        ]
-      },
-      {
-        "id": "8qnzr1u",
-        "name": "Remada curvada com barra",
-        "category": "Costas",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 25
-          },
-          {
             "reps": 11,
-            "weight": 25
-          },
-          {
-            "reps": 10,
-            "weight": 25
+            "weight": 9
           }
         ]
       },
@@ -89,6 +69,26 @@
           },
           {
             "reps": 12,
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "id": "8qnzr1u",
+        "name": "Remada curvada com barra",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 25
+          },
+          {
+            "reps": 11,
+            "weight": 25
+          },
+          {
+            "reps": 10,
             "weight": 25
           }
         ]
