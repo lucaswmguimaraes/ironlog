@@ -1,5 +1,137 @@
 [
   {
+    "id": "1zidynz",
+    "date": "2026-07-11",
+    "name": "Treino C - Quadríceps",
+    "trainType": "C",
+    "exercises": [
+      {
+        "id": "o1okber",
+        "name": "Hack squat",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 60
+          },
+          {
+            "reps": 10,
+            "weight": 70
+          },
+          {
+            "reps": 10,
+            "weight": 60
+          }
+        ]
+      },
+      {
+        "id": "zcn3tvw",
+        "name": "Leg press horizontal",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 111
+          },
+          {
+            "reps": 11,
+            "weight": 102
+          },
+          {
+            "reps": 12,
+            "weight": 93
+          }
+        ]
+      },
+      {
+        "id": "uq69oar",
+        "name": "Extensora unilateral",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 22.5
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 17.5
+          }
+        ]
+      },
+      {
+        "id": "8sla3jc",
+        "name": "Adutora na máquina",
+        "category": "Adutores / Abdutores",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 120
+          },
+          {
+            "reps": 10,
+            "weight": 120
+          },
+          {
+            "reps": 9,
+            "weight": 111
+          }
+        ]
+      },
+      {
+        "id": "a9gskrk",
+        "name": "Panturrilha em pé (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 86
+          },
+          {
+            "reps": 11,
+            "weight": 86
+          },
+          {
+            "reps": 10,
+            "weight": 86
+          }
+        ]
+      },
+      {
+        "id": "doqnwtk",
+        "name": "Abdominal supra",
+        "category": "Core / Abdômen",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 14
+          },
+          {
+            "reps": 10,
+            "weight": 14
+          },
+          {
+            "reps": 10,
+            "weight": 12
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "zx9p2zy",
     "date": "2026-07-07",
     "name": "Treino D - Superiores",
