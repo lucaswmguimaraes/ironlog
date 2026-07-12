@@ -40,12 +40,32 @@
             "weight": 18
           },
           {
-            "reps": 11,
+            "reps": 12,
             "weight": 18
           },
           {
-            "reps": 11,
-            "weight": 16
+            "reps": 12,
+            "weight": 18
+          }
+        ]
+      },
+      {
+        "id": "4evp92g",
+        "name": "Tríceps testa com barra",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 18
+          },
+          {
+            "reps": 12,
+            "weight": 18
+          },
+          {
+            "reps": 12,
+            "weight": 18
           }
         ]
       },
@@ -74,26 +94,6 @@
           {
             "reps": 5,
             "weight": 9
-          }
-        ]
-      },
-      {
-        "id": "4evp92g",
-        "name": "Tríceps testa com barra",
-        "category": "Tríceps",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 18
-          },
-          {
-            "reps": 12,
-            "weight": 18
-          },
-          {
-            "reps": 12,
-            "weight": 18
           }
         ]
       },
