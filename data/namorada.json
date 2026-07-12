@@ -64,8 +64,28 @@
             "weight": 25
           },
           {
-            "reps": 10,
+            "reps": 8,
             "weight": 25
+          }
+        ]
+      },
+      {
+        "id": "rl3i034",
+        "name": "Tríceps na polia com corda",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 13.5
+          },
+          {
+            "reps": 11,
+            "weight": 13.5
+          },
+          {
+            "reps": 10,
+            "weight": 13.5
           }
         ]
       },
@@ -94,26 +114,6 @@
           {
             "reps": 5,
             "weight": 9
-          }
-        ]
-      },
-      {
-        "id": "rl3i034",
-        "name": "Tríceps na polia com corda",
-        "category": "Tríceps",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 13.5
-          },
-          {
-            "reps": 11,
-            "weight": 13.5
-          },
-          {
-            "reps": 10,
-            "weight": 13.5
           }
         ]
       },
