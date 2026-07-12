@@ -96,12 +96,12 @@
         "notes": "",
         "sets": [
           {
-            "reps": 8,
-            "weight": 9
+            "reps": 6,
+            "weight": 10
           },
           {
-            "reps": 8,
-            "weight": 9
+            "reps": 10,
+            "weight": 5
           }
         ]
       },
@@ -130,26 +130,6 @@
           {
             "reps": 5,
             "weight": 9
-          }
-        ]
-      },
-      {
-        "id": "uf5aihb",
-        "name": "Posterior de ombro no cross",
-        "category": "Ombros",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 4.5
-          },
-          {
-            "reps": 10,
-            "weight": 4.5
-          },
-          {
-            "reps": 8,
-            "weight": 4.5
           }
         ]
       }
