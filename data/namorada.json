@@ -1,5 +1,161 @@
 [
   {
+    "id": "d5tli93",
+    "date": "2026-07-12",
+    "name": "Treino 1 - PEITO + TRÍCEPS + OMBRO",
+    "trainType": "B",
+    "exercises": [
+      {
+        "id": "6co3fq6",
+        "name": "Chest Press máquina",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 20
+          },
+          {
+            "reps": 12,
+            "weight": 20
+          },
+          {
+            "reps": 11,
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "id": "d8e7m7s",
+        "name": "Supino inclinado com halteres",
+        "category": "Peito",
+        "notes": "máquina ",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 16
+          },
+          {
+            "reps": 11,
+            "weight": 16
+          },
+          {
+            "reps": 11,
+            "weight": 16
+          }
+        ]
+      },
+      {
+        "id": "ht6edzg",
+        "name": "Desenvolvimento no aparelho",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 9
+          },
+          {
+            "reps": 10,
+            "weight": 13.5
+          },
+          {
+            "reps": 9,
+            "weight": 13.5
+          },
+          {
+            "reps": 9,
+            "weight": 13.5
+          },
+          {
+            "reps": 5,
+            "weight": 9
+          }
+        ]
+      },
+      {
+        "id": "4evp92g",
+        "name": "Tríceps testa com barra",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 18
+          },
+          {
+            "reps": 12,
+            "weight": 18
+          },
+          {
+            "reps": 12,
+            "weight": 18
+          }
+        ]
+      },
+      {
+        "id": "rl3i034",
+        "name": "Tríceps na polia com corda",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 13.5
+          },
+          {
+            "reps": 11,
+            "weight": 13.5
+          },
+          {
+            "reps": 10,
+            "weight": 13.5
+          }
+        ]
+      },
+      {
+        "id": "oyw1caq",
+        "name": "Tríceps francês no cross com corda",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 8,
+            "weight": 9
+          },
+          {
+            "reps": 8,
+            "weight": 9
+          }
+        ]
+      },
+      {
+        "id": "uf5aihb",
+        "name": "Posterior de ombro no cross",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 4.5
+          },
+          {
+            "reps": 10,
+            "weight": 4.5
+          },
+          {
+            "reps": 8,
+            "weight": 4.5
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "vvoe3eq",
     "date": "2026-07-11",
     "name": "Treino 3 - QUADRÍCEPS",
