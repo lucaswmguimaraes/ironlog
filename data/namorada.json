@@ -80,12 +80,28 @@
             "weight": 15
           },
           {
-            "reps": 11,
+            "reps": 10,
             "weight": 15
           },
           {
             "reps": 10,
             "weight": 15
+          }
+        ]
+      },
+      {
+        "id": "oyw1caq",
+        "name": "Tríceps francês no cross com corda",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 8,
+            "weight": 9
+          },
+          {
+            "reps": 8,
+            "weight": 9
           }
         ]
       },
@@ -113,22 +129,6 @@
           },
           {
             "reps": 5,
-            "weight": 9
-          }
-        ]
-      },
-      {
-        "id": "oyw1caq",
-        "name": "Tríceps francês no cross com corda",
-        "category": "Tríceps",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 8,
-            "weight": 9
-          },
-          {
-            "reps": 8,
             "weight": 9
           }
         ]
