@@ -1,5 +1,161 @@
 [
   {
+    "id": "h7ld32g",
+    "date": "2026-07-12",
+    "name": "Treino B - Push",
+    "trainType": "B",
+    "exercises": [
+      {
+        "id": "4gch0ku",
+        "name": "Chest Press máquina",
+        "category": "Peito",
+        "notes": "Articulado",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 35
+          },
+          {
+            "reps": 12,
+            "weight": 75
+          },
+          {
+            "reps": 9,
+            "weight": 75
+          },
+          {
+            "reps": 9,
+            "weight": 70
+          }
+        ]
+      },
+      {
+        "id": "lvagwlu",
+        "name": "Supino inclinado com halteres",
+        "category": "Peito",
+        "notes": "Diminuir um pouco, caprichar na execução",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 26
+          },
+          {
+            "reps": 9,
+            "weight": 24
+          },
+          {
+            "reps": 8,
+            "weight": 20
+          }
+        ]
+      },
+      {
+        "id": "c35a596",
+        "name": "Tríceps testa com barra",
+        "category": "Tríceps",
+        "notes": "No cross",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 50
+          },
+          {
+            "reps": 10,
+            "weight": 50
+          },
+          {
+            "reps": 9,
+            "weight": 42.5
+          }
+        ]
+      },
+      {
+        "id": "lw8hrs5",
+        "name": "Tríceps na polia com corda",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 50
+          },
+          {
+            "reps": 10,
+            "weight": 42.5
+          },
+          {
+            "reps": 8,
+            "weight": 42.5
+          }
+        ]
+      },
+      {
+        "id": "nyk4krj",
+        "name": "Tríceps francês no cross com corda",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 9,
+            "weight": 25
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          }
+        ]
+      },
+      {
+        "id": "nvcj96c",
+        "name": "Desenvolvimento máquina",
+        "category": "Ombros",
+        "notes": "Drop na última série",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 13.5
+          },
+          {
+            "reps": 7,
+            "weight": 36.5
+          },
+          {
+            "reps": 7,
+            "weight": 31.5
+          },
+          {
+            "reps": 7,
+            "weight": 27
+          },
+          {
+            "reps": 8,
+            "weight": 13.5
+          }
+        ]
+      },
+      {
+        "id": "lg71rlx",
+        "name": "Posterior de ombro no cross",
+        "category": "Ombros",
+        "notes": "Bilateral",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 9
+          },
+          {
+            "reps": 10,
+            "weight": 9
+          },
+          {
+            "reps": 8,
+            "weight": 9
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "1zidynz",
     "date": "2026-07-11",
     "name": "Treino C - Quadríceps",
