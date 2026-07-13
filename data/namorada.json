@@ -50,6 +50,30 @@
         ]
       },
       {
+        "id": "42d29s2",
+        "name": "Rosca Scott com barra W",
+        "category": "Bíceps",
+        "notes": "máquina ",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 15
+          },
+          {
+            "reps": 8,
+            "weight": 15
+          },
+          {
+            "reps": 6,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          }
+        ]
+      },
+      {
         "id": "bn9peuf",
         "name": "Remada baixa com triângulo",
         "category": "Costas",
@@ -86,34 +110,6 @@
           {
             "reps": 10,
             "weight": 30
-          }
-        ]
-      },
-      {
-        "id": "42d29s2",
-        "name": "Rosca Scott com barra W",
-        "category": "Bíceps",
-        "notes": "máquina ",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 2.5
-          },
-          {
-            "reps": 7,
-            "weight": 10
-          },
-          {
-            "reps": 8,
-            "weight": 10
-          },
-          {
-            "reps": 6,
-            "weight": 7.5
-          },
-          {
-            "reps": 7,
-            "weight": 2.5
           }
         ]
       },
