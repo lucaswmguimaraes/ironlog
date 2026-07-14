@@ -34,26 +34,6 @@
         ]
       },
       {
-        "id": "8mvme2d",
-        "name": "Leg press horizontal",
-        "category": "Quadríceps",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 66
-          },
-          {
-            "reps": "",
-            "weight": 66
-          },
-          {
-            "reps": "",
-            "weight": 66
-          }
-        ]
-      },
-      {
         "id": "yxsa656",
         "name": "Stiff com barra",
         "category": "Posterior de Coxa",
@@ -70,6 +50,26 @@
           {
             "reps": 10,
             "weight": 35
+          }
+        ]
+      },
+      {
+        "id": "8mvme2d",
+        "name": "Leg press horizontal",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 66
+          },
+          {
+            "reps": 12,
+            "weight": 66
+          },
+          {
+            "reps": 12,
+            "weight": 66
           }
         ]
       },
