@@ -41,15 +41,15 @@
         "sets": [
           {
             "reps": 12,
-            "weight": 35
+            "weight": 30
           },
           {
-            "reps": 11,
-            "weight": 35
+            "reps": 12,
+            "weight": 30
           },
           {
             "reps": 10,
-            "weight": 35
+            "weight": 30
           }
         ]
       },
