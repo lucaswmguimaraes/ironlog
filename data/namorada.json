@@ -1,5 +1,189 @@
 [
   {
+    "id": "mkwrn6r",
+    "date": "2026-07-21",
+    "name": "Treino 4 - SUPERIORES GERAL",
+    "trainType": "D",
+    "exercises": [
+      {
+        "id": "a3o6jke",
+        "name": "Remada cavalinho",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 17.5
+          },
+          {
+            "reps": 9,
+            "weight": 17.5
+          },
+          {
+            "reps": 11,
+            "weight": 15
+          }
+        ]
+      },
+      {
+        "id": "0ze9dh4",
+        "name": "Remada serrote unilateral",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 12
+          },
+          {
+            "reps": 10,
+            "weight": 12
+          },
+          {
+            "reps": 10,
+            "weight": 12
+          }
+        ]
+      },
+      {
+        "id": "p8dvxng",
+        "name": "Peck deck",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 11
+          },
+          {
+            "reps": 12,
+            "weight": 18
+          },
+          {
+            "reps": 11,
+            "weight": 25
+          },
+          {
+            "reps": 10,
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "id": "z5p9wra",
+        "name": "Elevação lateral + frontal alternadas",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 3
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 3
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 9,
+            "weight": 3
+          }
+        ]
+      },
+      {
+        "id": "t26mg9t",
+        "name": "Supino declinado com halteres",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 12.5
+          },
+          {
+            "reps": 10,
+            "weight": 12.5
+          }
+        ]
+      },
+      {
+        "id": "u77feiu",
+        "name": "Rosca na corda",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 18
+          },
+          {
+            "reps": 10,
+            "weight": 18
+          },
+          {
+            "reps": 10,
+            "weight": 18
+          },
+          {
+            "reps": 10,
+            "weight": 9
+          }
+        ]
+      },
+      {
+        "id": "2k7iega",
+        "name": "Encolhimento com barra (trapézio)",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 15
+          },
+          {
+            "reps": 12,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          }
+        ]
+      },
+      {
+        "id": "909d5nk",
+        "name": "Chest Press máquina",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "i747bjh",
     "date": "2026-07-14",
     "name": "Treino 5 - GLÚTEO/ POSTERIOR",
