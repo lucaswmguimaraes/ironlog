@@ -126,6 +126,30 @@
         ]
       },
       {
+        "id": "u77feiu",
+        "name": "Rosca na corda",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 11,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          }
+        ]
+      },
+      {
         "id": "t26mg9t",
         "name": "Supino declinado com halteres",
         "category": "Peito",
@@ -142,30 +166,6 @@
           {
             "reps": 10,
             "weight": 12.5
-          }
-        ]
-      },
-      {
-        "id": "u77feiu",
-        "name": "Rosca na corda",
-        "category": "Bíceps",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 18
-          },
-          {
-            "reps": 10,
-            "weight": 18
-          },
-          {
-            "reps": 10,
-            "weight": 18
-          },
-          {
-            "reps": 10,
-            "weight": 9
           }
         ]
       }
