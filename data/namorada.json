@@ -20,12 +20,32 @@
             "weight": 25
           },
           {
-            "reps": "",
-            "weight": ""
+            "reps": 10,
+            "weight": 25
           },
           {
-            "reps": "",
-            "weight": ""
+            "reps": 12,
+            "weight": 20
+          }
+        ]
+      },
+      {
+        "id": "p8dvxng",
+        "name": "Peck deck",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 25
+          },
+          {
+            "reps": 10,
+            "weight": 25
+          },
+          {
+            "reps": 10,
+            "weight": 25
           }
         ]
       },
@@ -70,30 +90,6 @@
           {
             "reps": 10,
             "weight": 12
-          }
-        ]
-      },
-      {
-        "id": "p8dvxng",
-        "name": "Peck deck",
-        "category": "Peito",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 11
-          },
-          {
-            "reps": 12,
-            "weight": 18
-          },
-          {
-            "reps": 11,
-            "weight": 25
-          },
-          {
-            "reps": 10,
-            "weight": 25
           }
         ]
       },
