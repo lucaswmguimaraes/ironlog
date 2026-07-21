@@ -6,6 +6,30 @@
     "trainType": "D",
     "exercises": [
       {
+        "id": "909d5nk",
+        "name": "Chest Press máquina",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          },
+          {
+            "reps": "",
+            "weight": ""
+          },
+          {
+            "reps": "",
+            "weight": ""
+          },
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      },
+      {
         "id": "a3o6jke",
         "name": "Remada cavalinho",
         "category": "Costas",
@@ -166,18 +190,6 @@
           {
             "reps": 10,
             "weight": 15
-          }
-        ]
-      },
-      {
-        "id": "909d5nk",
-        "name": "Chest Press máquina",
-        "category": "Peito",
-        "notes": "",
-        "sets": [
-          {
-            "reps": "",
-            "weight": ""
           }
         ]
       }
