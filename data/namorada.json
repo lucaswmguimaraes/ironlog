@@ -74,6 +74,26 @@
         ]
       },
       {
+        "id": "37afr8u",
+        "name": "Kickback na polia",
+        "category": "Glúteos",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          },
+          {
+            "reps": "",
+            "weight": ""
+          },
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      },
+      {
         "id": "ayquz62",
         "name": "Adutora na máquina",
         "category": "Adutores / Abdutores",
@@ -90,26 +110,6 @@
           {
             "reps": 10,
             "weight": 75
-          }
-        ]
-      },
-      {
-        "id": "ax84mnj",
-        "name": "Abdutora na máquina",
-        "category": "Glúteos",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 93
-          },
-          {
-            "reps": 12,
-            "weight": 93
-          },
-          {
-            "reps": 10,
-            "weight": 93
           }
         ]
       }
