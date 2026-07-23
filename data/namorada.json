@@ -1,5 +1,117 @@
 [
   {
+    "id": "055cs20",
+    "date": "2026-07-23",
+    "name": "Treino 3 - QUADRÍCEPS",
+    "trainType": "C",
+    "exercises": [
+      {
+        "id": "uzolyuu",
+        "name": "Agachamento no smith",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 20
+          },
+          {
+            "reps": 12,
+            "weight": 50
+          },
+          {
+            "reps": 10,
+            "weight": 45
+          },
+          {
+            "reps": 10,
+            "weight": 45
+          }
+        ]
+      },
+      {
+        "id": "mcozdar",
+        "name": "Leg Press 45°",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 140
+          },
+          {
+            "reps": 11,
+            "weight": 150
+          },
+          {
+            "reps": 10,
+            "weight": 150
+          }
+        ]
+      },
+      {
+        "id": "t8rmvkv",
+        "name": "Extensora",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 38.5
+          },
+          {
+            "reps": 12,
+            "weight": 38.5
+          },
+          {
+            "reps": 10,
+            "weight": 38.5
+          }
+        ]
+      },
+      {
+        "id": "ayquz62",
+        "name": "Adutora na máquina",
+        "category": "Adutores / Abdutores",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 75
+          },
+          {
+            "reps": 10,
+            "weight": 75
+          },
+          {
+            "reps": 10,
+            "weight": 75
+          }
+        ]
+      },
+      {
+        "id": "ax84mnj",
+        "name": "Abdutora na máquina",
+        "category": "Glúteos",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 93
+          },
+          {
+            "reps": 12,
+            "weight": 93
+          },
+          {
+            "reps": 10,
+            "weight": 93
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "mkwrn6r",
     "date": "2026-07-21",
     "name": "Treino 4 - SUPERIORES GERAL",
