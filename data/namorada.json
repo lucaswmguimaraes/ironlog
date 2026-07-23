@@ -84,12 +84,8 @@
             "weight": 10
           },
           {
-            "reps": "",
+            "reps": 10,
             "weight": 12.5
-          },
-          {
-            "reps": "",
-            "weight": ""
           }
         ]
       },
