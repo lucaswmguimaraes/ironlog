@@ -80,12 +80,12 @@
         "notes": "",
         "sets": [
           {
-            "reps": "",
-            "weight": ""
+            "reps": 10,
+            "weight": 10
           },
           {
             "reps": "",
-            "weight": ""
+            "weight": 12.5
           },
           {
             "reps": "",
