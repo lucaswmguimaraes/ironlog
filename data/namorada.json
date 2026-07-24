@@ -1,5 +1,12 @@
 [
   {
+    "id": "n0of6m4",
+    "date": "2026-07-24",
+    "name": "",
+    "trainType": null,
+    "exercises": []
+  },
+  {
     "id": "ucmdd5y",
     "date": "2026-07-24",
     "name": "Treino 1 - PEITO + TRÍCEPS + OMBRO",
@@ -24,7 +31,7 @@
             "weight": 30
           },
           {
-            "reps": 12,
+            "reps": 10,
             "weight": 25
           }
         ]
