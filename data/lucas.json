@@ -1,5 +1,125 @@
 [
   {
+    "id": "381lljj",
+    "date": "2026-07-25",
+    "name": "Treino A - Pull",
+    "trainType": "A",
+    "exercises": [
+      {
+        "id": "28frsj7",
+        "name": "Rosca Scott com barra W",
+        "category": "Bíceps",
+        "notes": "Na mesa scott + drop",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 18
+          },
+          {
+            "reps": 10,
+            "weight": 33
+          },
+          {
+            "reps": 10,
+            "weight": 28
+          },
+          {
+            "reps": 8,
+            "weight": 28
+          },
+          {
+            "reps": 8,
+            "weight": 18
+          }
+        ]
+      },
+      {
+        "id": "lqur26h",
+        "name": "Rosca na polia (cabo baixo)",
+        "category": "Bíceps",
+        "notes": "Unilateral",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 9,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 8.125
+          }
+        ]
+      },
+      {
+        "id": "vf1x7p8",
+        "name": "Puxada alta com barra reta",
+        "category": "Costas",
+        "notes": "Rest and pause na última",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 70
+          },
+          {
+            "reps": 10,
+            "weight": 65
+          },
+          {
+            "reps": 11,
+            "weight": 60
+          },
+          {
+            "reps": 10,
+            "weight": 50
+          }
+        ]
+      },
+      {
+        "id": "kqfgbr7",
+        "name": "Remada baixa com triângulo",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 7,
+            "weight": 57
+          },
+          {
+            "reps": 10,
+            "weight": 43
+          },
+          {
+            "reps": 10,
+            "weight": 36
+          }
+        ]
+      },
+      {
+        "id": "gjw6cm3",
+        "name": "Posterior de ombro no cross",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 7.5
+          },
+          {
+            "reps": 8,
+            "weight": 7.5
+          },
+          {
+            "reps": 10,
+            "weight": 6.25
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "1966v1n",
     "date": "2026-07-24",
     "name": "Treino B - Push",
