@@ -50,6 +50,30 @@
         ]
       },
       {
+        "id": "j5vabun",
+        "name": "Desenvolvimento no aparelho",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 13.5
+          },
+          {
+            "reps": 8,
+            "weight": 13.5
+          },
+          {
+            "reps": 12,
+            "weight": 9
+          }
+        ]
+      },
+      {
         "id": "f8emrn6",
         "name": "Tríceps testa com barra",
         "category": "Tríceps",
@@ -102,30 +126,6 @@
           {
             "reps": 10,
             "weight": 5
-          }
-        ]
-      },
-      {
-        "id": "j5vabun",
-        "name": "Desenvolvimento no aparelho",
-        "category": "Ombros",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 9
-          },
-          {
-            "reps": 10,
-            "weight": 13.5
-          },
-          {
-            "reps": 8,
-            "weight": 13.5
-          },
-          {
-            "reps": 12,
-            "weight": 9
           }
         ]
       }
