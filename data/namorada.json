@@ -30,6 +30,26 @@
         ]
       },
       {
+        "id": "eyo41oj",
+        "name": "Rosca na polia (cabo baixo)",
+        "category": "Bíceps",
+        "notes": "unilateral",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 4.37
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          }
+        ]
+      },
+      {
         "id": "lpk8tz9",
         "name": "Puxada alta com barra reta",
         "category": "Costas",
@@ -86,30 +106,6 @@
           {
             "reps": 12,
             "weight": 30
-          }
-        ]
-      },
-      {
-        "id": "eyo41oj",
-        "name": "Rosca na polia (cabo baixo)",
-        "category": "Bíceps",
-        "notes": "unilateral",
-        "sets": [
-          {
-            "reps": 11,
-            "weight": 5
-          },
-          {
-            "reps": 10,
-            "weight": 10
-          },
-          {
-            "reps": 10,
-            "weight": 10
-          },
-          {
-            "reps": 10,
-            "weight": 10
           }
         ]
       },
