@@ -40,12 +40,12 @@
         "notes": "Contando a barra",
         "sets": [
           {
-            "reps": 6,
+            "reps": 10,
             "weight": 90
           },
           {
             "reps": 10,
-            "weight": 80
+            "weight": 90
           },
           {
             "reps": 9,
