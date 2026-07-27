@@ -74,6 +74,26 @@
         ]
       },
       {
+        "id": "eiysqss",
+        "name": "Abdutora na máquina",
+        "category": "Glúteos",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 50
+          },
+          {
+            "reps": 12,
+            "weight": 50
+          },
+          {
+            "reps": 10,
+            "weight": 50
+          }
+        ]
+      },
+      {
         "id": "zhtttqb",
         "name": "Leg press horizontal",
         "category": "Quadríceps",
@@ -90,26 +110,6 @@
           {
             "reps": 12,
             "weight": 66
-          }
-        ]
-      },
-      {
-        "id": "eiysqss",
-        "name": "Abdutora na máquina",
-        "category": "Glúteos",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 93
-          },
-          {
-            "reps": 12,
-            "weight": 93
-          },
-          {
-            "reps": 10,
-            "weight": 93
           }
         ]
       },
