@@ -94,26 +94,6 @@
         ]
       },
       {
-        "id": "zhtttqb",
-        "name": "Leg press horizontal",
-        "category": "Quadríceps",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 66
-          },
-          {
-            "reps": 12,
-            "weight": 66
-          },
-          {
-            "reps": 12,
-            "weight": 66
-          }
-        ]
-      },
-      {
         "id": "t60f96v",
         "name": "Panturrilha em pé (máquina)",
         "category": "Panturrilha",
