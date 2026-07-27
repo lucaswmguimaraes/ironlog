@@ -44,7 +44,7 @@
             "weight": 90
           },
           {
-            "reps": 10,
+            "reps": 7,
             "weight": 90
           },
           {
@@ -57,39 +57,19 @@
         "id": "y7uvkze",
         "name": "Nordic curl",
         "category": "Posterior de Coxa",
-        "notes": "",
+        "notes": "Flexão lombar no descanso ativo",
         "sets": [
+          {
+            "reps": 14,
+            "weight": 88
+          },
           {
             "reps": 12,
-            "weight": 78
+            "weight": 88
           },
           {
             "reps": 10,
             "weight": 88
-          },
-          {
-            "reps": 14,
-            "weight": 88
-          }
-        ]
-      },
-      {
-        "id": "kp0waei",
-        "name": "Panturrilha em pé (máquina)",
-        "category": "Panturrilha",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 14,
-            "weight": 100
-          },
-          {
-            "reps": 9,
-            "weight": 120
-          },
-          {
-            "reps": 10,
-            "weight": 100
           }
         ]
       },
@@ -110,6 +90,26 @@
           {
             "reps": 11,
             "weight": 120
+          }
+        ]
+      },
+      {
+        "id": "kp0waei",
+        "name": "Panturrilha em pé (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 14,
+            "weight": 100
+          },
+          {
+            "reps": 9,
+            "weight": 120
+          },
+          {
+            "reps": 10,
+            "weight": 100
           }
         ]
       }
