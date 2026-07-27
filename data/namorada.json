@@ -6,26 +6,6 @@
     "trainType": "E",
     "exercises": [
       {
-        "id": "zhtttqb",
-        "name": "Leg press horizontal",
-        "category": "Quadríceps",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 66
-          },
-          {
-            "reps": 12,
-            "weight": 66
-          },
-          {
-            "reps": 12,
-            "weight": 66
-          }
-        ]
-      },
-      {
         "id": "kvw54d6",
         "name": "Mesa flexora",
         "category": "Posterior de Coxa",
@@ -50,6 +30,26 @@
           {
             "reps": 7,
             "weight": 15
+          }
+        ]
+      },
+      {
+        "id": "zhtttqb",
+        "name": "Leg press horizontal",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 66
+          },
+          {
+            "reps": 12,
+            "weight": 66
+          },
+          {
+            "reps": 12,
+            "weight": 66
           }
         ]
       },
