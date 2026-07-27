@@ -34,6 +34,26 @@
         ]
       },
       {
+        "id": "cumfgs8",
+        "name": "Stiff com barra",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 9,
+            "weight": 40
+          },
+          {
+            "reps": 10,
+            "weight": 40
+          },
+          {
+            "reps": 10,
+            "weight": 30
+          }
+        ]
+      },
+      {
         "id": "zhtttqb",
         "name": "Leg press horizontal",
         "category": "Quadríceps",
@@ -50,26 +70,6 @@
           {
             "reps": 12,
             "weight": 66
-          }
-        ]
-      },
-      {
-        "id": "cumfgs8",
-        "name": "Stiff com barra",
-        "category": "Posterior de Coxa",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 30
-          },
-          {
-            "reps": 12,
-            "weight": 30
-          },
-          {
-            "reps": 10,
-            "weight": 30
           }
         ]
       },
