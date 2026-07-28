@@ -30,6 +30,26 @@
         ]
       },
       {
+        "id": "om85gkn",
+        "name": "Peck deck",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 25
+          },
+          {
+            "reps": 10,
+            "weight": 25
+          },
+          {
+            "reps": 10,
+            "weight": 25
+          }
+        ]
+      },
+      {
         "id": "gstgxj2",
         "name": "Remada cavalinho",
         "category": "Costas",
@@ -50,26 +70,6 @@
           {
             "reps": 10,
             "weight": 15
-          }
-        ]
-      },
-      {
-        "id": "om85gkn",
-        "name": "Peck deck",
-        "category": "Peito",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 25
-          },
-          {
-            "reps": 10,
-            "weight": 25
-          },
-          {
-            "reps": 10,
-            "weight": 25
           }
         ]
       },
