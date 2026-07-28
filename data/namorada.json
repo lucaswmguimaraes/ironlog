@@ -74,6 +74,30 @@
         ]
       },
       {
+        "id": "224y0j0",
+        "name": "Rosca na corda",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 11,
+            "weight": 10.6
+          },
+          {
+            "reps": 12,
+            "weight": 10.6
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          }
+        ]
+      },
+      {
         "id": "gtc9l90",
         "name": "Elevação lateral + frontal alternadas",
         "category": "Ombros",
@@ -122,30 +146,6 @@
           {
             "reps": 10,
             "weight": 15
-          }
-        ]
-      },
-      {
-        "id": "224y0j0",
-        "name": "Rosca na corda",
-        "category": "Bíceps",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 11,
-            "weight": 20
-          },
-          {
-            "reps": 12,
-            "weight": 20
-          },
-          {
-            "reps": 10,
-            "weight": 20
-          },
-          {
-            "reps": 10,
-            "weight": 10
           }
         ]
       }
