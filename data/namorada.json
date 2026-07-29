@@ -20,12 +20,32 @@
             "weight": 25
           },
           {
-            "reps": 9,
+            "reps": 12,
             "weight": 25
           },
           {
             "reps": 10,
             "weight": 25
+          }
+        ]
+      },
+      {
+        "id": "5l1scuy",
+        "name": "Supino inclinado com halteres",
+        "category": "Peito",
+        "notes": "máquina ",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 18
+          },
+          {
+            "reps": 12,
+            "weight": 18
+          },
+          {
+            "reps": 12,
+            "weight": 18
           }
         ]
       },
@@ -82,26 +102,6 @@
           {
             "reps": 10,
             "weight": 5
-          }
-        ]
-      },
-      {
-        "id": "5l1scuy",
-        "name": "Supino inclinado com halteres",
-        "category": "Peito",
-        "notes": "máquina ",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 18
-          },
-          {
-            "reps": 12,
-            "weight": 18
-          },
-          {
-            "reps": 12,
-            "weight": 18
           }
         ]
       },
