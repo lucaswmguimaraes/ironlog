@@ -50,6 +50,34 @@
         ]
       },
       {
+        "id": "tcwmepr",
+        "name": "Desenvolvimento no aparelho",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 12.5
+          },
+          {
+            "reps": 10,
+            "weight": 12.5
+          },
+          {
+            "reps": 10,
+            "weight": 12.5
+          },
+          {
+            "reps": 7,
+            "weight": 7.5
+          }
+        ]
+      },
+      {
         "id": "s74rktc",
         "name": "Tríceps testa com barra",
         "category": "Tríceps",
@@ -102,34 +130,6 @@
           {
             "reps": 10,
             "weight": 5
-          }
-        ]
-      },
-      {
-        "id": "tcwmepr",
-        "name": "Desenvolvimento no aparelho",
-        "category": "Ombros",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 5
-          },
-          {
-            "reps": 10,
-            "weight": 12.5
-          },
-          {
-            "reps": 10,
-            "weight": 12.5
-          },
-          {
-            "reps": 10,
-            "weight": 12.5
-          },
-          {
-            "reps": 7,
-            "weight": 7.5
           }
         ]
       }
