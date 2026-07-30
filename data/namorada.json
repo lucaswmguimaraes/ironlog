@@ -2680,6 +2680,26 @@
             "weight": 93
           }
         ]
+      },
+      {
+        "id": "isg48wq",
+        "name": "Panturrilha em pé (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 40
+          },
+          {
+            "reps": 10,
+            "weight": 40
+          },
+          {
+            "reps": 10,
+            "weight": 40
+          }
+        ]
       }
     ]
   },
