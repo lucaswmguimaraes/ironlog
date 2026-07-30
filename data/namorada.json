@@ -97,7 +97,15 @@
         "sets": [
           {
             "reps": "",
-            "weight": ""
+            "weight": 60
+          },
+          {
+            "reps": "",
+            "weight": 60
+          },
+          {
+            "reps": "",
+            "weight": 40
           }
         ]
       }
