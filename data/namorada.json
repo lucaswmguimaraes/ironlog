@@ -1,5 +1,117 @@
 [
   {
+    "id": "vjzzi2l",
+    "date": "2026-07-30",
+    "name": "Treino 3 - QUADRÍCEPS",
+    "trainType": "C",
+    "exercises": [
+      {
+        "id": "j3gn9f7",
+        "name": "Agachamento no smith",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 50
+          },
+          {
+            "reps": 10,
+            "weight": 40
+          },
+          {
+            "reps": 10,
+            "weight": 40
+          }
+        ]
+      },
+      {
+        "id": "rynrkqn",
+        "name": "Leg Press 45°",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 120
+          },
+          {
+            "reps": 9,
+            "weight": 160
+          },
+          {
+            "reps": 9,
+            "weight": 160
+          }
+        ]
+      },
+      {
+        "id": "dze51bm",
+        "name": "Extensora",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 30
+          },
+          {
+            "reps": 8,
+            "weight": 35
+          },
+          {
+            "reps": 9,
+            "weight": 35
+          },
+          {
+            "reps": 10,
+            "weight": 35
+          }
+        ]
+      },
+      {
+        "id": "b41b1bt",
+        "name": "Kickback na polia",
+        "category": "Glúteos",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 12.5
+          }
+        ]
+      },
+      {
+        "id": "d4lh4kc",
+        "name": "Adutora na máquina",
+        "category": "Adutores / Abdutores",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 13,
+            "weight": 40
+          },
+          {
+            "reps": 10,
+            "weight": 75
+          },
+          {
+            "reps": 10,
+            "weight": 75
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "x9r688k",
     "date": "2026-07-29",
     "name": "Treino 1 - PEITO + TRÍCEPS + OMBRO",
