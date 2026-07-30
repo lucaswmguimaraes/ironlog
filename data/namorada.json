@@ -60,32 +60,12 @@
             "weight": 32.5
           },
           {
-            "reps": 8,
+            "reps": 12,
             "weight": 32.5
           },
           {
-            "reps": 9,
+            "reps": 12,
             "weight": 32.5
-          },
-          {
-            "reps": 10,
-            "weight": 32.5
-          }
-        ]
-      },
-      {
-        "id": "b41b1bt",
-        "name": "Kickback na polia",
-        "category": "Glúteos",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 10
-          },
-          {
-            "reps": 10,
-            "weight": 12.5
           }
         ]
       },
