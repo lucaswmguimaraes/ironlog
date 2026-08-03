@@ -136,6 +136,26 @@
             "weight": 10
           }
         ]
+      },
+      {
+        "id": "lllv5zn",
+        "name": "Posterior de ombro no cross",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 2.5
+          },
+          {
+            "reps": "",
+            "weight": 2.5
+          },
+          {
+            "reps": "",
+            "weight": 2.5
+          }
+        ]
       }
     ]
   },
