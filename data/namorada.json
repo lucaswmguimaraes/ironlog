@@ -54,6 +54,26 @@
         ]
       },
       {
+        "id": "lllv5zn",
+        "name": "Posterior de ombro no cross",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 2.5
+          },
+          {
+            "reps": 10,
+            "weight": 2.5
+          },
+          {
+            "reps": 10,
+            "weight": 2.5
+          }
+        ]
+      },
+      {
         "id": "of22aip",
         "name": "Puxada alta com barra reta",
         "category": "Costas",
@@ -134,26 +154,6 @@
           {
             "reps": 12,
             "weight": 10
-          }
-        ]
-      },
-      {
-        "id": "lllv5zn",
-        "name": "Posterior de ombro no cross",
-        "category": "Ombros",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 2.5
-          },
-          {
-            "reps": "",
-            "weight": 2.5
-          },
-          {
-            "reps": "",
-            "weight": 2.5
           }
         ]
       }
