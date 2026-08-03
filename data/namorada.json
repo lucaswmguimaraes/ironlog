@@ -114,26 +114,6 @@
         ]
       },
       {
-        "id": "peu6s4c",
-        "name": "Remada curvada com barra",
-        "category": "Costas",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 30
-          },
-          {
-            "reps": 11,
-            "weight": 30
-          },
-          {
-            "reps": 12,
-            "weight": 30
-          }
-        ]
-      },
-      {
         "id": "vxn5n73",
         "name": "Rosca inversa (barra)",
         "category": "Bíceps",
@@ -144,11 +124,11 @@
             "weight": 10
           },
           {
-            "reps": 12,
+            "reps": 10,
             "weight": 10
           },
           {
-            "reps": 12,
+            "reps": 10,
             "weight": 10
           }
         ]
