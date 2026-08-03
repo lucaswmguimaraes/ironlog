@@ -1,5 +1,169 @@
 [
   {
+    "id": "mho4ewu",
+    "date": "2026-08-03",
+    "name": "Treino A - Pull",
+    "trainType": "A",
+    "exercises": [
+      {
+        "id": "3amk3ex",
+        "name": "Rosca na polia (cabo baixo)",
+        "category": "Bíceps",
+        "notes": "Unilateral",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 10
+          },
+          {
+            "reps": 7,
+            "weight": 20
+          },
+          {
+            "reps": 8,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "id": "8hce3oh",
+        "name": "Rosca Scott com barra W",
+        "category": "Bíceps",
+        "notes": "Na mesa scott + drop",
+        "sets": [
+          {
+            "reps": 9,
+            "weight": 35
+          },
+          {
+            "reps": 9,
+            "weight": 30
+          },
+          {
+            "reps": 10,
+            "weight": 25
+          },
+          {
+            "reps": 9,
+            "weight": 17.5
+          }
+        ]
+      },
+      {
+        "id": "m7vb6pv",
+        "name": "Posterior de ombro no cross",
+        "category": "Ombros",
+        "notes": "Unilateral",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 12,
+            "weight": 3.5
+          },
+          {
+            "reps": 10,
+            "weight": 3.5
+          }
+        ]
+      },
+      {
+        "id": "qs7523g",
+        "name": "Puxada alta com barra reta",
+        "category": "Costas",
+        "notes": "Rest and pause na última",
+        "sets": [
+          {
+            "reps": 11,
+            "weight": 70
+          },
+          {
+            "reps": 10,
+            "weight": 65
+          },
+          {
+            "reps": 11,
+            "weight": 60
+          },
+          {
+            "reps": 10,
+            "weight": 50
+          }
+        ]
+      },
+      {
+        "id": "60ct4rf",
+        "name": "Remada baixa com triângulo",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 45
+          },
+          {
+            "reps": 10,
+            "weight": 40
+          },
+          {
+            "reps": 10,
+            "weight": 35
+          }
+        ]
+      },
+      {
+        "id": "u12lj34",
+        "name": "Rosca inversa (barra)",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 7,
+            "weight": 35
+          },
+          {
+            "reps": 8,
+            "weight": 30
+          },
+          {
+            "reps": 7,
+            "weight": 25
+          },
+          {
+            "reps": 6,
+            "weight": 15
+          }
+        ]
+      },
+      {
+        "id": "91w08gm",
+        "name": "Flexão de punho (polia alta)",
+        "category": "Antebraço",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 25
+          },
+          {
+            "reps": 9,
+            "weight": 20
+          },
+          {
+            "reps": 8,
+            "weight": 20
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "lwflt58",
     "date": "2026-07-30",
     "name": "Treino C - Quadríceps",
