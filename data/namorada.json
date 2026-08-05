@@ -30,6 +30,26 @@
         ]
       },
       {
+        "id": "4ro566p",
+        "name": "Fly na máquina",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": 20
+          },
+          {
+            "reps": "",
+            "weight": ""
+          },
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      },
+      {
         "id": "nx66r4o",
         "name": "Remada cavalinho",
         "category": "Costas",
@@ -54,22 +74,14 @@
         ]
       },
       {
-        "id": "jug93l7",
-        "name": "Peck deck",
-        "category": "Peito",
+        "id": "ot2o401",
+        "name": "Elevação lateral + frontal alternadas",
+        "category": "Ombros",
         "notes": "",
         "sets": [
           {
-            "reps": 10,
-            "weight": 10
-          },
-          {
-            "reps": 12,
-            "weight": 20
-          },
-          {
-            "reps": 11,
-            "weight": 20
+            "reps": "",
+            "weight": ""
           }
         ]
       },
@@ -94,38 +106,6 @@
           {
             "reps": 10,
             "weight": 5
-          }
-        ]
-      },
-      {
-        "id": "8sq1iyg",
-        "name": "Elevação lateral + frontal alternadas",
-        "category": "Ombros",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 5
-          },
-          {
-            "reps": 10,
-            "weight": 3
-          },
-          {
-            "reps": 10,
-            "weight": 5
-          },
-          {
-            "reps": 10,
-            "weight": 3
-          },
-          {
-            "reps": 10,
-            "weight": 5
-          },
-          {
-            "reps": 9,
-            "weight": 3
           }
         ]
       },
