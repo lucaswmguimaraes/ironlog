@@ -1,5 +1,157 @@
 [
   {
+    "id": "bhqk8qv",
+    "date": "2026-08-05",
+    "name": "Treino 4 - SUPERIORES GERAL",
+    "trainType": "D",
+    "exercises": [
+      {
+        "id": "8simxu1",
+        "name": "Supino declinado com halteres",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          },
+          {
+            "reps": 8,
+            "weight": 15
+          }
+        ]
+      },
+      {
+        "id": "nx66r4o",
+        "name": "Remada cavalinho",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 17.5
+          },
+          {
+            "reps": 10,
+            "weight": 17.5
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          }
+        ]
+      },
+      {
+        "id": "jug93l7",
+        "name": "Peck deck",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 20
+          },
+          {
+            "reps": 11,
+            "weight": 20
+          }
+        ]
+      },
+      {
+        "id": "6ptd47p",
+        "name": "Rosca na corda",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 11,
+            "weight": 10.6
+          },
+          {
+            "reps": 10,
+            "weight": 10.6
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "id": "8sq1iyg",
+        "name": "Elevação lateral + frontal alternadas",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 3
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 3
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 9,
+            "weight": 3
+          }
+        ]
+      },
+      {
+        "id": "be9nob0",
+        "name": "Encolhimento com barra (trapézio)",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "9or3uil",
     "date": "2026-08-04",
     "name": "Treino 5 - GLÚTEO/ POSTERIOR",
