@@ -612,16 +612,16 @@
         "notes": "",
         "sets": [
           {
-            "reps": "",
+            "reps": 10,
             "weight": 60
           },
           {
-            "reps": "",
+            "reps": 10,
             "weight": 60
           },
           {
-            "reps": "",
-            "weight": 40
+            "reps": 10,
+            "weight": 60
           }
         ]
       }
