@@ -84,8 +84,8 @@
             "weight": 35
           },
           {
-            "reps": 12,
-            "weight": 32.5
+            "reps": 11,
+            "weight": 35
           }
         ]
       },
@@ -96,16 +96,16 @@
         "notes": "",
         "sets": [
           {
-            "reps": "",
+            "reps": 10,
             "weight": 60
           },
           {
-            "reps": "",
+            "reps": 10,
             "weight": 60
           },
           {
-            "reps": "",
-            "weight": 40
+            "reps": 10,
+            "weight": 60
           }
         ]
       }
