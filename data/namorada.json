@@ -24,8 +24,28 @@
             "weight": 53.86
           },
           {
-            "reps": "",
-            "weight": ""
+            "reps": 10,
+            "weight": 53.86
+          }
+        ]
+      },
+      {
+        "id": "cfq8r88",
+        "name": "Adutora na máquina",
+        "category": "Adutores / Abdutores",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 13,
+            "weight": 40
+          },
+          {
+            "reps": 10,
+            "weight": 45
+          },
+          {
+            "reps": 10,
+            "weight": 45
           }
         ]
       },
@@ -66,26 +86,6 @@
           {
             "reps": 12,
             "weight": 32.5
-          }
-        ]
-      },
-      {
-        "id": "cfq8r88",
-        "name": "Adutora na máquina",
-        "category": "Adutores / Abdutores",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 13,
-            "weight": 40
-          },
-          {
-            "reps": 10,
-            "weight": 45
-          },
-          {
-            "reps": 10,
-            "weight": 45
           }
         ]
       },
