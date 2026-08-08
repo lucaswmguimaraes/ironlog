@@ -24,8 +24,56 @@
             "weight": 27.5
           },
           {
-            "reps": 10,
+            "reps": 11,
             "weight": 27.5
+          }
+        ]
+      },
+      {
+        "id": "uo7g1e7",
+        "name": "Supino inclinado com halteres",
+        "category": "Peito",
+        "notes": "máquina ",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 18
+          },
+          {
+            "reps": 12,
+            "weight": 18
+          },
+          {
+            "reps": 12,
+            "weight": 18
+          }
+        ]
+      },
+      {
+        "id": "9cl97j2",
+        "name": "Desenvolvimento no aparelho",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          },
+          {
+            "reps": 7,
+            "weight": 5
           }
         ]
       },
@@ -81,54 +129,6 @@
           },
           {
             "reps": 10,
-            "weight": 5
-          }
-        ]
-      },
-      {
-        "id": "uo7g1e7",
-        "name": "Supino inclinado com halteres",
-        "category": "Peito",
-        "notes": "máquina ",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 18
-          },
-          {
-            "reps": 12,
-            "weight": 18
-          },
-          {
-            "reps": 12,
-            "weight": 18
-          }
-        ]
-      },
-      {
-        "id": "9cl97j2",
-        "name": "Desenvolvimento no aparelho",
-        "category": "Ombros",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 5
-          },
-          {
-            "reps": 10,
-            "weight": 15
-          },
-          {
-            "reps": 10,
-            "weight": 15
-          },
-          {
-            "reps": 10,
-            "weight": 15
-          },
-          {
-            "reps": 7,
             "weight": 5
           }
         ]
