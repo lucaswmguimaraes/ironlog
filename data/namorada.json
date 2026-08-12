@@ -6,6 +6,30 @@
     "trainType": "A",
     "exercises": [
       {
+        "id": "q6l83t0",
+        "name": "Rosca Scott com barra W",
+        "category": "Bíceps",
+        "notes": "máquina ",
+        "sets": [
+          {
+            "reps": 8,
+            "weight": 15
+          },
+          {
+            "reps": 12,
+            "weight": 12.5
+          },
+          {
+            "reps": 10,
+            "weight": 12.5
+          },
+          {
+            "reps": 7,
+            "weight": 7.5
+          }
+        ]
+      },
+      {
         "id": "yjs6f3k",
         "name": "Puxada alta com barra reta",
         "category": "Costas",
@@ -66,30 +90,6 @@
           {
             "reps": 12,
             "weight": 5
-          }
-        ]
-      },
-      {
-        "id": "q6l83t0",
-        "name": "Rosca Scott com barra W",
-        "category": "Bíceps",
-        "notes": "máquina ",
-        "sets": [
-          {
-            "reps": 8,
-            "weight": 15
-          },
-          {
-            "reps": 12,
-            "weight": 12.5
-          },
-          {
-            "reps": 10,
-            "weight": 12.5
-          },
-          {
-            "reps": 7,
-            "weight": 7.5
           }
         ]
       },
