@@ -17,15 +17,31 @@
           },
           {
             "reps": 12,
-            "weight": 5
+            "weight": 5.625
           },
           {
             "reps": 12,
-            "weight": 5
+            "weight": 5.625
+          }
+        ]
+      },
+      {
+        "id": "5sh4ck6",
+        "name": "Posterior de ombro no cross",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 2.5
           },
           {
-            "reps": 12,
-            "weight": 5
+            "reps": 10,
+            "weight": 2.5
+          },
+          {
+            "reps": 10,
+            "weight": 2.5
           }
         ]
       },
@@ -66,26 +82,6 @@
           {
             "reps": 12,
             "weight": 30
-          }
-        ]
-      },
-      {
-        "id": "5sh4ck6",
-        "name": "Posterior de ombro no cross",
-        "category": "Ombros",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 2.5
-          },
-          {
-            "reps": 10,
-            "weight": 2.5
-          },
-          {
-            "reps": 10,
-            "weight": 2.5
           }
         ]
       },
