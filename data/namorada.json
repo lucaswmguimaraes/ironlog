@@ -66,26 +66,6 @@
         ]
       },
       {
-        "id": "tmrmyph",
-        "name": "Remada baixa com triângulo",
-        "category": "Costas",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 30
-          },
-          {
-            "reps": 12,
-            "weight": 30
-          },
-          {
-            "reps": 12,
-            "weight": 30
-          }
-        ]
-      },
-      {
         "id": "mkc98ru",
         "name": "Rosca inversa (barra)",
         "category": "Bíceps",
@@ -102,6 +82,26 @@
           {
             "reps": 10,
             "weight": 10
+          }
+        ]
+      },
+      {
+        "id": "tmrmyph",
+        "name": "Remada baixa com triângulo",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 30
+          },
+          {
+            "reps": 12,
+            "weight": 30
+          },
+          {
+            "reps": 12,
+            "weight": 30
           }
         ]
       }
