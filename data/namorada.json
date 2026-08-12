@@ -6,26 +6,26 @@
     "trainType": "A",
     "exercises": [
       {
-        "id": "q6l83t0",
-        "name": "Rosca Scott com barra W",
+        "id": "crmcdcq",
+        "name": "Rosca na polia (cabo baixo)",
         "category": "Bíceps",
-        "notes": "máquina ",
+        "notes": "unilateral",
         "sets": [
           {
-            "reps": 8,
-            "weight": 15
+            "reps": 12,
+            "weight": 5.625
           },
           {
             "reps": 12,
-            "weight": 12.5
+            "weight": 5
           },
           {
-            "reps": 10,
-            "weight": 12.5
+            "reps": 12,
+            "weight": 5
           },
           {
-            "reps": 7,
-            "weight": 7.5
+            "reps": 12,
+            "weight": 5
           }
         ]
       },
@@ -66,30 +66,6 @@
           {
             "reps": 12,
             "weight": 30
-          }
-        ]
-      },
-      {
-        "id": "crmcdcq",
-        "name": "Rosca na polia (cabo baixo)",
-        "category": "Bíceps",
-        "notes": "unilateral",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 5
-          },
-          {
-            "reps": 12,
-            "weight": 5
-          },
-          {
-            "reps": 12,
-            "weight": 5
-          },
-          {
-            "reps": 12,
-            "weight": 5
           }
         ]
       },
