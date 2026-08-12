@@ -1,5 +1,169 @@
 [
   {
+    "id": "f67m1ze",
+    "date": "2026-08-12",
+    "name": "Treino A - Pull",
+    "trainType": "A",
+    "exercises": [
+      {
+        "id": "52wfa9h",
+        "name": "Rosca Scott com barra W",
+        "category": "Bíceps",
+        "notes": "Na mesa scott + drop",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 19.7
+          },
+          {
+            "reps": 8,
+            "weight": 34.7
+          },
+          {
+            "reps": 10,
+            "weight": 26.2
+          },
+          {
+            "reps": 10,
+            "weight": 24.7
+          },
+          {
+            "reps": 10,
+            "weight": 14.7
+          }
+        ]
+      },
+      {
+        "id": "8mw89la",
+        "name": "Rosca na polia (cabo baixo)",
+        "category": "Bíceps",
+        "notes": "Unilateral",
+        "sets": [
+          {
+            "reps": 8,
+            "weight": 12.5
+          },
+          {
+            "reps": 9,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 8.125
+          }
+        ]
+      },
+      {
+        "id": "2zm4mte",
+        "name": "Posterior de ombro no cross",
+        "category": "Ombros",
+        "notes": "Bilateral",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 8.75
+          },
+          {
+            "reps": 9,
+            "weight": 10
+          },
+          {
+            "reps": 8,
+            "weight": 8.75
+          }
+        ]
+      },
+      {
+        "id": "b2vuof5",
+        "name": "Puxada alta com barra reta",
+        "category": "Costas",
+        "notes": "Rest and pause na última",
+        "sets": [
+          {
+            "reps": 9,
+            "weight": 80
+          },
+          {
+            "reps": 10,
+            "weight": 70
+          },
+          {
+            "reps": 11,
+            "weight": 60
+          },
+          {
+            "reps": 6,
+            "weight": 50
+          }
+        ]
+      },
+      {
+        "id": "gyzx8zt",
+        "name": "Rosca inversa (barra)",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 12.5
+          },
+          {
+            "reps": 8,
+            "weight": 15
+          },
+          {
+            "reps": 8,
+            "weight": 12.5
+          },
+          {
+            "reps": 7,
+            "weight": 7.5
+          }
+        ]
+      },
+      {
+        "id": "2tyjgii",
+        "name": "Flexão de punho (polia alta)",
+        "category": "Antebraço",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 9,
+            "weight": 12.5
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 7,
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "id": "o2620ap",
+        "name": "Remada máquina articulada",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 40
+          },
+          {
+            "reps": 10,
+            "weight": 40
+          },
+          {
+            "reps": 10,
+            "weight": 35
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "l6sxo8m",
     "date": "2026-08-08",
     "name": "Treino B - Push",
