@@ -1,5 +1,121 @@
 [
   {
+    "id": "ruxk33g",
+    "date": "2026-08-13",
+    "name": "Treino E - Posteriores",
+    "trainType": "E",
+    "exercises": [
+      {
+        "id": "i57voh7",
+        "name": "Mesa flexora",
+        "category": "Posterior de Coxa",
+        "notes": "12s de isometria + parciais na última",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 20.2
+          },
+          {
+            "reps": 10,
+            "weight": 45
+          },
+          {
+            "reps": 10,
+            "weight": 41
+          },
+          {
+            "reps": 12,
+            "weight": 34.2
+          },
+          {
+            "reps": 8,
+            "weight": 34.2
+          }
+        ]
+      },
+      {
+        "id": "gk51rnx",
+        "name": "Stiff com barra",
+        "category": "Posterior de Coxa",
+        "notes": "Contando a barra",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 90
+          },
+          {
+            "reps": 8,
+            "weight": 90
+          },
+          {
+            "reps": 10,
+            "weight": 75
+          }
+        ]
+      },
+      {
+        "id": "peryq93",
+        "name": "Nordic curl",
+        "category": "Posterior de Coxa",
+        "notes": "Flexão lombar no descanso ativo",
+        "sets": [
+          {
+            "reps": 14,
+            "weight": 88
+          },
+          {
+            "reps": 12,
+            "weight": 88
+          },
+          {
+            "reps": 11,
+            "weight": 88
+          }
+        ]
+      },
+      {
+        "id": "3p5tl5b",
+        "name": "Abdutora na máquina",
+        "category": "Adutores / Abdutores",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 100
+          },
+          {
+            "reps": 9,
+            "weight": 100
+          },
+          {
+            "reps": 10,
+            "weight": 95
+          }
+        ]
+      },
+      {
+        "id": "9efvwl2",
+        "name": "Panturrilha em pé (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 14,
+            "weight": 120
+          },
+          {
+            "reps": 10,
+            "weight": 120
+          },
+          {
+            "reps": 10,
+            "weight": 100
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "f67m1ze",
     "date": "2026-08-12",
     "name": "Treino A - Pull",
