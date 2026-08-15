@@ -30,6 +30,38 @@
         ]
       },
       {
+        "id": "tkjwhsb",
+        "name": "Fly na máquina",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 25
+          },
+          {
+            "reps": 10,
+            "weight": 18
+          },
+          {
+            "reps": 12,
+            "weight": 25
+          },
+          {
+            "reps": 10,
+            "weight": 18
+          },
+          {
+            "reps": 10,
+            "weight": 25
+          },
+          {
+            "reps": 12,
+            "weight": 18
+          }
+        ]
+      },
+      {
         "id": "o72r2yp",
         "name": "Remada cavalinho",
         "category": "Costas",
@@ -50,38 +82,6 @@
           {
             "reps": 10,
             "weight": 17.5
-          }
-        ]
-      },
-      {
-        "id": "tkjwhsb",
-        "name": "Fly na máquina",
-        "category": "Peito",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 25
-          },
-          {
-            "reps": 10,
-            "weight": 18
-          },
-          {
-            "reps": 9,
-            "weight": 25
-          },
-          {
-            "reps": 9,
-            "weight": 18
-          },
-          {
-            "reps": 9,
-            "weight": 25
-          },
-          {
-            "reps": 9,
-            "weight": 18
           }
         ]
       },
