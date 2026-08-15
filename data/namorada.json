@@ -61,15 +61,27 @@
         "sets": [
           {
             "reps": 10,
-            "weight": 20
+            "weight": 25
           },
           {
             "reps": 10,
-            "weight": 22.5
+            "weight": 18
           },
           {
             "reps": 9,
-            "weight": 22.5
+            "weight": 25
+          },
+          {
+            "reps": 9,
+            "weight": 18
+          },
+          {
+            "reps": 9,
+            "weight": 25
+          },
+          {
+            "reps": 9,
+            "weight": 18
           }
         ]
       },
