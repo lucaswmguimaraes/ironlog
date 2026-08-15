@@ -100,20 +100,44 @@
             "weight": 3
           },
           {
+            "reps": 12,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 3
+          },
+          {
             "reps": 10,
             "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 3
+          }
+        ]
+      },
+      {
+        "id": "s8rhf94",
+        "name": "Rosca na corda",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 22.5
           },
           {
             "reps": 12,
-            "weight": 3
+            "weight": 22.5
+          },
+          {
+            "reps": 12,
+            "weight": 7.5
           },
           {
             "reps": 10,
             "weight": 5
-          },
-          {
-            "reps": 10,
-            "weight": 3
           }
         ]
       },
@@ -134,30 +158,6 @@
           {
             "reps": 10,
             "weight": 15
-          }
-        ]
-      },
-      {
-        "id": "s8rhf94",
-        "name": "Rosca na corda",
-        "category": "Bíceps",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 7.5
-          },
-          {
-            "reps": 12,
-            "weight": 7.5
-          },
-          {
-            "reps": 12,
-            "weight": 7.5
-          },
-          {
-            "reps": 10,
-            "weight": 5
           }
         ]
       }
