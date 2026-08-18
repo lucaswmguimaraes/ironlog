@@ -36,7 +36,7 @@
         "notes": "",
         "sets": [
           {
-            "reps": 10,
+            "reps": 12,
             "weight": 100
           },
           {
@@ -57,7 +57,7 @@
         "sets": [
           {
             "reps": 10,
-            "weight": 40
+            "weight": 45
           },
           {
             "reps": 10,
@@ -76,16 +76,16 @@
         "notes": "",
         "sets": [
           {
-            "reps": 10,
+            "reps": 12,
             "weight": 80
           },
           {
-            "reps": 10,
-            "weight": 75
+            "reps": 9,
+            "weight": 90
           },
           {
-            "reps": 10,
-            "weight": 70
+            "reps": 9,
+            "weight": 85
           }
         ]
       },
@@ -97,10 +97,10 @@
         "sets": [
           {
             "reps": 10,
-            "weight": 120
+            "weight": 130
           },
           {
-            "reps": 9,
+            "reps": 12,
             "weight": 120
           },
           {
