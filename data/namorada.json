@@ -1,5 +1,117 @@
 [
   {
+    "id": "jqw6l87",
+    "date": "2026-08-18",
+    "name": "Treino 3 - QUADRÍCEPS",
+    "trainType": "C",
+    "exercises": [
+      {
+        "id": "sz1zv2n",
+        "name": "Hack Squat máquina",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 11,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 30
+          },
+          {
+            "reps": 11,
+            "weight": 35
+          },
+          {
+            "reps": 10,
+            "weight": 35
+          }
+        ]
+      },
+      {
+        "id": "h9vftw2",
+        "name": "Leg press horizontal",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 80
+          },
+          {
+            "reps": "",
+            "weight": ""
+          },
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      },
+      {
+        "id": "xrgzv52",
+        "name": "Extensora",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 35
+          },
+          {
+            "reps": 10,
+            "weight": 35
+          },
+          {
+            "reps": 11,
+            "weight": 35
+          }
+        ]
+      },
+      {
+        "id": "l81uzhb",
+        "name": "Adutora na máquina",
+        "category": "Adutores / Abdutores",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 40
+          },
+          {
+            "reps": 13,
+            "weight": 40
+          },
+          {
+            "reps": 10,
+            "weight": 40
+          }
+        ]
+      },
+      {
+        "id": "s9aq1yw",
+        "name": "Panturrilha em pé (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 60
+          },
+          {
+            "reps": 10,
+            "weight": 60
+          },
+          {
+            "reps": 10,
+            "weight": 60
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "qqtf3fp",
     "date": "2026-08-15",
     "name": "Treino 4 - SUPERIORES GERAL",
