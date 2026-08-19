@@ -104,16 +104,16 @@
         "notes": "",
         "sets": [
           {
-            "reps": 12,
-            "weight": 7.5
-          },
-          {
-            "reps": 12,
-            "weight": 8.125
+            "reps": 11,
+            "weight": 6.8
           },
           {
             "reps": 10,
-            "weight": 8.125
+            "weight": 6.8
+          },
+          {
+            "reps": 10,
+            "weight": 6.8
           }
         ]
       },
