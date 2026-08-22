@@ -1,5 +1,93 @@
 [
   {
+    "id": "k1d7ke4",
+    "date": "2026-08-22",
+    "name": "Treino 2 - COSTAS + BÍCEPS",
+    "trainType": "A",
+    "exercises": [
+      {
+        "id": "f0u7bxi",
+        "name": "Puxada alta com barra reta",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 30
+          },
+          {
+            "reps": 12,
+            "weight": 30
+          },
+          {
+            "reps": 12,
+            "weight": 30
+          }
+        ]
+      },
+      {
+        "id": "aozl1vw",
+        "name": "Remada máquina articulada",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 25
+          },
+          {
+            "reps": 12,
+            "weight": 25
+          },
+          {
+            "reps": 12,
+            "weight": 30
+          }
+        ]
+      },
+      {
+        "id": "1d3ctqq",
+        "name": "Rosca na polia (cabo baixo)",
+        "category": "Bíceps",
+        "notes": "unilateral",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 5.625
+          },
+          {
+            "reps": 12,
+            "weight": 5.625
+          },
+          {
+            "reps": 12,
+            "weight": 5.625
+          }
+        ]
+      },
+      {
+        "id": "ub3flrf",
+        "name": "Posterior de ombro no cross",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 2.5
+          },
+          {
+            "reps": 10,
+            "weight": 2.5
+          },
+          {
+            "reps": 10,
+            "weight": 2.5
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "xxh0zm2",
     "date": "2026-08-19",
     "name": "Treino 1 - PEITO + TRÍCEPS + OMBRO",
