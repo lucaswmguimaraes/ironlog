@@ -64,12 +64,12 @@
         "notes": "",
         "sets": [
           {
-            "reps": 12,
-            "weight": 30
+            "reps": 10,
+            "weight": 32
           },
           {
             "reps": 12,
-            "weight": 30
+            "weight": 32
           }
         ]
       },
