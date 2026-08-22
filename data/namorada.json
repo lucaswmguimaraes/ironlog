@@ -20,8 +20,24 @@
             "weight": 18
           },
           {
-            "reps": 10,
-            "weight": 12.5
+            "reps": 9,
+            "weight": 23
+          }
+        ]
+      },
+      {
+        "id": "buhbg81",
+        "name": "Rosca na polia (cabo baixo)",
+        "category": "Bíceps",
+        "notes": "unilateral",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 4.5
+          },
+          {
+            "reps": 12,
+            "weight": 4.5
           }
         ]
       },
@@ -62,30 +78,6 @@
           {
             "reps": 12,
             "weight": 30
-          }
-        ]
-      },
-      {
-        "id": "buhbg81",
-        "name": "Rosca na polia (cabo baixo)",
-        "category": "Bíceps",
-        "notes": "unilateral",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 5
-          },
-          {
-            "reps": 12,
-            "weight": 5
-          },
-          {
-            "reps": 12,
-            "weight": 5
-          },
-          {
-            "reps": 12,
-            "weight": 5
           }
         ]
       },
