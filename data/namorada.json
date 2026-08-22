@@ -81,35 +81,11 @@
         "sets": [
           {
             "reps": 10,
-            "weight": 2.5
+            "weight": 2.3
           },
           {
             "reps": 10,
-            "weight": 2.5
-          },
-          {
-            "reps": 10,
-            "weight": 2.5
-          }
-        ]
-      },
-      {
-        "id": "g6eaut4",
-        "name": "Rosca inversa (barra)",
-        "category": "Bíceps",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 10
-          },
-          {
-            "reps": 10,
-            "weight": 10
-          },
-          {
-            "reps": 10,
-            "weight": 10
+            "weight": 2.3
           }
         ]
       }
