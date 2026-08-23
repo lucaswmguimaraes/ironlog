@@ -101,7 +101,7 @@
         "sets": [
           {
             "reps": 10,
-            "weight": 60
+            "weight": 40
           },
           {
             "reps": 10,
@@ -110,6 +110,18 @@
           {
             "reps": 10,
             "weight": 60
+          }
+        ]
+      },
+      {
+        "id": "8dd9yf7",
+        "name": "Crunch máquina",
+        "category": "Core / Abdômen",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
           }
         ]
       }
