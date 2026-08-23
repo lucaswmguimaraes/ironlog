@@ -1,5 +1,121 @@
 [
   {
+    "id": "avoofkg",
+    "date": "2026-08-23",
+    "name": "Treino 5 - GLÚTEO/ POSTERIOR",
+    "trainType": "E",
+    "exercises": [
+      {
+        "id": "l4s03dw",
+        "name": "Mesa flexora",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 15
+          },
+          {
+            "reps": 12,
+            "weight": 30
+          },
+          {
+            "reps": 12,
+            "weight": 30
+          },
+          {
+            "reps": 10,
+            "weight": 30
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          }
+        ]
+      },
+      {
+        "id": "rjsplty",
+        "name": "Stiff com barra",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 35
+          },
+          {
+            "reps": 10,
+            "weight": 35
+          },
+          {
+            "reps": 10,
+            "weight": 35
+          }
+        ]
+      },
+      {
+        "id": "dqmqzxh",
+        "name": "Nordic curl",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "id": "ixqz8fw",
+        "name": "Abdutora na máquina",
+        "category": "Glúteos",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 50
+          },
+          {
+            "reps": 12,
+            "weight": 50
+          },
+          {
+            "reps": 12,
+            "weight": 50
+          }
+        ]
+      },
+      {
+        "id": "9ii1sq9",
+        "name": "Panturrilha em pé (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 60
+          },
+          {
+            "reps": 10,
+            "weight": 60
+          },
+          {
+            "reps": 10,
+            "weight": 60
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "3ovr4ew",
     "date": "2026-08-21",
     "name": "Treino 2 - COSTAS + BÍCEPS",
