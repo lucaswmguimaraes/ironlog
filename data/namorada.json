@@ -50,21 +50,21 @@
         ]
       },
       {
-        "id": "dls5c9o",
-        "name": "Remada cavalinho",
+        "id": "ue9zyba",
+        "name": "Remada máquina articulada",
         "category": "Costas",
         "notes": "",
         "sets": [
           {
-            "reps": 12,
+            "reps": 10,
             "weight": 10
           },
           {
-            "reps": 10,
+            "reps": 12,
             "weight": 15
           },
           {
-            "reps": 10,
+            "reps": 11,
             "weight": 15
           }
         ]
@@ -76,7 +76,7 @@
         "notes": "",
         "sets": [
           {
-            "reps": 10,
+            "reps": 12,
             "weight": 5
           },
           {
@@ -88,7 +88,7 @@
             "weight": 5
           },
           {
-            "reps": 10,
+            "reps": 8,
             "weight": 3
           },
           {
