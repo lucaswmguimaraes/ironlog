@@ -76,16 +76,16 @@
         "notes": "",
         "sets": [
           {
-            "reps": 15,
-            "weight": 40
-          },
-          {
-            "reps": 13,
-            "weight": 40
-          },
-          {
             "reps": 10,
-            "weight": 40
+            "weight": 29
+          },
+          {
+            "reps": 11,
+            "weight": 29
+          },
+          {
+            "reps": 12,
+            "weight": 29
           }
         ]
       },
