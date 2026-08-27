@@ -6,6 +6,30 @@
     "trainType": "C",
     "exercises": [
       {
+        "id": "a5nvd2o",
+        "name": "Agachamento no smith",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": "",
+            "weight": ""
+          },
+          {
+            "reps": "",
+            "weight": ""
+          },
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      },
+      {
         "id": "khqgx6u",
         "name": "Leg press horizontal",
         "category": "Quadríceps",
