@@ -1,5 +1,117 @@
 [
   {
+    "id": "1c8z56k",
+    "date": "2026-08-27",
+    "name": "Treino C - Quadríceps",
+    "trainType": "C",
+    "exercises": [
+      {
+        "id": "btb4hms",
+        "name": "Agachamento no smith",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 30
+          },
+          {
+            "reps": 10,
+            "weight": 50
+          },
+          {
+            "reps": 10,
+            "weight": 55
+          },
+          {
+            "reps": 10,
+            "weight": 50
+          }
+        ]
+      },
+      {
+        "id": "i0089sa",
+        "name": "Leg press 45°",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 160
+          },
+          {
+            "reps": 10,
+            "weight": 160
+          },
+          {
+            "reps": 10,
+            "weight": 140
+          }
+        ]
+      },
+      {
+        "id": "1kv9kdb",
+        "name": "Extensora",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 43
+          },
+          {
+            "reps": 12,
+            "weight": 36
+          },
+          {
+            "reps": 10,
+            "weight": 36
+          }
+        ]
+      },
+      {
+        "id": "60qn1wo",
+        "name": "Adutora na máquina",
+        "category": "Adutores / Abdutores",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 57
+          },
+          {
+            "reps": 10,
+            "weight": 50
+          },
+          {
+            "reps": 9,
+            "weight": 50
+          }
+        ]
+      },
+      {
+        "id": "b25oao2",
+        "name": "Panturrilha em pé (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 14,
+            "weight": 120
+          },
+          {
+            "reps": 10,
+            "weight": 130
+          },
+          {
+            "reps": 12,
+            "weight": 110
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "teupy6j",
     "date": "2026-08-25",
     "name": "Treino D - Superiores",
