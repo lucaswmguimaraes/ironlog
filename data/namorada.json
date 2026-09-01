@@ -1,5 +1,141 @@
 [
   {
+    "id": "jc3cftt",
+    "date": "2026-09-01",
+    "name": "Treino 1 - PEITO + TRÍCEPS + OMBRO",
+    "trainType": "B",
+    "exercises": [
+      {
+        "id": "xnisvti",
+        "name": "Chest Press máquina",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 25
+          },
+          {
+            "reps": 10,
+            "weight": 25
+          },
+          {
+            "reps": 10,
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "id": "s1rh3td",
+        "name": "Tríceps testa com barra",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 11,
+            "weight": 9.1
+          },
+          {
+            "reps": 10,
+            "weight": 9.1
+          },
+          {
+            "reps": 9,
+            "weight": 9.1
+          }
+        ]
+      },
+      {
+        "id": "jhny84a",
+        "name": "Tríceps na polia com corda",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 11,
+            "weight": 6.8
+          },
+          {
+            "reps": 10,
+            "weight": 6.8
+          },
+          {
+            "reps": 10,
+            "weight": 6.8
+          }
+        ]
+      },
+      {
+        "id": "aczghho",
+        "name": "Tríceps francês no cross com corda",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 3.75
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          }
+        ]
+      },
+      {
+        "id": "pgtxw8z",
+        "name": "Supino inclinado com halteres",
+        "category": "Peito",
+        "notes": "máquina ",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 18
+          },
+          {
+            "reps": 11,
+            "weight": 18
+          },
+          {
+            "reps": 12,
+            "weight": 18
+          }
+        ]
+      },
+      {
+        "id": "nt68hgl",
+        "name": "Desenvolvimento no aparelho",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 9
+          },
+          {
+            "reps": 10,
+            "weight": 18
+          },
+          {
+            "reps": 9,
+            "weight": 18
+          },
+          {
+            "reps": 9,
+            "weight": 18
+          },
+          {
+            "reps": 10,
+            "weight": 9
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "lpevlr3",
     "date": "2026-08-27",
     "name": "Treino 3 - QUADRÍCEPS",
