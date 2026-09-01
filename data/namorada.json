@@ -73,7 +73,35 @@
           },
           {
             "reps": 10,
-            "weight": 9
+            "weight": 6
+          }
+        ]
+      },
+      {
+        "id": "q3cltzv",
+        "name": "Tríceps máquina (pushdown)",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 43
+          },
+          {
+            "reps": 5,
+            "weight": 57
+          },
+          {
+            "reps": 6,
+            "weight": 55
+          },
+          {
+            "reps": 5,
+            "weight": 57
+          },
+          {
+            "reps": 7,
+            "weight": 55
           }
         ]
       },
@@ -94,26 +122,6 @@
           {
             "reps": 9,
             "weight": 9.1
-          }
-        ]
-      },
-      {
-        "id": "jhny84a",
-        "name": "Tríceps na polia com corda",
-        "category": "Tríceps",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 11,
-            "weight": 6.8
-          },
-          {
-            "reps": 10,
-            "weight": 6.8
-          },
-          {
-            "reps": 10,
-            "weight": 6.8
           }
         ]
       },
