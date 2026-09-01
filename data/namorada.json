@@ -30,6 +30,26 @@
         ]
       },
       {
+        "id": "pgtxw8z",
+        "name": "Supino inclinado com halteres",
+        "category": "Peito",
+        "notes": "máquina ",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 18
+          },
+          {
+            "reps": 11,
+            "weight": 18
+          },
+          {
+            "reps": 12,
+            "weight": 18
+          }
+        ]
+      },
+      {
         "id": "s1rh3td",
         "name": "Tríceps testa com barra",
         "category": "Tríceps",
@@ -82,26 +102,6 @@
           {
             "reps": 10,
             "weight": 5
-          }
-        ]
-      },
-      {
-        "id": "pgtxw8z",
-        "name": "Supino inclinado com halteres",
-        "category": "Peito",
-        "notes": "máquina ",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 18
-          },
-          {
-            "reps": 11,
-            "weight": 18
-          },
-          {
-            "reps": 12,
-            "weight": 18
           }
         ]
       },
