@@ -136,7 +136,11 @@
             "weight": 14
           },
           {
-            "reps": 10,
+            "reps": 11,
+            "weight": 14
+          },
+          {
+            "reps": 12,
             "weight": 14
           }
         ]
