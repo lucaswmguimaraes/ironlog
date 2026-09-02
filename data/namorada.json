@@ -1,5 +1,137 @@
 [
   {
+    "id": "smurhes",
+    "date": "2026-09-02",
+    "name": "Treino 5 - GLÚTEO/ POSTERIOR",
+    "trainType": "E",
+    "exercises": [
+      {
+        "id": "3kl5cll",
+        "name": "Mesa flexora",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 9
+          },
+          {
+            "reps": 10,
+            "weight": 27
+          },
+          {
+            "reps": 10,
+            "weight": 27
+          },
+          {
+            "reps": 13,
+            "weight": 23
+          }
+        ]
+      },
+      {
+        "id": "2yt500n",
+        "name": "Stiff com barra",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 35
+          },
+          {
+            "reps": 11,
+            "weight": 35
+          },
+          {
+            "reps": 10,
+            "weight": 35
+          }
+        ]
+      },
+      {
+        "id": "yoszlxx",
+        "name": "Nordic curl",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 29
+          },
+          {
+            "reps": 9,
+            "weight": 36
+          },
+          {
+            "reps": 12,
+            "weight": 36
+          }
+        ]
+      },
+      {
+        "id": "ihbqcte",
+        "name": "Abdutora na máquina",
+        "category": "Glúteos",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 27
+          },
+          {
+            "reps": 10,
+            "weight": 23
+          },
+          {
+            "reps": 13,
+            "weight": 23
+          }
+        ]
+      },
+      {
+        "id": "kw4spur",
+        "name": "Panturrilha em pé (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 40
+          },
+          {
+            "reps": 10,
+            "weight": 60
+          },
+          {
+            "reps": 10,
+            "weight": 60
+          }
+        ]
+      },
+      {
+        "id": "s3ta91e",
+        "name": "Crunch máquina",
+        "category": "Core / Abdômen",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 14
+          },
+          {
+            "reps": 12,
+            "weight": 18
+          },
+          {
+            "reps": 10,
+            "weight": 18
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "jc3cftt",
     "date": "2026-09-01",
     "name": "Treino 1 - PEITO + TRÍCEPS + OMBRO",
