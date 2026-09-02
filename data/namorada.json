@@ -106,26 +106,6 @@
         ]
       },
       {
-        "id": "s1rh3td",
-        "name": "Tríceps testa com barra",
-        "category": "Tríceps",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 11,
-            "weight": 9.1
-          },
-          {
-            "reps": 10,
-            "weight": 9.1
-          },
-          {
-            "reps": 9,
-            "weight": 9.1
-          }
-        ]
-      },
-      {
         "id": "aczghho",
         "name": "Tríceps francês no cross com corda",
         "category": "Tríceps",
@@ -133,11 +113,31 @@
         "sets": [
           {
             "reps": 10,
-            "weight": 3.75
+            "weight": 9
           },
           {
             "reps": 10,
-            "weight": 5
+            "weight": 9
+          },
+          {
+            "reps": 10,
+            "weight": 9
+          }
+        ]
+      },
+      {
+        "id": "s1rh3td",
+        "name": "Tríceps testa com barra",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 14
+          },
+          {
+            "reps": 10,
+            "weight": 14
           }
         ]
       }
