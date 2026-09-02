@@ -1,5 +1,81 @@
 [
   {
+    "id": "pbkgkwq",
+    "date": "2026-09-02",
+    "name": "Treino E - Posteriores",
+    "trainType": "E",
+    "exercises": [
+      {
+        "id": "5631c60",
+        "name": "Mesa flexora",
+        "category": "Posterior de Coxa",
+        "notes": "12s de isometria + parciais na última",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 20.2
+          },
+          {
+            "reps": 9,
+            "weight": 52.2
+          },
+          {
+            "reps": 9,
+            "weight": 45
+          },
+          {
+            "reps": 11,
+            "weight": 41
+          },
+          {
+            "reps": 2,
+            "weight": 41
+          }
+        ]
+      },
+      {
+        "id": "4ry7vh1",
+        "name": "Stiff com barra",
+        "category": "Posterior de Coxa",
+        "notes": "Contando a barra",
+        "sets": [
+          {
+            "reps": 11,
+            "weight": 90
+          },
+          {
+            "reps": 8,
+            "weight": 90
+          },
+          {
+            "reps": 10,
+            "weight": 80
+          }
+        ]
+      },
+      {
+        "id": "lgflh3m",
+        "name": "Nordic curl",
+        "category": "Posterior de Coxa",
+        "notes": "Flexão lombar no descanso ativo",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 36
+          },
+          {
+            "reps": 10,
+            "weight": 43
+          },
+          {
+            "reps": 10,
+            "weight": 36
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "6j9115n",
     "date": "2026-09-01",
     "name": "Treino B - Push",
