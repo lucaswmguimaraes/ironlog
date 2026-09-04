@@ -80,6 +80,14 @@
         "notes": "",
         "sets": [
           {
+            "reps": 11,
+            "weight": 23
+          },
+          {
+            "reps": 10,
+            "weight": 23
+          },
+          {
             "reps": "",
             "weight": ""
           }
