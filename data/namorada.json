@@ -1,5 +1,101 @@
 [
   {
+    "id": "ngbmi1o",
+    "date": "2026-09-04",
+    "name": "Treino 2 - COSTAS + BÍCEPS",
+    "trainType": "A",
+    "exercises": [
+      {
+        "id": "3f2cxh2",
+        "name": "Rosca na polia (cabo baixo)",
+        "category": "Bíceps",
+        "notes": "unilateral",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 4.5
+          },
+          {
+            "reps": 12,
+            "weight": 4.5
+          },
+          {
+            "reps": 12,
+            "weight": 4.5
+          }
+        ]
+      },
+      {
+        "id": "1e905w8",
+        "name": "Puxada alta com barra reta",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 11,
+            "weight": 32
+          },
+          {
+            "reps": 12,
+            "weight": 34.3
+          }
+        ]
+      },
+      {
+        "id": "rtwz6jq",
+        "name": "Remada baixa com triângulo",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 32
+          },
+          {
+            "reps": 12,
+            "weight": 32
+          }
+        ]
+      },
+      {
+        "id": "3lkqlue",
+        "name": "Rosca Scott com barra W",
+        "category": "Bíceps",
+        "notes": "máquina ",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 4.5
+          },
+          {
+            "reps": 10,
+            "weight": 18
+          },
+          {
+            "reps": 9,
+            "weight": 23
+          }
+        ]
+      },
+      {
+        "id": "6ivfa3l",
+        "name": "Posterior de ombro no cross",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 2.3
+          },
+          {
+            "reps": 10,
+            "weight": 2.3
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "smurhes",
     "date": "2026-09-02",
     "name": "Treino 5 - GLÚTEO/ POSTERIOR",
