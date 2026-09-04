@@ -9,14 +9,14 @@
         "id": "3f2cxh2",
         "name": "Rosca na polia (cabo baixo)",
         "category": "Bíceps",
-        "notes": "unilateral",
+        "notes": "bilateral",
         "sets": [
           {
             "reps": 11,
             "weight": 2.3
           },
           {
-            "reps": 12,
+            "reps": 10,
             "weight": 4.5
           },
           {
