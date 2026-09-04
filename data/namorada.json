@@ -44,12 +44,32 @@
             "weight": 32
           },
           {
-            "reps": 10,
+            "reps": 11,
             "weight": 32
           },
           {
             "reps": 10,
             "weight": 32
+          }
+        ]
+      },
+      {
+        "id": "3lkqlue",
+        "name": "Rosca Scott com barra W",
+        "category": "Bíceps",
+        "notes": "máquina ",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 4.5
+          },
+          {
+            "reps": 10,
+            "weight": 18
+          },
+          {
+            "reps": 9,
+            "weight": 23
           }
         ]
       },
@@ -82,26 +102,6 @@
           {
             "reps": 12,
             "weight": 32
-          }
-        ]
-      },
-      {
-        "id": "3lkqlue",
-        "name": "Rosca Scott com barra W",
-        "category": "Bíceps",
-        "notes": "máquina ",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 4.5
-          },
-          {
-            "reps": 10,
-            "weight": 18
-          },
-          {
-            "reps": 9,
-            "weight": 23
           }
         ]
       },
