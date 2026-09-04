@@ -20,8 +20,12 @@
             "weight": 4.5
           },
           {
-            "reps": 12,
+            "reps": 10,
             "weight": 4.5
+          },
+          {
+            "reps": 12,
+            "weight": 2.3
           }
         ]
       },
