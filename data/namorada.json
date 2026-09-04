@@ -1,5 +1,141 @@
 [
   {
+    "id": "rijzorv",
+    "date": "2026-09-04",
+    "name": "Treino 5 - GLÚTEO/ POSTERIOR",
+    "trainType": "E",
+    "exercises": [
+      {
+        "id": "vmfwrh8",
+        "name": "Mesa flexora",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 9
+          },
+          {
+            "reps": 10,
+            "weight": 27
+          },
+          {
+            "reps": 10,
+            "weight": 27
+          },
+          {
+            "reps": 10,
+            "weight": 27
+          },
+          {
+            "reps": 6,
+            "weight": 23
+          }
+        ]
+      },
+      {
+        "id": "j8lizdy",
+        "name": "Stiff com barra",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 35
+          },
+          {
+            "reps": 11,
+            "weight": 35
+          },
+          {
+            "reps": 10,
+            "weight": 35
+          }
+        ]
+      },
+      {
+        "id": "9g5r409",
+        "name": "Nordic curl",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 29
+          },
+          {
+            "reps": 9,
+            "weight": 36
+          },
+          {
+            "reps": 12,
+            "weight": 36
+          }
+        ]
+      },
+      {
+        "id": "rroo3g8",
+        "name": "Abdutora na máquina",
+        "category": "Glúteos",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 27
+          },
+          {
+            "reps": 10,
+            "weight": 23
+          },
+          {
+            "reps": 13,
+            "weight": 23
+          }
+        ]
+      },
+      {
+        "id": "2w41vhq",
+        "name": "Panturrilha em pé (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 40
+          },
+          {
+            "reps": 10,
+            "weight": 60
+          },
+          {
+            "reps": 10,
+            "weight": 60
+          }
+        ]
+      },
+      {
+        "id": "6qakw42",
+        "name": "Crunch máquina",
+        "category": "Core / Abdômen",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 14
+          },
+          {
+            "reps": 12,
+            "weight": 18
+          },
+          {
+            "reps": 10,
+            "weight": 18
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "smurhes",
     "date": "2026-09-02",
     "name": "Treino 5 - GLÚTEO/ POSTERIOR",
