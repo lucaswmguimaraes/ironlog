@@ -36,8 +36,20 @@
         "notes": "",
         "sets": [
           {
-            "reps": "",
-            "weight": ""
+            "reps": 12,
+            "weight": 11
+          },
+          {
+            "reps": 10,
+            "weight": 32
+          },
+          {
+            "reps": 10,
+            "weight": 32
+          },
+          {
+            "reps": 10,
+            "weight": 32
           }
         ]
       },
