@@ -60,16 +60,16 @@
         "notes": "máquina ",
         "sets": [
           {
-            "reps": 12,
-            "weight": 4.5
-          },
-          {
             "reps": 10,
-            "weight": 18
+            "weight": 23
           },
           {
             "reps": 9,
             "weight": 23
+          },
+          {
+            "reps": 12,
+            "weight": 18
           }
         ]
       },
