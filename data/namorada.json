@@ -88,24 +88,8 @@
             "weight": 23
           },
           {
-            "reps": "",
-            "weight": ""
-          }
-        ]
-      },
-      {
-        "id": "1e905w8",
-        "name": "Puxada alta com barra reta",
-        "category": "Costas",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 11,
-            "weight": 32
-          },
-          {
-            "reps": 12,
-            "weight": 34.3
+            "reps": 10,
+            "weight": 23
           }
         ]
       },
@@ -122,6 +106,26 @@
           {
             "reps": 10,
             "weight": 2.3
+          },
+          {
+            "reps": 10,
+            "weight": 2.3
+          }
+        ]
+      },
+      {
+        "id": "1e905w8",
+        "name": "Puxada alta com barra reta",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 11,
+            "weight": 32
+          },
+          {
+            "reps": 12,
+            "weight": 34.3
           }
         ]
       }
