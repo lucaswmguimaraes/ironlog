@@ -1,5 +1,117 @@
 [
   {
+    "id": "o85o27b",
+    "date": "2026-09-08",
+    "name": "Treino C - Quadríceps",
+    "trainType": "C",
+    "exercises": [
+      {
+        "id": "9v40g7a",
+        "name": "Agachamento no smith",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 30
+          },
+          {
+            "reps": 10,
+            "weight": 50
+          },
+          {
+            "reps": 10,
+            "weight": 55
+          },
+          {
+            "reps": 10,
+            "weight": 50
+          }
+        ]
+      },
+      {
+        "id": "m3b0bfc",
+        "name": "Leg press 45°",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 160
+          },
+          {
+            "reps": 10,
+            "weight": 200
+          },
+          {
+            "reps": 10,
+            "weight": 180
+          }
+        ]
+      },
+      {
+        "id": "pcrbw1r",
+        "name": "Extensora",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 50
+          },
+          {
+            "reps": 12,
+            "weight": 43
+          },
+          {
+            "reps": 10,
+            "weight": 43
+          }
+        ]
+      },
+      {
+        "id": "2u20ogw",
+        "name": "Adutora na máquina",
+        "category": "Adutores / Abdutores",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 63
+          },
+          {
+            "reps": 10,
+            "weight": 57
+          },
+          {
+            "reps": 9,
+            "weight": 57
+          }
+        ]
+      },
+      {
+        "id": "1kdoyiv",
+        "name": "Panturrilha em pé (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 130
+          },
+          {
+            "reps": 12,
+            "weight": 120
+          },
+          {
+            "reps": 12,
+            "weight": 110
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "3n8i7jw",
     "date": "2026-09-04",
     "name": "Treino A - Pull",
