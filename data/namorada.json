@@ -1,5 +1,117 @@
 [
   {
+    "id": "z0x17hr",
+    "date": "2026-09-08",
+    "name": "Treino 3 - QUADRÍCEPS",
+    "trainType": "C",
+    "exercises": [
+      {
+        "id": "92s2y3q",
+        "name": "Agachamento no smith",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 45
+          },
+          {
+            "reps": 10,
+            "weight": 45
+          },
+          {
+            "reps": 10,
+            "weight": 40
+          }
+        ]
+      },
+      {
+        "id": "c0h23wt",
+        "name": "Leg press 45°",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 9,
+            "weight": 160
+          },
+          {
+            "reps": 11,
+            "weight": 120
+          },
+          {
+            "reps": 11,
+            "weight": 140
+          }
+        ]
+      },
+      {
+        "id": "09r2pma",
+        "name": "Extensora",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 29
+          },
+          {
+            "reps": 12,
+            "weight": 29
+          },
+          {
+            "reps": 12,
+            "weight": 29
+          }
+        ]
+      },
+      {
+        "id": "x5uitfk",
+        "name": "Adutora na máquina",
+        "category": "Adutores / Abdutores",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 29
+          },
+          {
+            "reps": 11,
+            "weight": 29
+          },
+          {
+            "reps": 12,
+            "weight": 29
+          }
+        ]
+      },
+      {
+        "id": "3iya4cv",
+        "name": "Panturrilha em pé (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 70
+          },
+          {
+            "reps": 10,
+            "weight": 70
+          },
+          {
+            "reps": 10,
+            "weight": 70
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "ngbmi1o",
     "date": "2026-09-04",
     "name": "Treino 2 - COSTAS + BÍCEPS",
