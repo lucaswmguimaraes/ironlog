@@ -56,31 +56,11 @@
         "notes": "",
         "sets": [
           {
-            "reps": 12,
-            "weight": 29
-          },
-          {
-            "reps": 12,
-            "weight": 29
-          },
-          {
-            "reps": 12,
-            "weight": 29
-          }
-        ]
-      },
-      {
-        "id": "x5uitfk",
-        "name": "Adutora na máquina",
-        "category": "Adutores / Abdutores",
-        "notes": "",
-        "sets": [
-          {
             "reps": 10,
             "weight": 29
           },
           {
-            "reps": 11,
+            "reps": 12,
             "weight": 29
           },
           {
