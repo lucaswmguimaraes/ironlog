@@ -70,6 +70,26 @@
         ]
       },
       {
+        "id": "zrysol1",
+        "name": "Abdutora na máquina",
+        "category": "Adutores / Abdutores",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 29
+          },
+          {
+            "reps": 13,
+            "weight": 29
+          },
+          {
+            "reps": 13,
+            "weight": 29
+          }
+        ]
+      },
+      {
         "id": "3iya4cv",
         "name": "Panturrilha em pé (máquina)",
         "category": "Panturrilha",
