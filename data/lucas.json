@@ -1,5 +1,169 @@
 [
   {
+    "id": "x5cgw40",
+    "date": "2026-09-09",
+    "name": "Treino D - Superiores",
+    "trainType": "D",
+    "exercises": [
+      {
+        "id": "0dllk12",
+        "name": "Crucifixo no cross (cabo alto)",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 13.6
+          },
+          {
+            "reps": 12,
+            "weight": 27.2
+          },
+          {
+            "reps": 10,
+            "weight": 31.8
+          },
+          {
+            "reps": 10,
+            "weight": 27.2
+          }
+        ]
+      },
+      {
+        "id": "qdht34a",
+        "name": "Fly na máquina",
+        "category": "Peito",
+        "notes": "Parciais após completas",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 59
+          },
+          {
+            "reps": 10,
+            "weight": 59
+          },
+          {
+            "reps": 10,
+            "weight": 66
+          },
+          {
+            "reps": 10,
+            "weight": 66
+          },
+          {
+            "reps": 10,
+            "weight": 59
+          },
+          {
+            "reps": 8,
+            "weight": 59
+          }
+        ]
+      },
+      {
+        "id": "zhfqk10",
+        "name": "Remada máquina articulada",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 60
+          },
+          {
+            "reps": 10,
+            "weight": 60
+          },
+          {
+            "reps": 10,
+            "weight": 60
+          }
+        ]
+      },
+      {
+        "id": "odc3thn",
+        "name": "Elevação lateral máquina",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 7.5
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "id": "2hivtha",
+        "name": "Elevação frontal na polia",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 8,
+            "weight": 13.6
+          },
+          {
+            "reps": 8,
+            "weight": 11.3
+          },
+          {
+            "reps": 10,
+            "weight": 9.1
+          }
+        ]
+      },
+      {
+        "id": "tv17dr8",
+        "name": "Rosca na corda",
+        "category": "Bíceps",
+        "notes": "Drop na última série",
+        "sets": [
+          {
+            "reps": 8,
+            "weight": 24.9
+          },
+          {
+            "reps": 10,
+            "weight": 20.4
+          },
+          {
+            "reps": 10,
+            "weight": 18.1
+          }
+        ]
+      },
+      {
+        "id": "k2i9qhf",
+        "name": "Encolhimento com halteres",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 28
+          },
+          {
+            "reps": 9,
+            "weight": 34
+          },
+          {
+            "reps": 10,
+            "weight": 32
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "o85o27b",
     "date": "2026-09-08",
     "name": "Treino C - Quadríceps",
