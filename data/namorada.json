@@ -877,15 +877,15 @@
         "sets": [
           {
             "reps": 10,
-            "weight": 10
+            "weight": 20
           },
           {
             "reps": 12,
-            "weight": 15
+            "weight": 30
           },
           {
             "reps": 11,
-            "weight": 15
+            "weight": 30
           }
         ]
       },
