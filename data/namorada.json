@@ -56,16 +56,16 @@
         "notes": "",
         "sets": [
           {
-            "reps": 10,
-            "weight": 10
+            "reps": 12,
+            "weight": 30
           },
           {
             "reps": 12,
-            "weight": 15
+            "weight": 30
           },
           {
-            "reps": 11,
-            "weight": 15
+            "reps": 10,
+            "weight": 30
           }
         ]
       },
