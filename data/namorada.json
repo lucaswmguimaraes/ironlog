@@ -94,34 +94,22 @@
         ]
       },
       {
-        "id": "j3v1gfc",
-        "name": "Elevação lateral + frontal alternadas",
+        "id": "lbpdh30",
+        "name": "Elevação lateral máquina",
         "category": "Ombros",
         "notes": "",
         "sets": [
           {
-            "reps": 12,
-            "weight": 5
+            "reps": 10,
+            "weight": 2.5
           },
           {
             "reps": 10,
-            "weight": 3
-          },
-          {
-            "reps": 12,
-            "weight": 5
-          },
-          {
-            "reps": 8,
-            "weight": 3
+            "weight": 2.5
           },
           {
             "reps": 10,
-            "weight": 5
-          },
-          {
-            "reps": 10,
-            "weight": 3
+            "weight": 2.5
           }
         ]
       },
@@ -142,6 +130,26 @@
           {
             "reps": 12,
             "weight": 11.3
+          }
+        ]
+      },
+      {
+        "id": "bd8fg8x",
+        "name": "Elevação frontal na polia",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 4.5
+          },
+          {
+            "reps": 8,
+            "weight": 4.5
+          },
+          {
+            "reps": "",
+            "weight": 4.5
           }
         ]
       },
