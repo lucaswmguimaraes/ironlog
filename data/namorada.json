@@ -30,6 +30,26 @@
         ]
       },
       {
+        "id": "em868xx",
+        "name": "Fly na máquina",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 25
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          }
+        ]
+      },
+      {
         "id": "peqh8zc",
         "name": "Remada máquina articulada",
         "category": "Costas",
@@ -70,26 +90,6 @@
           {
             "reps": 10,
             "weight": 15
-          }
-        ]
-      },
-      {
-        "id": "em868xx",
-        "name": "Fly na máquina",
-        "category": "Peito",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 20
-          },
-          {
-            "reps": 10,
-            "weight": 20
-          },
-          {
-            "reps": 10,
-            "weight": 20
           }
         ]
       },
