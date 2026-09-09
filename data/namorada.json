@@ -1,5 +1,161 @@
 [
   {
+    "id": "ygnqzz4",
+    "date": "2026-09-09",
+    "name": "Treino 4 - SUPERIORES GERAL",
+    "trainType": "D",
+    "exercises": [
+      {
+        "id": "yozmy2k",
+        "name": "Crucifixo no cross (cabo alto)",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": "",
+            "weight": ""
+          }
+        ]
+      },
+      {
+        "id": "peqh8zc",
+        "name": "Remada máquina articulada",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 15
+          },
+          {
+            "reps": 11,
+            "weight": 15
+          }
+        ]
+      },
+      {
+        "id": "w27hh3m",
+        "name": "Supino declinado com halteres",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 10
+          },
+          {
+            "reps": 12,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          },
+          {
+            "reps": 10,
+            "weight": 15
+          }
+        ]
+      },
+      {
+        "id": "em868xx",
+        "name": "Fly na máquina",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          }
+        ]
+      },
+      {
+        "id": "j3v1gfc",
+        "name": "Elevação lateral + frontal alternadas",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 3
+          },
+          {
+            "reps": 12,
+            "weight": 5
+          },
+          {
+            "reps": 8,
+            "weight": 3
+          },
+          {
+            "reps": 10,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 3
+          }
+        ]
+      },
+      {
+        "id": "zr1n73z",
+        "name": "Rosca na corda",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 11.3
+          },
+          {
+            "reps": 12,
+            "weight": 11.3
+          },
+          {
+            "reps": 12,
+            "weight": 11.3
+          }
+        ]
+      },
+      {
+        "id": "iy7i5n9",
+        "name": "Encolhimento com barra (trapézio)",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 25
+          },
+          {
+            "reps": 10,
+            "weight": 25
+          },
+          {
+            "reps": 10,
+            "weight": 25
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "z0x17hr",
     "date": "2026-09-08",
     "name": "Treino 3 - QUADRÍCEPS",
