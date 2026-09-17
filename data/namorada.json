@@ -30,6 +30,26 @@
         ]
       },
       {
+        "id": "5g3qetk",
+        "name": "Supino inclinado com halteres",
+        "category": "Peito",
+        "notes": "máquina ",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 12,
+            "weight": 18
+          }
+        ]
+      },
+      {
         "id": "ksr19cv",
         "name": "Tríceps máquina (pushdown)",
         "category": "Tríceps",
@@ -94,26 +114,6 @@
           {
             "reps": 12,
             "weight": 14
-          }
-        ]
-      },
-      {
-        "id": "5g3qetk",
-        "name": "Supino inclinado com halteres",
-        "category": "Peito",
-        "notes": "máquina ",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 20
-          },
-          {
-            "reps": 10,
-            "weight": 20
-          },
-          {
-            "reps": 12,
-            "weight": 18
           }
         ]
       },
