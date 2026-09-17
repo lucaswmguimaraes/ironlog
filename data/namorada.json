@@ -1,5 +1,153 @@
 [
   {
+    "id": "8qz2al3",
+    "date": "2026-09-17",
+    "name": "Treino 1 - PEITO + TRÍCEPS + OMBRO",
+    "trainType": "B",
+    "exercises": [
+      {
+        "id": "u0hkepy",
+        "name": "Chest Press máquina",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 13,
+            "weight": 9
+          },
+          {
+            "reps": 10,
+            "weight": 25
+          },
+          {
+            "reps": 9,
+            "weight": 25
+          },
+          {
+            "reps": 10,
+            "weight": 25
+          }
+        ]
+      },
+      {
+        "id": "ksr19cv",
+        "name": "Tríceps máquina (pushdown)",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 43
+          },
+          {
+            "reps": 5,
+            "weight": 57
+          },
+          {
+            "reps": 6,
+            "weight": 55
+          },
+          {
+            "reps": 5,
+            "weight": 57
+          },
+          {
+            "reps": 7,
+            "weight": 55
+          }
+        ]
+      },
+      {
+        "id": "qk84i0h",
+        "name": "Tríceps francês no cross com corda",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 9
+          },
+          {
+            "reps": 10,
+            "weight": 9
+          },
+          {
+            "reps": 10,
+            "weight": 9
+          }
+        ]
+      },
+      {
+        "id": "63j7e4j",
+        "name": "Tríceps testa com barra",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 14
+          },
+          {
+            "reps": 11,
+            "weight": 14
+          },
+          {
+            "reps": 12,
+            "weight": 14
+          }
+        ]
+      },
+      {
+        "id": "5g3qetk",
+        "name": "Supino inclinado com halteres",
+        "category": "Peito",
+        "notes": "máquina ",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 10,
+            "weight": 20
+          },
+          {
+            "reps": 12,
+            "weight": 18
+          }
+        ]
+      },
+      {
+        "id": "f62191n",
+        "name": "Desenvolvimento no aparelho",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 9
+          },
+          {
+            "reps": 10,
+            "weight": 9
+          },
+          {
+            "reps": 10,
+            "weight": 9
+          },
+          {
+            "reps": 9,
+            "weight": 9
+          },
+          {
+            "reps": 10,
+            "weight": 6
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "ygnqzz4",
     "date": "2026-09-09",
     "name": "Treino 4 - SUPERIORES GERAL",
