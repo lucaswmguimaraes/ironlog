@@ -84,24 +84,16 @@
         "notes": "",
         "sets": [
           {
-            "reps": 12,
-            "weight": 43
-          },
-          {
-            "reps": 5,
-            "weight": 57
+            "reps": 7,
+            "weight": 50
           },
           {
             "reps": 6,
-            "weight": 55
+            "weight": 50
           },
           {
             "reps": 5,
-            "weight": 57
-          },
-          {
-            "reps": 7,
-            "weight": 55
+            "weight": 50
           }
         ]
       },
