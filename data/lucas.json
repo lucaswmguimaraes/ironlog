@@ -1,5 +1,145 @@
 [
   {
+    "id": "31kiijx",
+    "date": "2026-09-17",
+    "name": "Treino B - Push",
+    "trainType": "B",
+    "exercises": [
+      {
+        "id": "07o3bk8",
+        "name": "Chest Press máquina",
+        "category": "Peito",
+        "notes": "Na máquina articulada",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 30
+          },
+          {
+            "reps": 10,
+            "weight": 57
+          },
+          {
+            "reps": 10,
+            "weight": 50
+          },
+          {
+            "reps": 10,
+            "weight": 43
+          }
+        ]
+      },
+      {
+        "id": "0nv383l",
+        "name": "Supino inclinado com barra",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 50
+          },
+          {
+            "reps": 10,
+            "weight": 55
+          },
+          {
+            "reps": 8,
+            "weight": 55
+          }
+        ]
+      },
+      {
+        "id": "bqahbpq",
+        "name": "Desenvolvimento máquina",
+        "category": "Ombros",
+        "notes": "Drop na última série",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 14
+          },
+          {
+            "reps": 10,
+            "weight": 23
+          },
+          {
+            "reps": 9,
+            "weight": 23
+          },
+          {
+            "reps": 12,
+            "weight": 18
+          },
+          {
+            "reps": 8,
+            "weight": 14
+          }
+        ]
+      },
+      {
+        "id": "x3d1z5y",
+        "name": "Tríceps máquina (pushdown)",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 77
+          },
+          {
+            "reps": 12,
+            "weight": 70
+          },
+          {
+            "reps": 12,
+            "weight": 63
+          }
+        ]
+      },
+      {
+        "id": "c64z7l2",
+        "name": "Tríceps francês no cross com corda",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 9,
+            "weight": 32
+          },
+          {
+            "reps": 10,
+            "weight": 27
+          },
+          {
+            "reps": 10,
+            "weight": 23
+          }
+        ]
+      },
+      {
+        "id": "ixq0j4m",
+        "name": "Tríceps testa com barra",
+        "category": "Tríceps",
+        "notes": "No cross",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 36
+          },
+          {
+            "reps": 12,
+            "weight": 32
+          },
+          {
+            "reps": 10,
+            "weight": 32
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "x5cgw40",
     "date": "2026-09-09",
     "name": "Treino D - Superiores",
