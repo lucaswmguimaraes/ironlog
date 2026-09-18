@@ -50,6 +50,34 @@
         ]
       },
       {
+        "id": "f62191n",
+        "name": "Desenvolvimento no aparelho",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 20,
+            "weight": 4.5
+          },
+          {
+            "reps": 10,
+            "weight": 9
+          },
+          {
+            "reps": 10,
+            "weight": 9
+          },
+          {
+            "reps": 9,
+            "weight": 9
+          },
+          {
+            "reps": 10,
+            "weight": 6
+          }
+        ]
+      },
+      {
         "id": "ksr19cv",
         "name": "Tríceps máquina (pushdown)",
         "category": "Tríceps",
@@ -114,34 +142,6 @@
           {
             "reps": 12,
             "weight": 14
-          }
-        ]
-      },
-      {
-        "id": "f62191n",
-        "name": "Desenvolvimento no aparelho",
-        "category": "Ombros",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 9
-          },
-          {
-            "reps": 10,
-            "weight": 9
-          },
-          {
-            "reps": 10,
-            "weight": 9
-          },
-          {
-            "reps": 9,
-            "weight": 9
-          },
-          {
-            "reps": 10,
-            "weight": 6
           }
         ]
       }
