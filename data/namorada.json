@@ -30,6 +30,26 @@
         ]
       },
       {
+        "id": "xs0hhak",
+        "name": "Rosca Scott com barra W",
+        "category": "Bíceps",
+        "notes": "máquina ",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 23
+          },
+          {
+            "reps": 9,
+            "weight": 23
+          },
+          {
+            "reps": 12,
+            "weight": 18
+          }
+        ]
+      },
+      {
         "id": "tubs78e",
         "name": "Puxada alta com barra triângulo",
         "category": "Costas",
@@ -86,26 +106,6 @@
           {
             "reps": 12,
             "weight": 34.3
-          }
-        ]
-      },
-      {
-        "id": "xs0hhak",
-        "name": "Rosca Scott com barra W",
-        "category": "Bíceps",
-        "notes": "máquina ",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 23
-          },
-          {
-            "reps": 9,
-            "weight": 23
-          },
-          {
-            "reps": 12,
-            "weight": 18
           }
         ]
       },
