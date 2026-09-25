@@ -96,44 +96,8 @@
             "weight": 27.3
           },
           {
-            "reps": "",
-            "weight": 27.3
-          }
-        ]
-      },
-      {
-        "id": "uhgdfg3",
-        "name": "Remada iso-lateral",
-        "category": "Costas",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 11,
-            "weight": 23
-          },
-          {
-            "reps": 10,
-            "weight": 23
-          },
-          {
-            "reps": 10,
-            "weight": 23
-          }
-        ]
-      },
-      {
-        "id": "6d310xs",
-        "name": "Puxada alta com barra reta",
-        "category": "Costas",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 11,
-            "weight": 32
-          },
-          {
             "reps": 12,
-            "weight": 34.3
+            "weight": 27.3
           }
         ]
       },
