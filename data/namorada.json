@@ -1,5 +1,137 @@
 [
   {
+    "id": "pda229w",
+    "date": "2026-09-25",
+    "name": "Treino 5 - GLÚTEO/ POSTERIOR",
+    "trainType": "E",
+    "exercises": [
+      {
+        "id": "dk1qqlm",
+        "name": "Mesa flexora",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 13,
+            "weight": 9
+          },
+          {
+            "reps": 10,
+            "weight": 27
+          },
+          {
+            "reps": 10,
+            "weight": 27
+          },
+          {
+            "reps": 13,
+            "weight": 23
+          }
+        ]
+      },
+      {
+        "id": "6ta6rkt",
+        "name": "Stiff com barra",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 35
+          },
+          {
+            "reps": 10,
+            "weight": 35
+          },
+          {
+            "reps": 12,
+            "weight": 30
+          }
+        ]
+      },
+      {
+        "id": "yu6pfa5",
+        "name": "Nordic curl",
+        "category": "Posterior de Coxa",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 29
+          },
+          {
+            "reps": 9,
+            "weight": 36
+          },
+          {
+            "reps": 12,
+            "weight": 36
+          }
+        ]
+      },
+      {
+        "id": "msi25i6",
+        "name": "Abdutora na máquina",
+        "category": "Glúteos",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 27
+          },
+          {
+            "reps": 10,
+            "weight": 23
+          },
+          {
+            "reps": 13,
+            "weight": 23
+          }
+        ]
+      },
+      {
+        "id": "dsie11h",
+        "name": "Panturrilha em pé (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 40
+          },
+          {
+            "reps": 10,
+            "weight": 60
+          },
+          {
+            "reps": 10,
+            "weight": 60
+          }
+        ]
+      },
+      {
+        "id": "iicf56c",
+        "name": "Crunch máquina",
+        "category": "Core / Abdômen",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 14
+          },
+          {
+            "reps": 12,
+            "weight": 18
+          },
+          {
+            "reps": 10,
+            "weight": 18
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "axiza1q",
     "date": "2026-09-24",
     "name": "Treino 2 - COSTAS + BÍCEPS",
