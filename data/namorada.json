@@ -41,7 +41,7 @@
         "sets": [
           {
             "reps": 10,
-            "weight": 35
+            "weight": 30
           },
           {
             "reps": 10,
@@ -60,16 +60,16 @@
         "notes": "",
         "sets": [
           {
-            "reps": 10,
-            "weight": 29
-          },
-          {
-            "reps": 9,
-            "weight": 36
+            "reps": 12,
+            "weight": 30
           },
           {
             "reps": 12,
-            "weight": 36
+            "weight": 30
+          },
+          {
+            "reps": "",
+            "weight": ""
           }
         ]
       },
