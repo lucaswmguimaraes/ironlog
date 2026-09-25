@@ -112,26 +112,6 @@
             "weight": 60
           }
         ]
-      },
-      {
-        "id": "iicf56c",
-        "name": "Crunch máquina",
-        "category": "Core / Abdômen",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 14
-          },
-          {
-            "reps": 12,
-            "weight": 18
-          },
-          {
-            "reps": 10,
-            "weight": 18
-          }
-        ]
       }
     ]
   },
