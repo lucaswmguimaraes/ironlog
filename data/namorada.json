@@ -72,8 +72,32 @@
             "weight": 32
           },
           {
-            "reps": 10,
+            "reps": 11,
             "weight": 32
+          }
+        ]
+      },
+      {
+        "id": "yrj5wjk",
+        "name": "Remada baixa com triângulo",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 5,
+            "weight": 32
+          },
+          {
+            "reps": 11,
+            "weight": 25
+          },
+          {
+            "reps": "",
+            "weight": ""
+          },
+          {
+            "reps": "",
+            "weight": ""
           }
         ]
       },
