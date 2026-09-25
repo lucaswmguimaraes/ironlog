@@ -44,8 +44,12 @@
             "weight": 18
           },
           {
-            "reps": 12,
+            "reps": 10,
             "weight": 18
+          },
+          {
+            "reps": 10,
+            "weight": 14
           }
         ]
       },
