@@ -76,36 +76,16 @@
         "notes": "",
         "sets": [
           {
-            "reps": 10,
+            "reps": 7,
             "weight": 2.5
-          },
-          {
-            "reps": 10,
-            "weight": 2.5
-          },
-          {
-            "reps": 10,
-            "weight": 2.5
-          }
-        ]
-      },
-      {
-        "id": "wefvjyi",
-        "name": "Remada máquina articulada",
-        "category": "Costas",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 30
           },
           {
             "reps": 12,
-            "weight": 30
+            "weight": 0
           },
           {
-            "reps": 10,
-            "weight": 30
+            "reps": 12,
+            "weight": 0
           }
         ]
       },
@@ -126,6 +106,26 @@
           {
             "reps": 10,
             "weight": 11.3
+          }
+        ]
+      },
+      {
+        "id": "wefvjyi",
+        "name": "Remada máquina articulada",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 30
+          },
+          {
+            "reps": 12,
+            "weight": 30
+          },
+          {
+            "reps": 10,
+            "weight": 30
           }
         ]
       },
