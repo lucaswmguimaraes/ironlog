@@ -1,5 +1,161 @@
 [
   {
+    "id": "d697429",
+    "date": "2026-09-28",
+    "name": "Treino 4 - SUPERIORES GERAL",
+    "trainType": "D",
+    "exercises": [
+      {
+        "id": "oe5eszo",
+        "name": "Crucifixo no cross (cabo alto)",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 2.3
+          },
+          {
+            "reps": 10,
+            "weight": 6.8
+          },
+          {
+            "reps": 10,
+            "weight": 6.8
+          },
+          {
+            "reps": 13,
+            "weight": 4.5
+          }
+        ]
+      },
+      {
+        "id": "5938ten",
+        "name": "Fly na máquina",
+        "category": "Peito",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 25
+          },
+          {
+            "reps": 10,
+            "weight": 32
+          },
+          {
+            "reps": 10,
+            "weight": 32
+          }
+        ]
+      },
+      {
+        "id": "wefvjyi",
+        "name": "Remada máquina articulada",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 30
+          },
+          {
+            "reps": 12,
+            "weight": 30
+          },
+          {
+            "reps": 10,
+            "weight": 30
+          }
+        ]
+      },
+      {
+        "id": "uf4z65k",
+        "name": "Elevação lateral máquina",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 2.5
+          },
+          {
+            "reps": 10,
+            "weight": 2.5
+          },
+          {
+            "reps": 10,
+            "weight": 2.5
+          }
+        ]
+      },
+      {
+        "id": "rmw4shx",
+        "name": "Rosca na corda",
+        "category": "Bíceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 11.3
+          },
+          {
+            "reps": 10,
+            "weight": 11.3
+          },
+          {
+            "reps": 10,
+            "weight": 11.3
+          }
+        ]
+      },
+      {
+        "id": "1d9eybt",
+        "name": "Elevação frontal na polia",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 4.5
+          },
+          {
+            "reps": 8,
+            "weight": 4.5
+          },
+          {
+            "reps": 10,
+            "weight": 4.5
+          }
+        ]
+      },
+      {
+        "id": "o0epi99",
+        "name": "Crunch máquina",
+        "category": "Core / Abdômen",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 18
+          },
+          {
+            "reps": 10,
+            "weight": 18
+          },
+          {
+            "reps": 12,
+            "weight": 18
+          },
+          {
+            "reps": 10,
+            "weight": 18
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "pda229w",
     "date": "2026-09-25",
     "name": "Treino 5 - GLÚTEO/ POSTERIOR",
