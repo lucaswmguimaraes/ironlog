@@ -96,36 +96,28 @@
         "notes": "",
         "sets": [
           {
+            "reps": 10,
+            "weight": 11.3
+          },
+          {
             "reps": 12,
-            "weight": 11.3
+            "weight": 9.1
           },
           {
-            "reps": 10,
-            "weight": 11.3
-          },
-          {
-            "reps": 10,
-            "weight": 11.3
+            "reps": 12,
+            "weight": 9.1
           }
         ]
       },
       {
-        "id": "wefvjyi",
-        "name": "Remada máquina articulada",
+        "id": "z9gpq8a",
+        "name": "Pulldown máquina",
         "category": "Costas",
         "notes": "",
         "sets": [
           {
-            "reps": 12,
-            "weight": 30
-          },
-          {
-            "reps": 12,
-            "weight": 30
-          },
-          {
-            "reps": 10,
-            "weight": 30
+            "reps": "",
+            "weight": ""
           }
         ]
       },
