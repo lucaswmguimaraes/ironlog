@@ -36,16 +36,36 @@
         "notes": "",
         "sets": [
           {
-            "reps": 12,
-            "weight": 25
-          },
-          {
             "reps": 10,
             "weight": 32
           },
           {
             "reps": 10,
             "weight": 32
+          },
+          {
+            "reps": 10,
+            "weight": 32
+          }
+        ]
+      },
+      {
+        "id": "1d9eybt",
+        "name": "Elevação frontal na polia",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 11,
+            "weight": 4.5
+          },
+          {
+            "reps": 11,
+            "weight": 4.5
+          },
+          {
+            "reps": 10,
+            "weight": 4.5
           }
         ]
       },
@@ -106,26 +126,6 @@
           {
             "reps": 10,
             "weight": 11.3
-          }
-        ]
-      },
-      {
-        "id": "1d9eybt",
-        "name": "Elevação frontal na polia",
-        "category": "Ombros",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 10,
-            "weight": 4.5
-          },
-          {
-            "reps": 8,
-            "weight": 4.5
-          },
-          {
-            "reps": 10,
-            "weight": 4.5
           }
         ]
       },
