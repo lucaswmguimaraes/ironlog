@@ -1,5 +1,117 @@
 [
   {
+    "id": "5erg6su",
+    "date": "2026-10-01",
+    "name": "Treino 3 - QUADRÍCEPS",
+    "trainType": "C",
+    "exercises": [
+      {
+        "id": "7ooe0z6",
+        "name": "Agachamento no smith",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 0
+          },
+          {
+            "reps": 11,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          },
+          {
+            "reps": 10,
+            "weight": 10
+          }
+        ]
+      },
+      {
+        "id": "k7rlu4g",
+        "name": "Leg press 45°",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 160
+          },
+          {
+            "reps": 11,
+            "weight": 120
+          },
+          {
+            "reps": 11,
+            "weight": 140
+          }
+        ]
+      },
+      {
+        "id": "cfa78ye",
+        "name": "Extensora",
+        "category": "Quadríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 29
+          },
+          {
+            "reps": 12,
+            "weight": 29
+          },
+          {
+            "reps": 12,
+            "weight": 29
+          }
+        ]
+      },
+      {
+        "id": "0laid2x",
+        "name": "Abdutora na máquina",
+        "category": "Adutores / Abdutores",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 29
+          },
+          {
+            "reps": 13,
+            "weight": 29
+          },
+          {
+            "reps": 13,
+            "weight": 29
+          }
+        ]
+      },
+      {
+        "id": "g13f7h9",
+        "name": "Panturrilha em pé (máquina)",
+        "category": "Panturrilha",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 70
+          },
+          {
+            "reps": 12,
+            "weight": 70
+          },
+          {
+            "reps": 10,
+            "weight": 75
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "d697429",
     "date": "2026-09-28",
     "name": "Treino 4 - SUPERIORES GERAL",
