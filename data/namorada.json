@@ -70,21 +70,21 @@
         ]
       },
       {
-        "id": "0laid2x",
-        "name": "Abdutora na máquina",
+        "id": "4jvwtpd",
+        "name": "Adutora na máquina",
         "category": "Adutores / Abdutores",
         "notes": "",
         "sets": [
           {
-            "reps": 12,
-            "weight": 29
-          },
-          {
             "reps": 13,
             "weight": 29
           },
           {
-            "reps": 13,
+            "reps": "",
+            "weight": 29
+          },
+          {
+            "reps": "",
             "weight": 29
           }
         ]
