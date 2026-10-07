@@ -74,26 +74,6 @@
         ]
       },
       {
-        "id": "ozss4sw",
-        "name": "Tríceps máquina (pushdown)",
-        "category": "Tríceps",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 7,
-            "weight": 50
-          },
-          {
-            "reps": 9,
-            "weight": 50
-          },
-          {
-            "reps": 9,
-            "weight": 50
-          }
-        ]
-      },
-      {
         "id": "jkic6tw",
         "name": "Tríceps francês no cross com corda",
         "category": "Tríceps",
@@ -110,6 +90,26 @@
           {
             "reps": 10,
             "weight": 9
+          }
+        ]
+      },
+      {
+        "id": "ozss4sw",
+        "name": "Tríceps máquina (pushdown)",
+        "category": "Tríceps",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 7,
+            "weight": 50
+          },
+          {
+            "reps": 9,
+            "weight": 50
+          },
+          {
+            "reps": 9,
+            "weight": 50
           }
         ]
       },
