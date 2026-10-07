@@ -36,16 +36,44 @@
         "notes": "máquina ",
         "sets": [
           {
-            "reps": 10,
-            "weight": 20
-          },
-          {
-            "reps": 10,
-            "weight": 20
-          },
-          {
             "reps": 12,
-            "weight": 18
+            "weight": 20
+          },
+          {
+            "reps": 11,
+            "weight": 20
+          },
+          {
+            "reps": 11,
+            "weight": 20
+          }
+        ]
+      },
+      {
+        "id": "2zue82r",
+        "name": "Desenvolvimento no aparelho",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 20,
+            "weight": 4.5
+          },
+          {
+            "reps": 10,
+            "weight": 9
+          },
+          {
+            "reps": 10,
+            "weight": 9
+          },
+          {
+            "reps": 10,
+            "weight": 9
+          },
+          {
+            "reps": 9,
+            "weight": 6
           }
         ]
       },
@@ -106,34 +134,6 @@
           {
             "reps": 12,
             "weight": 14
-          }
-        ]
-      },
-      {
-        "id": "2zue82r",
-        "name": "Desenvolvimento no aparelho",
-        "category": "Ombros",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 20,
-            "weight": 4.5
-          },
-          {
-            "reps": 10,
-            "weight": 9
-          },
-          {
-            "reps": 10,
-            "weight": 9
-          },
-          {
-            "reps": 10,
-            "weight": 9
-          },
-          {
-            "reps": 9,
-            "weight": 6
           }
         ]
       }
