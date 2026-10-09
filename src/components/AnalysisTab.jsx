@@ -46,7 +46,7 @@ const CONCEPTS = {
 
 // ── Peças visuais ──────────────────────────────────────────────────────────────
 const card = { background: `linear-gradient(180deg, ${C.surface}, #111217)`, border: `1px solid ${C.border}`, borderRadius: 16, padding: 14, marginBottom: 12 };
-const tooltipStyle = { contentStyle: { background: "#1c1d24", border: `1px solid ${C.border}`, borderRadius: 10, fontSize: 12, color: C.text }, labelStyle: { color: C.sub }, cursor: { fill: "rgba(255,255,255,.04)" } };
+const tooltipStyle = { contentStyle: { background: "#1c1d24", border: `1px solid ${C.border}`, borderRadius: 10, fontSize: 12, color: C.text }, labelStyle: { color: C.sub }, itemStyle: { color: C.text }, cursor: { fill: "rgba(255,255,255,.04)" } };
 const pctTxt = (v) => (v === null || !isFinite(v) ? "—" : `${v >= 0 ? "+" : ""}${v.toFixed(0)}%`);
 const pct = (a, b) => (b ? ((a - b) / b) * 100 : null);
 
