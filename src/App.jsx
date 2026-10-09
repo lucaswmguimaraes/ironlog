@@ -7,67 +7,22 @@ import {
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 
-import { EXERCISE_DB, ALL_EXERCISES, findExercise } from "./data/exercises";
+import { EXERCISE_DB, ALL_EXERCISES, findExercise, matchesExercise } from "./data/exercises";
 import {
-  C, PROFILES, TRAIN_TYPES, MUSCLE_GROUPS, MONTHS_PT, PERIODIZATION_TIPS,
-  uid, fmtDate, dayName, calcVolume, detectTrainType,
+  C, PROFILES, TRAIN_TYPES, MONTHS_PT,
+  uid, fmtDate, dayName, calcVolume, detectTrainType, todayISO, UNKNOWN_GYM,
 } from "./data/constants";
+import { DEFAULT_ANALYSIS_PREFS, lastComparable, warmupFlags } from "./data/progression";
 import { useGitHubStorage } from "./hooks/useGitHubStorage";
+import { useSyncedData } from "./hooks/useSyncedData";
 import { useProfile } from "./hooks/useProfile";
 import { ProfileSetup } from "./components/ProfileSetup";
 import { GitHubSetup } from "./components/GitHubSetup";
 import { AnalysisTab } from "./components/AnalysisTab";
 import { ProfileSettings } from "./components/ProfileSettings";
-
-// ── INITIAL DATA ───────────────────────────────────────────────────────────────
-const INITIAL_SESSIONS_LUCAS = [
-  {id:"s1",date:"2025-04-04",name:"Treino C – Legs (Quadríceps + Panturrilha)",trainType:"C",exercises:[
-    {id:"e1",name:"Agachamento livre",category:"Quadríceps",notes:"Última série com isometria 10-15s",sets:[{reps:15,weight:15},{reps:10,weight:30},{reps:12,weight:27.5},{reps:10,weight:25}]},
-    {id:"e2",name:"Leg press 45°",category:"Quadríceps",notes:"",sets:[{reps:10,weight:110},{reps:10,weight:100},{reps:10,weight:90}]},
-    {id:"e3",name:"Extensora",category:"Quadríceps",notes:"Última série com rest-pause",sets:[{reps:12,weight:59},{reps:10,weight:52},{reps:10,weight:52},{reps:8,weight:52}]},
-    {id:"e4",name:"Agachamento búlgaro com halteres",category:"Quadríceps",notes:"Por perna",sets:[{reps:10,weight:17.5},{reps:8,weight:17.5},{reps:7,weight:16}]},
-    {id:"e5",name:"Adutora na máquina",category:"Adutores / Abdutores",notes:"",sets:[{reps:15,weight:102},{reps:10,weight:111},{reps:10,weight:102}]},
-    {id:"e6",name:"Panturrilha sentado (máquina)",category:"Panturrilha",notes:"",sets:[{reps:12,weight:100},{reps:15,weight:115},{reps:15,weight:130}]},
-  ]},
-  {id:"s2",date:"2025-04-03",name:"Treino D – Upper (Bíceps, Ombros, Peito, Costas)",trainType:"D",exercises:[
-    {id:"e7",name:"Remada cavalinho",category:"Costas",notes:"Pegada aberta",sets:[{reps:12,weight:15},{reps:10,weight:35},{reps:10,weight:30},{reps:10,weight:25}]},
-    {id:"e8",name:"Supino reto com halteres",category:"Peito",notes:"",sets:[{reps:12,weight:14},{reps:10,weight:26},{reps:9,weight:24},{reps:10,weight:20}]},
-    {id:"e9",name:"Remada serrote unilateral",category:"Costas",notes:"",sets:[{reps:10,weight:22},{reps:8,weight:22},{reps:10,weight:20}]},
-    {id:"e10",name:"Elevação lateral + frontal alternadas",category:"Ombros",notes:"10 cada",sets:[{reps:10,weight:9},{reps:9,weight:9},{reps:10,weight:8}]},
-    {id:"e11",name:"Rosca direta na corda com drops",category:"Bíceps",notes:"2 drops na última série",sets:[{reps:10,weight:31.5},{reps:10,weight:31.5},{reps:10,weight:27}]},
-    {id:"e12",name:"Peck deck",category:"Peito",notes:"+ parciais no final",sets:[{reps:12,weight:38.5},{reps:10,weight:38.5},{reps:10,weight:38.5}]},
-    {id:"e13",name:"Encolhimento com barra (trapézio)",category:"Ombros",notes:"",sets:[{reps:12,weight:60},{reps:10,weight:60},{reps:8,weight:60}]},
-  ]},
-  {id:"s3",date:"2025-04-02",name:"Treino E – Lower (Posterior + Panturrilha + Core)",trainType:"E",exercises:[
-    {id:"e14",name:"Mesa flexora",category:"Posterior de Coxa",notes:"Última série: isometria + parciais",sets:[{reps:15,weight:18},{reps:10,weight:38.5},{reps:8,weight:38.5},{reps:8,weight:31.5}]},
-    {id:"e15",name:"Stiff com barra",category:"Posterior de Coxa",notes:"Cada lado",sets:[{reps:12,weight:20},{reps:10,weight:20},{reps:8,weight:20}]},
-    {id:"e16",name:"Leg press 45°",category:"Quadríceps",notes:"Foco glúteo/posterior",sets:[{reps:12,weight:80},{reps:8,weight:80},{reps:10,weight:72.5}]},
-    {id:"e17",name:"Glute bridge",category:"Glúteos",notes:"",sets:[{reps:12,weight:0},{reps:12,weight:0},{reps:12,weight:0}]},
-    {id:"e18",name:"Abdutora na máquina",category:"Adutores / Abdutores",notes:"",sets:[{reps:10,weight:120},{reps:10,weight:111},{reps:10,weight:111}]},
-    {id:"e19",name:"Panturrilha em pé (máquina)",category:"Panturrilha",notes:"",sets:[{reps:12,weight:60},{reps:12,weight:60},{reps:10,weight:60}]},
-  ]},
-  {id:"s4",date:"2025-03-30",name:"Treino A – Pull (Costas, Bíceps, Antebraço)",trainType:"A",exercises:[
-    {id:"e20",name:"Rosca 45° com halteres",category:"Bíceps",notes:"Última série com drop set",sets:[{reps:15,weight:7},{reps:10,weight:12.5},{reps:8,weight:12.5},{reps:9,weight:10}]},
-    {id:"e21",name:"Rosca Scott com barra W",category:"Bíceps",notes:"",sets:[{reps:8,weight:28},{reps:10,weight:23},{reps:8,weight:23}]},
-    {id:"e22",name:"Puxada alta com barra reta",category:"Costas",notes:"Rest-pause na última série",sets:[{reps:9,weight:60},{reps:8,weight:60},{reps:9,weight:50}]},
-    {id:"e23",name:"Remada curvada com barra",category:"Costas",notes:"",sets:[{reps:12,weight:30},{reps:8,weight:30},{reps:10,weight:25}]},
-    {id:"e24",name:"Remada baixa com triângulo",category:"Costas",notes:"",sets:[{reps:10,weight:60},{reps:7,weight:60},{reps:10,weight:50}]},
-    {id:"e25",name:"Pullover com corda na polia",category:"Costas",notes:"",sets:[{reps:10,weight:50},{reps:8,weight:50},{reps:9,weight:40}]},
-    {id:"e26",name:"Rosca inversa (barra)",category:"Antebraço",notes:"",sets:[{reps:8,weight:40},{reps:10,weight:30},{reps:9,weight:25}]},
-    {id:"e27",name:"Flexão de punho (polia alta)",category:"Antebraço",notes:"",sets:[{reps:10,weight:30},{reps:10,weight:25},{reps:10,weight:25}]},
-    {id:"e28",name:"Exercício escapular",category:"Escapular / Mobilidade",notes:"",sets:[{reps:12,weight:25},{reps:12,weight:25},{reps:10,weight:25}]},
-  ]},
-  {id:"s5",date:"2025-03-29",name:"Treino B – Push (Peito, Ombro, Tríceps)",trainType:"B",exercises:[
-    {id:"e29",name:"Supino inclinado com halteres",category:"Peito",notes:"Última série rest-pause",sets:[{reps:15,weight:10},{reps:10,weight:22.5},{reps:8,weight:20},{reps:10,weight:17.5}]},
-    {id:"e30",name:"Crucifixo no cross (cabo alto)",category:"Peito",notes:"+ 6 parciais por série",sets:[{reps:12,weight:27},{reps:10,weight:27},{reps:10,weight:22.5}]},
-    {id:"e31",name:"Desenvolvimento no aparelho",category:"Ombros",notes:"",sets:[{reps:15,weight:9},{reps:10,weight:31.5},{reps:10,weight:27},{reps:10,weight:22.5}]},
-    {id:"e32",name:"Elevação lateral com drops",category:"Ombros",notes:"Parciais + completas",sets:[{reps:12,weight:16},{reps:12,weight:14},{reps:12,weight:14}]},
-    {id:"e33",name:"Posterior de ombro no cross",category:"Ombros",notes:"Unilateral",sets:[{reps:10,weight:10},{reps:10,weight:10},{reps:8,weight:10}]},
-    {id:"e34",name:"Tríceps testa na polia unilateral",category:"Tríceps",notes:"",sets:[{reps:8,weight:22.5},{reps:10,weight:18},{reps:9,weight:18}]},
-    {id:"e35",name:"Tríceps na polia com corda",category:"Tríceps",notes:"",sets:[{reps:12,weight:30},{reps:10,weight:40},{reps:8,weight:40}]},
-    {id:"e36",name:"Tríceps francês no cross com corda",category:"Tríceps",notes:"",sets:[{reps:10,weight:30},{reps:8,weight:30}]},
-  ]},
-];
+import { GymBodySettings } from "./components/GymBodySettings";
+import { CardioTab } from "./components/CardioTab";
+import { ExerciseDetail } from "./components/ExerciseDetail";
 
 // ── SORTABLE EXERCISE ITEM (drag & drop) ───────────────────────────────────────
 function SortableExerciseItem({ id, children }) {
@@ -165,125 +120,87 @@ function ProfileScreen({ onSelect }) {
   );
 }
 
-// ── APP LOG ────────────────────────────────────────────────────────────────────
-function appLog(msg) {
-  try {
-    const logs = JSON.parse(localStorage.getItem("ironlog_sync_log") || "[]");
-    const now = new Date();
-    const ts = `${String(now.getHours()).padStart(2,"0")}:${String(now.getMinutes()).padStart(2,"0")}:${String(now.getSeconds()).padStart(2,"0")}`;
-    logs.unshift(`${ts} ${msg}`);
-    localStorage.setItem("ironlog_sync_log", JSON.stringify(logs.slice(0, 50)));
-  } catch {}
-}
-
 // ── MAIN APP ───────────────────────────────────────────────────────────────────
+const gymName = (gyms, id) => (id ? (gyms.find((g) => g.id === id)?.name || UNKNOWN_GYM) : UNKNOWN_GYM);
+const hasFilledSets = (s) => (s?.exercises || []).some((e) => e.sets.some((x) => x.reps !== "" || x.weight !== ""));
+
 export default function App(){
   const { profile, selectProfile, getPAT, setPAT, getConfig, saveConfig } = useProfile();
-  const { loadFromGitHub, saveToGitHub } = useGitHubStorage();
-  const syncTimer = useRef(null);
-  // userChangedRef: só fica true após ação do usuário (add/edit/delete)
-  // fica false durante load do GitHub para impedir save reativo ao load
-  const userChangedRef = useRef(false);
+  const { loadFile, saveFile } = useGitHubStorage();
+  const pid = profile?.id || null;
+  const [patTick, setPatTick] = useState(0);
+  const pat = pid ? getPAT(pid) : null;
+  const sync = { profileId: pid, pat, loadFile, saveFile };
+  const sessSync = useSyncedData({ ...sync, file: `${pid}.json`, lsKey: `wkv3_${pid}` });
+  const cardioSync = useSyncedData({ ...sync, file: `${pid}-cardio.json`, lsKey: `ironlog_cardio_${pid}` });
+  const metaSync = useSyncedData({ ...sync, file: `${pid}-meta.json`, lsKey: `ironlog_meta_${pid}`, kind: "object" });
 
-  const [sessions, setSessions] = useState(() => {
-    if (!profile) return [];
-    try {
-      const s = localStorage.getItem(`wkv3_${profile.id}`);
-      if (s) return JSON.parse(s);
-      return profile.id === "lucas" ? INITIAL_SESSIONS_LUCAS : [];
-    } catch {
-      return profile.id === "lucas" ? INITIAL_SESSIONS_LUCAS : [];
-    }
-  });
+  const sessions = Array.isArray(sessSync.data) ? sessSync.data : [];
+  const cardio = Array.isArray(cardioSync.data) ? cardioSync.data : [];
+  const meta = metaSync.data || {};
+  const gyms = meta.gyms || [];
+  const analysisPrefs = { ...DEFAULT_ANALYSIS_PREFS, ...(meta.analysis || {}) };
+  const updateMeta = (patch) => metaSync.update((prev) => ({ ...(prev || {}), ...(typeof patch === "function" ? patch(prev || {}) : patch), updatedAt: Date.now() }));
 
-  const [onboardingDone, setOnboardingDone] = useState(() => {
-    if (!profile) return true;
-    return getConfig(profile.id).completedOnboarding;
-  });
-
-  const [githubSetupDone, setGithubSetupDone] = useState(() => {
-    if (!profile) return true;
-    return !!getPAT(profile.id);
-  });
-
+  const [onboardingDone, setOnboardingDone] = useState(() => (profile ? getConfig(profile.id).completedOnboarding : true));
+  const [githubSetupDone, setGithubSetupDone] = useState(() => (profile ? !!getPAT(profile.id) : true));
   const [tab, setTab] = useState("home");
-  const [activeSession, setActiveSession] = useState(null);
   const [histEx, setHistEx] = useState(null);
   const [swapEx, setSwapEx] = useState(null);
   const [calYear, setCalYear] = useState(new Date().getFullYear());
   const [showSettings, setShowSettings] = useState(false);
   const prevTab = useRef("home");
 
-  // Persist to localStorage
+  // Rascunho do treino em edição — persistido a cada mudança (sobrevive a fechar o app)
+  const draftKey = `ironlog_draft_${pid}`;
+  const [draft, setDraftState] = useState(null);
   useEffect(() => {
-    if (!profile) return;
-    try {
-      localStorage.setItem(`wkv3_${profile.id}`, JSON.stringify(sessions));
-      appLog(`LS_WRITE ${profile.id}: ${sessions.length} treinos | userChanged=${userChangedRef.current}`);
-    } catch {}
-  }, [sessions, profile?.id]);
+    if (!pid) return;
+    try { setDraftState(JSON.parse(localStorage.getItem(`ironlog_draft_${pid}`) || "null")); } catch { setDraftState(null); }
+  }, [pid]);
+  const setDraft = (d) => {
+    setDraftState(d);
+    try { d ? localStorage.setItem(draftKey, JSON.stringify(d)) : localStorage.removeItem(draftKey); } catch {}
+  };
 
-  // Load from GitHub on profile select — bloqueia save durante load
-  useEffect(() => {
-    if (!profile) return;
-    const pat = getPAT(profile.id);
-    if (!pat) { appLog(`LOAD_INIT ${profile.id}: sem PAT, pulando`); return; }
-    appLog(`LOAD_INIT ${profile.id}: iniciando load do GitHub`);
-    userChangedRef.current = false;
-    loadFromGitHub(profile.id, pat).then((data) => {
-      appLog(`LOAD_INIT ${profile.id}: resultado=${data === null ? "null" : data.length + " treinos"}`);
-      if (data !== null) {
-        setSessions(data);
-      }
-      setTimeout(() => { userChangedRef.current = false; }, 0);
+  const saveSession = (s) => {
+    const clean = { ...s, updatedAt: Date.now() };
+    sessSync.update((prev) => {
+      const i = prev.findIndex((x) => x.id === clean.id);
+      if (i >= 0) { const n = [...prev]; n[i] = clean; return n; }
+      return [clean, ...prev];
     });
-  }, [profile?.id]);
+  };
+  const deleteSession = (id) => {
+    sessSync.update((p) => p.filter((s) => s.id !== id), { deletedIds: [id] });
+    setDraft(null);
+    setTab("home");
+  };
 
-
-  // Sync to GitHub — só salva se foi o usuário que mudou os dados
+  // App indo para segundo plano com treino aberto: grava o rascunho como treino
+  const draftRef = useRef(draft);
+  draftRef.current = draft;
   useEffect(() => {
-    if (!profile) return;
-    if (!userChangedRef.current) { appLog(`SYNC_SKIP ${profile.id}: ${sessions.length} treinos | userChanged=false, ignorado`); return; }
-    const pat = getPAT(profile.id);
-    if (!pat) return;
-    appLog(`SYNC_QUEUE ${profile.id}: ${sessions.length} treinos, aguardando 1500ms`);
-    clearTimeout(syncTimer.current);
-    syncTimer.current = setTimeout(() => {
-      appLog(`SYNC_FIRE ${profile.id}: disparando save para GitHub`);
-      saveToGitHub(profile.id, sessions, pat);
-    }, 1500);
-    return () => clearTimeout(syncTimer.current);
-  }, [sessions, profile?.id]);
-
-  // Save immediately when app goes to background (prevents data loss on fast close)
-  useEffect(() => {
-    const flush = () => {
-      if (userChangedRef.current && profile) {
-        const pat = getPAT(profile.id);
-        if (!pat) return;
-        appLog(`FLUSH ${profile.id}: app indo para background, salvando imediatamente ${sessions.length} treinos`);
-        clearTimeout(syncTimer.current);
-        saveToGitHub(profile.id, sessions, pat);
-        userChangedRef.current = false;
-      } else if (profile) {
-        appLog(`FLUSH ${profile.id}: app indo para background, sem mudanças pendentes`);
-      }
+    const onHide = () => {
+      const d = draftRef.current;
+      if (document.visibilityState === "hidden" && d && hasFilledSets(d.session)) saveSession(d.session);
     };
-    const onVisChange = () => { if (document.visibilityState === "hidden") flush(); };
-    document.addEventListener("visibilitychange", onVisChange);
-    window.addEventListener("pagehide", flush);
-    return () => {
-      document.removeEventListener("visibilitychange", onVisChange);
-      window.removeEventListener("pagehide", flush);
-    };
-  }, [sessions, profile?.id]);
+    document.addEventListener("visibilitychange", onHide);
+    return () => document.removeEventListener("visibilitychange", onHide);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pid]);
 
   // Export/import for ProfileSettings
   window.__ironlog_export = () => sessions;
-  window.__ironlog_import = (data) => { userChangedRef.current = true; setSessions(data); };
+  window.__ironlog_import = (data) => {
+    sessSync.update((prev) => {
+      const byId = new Map(prev.map((s) => [s.id, s]));
+      data.forEach((s) => byId.set(s.id, { ...s, updatedAt: Date.now() }));
+      return [...byId.values()];
+    });
+  };
 
   const handleSelectProfile = (p) => {
-    userChangedRef.current = false;
     sessionStorage.setItem("ironlog_profile", JSON.stringify(p));
     setTab("home");
     selectProfile(p);
@@ -293,7 +210,6 @@ export default function App(){
   };
 
   const handleSwitchProfile = () => {
-    userChangedRef.current = false;
     sessionStorage.removeItem("ironlog_profile");
     selectProfile(null);
     setTab("home");
@@ -323,35 +239,15 @@ export default function App(){
         <GitHubSetup
           profileId={profile.id}
           profileName={profile.name}
-          onSave={(pat) => { setPAT(profile.id, pat); setGithubSetupDone(true); }}
+          onSave={(p) => { setPAT(profile.id, p); setPatTick((t) => t + 1); setGithubSetupDone(true); }}
           onSkip={() => setGithubSetupDone(true)}
         />
       </div>
     );
   }
 
-  const saveSession = s => {
-    userChangedRef.current = true;
-    setSessions(prev => {
-      const i = prev.findIndex(x => x.id === s.id);
-      if (i >= 0) { const n = [...prev]; n[i] = s; return n; }
-      return [s, ...prev];
-    });
-  };
-  const deleteSession = id => {
-    userChangedRef.current = true;
-    setSessions(p => p.filter(s => s.id !== id));
-    setTab("home");
-  };
-  const getExHist = name => sessions
-    .filter(s => s.exercises.some(e => e.name === name))
-    .map(s => { const ex = s.exercises.find(e => e.name === name); return { date: s.date, sessionName: s.name, sets: ex.sets, notes: ex.notes }; })
-    .sort((a, b) => b.date.localeCompare(a.date));
-  const getLastSess = name => getExHist(name)[0] || null;
-
   const goTo = (t, extra = {}) => {
     prevTab.current = tab;
-    if (extra.session !== undefined) setActiveSession(extra.session);
     if (extra.ex !== undefined) setHistEx(extra.ex);
     if (extra.swap !== undefined) setSwapEx(extra.swap);
     setTab(t);
@@ -359,14 +255,43 @@ export default function App(){
 
   const sorted = [...sessions].sort((a, b) => b.date.localeCompare(a.date));
   const lastSession = sorted[0] || null;
+  const defaultGymId = meta.defaultGymId && gyms.some((g) => g.id === meta.defaultGymId) ? meta.defaultGymId : null;
 
+  // Monta exercícios a partir de um treino-modelo: mesma ordem, séries e reps;
+  // cargas SÓ do histórico da mesma academia + equipamento (senão ficam em branco).
+  const buildExercises = (tplExercises, gymId, excludeId) => tplExercises.map((ex) => {
+    const { exact } = lastComparable(sessions, ex.name, gymId, ex.equipment, excludeId);
+    const ref = exact ? exact.sets : null;
+    return {
+      id: uid(), name: ex.name, category: ex.category, notes: ex.notes || "",
+      ...(ex.equipment ? { equipment: ex.equipment } : {}),
+      sets: ex.sets.map((s, i) => ({
+        reps: s.reps,
+        weight: ref ? (ref[i] || ref[ref.length - 1]).weight : "",
+        ...(s.warmup !== undefined ? { warmup: s.warmup } : {}),
+      })),
+    };
+  });
+
+  const openSession = (s) => { setDraft({ session: JSON.parse(JSON.stringify(s)), isNew: false }); setTab("session"); };
+  const startNew = () => {
+    setDraft({ session: { id: uid(), date: todayISO(), name: "", trainType: null, gymId: defaultGymId, exercises: [] }, isNew: true });
+    setTab("session");
+  };
   const handleRepeatLast = () => {
     if (!lastSession) return;
-    const newSess = { ...JSON.parse(JSON.stringify(lastSession)), id: uid(), date: new Date().toISOString().slice(0, 10) };
-    goTo("session", { session: newSess });
+    setDraft({
+      session: {
+        id: uid(), date: todayISO(), name: lastSession.name, trainType: lastSession.trainType || null,
+        gymId: defaultGymId, exercises: buildExercises(lastSession.exercises, defaultGymId, null),
+      },
+      isNew: true, fromTemplate: true,
+    });
+    setTab("session");
   };
 
   const profileConfig = getConfig(profile.id);
+  const body = { ...(meta.body || {}), sex: (meta.body && meta.body.sex) || profileConfig.sex };
 
   if (showSettings) return (
     <div style={{ background: C.bg, minHeight: "100vh" }}>
@@ -375,38 +300,45 @@ export default function App(){
         profileId={profile.id}
         profileName={profile.name}
         currentConfig={profileConfig}
-        currentPAT={getPAT(profile.id)}
+        currentPAT={pat}
         onSave={(config) => { saveConfig(profile.id, { ...config, completedOnboarding: true }); setShowSettings(false); }}
-        onSavePAT={(pat) => setPAT(profile.id, pat)}
+        onSavePAT={(p) => { setPAT(profile.id, p); setPatTick((t) => t + 1); }}
         onBack={() => setShowSettings(false)}
-      />
+      >
+        <GymBodySettings meta={meta} updateMeta={updateMeta} sessions={sessions}
+          onAssignGym={(gymId, ids) => sessSync.update((prev) => prev.map((s) => (ids.includes(s.id) ? { ...s, gymId, updatedAt: Date.now() } : s)))}
+          profileConfig={profileConfig} />
+      </ProfileSettings>
     </div>
   );
 
-  if (tab === "session" && activeSession) return (
-    <SessionView session={activeSession} isNew={false}
-      onSave={s => { saveSession(s); setTab("home"); }}
-      onDelete={() => deleteSession(activeSession.id)}
-      onBack={() => setTab("home")}
-      onHistClick={n => goTo("ex-hist", { ex: n })}
-      onSwap={ex => goTo("swap", { swap: ex })}
-      getLastSess={getLastSess}
-      profileConfig={profileConfig}
-    />
-  );
-  if (tab === "new-session") return (
+  if (tab === "session" && draft) return (
     <SessionView
-      session={{ id: uid(), date: new Date().toISOString().slice(0, 10), name: "", trainType: null, exercises: [] }}
-      isNew onSave={s => { saveSession(s); setTab("home"); }}
-      onDelete={null} onBack={() => setTab("home")}
-      onHistClick={n => goTo("ex-hist", { ex: n })}
-      onSwap={ex => goTo("swap", { swap: ex })}
-      getLastSess={getLastSess} allSessions={sorted}
-      profileConfig={profileConfig}
+      key={draft.session.id}
+      draft={draft}
+      sessions={sorted}
+      gyms={gyms}
+      onChange={(s) => setDraft({ ...draft, session: s })}
+      onSave={(s) => { saveSession(s); setDraft(null); setTab("home"); }}
+      onBack={(s) => {
+        if (!draft.isNew || hasFilledSets(s) || s.exercises.length > 0) saveSession(s);
+        setDraft(null); setTab("home");
+      }}
+      onDelete={draft.isNew ? null : () => deleteSession(draft.session.id)}
+      onHistClick={(n) => goTo("ex-hist", { ex: n })}
+      onSwap={(ex) => goTo("swap", { swap: ex })}
+      buildExercises={buildExercises}
     />
   );
-  if (tab === "ex-hist") return <HistView exName={histEx} history={getExHist(histEx)} onBack={() => setTab(prevTab.current)} />;
-  if (tab === "swap") return <SwapView exercise={swapEx} onBack={() => setTab(prevTab.current)} />;
+  if (tab === "ex-hist") return (
+    <ExerciseDetail exName={histEx} sessions={sessions} gyms={gyms} prefs={analysisPrefs}
+      onBack={() => setTab(prevTab.current === "session" && draft ? "session" : prevTab.current)} />
+  );
+  if (tab === "swap") return <SwapView exercise={swapEx} onBack={() => setTab(prevTab.current === "session" && draft ? "session" : prevTab.current)} />;
+
+  const st = [sessSync.status, cardioSync.status, metaSync.status];
+  const syncState = st.includes("error") ? "error" : st.some((x) => x === "saving" || x === "pending") ? "saving" : st.includes("offline") ? "offline" : "ok";
+  const retryAll = () => { sessSync.retry(); cardioSync.retry(); metaSync.retry(); };
 
   return (
     <div style={S.app}>
@@ -414,43 +346,68 @@ export default function App(){
       <header style={S.header}>
         <div style={S.headerInner}>
           <div><div style={S.logo}>⚡ IRON LOG</div><div style={S.logoSub}>Diário de Hipertrofia</div></div>
-          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+            <button onClick={retryAll} title="Sincronização" style={{ background: "none", border: "none", cursor: "pointer", fontSize: 11, padding: "4px 2px",
+              color: syncState === "error" ? C.danger : syncState === "saving" ? C.warn : C.sub }}>
+              {syncState === "error" ? "⚠️ não salvo" : syncState === "saving" ? "⟳" : syncState === "offline" ? "📴" : "☁️✓"}
+            </button>
             <button style={{ ...S.profileChip, borderColor: `${profile.color}66`, color: profile.color }} onClick={handleSwitchProfile}>
               {profile.emoji} {profile.name} ↩
             </button>
             <button style={{ background: "none", border: "none", color: C.sub, fontSize: 18, cursor: "pointer", padding: "4px 6px" }} onClick={() => setShowSettings(true)}>⚙️</button>
-            <button style={S.newBtn} onClick={() => goTo("new-session")}>+ Treino</button>
+            <button style={S.newBtn} onClick={startNew}>+ Treino</button>
           </div>
         </div>
       </header>
       <div style={S.tabBar}>
-        {[["home", "🏠", "Início"], ["calendar", "📅", "Calendário"], ["analysis", "📊", "Análise"]].map(([t, icon, label]) => (
+        {[["home", "🏠", "Início"], ["calendar", "📅", "Calendário"], ["cardio", "🏃", "Cardio"], ["analysis", "📊", "Análise"]].map(([t, icon, label]) => (
           <button key={t} style={{ ...S.tab, ...(tab === t ? S.tabActive : {}) }} onClick={() => setTab(t)}>
             <span style={{ fontSize: 18 }}>{icon}</span><span style={{ fontSize: 10 }}>{label}</span>
           </button>
         ))}
       </div>
-      {tab === "home" && <HomeTab sessions={sorted} onOpen={s => goTo("session", { session: s })} onHistClick={n => goTo("ex-hist", { ex: n })} getLastSess={getLastSess} onRepeatLast={handleRepeatLast} lastSession={lastSession} profileConfig={profileConfig} />}
-      {tab === "calendar" && <CalTab sessions={sessions} year={calYear} setYear={setCalYear} onOpen={s => goTo("session", { session: s })} />}
-      {tab === "analysis" && <AnalysisTab sessions={sessions} profileConfig={profileConfig} />}
+      {syncState === "error" && (
+        <div style={{ margin: "10px 16px 0", padding: "8px 12px", borderRadius: 10, fontSize: 12, background: "rgba(255,68,85,.08)", border: "1px solid rgba(255,68,85,.3)", color: "#ff6677" }}>
+          Há alterações guardadas neste aparelho que ainda não subiram para o GitHub. Elas não serão perdidas — tentaremos de novo automaticamente.
+          <button onClick={retryAll} style={{ marginLeft: 8, background: "none", border: "1px solid #ff667766", borderRadius: 6, color: "#ff6677", fontSize: 11, padding: "2px 8px", cursor: "pointer" }}>Tentar agora</button>
+        </div>
+      )}
+      {tab === "home" && <HomeTab sessions={sorted} onOpen={openSession} onHistClick={(n) => goTo("ex-hist", { ex: n })} onRepeatLast={handleRepeatLast} lastSession={lastSession} profileConfig={profileConfig}
+        gyms={gyms} defaultGymId={defaultGymId} onSetDefaultGym={(id) => updateMeta({ defaultGymId: id })}
+        draft={draft} onResumeDraft={() => setTab("session")} onDiscardDraft={() => setDraft(null)} />}
+      {tab === "calendar" && <CalTab sessions={sessions} cardio={cardio} year={calYear} setYear={setCalYear} onOpen={openSession} />}
+      {tab === "cardio" && <CardioTab cardio={cardio} update={cardioSync.update} body={body} onOpenSettings={() => setShowSettings(true)} />}
+      {tab === "analysis" && <AnalysisTab sessions={sessions} profileConfig={profileConfig} prefs={analysisPrefs} landmarkOverrides={meta.landmarks || {}} gyms={gyms}
+        onOpenExercise={(n) => goTo("ex-hist", { ex: n })} />}
     </div>
   );
 }
 
 // ── HOME ───────────────────────────────────────────────────────────────────────
-function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, lastSession, profileConfig }) {
+function HomeTab({ sessions, onOpen, onHistClick, onRepeatLast, lastSession, profileConfig, gyms, defaultGymId, onSetDefaultGym, draft, onResumeDraft, onDiscardDraft }) {
   const [q, setQ] = useState("");
   const [cat, setCat] = useState("Todos");
+  const [view, setView] = useState(() => { try { return localStorage.getItem("ironlog_home_view") || "group"; } catch { return "group"; } });
+  const [openGroup, setOpenGroup] = useState(null);
+  const setViewP = (v) => { setView(v); try { localStorage.setItem("ironlog_home_view", v); } catch {} };
   const cats = ["Todos", ...Object.keys(EXERCISE_DB)];
-  const hits = q.length > 1 ? ALL_EXERCISES.filter(e => (cat === "Todos" || e.category === cat) && e.name.toLowerCase().includes(q.toLowerCase())).slice(0, 12) : [];
+  const hits = q.length > 1 ? ALL_EXERCISES.filter(e => (cat === "Todos" || e.category === cat) && matchesExercise(e, q)).slice(0, 12) : [];
+  const lastOf = (name) => {
+    for (const s of sessions) { const e = s.exercises.find(x => x.name === name); if (e) return { date: s.date, sets: e.sets }; }
+    return null;
+  };
 
-  // New KPIs
   const now = new Date();
   const thisMonthPrefix = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}`;
   const lastMonthDate = new Date(now.getFullYear(), now.getMonth() - 1, 1);
   const lastMonthPrefix = `${lastMonthDate.getFullYear()}-${String(lastMonthDate.getMonth() + 1).padStart(2, "0")}`;
+  const dayOfMonth = now.getDate();
+  const daysInMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
+  const monthInProgress = dayOfMonth < daysInMonth;
   const thisMonthSessions = sessions.filter(s => s.date.startsWith(thisMonthPrefix));
   const lastMonthSessions = sessions.filter(s => s.date.startsWith(lastMonthPrefix));
+  // Mês anterior até o MESMO dia → comparação equivalente
+  const lastMonthEquiv = lastMonthSessions.filter(s => +s.date.slice(8, 10) <= dayOfMonth);
   const sessionsThisMonth = thisMonthSessions.length;
   const avgEx = thisMonthSessions.length > 0
     ? Math.round((thisMonthSessions.reduce((a, s) => a + s.exercises.length, 0) / thisMonthSessions.length) * 10) / 10
@@ -464,10 +421,51 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
   };
   const thisVol = volByMuscle(thisMonthSessions);
   const lastVol = volByMuscle(lastMonthSessions);
+  const lastVolEq = volByMuscle(lastMonthEquiv);
+
+  // Agrupamento por treino (tipo A–E; sem tipo → pelo nome)
+  const groups = [];
+  const gIdx = {};
+  sessions.forEach(s => {
+    const tt = s.trainType || detectTrainType(s.name);
+    const key = tt || `n:${(s.name || "Sem nome").trim().toLowerCase()}`;
+    if (!(key in gIdx)) { gIdx[key] = groups.length; groups.push({ key, tt, title: s.name || "Treino sem nome", list: [] }); }
+    groups[gIdx[key]].list.push(s);
+  });
+  groups.sort((a, b) => (a.tt && b.tt ? a.tt.localeCompare(b.tt) : a.tt ? -1 : b.tt ? 1 : 0));
+
+  const sessRow = (s) => {
+    const vol = s.exercises.reduce((a, e) => a + calcVolume(e.sets), 0);
+    const tt = s.trainType || detectTrainType(s.name);
+    const ti = tt ? TRAIN_TYPES[tt] : null;
+    return (
+      <button key={s.id} style={S.sessCard} onClick={() => onOpen(s)}>
+        <div style={{ ...S.sessDot, background: ti ? ti.color : "#555" }} />
+        <div style={{ flex: 1, minWidth: 0 }}>
+          <div style={S.sessTop}>
+            <span style={S.sessNm}>{s.name || "Treino sem nome"}</span>
+            {ti && <span style={{ ...S.ttBadge, background: `${ti.color}22`, color: ti.color }}>{ti.emoji} {tt}</span>}
+          </div>
+          <div style={S.sessMt}>{dayName(s.date)}, {fmtDate(s.date)} · {s.exercises.length} ex · {vol.toFixed(0)} kg{gyms.length > 0 ? ` · ${gymName(gyms, s.gymId)}` : ""}</div>
+        </div>
+        <span style={S.arrow}>›</span>
+      </button>
+    );
+  };
 
   return (
     <div style={S.body}>
-      {/* New KPI cards */}
+      {draft && (
+        <div style={{ background: C.accentD, border: `1px solid ${C.accent}66`, borderRadius: 12, padding: 12, marginBottom: 12, display: "flex", alignItems: "center", gap: 10 }}>
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <div style={{ fontSize: 12, fontWeight: 700, color: C.accent }}>⏳ Treino em andamento</div>
+            <div style={{ fontSize: 11, color: C.sub, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{draft.session.name || "Sem nome"} · {draft.session.exercises.length} ex · {fmtDate(draft.session.date)}</div>
+          </div>
+          <button onClick={onResumeDraft} style={{ ...S.newBtn, padding: "6px 12px", fontSize: 12 }}>Continuar</button>
+          <button onClick={onDiscardDraft} style={{ ...S.ghostB, padding: "6px 10px", fontSize: 11 }}>Fechar</button>
+        </div>
+      )}
+
       <div style={{ display: "flex", gap: 10, marginBottom: 12 }}>
         <div style={{ flex: 1, background: C.surface, border: `1px solid ${C.border}`, borderRadius: 12, padding: 14 }}>
           <div style={{ fontSize: 10, color: C.sub, marginBottom: 4 }}>🗓 Sessões este mês</div>
@@ -481,17 +479,20 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 
       {focalGroups.length > 0 && (
         <div style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: 12, padding: 14, marginBottom: 12 }}>
-          <div style={{ fontSize: 11, color: C.sub, marginBottom: 10 }}>📊 Volume por grupo focal (mês atual vs. anterior)</div>
+          <div style={{ fontSize: 11, color: C.sub, marginBottom: 4 }}>📊 Volume (tonelagem) por grupo focal — mês atual vs. anterior</div>
+          {monthInProgress && <div style={{ fontSize: 10, color: C.warn, marginBottom: 10 }}>⏳ Mês em andamento (dia {dayOfMonth}/{daysInMonth}) — % comparada aos mesmos {dayOfMonth} dias do mês anterior</div>}
           {focalGroups.map(g => {
             const curr = thisVol[g] || 0;
             const prev = lastVol[g] || 0;
-            const delta = prev > 0 ? ((curr - prev) / prev * 100) : null;
+            const prevEq = lastVolEq[g] || 0;
+            const delta = prevEq > 0 ? ((curr - prevEq) / prevEq * 100) : null;
             const maxVal = Math.max(curr, prev, 1);
+            const col = delta === null ? C.sub : delta >= 0 ? C.success : monthInProgress ? C.sub : C.warn;
             return (
               <div key={g} style={{ marginBottom: 10 }}>
                 <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 4 }}>
                   <span style={{ fontSize: 12, color: C.text }}>{g}</span>
-                  <span style={{ fontSize: 11, color: delta === null ? C.sub : delta >= 0 ? C.success : C.danger }}>
+                  <span style={{ fontSize: 11, color: col }}>
                     {delta !== null ? `${delta >= 0 ? "+" : ""}${delta.toFixed(0)}%` : "—"}
                   </span>
                 </div>
@@ -500,7 +501,7 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
                   <div style={{ flex: curr / maxVal, background: C.accent, borderRadius: 3 }} />
                 </div>
                 <div style={{ display: "flex", justifyContent: "space-between", marginTop: 2 }}>
-                  <span style={{ fontSize: 9, color: C.sub }}>{(prev / 1000).toFixed(1)}t ant.</span>
+                  <span style={{ fontSize: 9, color: C.sub }}>{(prev / 1000).toFixed(1)}t mês ant.{monthInProgress ? ` (${(prevEq / 1000).toFixed(1)}t até dia ${dayOfMonth})` : ""}</span>
                   <span style={{ fontSize: 9, color: C.accent }}>{(curr / 1000).toFixed(1)}t atual</span>
                 </div>
               </div>
@@ -521,13 +522,23 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
           </button>
         </div>
       )}
+      {gyms.length > 0 && (
+        <div style={{ display: "flex", alignItems: "center", gap: 6, margin: "-10px 0 16px", fontSize: 11, color: C.sub }}>
+          <span>🏢 Academia padrão:</span>
+          <select value={defaultGymId || ""} onChange={(e) => onSetDefaultGym(e.target.value || null)}
+            style={{ background: "transparent", border: "none", color: C.accent, fontSize: 11, fontWeight: 600, outline: "none", cursor: "pointer" }}>
+            <option value="">{UNKNOWN_GYM}</option>
+            {gyms.map(g => <option key={g.id} value={g.id}>{g.name}</option>)}
+          </select>
+        </div>
+      )}
 
       <div style={S.section}>
         <div style={S.sT}>🔍 Buscar Exercício</div>
         <input style={S.si} placeholder="Nome do exercício..." value={q} onChange={e => setQ(e.target.value)} />
         {q.length > 1 && <div style={S.cScroll}>{cats.map(c => <button key={c} style={{ ...S.chip, ...(cat === c ? S.chipA : {}) }} onClick={() => setCat(c)}>{c}</button>)}</div>}
         {hits.length > 0 && <div style={S.exGrid}>{hits.map(ex => {
-          const l = getLastSess(ex.name);
+          const l = lastOf(ex.name);
           return (
             <button key={ex.name} style={S.exCard} onClick={() => onHistClick(ex.name)}>
               <div style={S.exCat}>{ex.category}</div>
@@ -540,23 +551,34 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
       </div>
 
       <div style={S.section}>
-        <div style={S.sT}>📋 Treinos Recentes</div>
-        {sessions.map(s => {
-          const vol = s.exercises.reduce((a, e) => a + calcVolume(e.sets), 0);
-          const tt = s.trainType || detectTrainType(s.name);
-          const ti = tt ? TRAIN_TYPES[tt] : null;
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 10 }}>
+          <div style={{ ...S.sT, marginBottom: 0 }}>📋 {view === "group" ? "Treinos por grupamento" : "Treinos Recentes"}</div>
+          <div style={{ display: "flex", gap: 4 }}>
+            {[["group", "Por treino"], ["recent", "Recentes"]].map(([v, l]) => (
+              <button key={v} onClick={() => setViewP(v)} style={{ ...S.chip, padding: "4px 10px", fontSize: 11, ...(view === v ? S.chipA : {}) }}>{l}</button>
+            ))}
+          </div>
+        </div>
+        {view === "recent" && sessions.map(sessRow)}
+        {view === "group" && groups.map(g => {
+          const ti = g.tt ? TRAIN_TYPES[g.tt] : null;
+          const isOpen = openGroup === g.key;
+          const last = g.list[0];
           return (
-            <button key={s.id} style={S.sessCard} onClick={() => onOpen(s)}>
-              <div style={{ ...S.sessDot, background: ti ? ti.color : "#555" }} />
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <div style={S.sessTop}>
-                  <span style={S.sessNm}>{s.name || "Treino sem nome"}</span>
-                  {ti && <span style={{ ...S.ttBadge, background: `${ti.color}22`, color: ti.color }}>{ti.emoji} {tt}</span>}
+            <div key={g.key} style={{ marginBottom: 8 }}>
+              <button onClick={() => setOpenGroup(isOpen ? null : g.key)} style={{ ...S.sessCard, marginBottom: isOpen ? 6 : 0, borderColor: ti ? `${ti.color}55` : C.border }}>
+                <div style={{ ...S.sessDot, background: ti ? ti.color : "#555" }} />
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <div style={S.sessTop}>
+                    <span style={S.sessNm}>{g.title}</span>
+                    {ti && <span style={{ ...S.ttBadge, background: `${ti.color}22`, color: ti.color }}>{ti.emoji} {g.tt}</span>}
+                  </div>
+                  <div style={S.sessMt}>{g.list.length} treinos · último {dayName(last.date)}, {fmtDate(last.date)}</div>
                 </div>
-                <div style={S.sessMt}>{dayName(s.date)}, {fmtDate(s.date)} · {s.exercises.length} ex · {vol.toFixed(0)} kg</div>
-              </div>
-              <span style={S.arrow}>›</span>
-            </button>
+                <span style={{ color: C.sub, fontSize: 12 }}>{isOpen ? "▲" : "▼"}</span>
+              </button>
+              {isOpen && <div style={{ paddingLeft: 12, borderLeft: `2px solid ${ti ? ti.color + "55" : C.border}`, marginLeft: 4 }}>{g.list.map(sessRow)}</div>}
+            </div>
           );
         })}
       </div>
@@ -565,13 +587,15 @@ function HomeTab({ sessions, onOpen, onHistClick, getLastSess, onRepeatLast, las
 }
 
 // ── CALENDAR ───────────────────────────────────────────────────────────────────
-function CalTab({ sessions, year, setYear, onOpen }) {
+function CalTab({ sessions, cardio = [], year, setYear, onOpen }) {
   const [selDay, setSelDay] = useState(null);
   const sMap = {};
   sessions.forEach(s => { if (!sMap[s.date]) sMap[s.date] = []; sMap[s.date].push(s); });
+  const cMap = {};
+  cardio.forEach(c => { if (!cMap[c.date]) cMap[c.date] = []; cMap[c.date].push(c); });
 
   const sorted = [...new Set(sessions.map(s => s.date))].sort();
-  let streak = 0, cur = new Date().toISOString().slice(0, 10);
+  let streak = 0, cur = todayISO();
   for (let i = sorted.length - 1; i >= 0; i--) {
     const d = sorted[i];
     const diff = Math.round((new Date(cur + "T12:00:00") - new Date(d + "T12:00:00")) / 864e5);
@@ -610,14 +634,17 @@ function CalTab({ sessions, year, setYear, onOpen }) {
                   const day = i + 1;
                   const ds = `${year}-${String(m + 1).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
                   const ds2 = sMap[ds] || [];
-                  const today = new Date().toISOString().slice(0, 10);
+                  const today = todayISO();
                   const tt = ds2[0] ? (ds2[0].trainType || detectTrainType(ds2[0].name)) : null;
                   const col = tt ? TRAIN_TYPES[tt]?.color : null;
                   const isSel = ds === selDay, isToday = ds === today;
                   return (
                     <button key={day} style={{ ...S.dCell, ...(isToday ? { border: `1px solid ${C.accent}66` } : {}), ...(isSel ? { border: `1px solid ${C.accent}` } : {}), ...(col ? { background: `${col}30`, border: `1px solid ${col}66` } : {}) }} onClick={() => setSelDay(isSel ? null : ds)}>
                       <span style={{ fontSize: 9, color: col || C.sub, lineHeight: 1 }}>{day}</span>
-                      {ds2.length > 0 && <div style={{ width: 3, height: 3, borderRadius: "50%", background: col || C.accent, marginTop: 1 }} />}
+                      <div style={{ display: "flex", gap: 1, marginTop: 1 }}>
+                        {ds2.length > 0 && <div style={{ width: 3, height: 3, borderRadius: "50%", background: col || C.accent }} />}
+                        {cMap[ds] && <div style={{ width: 3, height: 3, borderRadius: "50%", background: "#4fc3f7" }} />}
+                      </div>
                     </button>
                   );
                 })}
@@ -629,8 +656,14 @@ function CalTab({ sessions, year, setYear, onOpen }) {
       {selDay && (
         <div style={S.section}>
           <div style={S.sT}>{dayName(selDay)}, {fmtDate(selDay)}</div>
-          {selSessions.length === 0
+          {cMap[selDay] && cMap[selDay].map(c => (
+            <div key={c.id} style={{ fontSize: 12, color: "#4fc3f7", background: "rgba(79,195,247,.06)", border: "1px solid rgba(79,195,247,.25)", borderRadius: 10, padding: "8px 12px", marginBottom: 8 }}>
+              🏃 {c.label || c.activity} · {c.durationMin} min{c.kcal ? ` · ≈${c.kcal} kcal` : ""}
+            </div>
+          ))}
+          {selSessions.length === 0 && !cMap[selDay]
             ? <div style={{ color: C.sub, fontSize: 13, padding: "8px 0" }}>Dia de descanso 😴</div>
+            : selSessions.length === 0 ? null
             : selSessions.map(s => {
               const tt = s.trainType || detectTrainType(s.name);
               const ti = tt ? TRAIN_TYPES[tt] : null;
@@ -679,18 +712,23 @@ function CalTab({ sessions, year, setYear, onOpen }) {
 }
 
 // ── SESSION VIEW ───────────────────────────────────────────────────────────────
-function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, onSwap, getLastSess, allSessions, profileConfig }) {
-  const [data, setData] = useState(() => JSON.parse(JSON.stringify(session)));
+function SessionView({ draft, sessions, gyms, onChange, onSave, onBack, onDelete, onHistClick, onSwap, buildExercises }) {
+  const isNew = draft.isNew;
+  const [data, setData] = useState(() => JSON.parse(JSON.stringify(draft.session)));
   const [showPicker, setShowPicker] = useState(false);
   const [showTemplatePicker, setShowTemplatePicker] = useState(false);
   const [q, setQ] = useState(""); const [cat, setCat] = useState("Todos");
-  const [exp, setExp] = useState(isNew ? [] : session.exercises.map(e => e.id));
+  const [exp, setExp] = useState(isNew && !draft.fromTemplate ? [] : draft.session.exercises.map(e => e.id));
   const [confirmDel, setConfirmDel] = useState(false);
 
   const sensors = useSensors(
     useSensor(PointerSensor, { activationConstraint: { distance: 8 } }),
     useSensor(TouchSensor, { activationConstraint: { delay: 200, tolerance: 8 } })
   );
+
+  // Toda mudança vai para o rascunho persistido (não se perde se o app fechar)
+  const first = useRef(true);
+  useEffect(() => { if (first.current) { first.current = false; return; } onChange(data); }, [data]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const mut = fn => { setData(p => { const n = JSON.parse(JSON.stringify(p)); fn(n); return n; }); };
   const addEx = ex => { const id = uid(); mut(d => d.exercises.push({ id, name: ex.name, category: ex.category, notes: "", sets: [{ reps: "", weight: "" }] })); setExp(p => [...p, id]); setShowPicker(false); setQ(""); };
@@ -699,6 +737,8 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
   const rmSet = (eid, si) => mut(d => { d.exercises.find(e => e.id === eid).sets.splice(si, 1); });
   const updS = (eid, si, f, v) => mut(d => { d.exercises.find(e => e.id === eid).sets[si][f] = v === "" ? "" : (parseFloat(v) || 0); });
   const updN = (eid, v) => mut(d => { d.exercises.find(e => e.id === eid).notes = v; });
+  const updEq = (eid, v) => mut(d => { const ex = d.exercises.find(e => e.id === eid); if (v.trim()) ex.equipment = v; else delete ex.equipment; });
+  const togWarm = (eid, si, current) => mut(d => { d.exercises.find(e => e.id === eid).sets[si].warmup = !current; });
   const togEx = id => setExp(p => p.includes(id) ? p.filter(x => x !== id) : [...p, id]);
 
   const handleDragEnd = (event) => {
@@ -711,34 +751,37 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
     });
   };
 
-  // Load from template with focal groups prioritization
+  // Usar treino anterior como base: mantém EXATAMENTE a ordem do treino escolhido
   const loadFromTemplate = (templateSession) => {
-    const focalGroups = profileConfig?.focalGroups || [];
-    const rawExercises = templateSession.exercises.map(ex => ({
-      ...JSON.parse(JSON.stringify(ex)), id: uid(), notes: ex.notes || "",
-    }));
-    const focal = rawExercises.filter(e => focalGroups.includes(e.category));
-    const rest = rawExercises.filter(e => !focalGroups.includes(e.category));
-    const reordered = [...focal, ...rest];
-    mut(d => { d.name = templateSession.name; d.trainType = templateSession.trainType; d.exercises = reordered; });
-    setExp(reordered.map(e => e.id));
+    const exs = buildExercises(templateSession.exercises, data.gymId || null, data.id);
+    mut(d => { d.name = templateSession.name; d.trainType = templateSession.trainType; d.exercises = exs; });
+    setExp(exs.map(e => e.id));
     setShowTemplatePicker(false);
+  };
+  const refillFromGym = () => {
+    const exs = buildExercises(data.exercises, data.gymId || null, data.id);
+    mut(d => { d.exercises = d.exercises.map((e, i) => ({ ...e, sets: exs[i].sets })); });
+  };
+
+  // Equipamentos já usados neste exercício nesta academia (sugestões)
+  const equipOptions = (name) => {
+    const set = new Set();
+    sessions.forEach(s => { if ((s.gymId || null) !== (data.gymId || null)) return; s.exercises.forEach(e => { if (e.name === name && e.equipment) set.add(e.equipment); }); });
+    return [...set];
   };
 
   const cats = ["Todos", ...Object.keys(EXERCISE_DB)];
-  const filtEx = ALL_EXERCISES.filter(e => (cat === "Todos" || e.category === cat) && (q.length < 2 || e.name.toLowerCase().includes(q.toLowerCase())));
+  const filtEx = ALL_EXERCISES.filter(e => (cat === "Todos" || e.category === cat) && (q.length < 2 || matchesExercise(e, q)));
   const totalVol = data.exercises.reduce((a, e) => a + calcVolume(e.sets), 0);
   const tt = data.trainType || detectTrainType(data.name);
   const ti = tt ? TRAIN_TYPES[tt] : null;
-
-  // Autosave before navigation
-  const saveAndNavigate = (callback) => { onSave(data); callback(); };
+  const gName = gymName(gyms, data.gymId);
 
   return (
     <div style={S.app}>
       <div style={S.grain} />
       <header style={S.sessHdr}>
-        <button style={S.back} onClick={() => saveAndNavigate(onBack)}>← Voltar</button>
+        <button style={S.back} onClick={() => onBack(data)}>← Voltar</button>
         <div style={{ flex: 1, textAlign: "center", fontSize: 13, fontWeight: 700, color: C.text }}>{isNew ? "Novo Treino" : "Editar"}</div>
         <button style={S.saveB} onClick={() => onSave(data)}>✓ Salvar</button>
       </header>
@@ -746,12 +789,24 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
         <div style={S.metaCard}>
           <div style={S.mRow2}><label style={S.mLbl2}>Data</label><input type="date" style={S.mIn} value={data.date} onChange={e => mut(d => d.date = e.target.value)} /></div>
           <div style={S.mRow2}><label style={S.mLbl2}>Nome</label><input style={{ ...S.mIn, flex: 1 }} placeholder="Ex: Treino B – Push" value={data.name} onChange={e => { mut(d => { d.name = e.target.value; const tt = detectTrainType(e.target.value); if (tt) d.trainType = tt; }); }} /></div>
+          {gyms.length > 0 && (
+            <div style={S.mRow2}>
+              <label style={{ ...S.mLbl2, width: 36 }}>🏢</label>
+              <select value={data.gymId || ""} onChange={e => mut(d => { d.gymId = e.target.value || null; })} style={{ ...S.mIn, flex: 1 }}>
+                <option value="">{UNKNOWN_GYM}</option>
+                {gyms.map(g => <option key={g.id} value={g.id}>{g.name}</option>)}
+              </select>
+            </div>
+          )}
+          {gyms.length > 0 && isNew && data.exercises.length > 0 && (
+            <button onClick={refillFromGym} style={{ ...S.swapB, margin: "0 0 10px", fontSize: 11 }}>↻ Preencher cargas com o último registro em {gName}</button>
+          )}
           <div style={S.cRow}>{Object.entries(TRAIN_TYPES).map(([k, v]) => <button key={k} style={{ ...S.chip, fontSize: 11, ...(data.trainType === k ? { background: `${v.color}22`, borderColor: v.color, color: v.color } : {}) }} onClick={() => mut(d => d.trainType = k)}>{v.emoji} {k}</button>)}</div>
           {ti && <div style={{ fontSize: 11, color: ti.color, marginTop: 6 }}>{ti.label} · {ti.muscles.join(", ")}</div>}
           <div style={{ fontSize: 11, color: C.sub, marginTop: 8 }}>Volume total: <strong style={{ color: C.accent }}>{totalVol.toFixed(0)} kg</strong></div>
         </div>
 
-        {isNew && allSessions && allSessions.length > 0 && data.exercises.length === 0 && (
+        {isNew && sessions.length > 0 && data.exercises.length === 0 && (
           <button style={S.templateBtn} onClick={() => setShowTemplatePicker(true)}>
             📋 Usar treino anterior como base
           </button>
@@ -760,29 +815,47 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
         <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
           <SortableContext items={data.exercises.map(e => e.id)} strategy={verticalListSortingStrategy}>
             {data.exercises.map(ex => {
-              const last = getLastSess(ex.name);
+              const { exact, other } = lastComparable(sessions, ex.name, data.gymId || null, ex.equipment, data.id);
               const exVol = calcVolume(ex.sets);
               const isO = exp.includes(ex.id);
               const info = findExercise(ex.name);
+              const warm = warmupFlags(ex.sets);
+              const eqOpts = equipOptions(ex.name);
+              const placeholderW = (si) => exact ? String((exact.sets[si] || exact.sets[exact.sets.length - 1]).weight) : "0";
               return (
                 <SortableExerciseItem key={ex.id} id={ex.id}>
                   <div style={S.exBlk}>
                     <div style={S.exBlkH} onClick={() => togEx(ex.id)}>
-                      <div style={{ flex: 1, minWidth: 0 }}><div style={S.exCat}>{ex.category}</div><div style={S.exNm2}>{ex.name}</div></div>
+                      <div style={{ flex: 1, minWidth: 0 }}><div style={S.exCat}>{ex.category}{ex.equipment ? ` · ${ex.equipment}` : ""}</div><div style={S.exNm2}>{ex.name}</div></div>
                       <span style={S.vChip}>{exVol.toFixed(0)}kg</span>
                       <span style={{ color: C.sub, fontSize: 11 }}>{isO ? "▲" : "▼"}</span>
                     </div>
                     {isO && (<>
                       {info.desc && <div style={S.exDsB}>📖 {info.desc}</div>}
-                      {last && <button style={S.lastH} onClick={() => saveAndNavigate(() => onHistClick(ex.name))}>
-                        <span>⏱</span>
-                        <div>
-                          <div style={{ fontSize: 11, color: C.green, fontWeight: 600 }}>Último: {fmtDate(last.date)}</div>
-                          <div style={{ fontSize: 11, color: C.sub, marginTop: 1 }}>{last.sets.map(s => `${s.reps}×${s.weight}kg`).join(" · ")}</div>
-                        </div>
-                        <span style={{ marginLeft: "auto", color: C.sub }}>›</span>
-                      </button>}
+                      {exact ? (
+                        <button style={S.lastH} onClick={() => onHistClick(ex.name)}>
+                          <span>⏱</span>
+                          <div>
+                            <div style={{ fontSize: 11, color: C.green, fontWeight: 600 }}>Último{gyms.length > 0 ? ` em ${gName}` : ""}{ex.equipment ? ` · ${ex.equipment}` : ""}: {fmtDate(exact.date)}</div>
+                            <div style={{ fontSize: 11, color: C.sub, marginTop: 1 }}>{exact.sets.map(s => `${s.reps}×${s.weight}kg`).join(" · ")}</div>
+                          </div>
+                          <span style={{ marginLeft: "auto", color: C.sub }}>›</span>
+                        </button>
+                      ) : (
+                        <button style={{ ...S.lastH, background: C.surfaceHigh, border: `1px solid ${C.border}` }} onClick={() => onHistClick(ex.name)}>
+                          <span>ℹ️</span>
+                          <div>
+                            <div style={{ fontSize: 11, color: C.sub, fontWeight: 600 }}>Ainda não há registros {gyms.length > 0 ? `em ${gName}` : ""}{ex.equipment ? ` com ${ex.equipment}` : ""}</div>
+                            {other && <div style={{ fontSize: 10, color: C.sub, marginTop: 2, opacity: .8 }}>Em {gymName(gyms, other.gymId)}{other.equipment ? ` · ${other.equipment}` : ""} ({fmtDate(other.date)}): {other.sets.map(s => `${s.reps}×${s.weight}`).join(" · ")} — não comparável</div>}
+                          </div>
+                          <span style={{ marginLeft: "auto", color: C.sub }}>›</span>
+                        </button>
+                      )}
                       {info.alts && info.alts.length > 0 && <button style={S.swapB} onClick={() => onSwap(info)}>🔄 Ver similares ({info.alts.length})</button>}
+                      <div style={{ display: "flex", gap: 8, margin: "0 14px 10px" }}>
+                        <input list={`eq-${ex.id}`} style={{ ...S.noteIn, margin: 0, width: "auto", flex: 1 }} placeholder="Equipamento (opcional) ex: Máquina 02" value={ex.equipment || ""} onChange={e => updEq(ex.id, e.target.value)} />
+                        <datalist id={`eq-${ex.id}`}>{eqOpts.map(o => <option key={o} value={o} />)}</datalist>
+                      </div>
                       <input style={S.noteIn} placeholder="Observações..." value={ex.notes} onChange={e => updN(ex.id, e.target.value)} />
                       <div style={S.sHdr}>
                         <span style={{ width: 24, color: C.sub, fontSize: 11, textAlign: "center" }}>#</span>
@@ -793,13 +866,17 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
                       </div>
                       {ex.sets.map((s, si) => (
                         <div key={si} style={S.sRow}>
-                          <span style={S.sNum}>{si + 1}</span>
-                          <input style={S.sIn} type="number" placeholder="0" value={s.reps} onChange={e => updS(ex.id, si, "reps", e.target.value)} />
-                          <input style={S.sIn} type="number" placeholder="0" step="0.5" value={s.weight} onChange={e => updS(ex.id, si, "weight", e.target.value)} />
+                          <button title="Tocar para marcar/desmarcar aquecimento" onClick={() => togWarm(ex.id, si, warm[si])}
+                            style={{ ...S.sNum, background: "none", border: "none", cursor: "pointer", padding: 0, color: warm[si] ? C.warn : C.sub, fontWeight: warm[si] ? 700 : 400 }}>
+                            {warm[si] ? "A" : si + 1}
+                          </button>
+                          <input style={S.sIn} type="number" inputMode="numeric" placeholder="0" value={s.reps} onChange={e => updS(ex.id, si, "reps", e.target.value)} />
+                          <input style={S.sIn} type="number" inputMode="decimal" placeholder={placeholderW(si)} step="0.5" value={s.weight} onChange={e => updS(ex.id, si, "weight", e.target.value)} />
                           <span style={S.sVol}>{((+s.reps || 0) * (+s.weight || 0)).toFixed(0)}</span>
                           <button style={S.sDel} onClick={() => rmSet(ex.id, si)}>×</button>
                         </div>
                       ))}
+                      <div style={{ fontSize: 10, color: C.sub, padding: "4px 14px 0" }}>Toque no nº da série para marcar como aquecimento (A) — não conta nas séries de trabalho.</div>
                       <div style={S.sActs}>
                         <button style={S.addSB} onClick={() => addSet(ex.id)}>+ Série</button>
                         <button style={S.rmExB} onClick={() => rmEx(ex.id)}>Remover</button>
@@ -830,8 +907,8 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
             <div style={S.mHdr}><span style={{ fontWeight: 700 }}>Escolher Exercício</span><button style={S.mClose} onClick={() => setShowPicker(false)}>×</button></div>
             <input autoFocus style={S.mSearch} placeholder="Buscar..." value={q} onChange={e => setQ(e.target.value)} />
             <div style={{ ...S.cScroll, padding: "0 14px 8px" }}>{cats.map(c => <button key={c} style={{ ...S.chip, ...(cat === c ? S.chipA : {}) }} onClick={() => setCat(c)}>{c}</button>)}</div>
-            <div style={S.mList}>{filtEx.slice(0, 40).map(ex => (
-              <button key={ex.name} style={S.mExI} onClick={() => addEx(ex)}>
+            <div style={S.mList}>{filtEx.slice(0, 60).map(ex => (
+              <button key={ex.category + ex.name} style={S.mExI} onClick={() => addEx(ex)}>
                 <span style={S.exCat}>{ex.category}</span>
                 <span style={{ fontSize: 14, color: C.text }}>{ex.name}</span>
                 {ex.desc && <span style={{ fontSize: 11, color: C.sub, marginTop: 2 }}>{ex.desc.slice(0, 60)}…</span>}
@@ -847,9 +924,9 @@ function SessionView({ session, isNew, onSave, onDelete, onBack, onHistClick, on
         <div style={S.modal} onClick={() => setShowTemplatePicker(false)}>
           <div style={S.mBox} onClick={e => e.stopPropagation()}>
             <div style={S.mHdr}><span style={{ fontWeight: 700 }}>Usar como base</span><button style={S.mClose} onClick={() => setShowTemplatePicker(false)}>×</button></div>
-            <div style={{ padding: "0 14px 8px", fontSize: 12, color: C.sub }}>Selecione um treino anterior para copiar os exercícios e séries</div>
+            <div style={{ padding: "0 14px 8px", fontSize: 12, color: C.sub }}>Copia exercícios (na mesma ordem), séries e reps. Cargas vêm do último registro em {gName}; sem registro, ficam em branco.</div>
             <div style={S.mList}>
-              {(allSessions || []).map(s => {
+              {sessions.map(s => {
                 const tt = s.trainType || detectTrainType(s.name);
                 const ti = tt ? TRAIN_TYPES[tt] : null;
                 const vol = s.exercises.reduce((a, e) => a + calcVolume(e.sets), 0);
@@ -902,72 +979,6 @@ function SwapView({ exercise, onBack }) {
           </div>
         ))}
         <div style={S.pNote}>💡 Troque exercícios mantendo o padrão de movimento. Segundo Pacholok, variações devem ocorrer a cada bloco de 4 semanas. Priorize movimentos compostos para troca de estímulo.</div>
-      </div>
-    </div>
-  );
-}
-
-// ── HISTORY VIEW ───────────────────────────────────────────────────────────────
-function HistView({ exName, history, onBack }) {
-  const vols = history.map(h => ({ date: h.date, vol: calcVolume(h.sets) })).reverse();
-  const maxV = Math.max(...vols.map(v => v.vol), 1);
-  const info = findExercise(exName);
-  return (
-    <div style={S.app}>
-      <div style={S.grain} />
-      <header style={S.sessHdr}>
-        <button style={S.back} onClick={onBack}>← Voltar</button>
-        <div style={{ flex: 1, textAlign: "center", fontSize: 13, fontWeight: 700, color: C.text }}>Histórico</div>
-        <div style={{ width: 70 }} />
-      </header>
-      <div style={S.body}>
-        <div style={{ fontSize: 18, fontWeight: 800, color: C.text, marginBottom: 4 }}>{exName}</div>
-        {info.desc && <div style={{ fontSize: 12, color: C.sub, marginBottom: 14, lineHeight: 1.5 }}>{info.desc}</div>}
-        {history.length === 0 && <div style={{ color: C.sub, padding: "20px 0" }}>Sem histórico ainda.</div>}
-        {vols.length > 1 && (
-          <div style={S.chartBox}>
-            <div style={S.sT}>📈 Progressão de Volume</div>
-            <div style={{ display: "flex", alignItems: "flex-end", gap: 6, height: 110, overflowX: "auto", paddingBottom: 4 }}>
-              {vols.map((v, i) => (
-                <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center", flexShrink: 0, minWidth: 44 }}>
-                  <span style={{ fontSize: 9, color: C.accent, marginBottom: 2 }}>{v.vol.toFixed(0)}</span>
-                  <div style={{ width: 28, background: `linear-gradient(to top,${C.accent},${C.accent}55)`, borderRadius: "3px 3px 0 0", height: `${(v.vol / maxV) * 96}px`, minHeight: 4 }} />
-                  <span style={{ fontSize: 8, color: C.sub, marginTop: 3 }}>{fmtDate(v.date).slice(0, 5)}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-        {history.map((h, i) => {
-          const vol = calcVolume(h.sets); const best = h.sets.reduce((a, s) => Math.max(a, +s.weight || 0), 0);
-          return (
-            <div key={i} style={S.hCard}>
-              <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 8 }}>
-                <div><div style={{ fontSize: 13, fontWeight: 700, color: C.text }}>{dayName(h.date)}, {fmtDate(h.date)}</div><div style={{ fontSize: 11, color: C.sub, marginTop: 2 }}>{h.sessionName}</div></div>
-                <div style={{ textAlign: "right" }}><div style={{ fontSize: 17, fontWeight: 800, color: C.accent }}>{vol.toFixed(0)}</div><div style={{ fontSize: 9, color: C.sub }}>kg vol</div></div>
-              </div>
-              {h.notes && <div style={{ fontSize: 11, color: C.sub, marginBottom: 8, fontStyle: "italic" }}>📝 {h.notes}</div>}
-              <div style={S.sHdr}>
-                <span style={{ width: 24, color: C.sub, fontSize: 11, textAlign: "center" }}>#</span>
-                <span style={{ flex: 1, color: C.sub, fontSize: 11, textAlign: "center" }}>Reps</span>
-                <span style={{ flex: 1, color: C.sub, fontSize: 11, textAlign: "center" }}>Peso</span>
-                <span style={{ flex: 1, color: C.sub, fontSize: 11, textAlign: "center" }}>Vol</span>
-              </div>
-              {h.sets.map((s, si) => (
-                <div key={si} style={{ ...S.sRow, cursor: "default" }}>
-                  <span style={S.sNum}>{si + 1}</span>
-                  <span style={{ flex: 1, textAlign: "center", fontSize: 13, color: C.text }}>{s.reps}</span>
-                  <span style={{ flex: 1, textAlign: "center", fontSize: 13, color: C.text }}>{s.weight}kg</span>
-                  <span style={S.sVol}>{((+s.reps || 0) * (+s.weight || 0)).toFixed(0)}</span>
-                </div>
-              ))}
-              <div style={{ display: "flex", justifyContent: "space-between", marginTop: 8, paddingTop: 8, borderTop: `1px solid ${C.border}`, fontSize: 11, color: C.sub }}>
-                <span>💪 Carga máx: <strong style={{ color: C.accent }}>{best}kg</strong></span>
-                <span>📊 {h.sets.length} séries</span>
-              </div>
-            </div>
-          );
-        })}
       </div>
     </div>
   );

@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { C, MUSCLE_GROUPS } from "../data/constants";
 
-export function ProfileSettings({ profileId, profileName, currentConfig, currentPAT, onSave, onSavePAT, onBack }) {
+export function ProfileSettings({ profileId, profileName, currentConfig, currentPAT, onSave, onSavePAT, onBack, children }) {
   const [config, setConfig] = useState({ ...currentConfig });
   const [patValue, setPatValue] = useState("");
   const [patSection, setPatSection] = useState(false);
@@ -143,6 +143,8 @@ export function ProfileSettings({ profileId, profileName, currentConfig, current
       }}>
         Salvar configurações
       </button>
+
+      {children}
 
       {/* GitHub PAT */}
       <div style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: 12, padding: 16, marginBottom: 16 }}>

@@ -1,13 +1,27 @@
 name: Deploy to GitHub Pages
 
+# Só faz deploy quando o CÓDIGO muda. Os saves de treino gravam em data/*.json
+# (lidos pela API do GitHub, não pelo build) e não devem disparar deploy —
+# antes cada save gerava um deploy, deploys concorrentes falhavam e cada falha
+# mandava e-mail.
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - "data/**"
+      - "docs/**"
+      - "**.md"
+  workflow_dispatch:
 
 permissions:
   contents: read
   pages: write
   id-token: write
+
+# Um deploy por vez; um novo push cancela o que ainda está na fila
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 jobs:
   deploy:
@@ -20,7 +34,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm install
+      - run: npm ci
       - run: npm run build
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
