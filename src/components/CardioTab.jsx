@@ -4,7 +4,7 @@ import { C, uid, fmtDate, dayName, todayISO, addDays, weekStartISO } from "../da
 import { CARDIO_ACTIVITIES, INTENSITIES, findActivity, estimateCardioKcal, METHOD_LABEL } from "../data/cardio";
 
 const chip = (on) => ({ padding: "8px 12px", borderRadius: 20, fontSize: 13, cursor: "pointer", whiteSpace: "nowrap", border: `1px solid ${on ? C.accent : C.border}`, background: on ? C.accentD : C.surfaceHigh, color: on ? C.accent : C.sub });
-const inp = { background: C.surfaceHigh, border: `1px solid ${C.border}`, borderRadius: 8, padding: "9px 10px", color: C.text, fontSize: 16, outline: "none", width: "100%", boxSizing: "border-box" };
+const inp = { background: C.surfaceHigh, border: `1px solid ${C.border}`, borderRadius: 8, padding: "9px 10px", color: C.text, fontSize: 16, outline: "none", width: "100%", minWidth: 0, boxSizing: "border-box" };
 const WEEK = ["Seg", "Ter", "Qua", "Qui", "Sex", "Sáb", "Dom"];
 
 function CardioForm({ initial, body, onSave, onDelete, onClose }) {
@@ -14,7 +14,7 @@ function CardioForm({ initial, body, onSave, onDelete, onClose }) {
   const act = findActivity(e.activity);
   const canSave = +e.durationMin > 0;
   return (
-    <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,.8)", zIndex: 200, display: "flex", alignItems: "flex-end" }} onClick={onClose}>
+    <div style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,.8)", zIndex: 300, display: "flex", alignItems: "flex-end" }} onClick={onClose}>
       <div style={{ background: C.surface, borderRadius: "20px 20px 0 0", width: "100%", maxWidth: 680, margin: "0 auto", maxHeight: "88vh", overflowY: "auto", padding: "16px 16px 28px", boxSizing: "border-box" }} onClick={(ev) => ev.stopPropagation()}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
           <span style={{ fontWeight: 700, color: C.text }}>🏃 Cardio · {dayName(e.date)}, {fmtDate(e.date)}</span>
@@ -34,7 +34,7 @@ function CardioForm({ initial, body, onSave, onDelete, onClose }) {
           {[15, 20, 30, 45, 60, 90].map((m) => <button key={m} style={chip(+e.durationMin === m)} onClick={() => set("durationMin", m)}>{m}</button>)}
         </div>
         <input type="number" inputMode="numeric" placeholder="ou digite os minutos" style={{ ...inp, marginBottom: 12 }} value={e.durationMin} onChange={(ev) => set("durationMin", ev.target.value === "" ? "" : +ev.target.value)} />
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 8, marginBottom: 12 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: 8, marginBottom: 12 }}>
           <label style={{ fontSize: 10, color: C.sub }}>FC média (bpm)<input type="number" inputMode="numeric" style={inp} value={e.avgHr ?? ""} onChange={(ev) => set("avgHr", ev.target.value === "" ? null : +ev.target.value)} /></label>
           <label style={{ fontSize: 10, color: C.sub }}>kcal do relógio<input type="number" inputMode="numeric" style={inp} value={e.watchKcal ?? ""} onChange={(ev) => set("watchKcal", ev.target.value === "" ? null : +ev.target.value)} /></label>
           <label style={{ fontSize: 10, color: C.sub }}>Distância (km)<input type="number" inputMode="decimal" step="0.1" style={inp} value={e.distanceKm ?? ""} onChange={(ev) => set("distanceKm", ev.target.value === "" ? null : +ev.target.value)} /></label>
@@ -90,7 +90,7 @@ export function CardioTab({ cardio, update, body, onOpenSettings }) {
   const del = (id) => { update((prev) => prev.filter((x) => x.id !== id), { deletedIds: [id] }); setEditing(null); };
 
   return (
-    <div style={{ padding: "16px 16px 80px", position: "relative", zIndex: 1 }}>
+    <div style={{ padding: "16px 16px 110px", position: "relative" }}>
       {bodyMissing && (
         <button onClick={onOpenSettings} style={{ width: "100%", textAlign: "left", background: "rgba(255,183,77,.08)", border: "1px solid rgba(255,183,77,.3)", borderRadius: 10, padding: "10px 12px", color: C.warn, fontSize: 12, marginBottom: 12, cursor: "pointer" }}>
           ⚠️ Preencha peso, altura e ano de nascimento em ⚙️ para calorias individualizadas ›

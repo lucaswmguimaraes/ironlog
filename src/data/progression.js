@@ -218,3 +218,22 @@ export function performanceEvolution(sessions, prefs, topN = 8, today = todayISO
     return out;
   });
 }
+
+// Série semanal (seg–dom) das últimas N semanas: tonelagem, sessões e séries de trabalho
+export function weeklySeries(sessions, prefs, n = 12, today = todayISO()) {
+  const ws = weekStartISO(today);
+  return Array.from({ length: n }, (_, i) => {
+    const from = addDays(ws, -7 * (n - 1 - i)), to = addDays(from, 6);
+    const ss = sessions.filter((s) => s.date >= from && s.date <= to);
+    const sets = Object.values(setsByMuscle(ss, prefs)).reduce((a, m) => a + m.direct, 0);
+    return { from, label: `${from.slice(8)}/${from.slice(5, 7)}`, tonnage: Math.round(tonnage(ss) / 100) / 10, sessions: ss.length, sets, inProgress: i === n - 1 };
+  });
+}
+
+// Pontos para sparkline: registros comparáveis (mesma chave do último) recentes
+export function sparkPoints(sessions, name, prefs, max = 10) {
+  const recs = exerciseRecords(sessions, name, prefs);
+  if (!recs.length) return [];
+  const key = recs[recs.length - 1].key;
+  return recs.filter((r) => r.key === key).slice(-max).map((r) => ({ date: r.date, e1rm: r.e1rm ? Math.round(r.e1rm * 10) / 10 : null, top: r.topWeight }));
+}
