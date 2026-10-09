@@ -54,6 +54,30 @@
         ]
       },
       {
+        "id": "lns6z08",
+        "name": "Rosca na polia (cabo baixo)",
+        "category": "Bíceps",
+        "notes": "bilateral",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 5
+          },
+          {
+            "reps": 10,
+            "weight": 4.5
+          },
+          {
+            "reps": 10,
+            "weight": 4.5
+          },
+          {
+            "reps": 10,
+            "weight": 4.5
+          }
+        ]
+      },
+      {
         "id": "5a8s5ge",
         "name": "Remada baixa com triângulo",
         "category": "Costas",
@@ -74,30 +98,6 @@
           {
             "reps": 12,
             "weight": 27.3
-          }
-        ]
-      },
-      {
-        "id": "lns6z08",
-        "name": "Rosca na polia (cabo baixo)",
-        "category": "Bíceps",
-        "notes": "bilateral",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 2.3
-          },
-          {
-            "reps": 10,
-            "weight": 4.5
-          },
-          {
-            "reps": 10,
-            "weight": 4.5
-          },
-          {
-            "reps": 10,
-            "weight": 4.5
           }
         ]
       },
