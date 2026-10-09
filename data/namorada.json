@@ -36,20 +36,16 @@
         "notes": "",
         "sets": [
           {
-            "reps": 12,
-            "weight": 18
-          },
-          {
-            "reps": 12,
-            "weight": 32
+            "reps": 11,
+            "weight": 25
           },
           {
             "reps": 11,
-            "weight": 32
+            "weight": 25
           },
           {
             "reps": 11,
-            "weight": 32
+            "weight": 25
           }
         ]
       },
@@ -64,16 +60,16 @@
             "weight": 5
           },
           {
-            "reps": 10,
-            "weight": 4.5
+            "reps": 12,
+            "weight": 9
           },
           {
-            "reps": 10,
-            "weight": 4.5
+            "reps": 12,
+            "weight": 9
           },
           {
-            "reps": 10,
-            "weight": 4.5
+            "reps": 12,
+            "weight": 9
           }
         ]
       },
@@ -102,6 +98,26 @@
         ]
       },
       {
+        "id": "plkmzha",
+        "name": "Posterior de ombro no cross",
+        "category": "Ombros",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 2.3
+          },
+          {
+            "reps": 12,
+            "weight": 2.3
+          },
+          {
+            "reps": 12,
+            "weight": 2.3
+          }
+        ]
+      },
+      {
         "id": "y6s8zdo",
         "name": "Rosca Scott com barra W",
         "category": "Bíceps",
@@ -122,26 +138,6 @@
           {
             "reps": 10,
             "weight": 14
-          }
-        ]
-      },
-      {
-        "id": "plkmzha",
-        "name": "Posterior de ombro no cross",
-        "category": "Ombros",
-        "notes": "",
-        "sets": [
-          {
-            "reps": 12,
-            "weight": 2.3
-          },
-          {
-            "reps": 12,
-            "weight": 2.3
-          },
-          {
-            "reps": 12,
-            "weight": 2.3
           }
         ]
       },
