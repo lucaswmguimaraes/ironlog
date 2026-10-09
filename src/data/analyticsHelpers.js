@@ -1,10 +1,10 @@
 // src/data/analyticsHelpers.js
-import { calcVolume } from "./constants";
+import { calcVolume, toISO } from "./constants";
 
 export function daysAgo(n) {
   const d = new Date();
   d.setDate(d.getDate() - n);
-  return d.toISOString().slice(0, 10);
+  return toISO(d);
 }
 
 export function sessionsInRange(sessions, fromDate, toDate) {

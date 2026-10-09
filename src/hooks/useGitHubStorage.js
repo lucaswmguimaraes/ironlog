@@ -1,4 +1,7 @@
 // src/hooks/useGitHubStorage.js
+// Leitura/escrita de arquivos JSON em data/ via GitHub Contents API.
+// Cada save busca o conteúdo remoto atual e faz MERGE antes de gravar —
+// nunca sobrescreve às cegas o que está no GitHub.
 import { useCallback, useRef } from "react";
 
 const REPO_OWNER = "lucaswmguimaraes";
@@ -7,11 +10,11 @@ const BRANCH = "main";
 
 const logKey = "ironlog_sync_log";
 
-function addLog(msg) {
+export function addLog(msg) {
   try {
     const logs = JSON.parse(localStorage.getItem(logKey) || "[]");
     const now = new Date(); const h = String(now.getHours()).padStart(2,'0'); const m = String(now.getMinutes()).padStart(2,'0'); const s = String(now.getSeconds()).padStart(2,'0'); logs.unshift(`${h}:${m}:${s} ${msg}`);
-    localStorage.setItem(logKey, JSON.stringify(logs.slice(0, 50)));
+    localStorage.setItem(logKey, JSON.stringify(logs.slice(0, 80)));
   } catch {}
 }
 
@@ -30,11 +33,11 @@ function decodeContent(b64) {
   return JSON.parse(new TextDecoder().decode(bytes));
 }
 
+const fileUrl = (file) => `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/data/${file}`;
+
 export function useGitHubStorage() {
-  // savingRef: impede dois saves simultâneos. Se um save já está em andamento,
-  // o próximo aguarda ele terminar antes de começar.
-  const savingRef = useRef(false);
-  const pendingRef = useRef(null); // última sessão pendente enquanto save está em curso
+  // Uma fila por arquivo: saves do mesmo arquivo nunca rodam em paralelo.
+  const queues = useRef({});
 
   const getHeaders = (pat) => ({
     Authorization: `token ${pat}`,
@@ -42,92 +45,68 @@ export function useGitHubStorage() {
     Accept: "application/vnd.github.v3+json",
   });
 
-  const loadFromGitHub = useCallback(async (profileId, pat) => {
-    if (!pat) { addLog(`LOAD ${profileId}: sem PAT`); return null; }
+  // Retorna { data, sha } | { data: fallback, sha: null } (404) | null (erro)
+  const fetchFile = useCallback(async (file, pat, fallback) => {
+    const res = await fetch(`${fileUrl(file)}?ref=${BRANCH}&t=${Date.now()}`, { headers: getHeaders(pat), cache: "no-store" });
+    if (res.status === 404) return { data: fallback, sha: null };
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const json = await res.json();
+    // Arquivos > 1MB vêm sem content na Contents API — usa o download_url
+    if (!json.content && json.download_url) {
+      const raw = await fetch(`${json.download_url}?t=${Date.now()}`, { headers: getHeaders(pat), cache: "no-store" });
+      return { data: await raw.json(), sha: json.sha };
+    }
+    return { data: decodeContent(json.content), sha: json.sha };
+  }, []);
+
+  const loadFile = useCallback(async (file, pat, fallback = []) => {
+    if (!pat) { addLog(`LOAD ${file}: sem PAT`); return null; }
     try {
-      addLog(`LOAD ${profileId}: iniciando`);
-      const res = await fetch(
-        `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/data/${profileId}.json?ref=${BRANCH}&t=${Date.now()}`,
-        { headers: getHeaders(pat), cache: "no-store" }
-      );
-      if (res.status === 404) { addLog(`LOAD ${profileId}: 404`); return []; }
-      if (!res.ok) { addLog(`LOAD ${profileId}: erro HTTP ${res.status}`); return null; }
-      const json = await res.json();
-      const data = decodeContent(json.content);
-      addLog(`LOAD ${profileId}: ok, ${data.length} treinos, sha=${json.sha.slice(0,7)}`);
-      return data;
+      const r = await fetchFile(file, pat, fallback);
+      addLog(`LOAD ${file}: ok${Array.isArray(r.data) ? `, ${r.data.length} itens` : ""}`);
+      return r.data;
     } catch (e) {
-      addLog(`LOAD ${profileId}: exception ${e.message}`);
+      addLog(`LOAD ${file}: erro ${e.message}`);
       return null;
     }
-  }, []);
+  }, [fetchFile]);
 
-  const doSave = useCallback(async (profileId, sessions, pat) => {
-    try {
-      // Sempre busca SHA atual do GitHub — fonte da verdade
-      addLog(`SAVE ${profileId}: ${sessions.length} treinos, buscando sha atual`);
-      const headRes = await fetch(
-        `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/data/${profileId}.json?ref=${BRANCH}&t=${Date.now()}`,
-        { headers: getHeaders(pat), cache: "no-store" }
-      );
-      let sha = null;
-      if (headRes.ok) {
-        const headJson = await headRes.json();
-        sha = headJson.sha;
-      }
-      addLog(`SAVE ${profileId}: sha atual=${sha ? sha.slice(0,7) : "NENHUM (arquivo novo)"}`);
-
-      const content = encodeContent(sessions);
-      const body = {
-        message: `chore: sync ${profileId} sessions`,
-        content,
-        branch: BRANCH,
-        ...(sha ? { sha } : {}),
-      };
-      const res = await fetch(
-        `https://api.github.com/repos/${REPO_OWNER}/${REPO_NAME}/contents/data/${profileId}.json`,
-        { method: "PUT", headers: getHeaders(pat), body: JSON.stringify(body) }
-      );
-      if (!res.ok) {
+  // merge(remote, local) => conteúdo final. Retorna o conteúdo gravado ou null.
+  const doSave = useCallback(async (file, pat, local, merge, fallback) => {
+    for (let attempt = 1; attempt <= 3; attempt++) {
+      try {
+        const remote = await fetchFile(file, pat, fallback);
+        const merged = merge(remote.data, local);
+        const body = {
+          message: `chore: sync ${file.replace(".json", "")}`,
+          content: encodeContent(merged),
+          branch: BRANCH,
+          ...(remote.sha ? { sha: remote.sha } : {}),
+        };
+        const res = await fetch(fileUrl(file), { method: "PUT", headers: getHeaders(pat), body: JSON.stringify(body) });
+        if (res.ok) {
+          addLog(`SAVE ${file}: ok${Array.isArray(merged) ? ` (${merged.length} itens)` : ""}`);
+          return merged;
+        }
         const errBody = await res.text();
-        addLog(`SAVE ${profileId}: ERRO ${res.status} — ${errBody.slice(0, 120)}`);
-        return false;
+        addLog(`SAVE ${file}: tentativa ${attempt} HTTP ${res.status} ${errBody.slice(0, 80)}`);
+        // 409/422 = sha mudou entre o GET e o PUT → tenta de novo com merge atualizado
+        if (res.status !== 409 && res.status !== 422) return null;
+      } catch (e) {
+        addLog(`SAVE ${file}: tentativa ${attempt} exception ${e.message}`);
+        return null;
       }
-      const json = await res.json();
-      addLog(`SAVE ${profileId}: ok, novo sha=${json.content.sha.slice(0,7)}`);
-      return true;
-    } catch (e) {
-      addLog(`SAVE ${profileId}: exception ${e.message}`);
-      return false;
     }
-  }, []);
+    return null;
+  }, [fetchFile]);
 
-  const saveToGitHub = useCallback(async (profileId, sessions, pat) => {
-    if (!pat) { addLog(`SAVE ${profileId}: sem PAT`); return false; }
-
-    // Se já há um save em andamento, registra como pendente e aguarda
-    if (savingRef.current) {
-      addLog(`SAVE ${profileId}: save em andamento, registrando como pendente`);
-      pendingRef.current = { profileId, sessions, pat };
-      return false;
-    }
-
-    savingRef.current = true;
-    pendingRef.current = null;
-
-    const result = await doSave(profileId, sessions, pat);
-    savingRef.current = false;
-
-    // Se chegou uma requisição pendente durante o save, executa agora
-    if (pendingRef.current) {
-      const p = pendingRef.current;
-      pendingRef.current = null;
-      addLog(`SAVE ${p.profileId}: executando save pendente (${p.sessions.length} treinos)`);
-      saveToGitHub(p.profileId, p.sessions, p.pat);
-    }
-
-    return result;
+  const saveFile = useCallback((file, pat, local, merge, fallback = []) => {
+    if (!pat) return Promise.resolve(null);
+    const prev = queues.current[file] || Promise.resolve();
+    const next = prev.catch(() => {}).then(() => doSave(file, pat, local, merge, fallback));
+    queues.current[file] = next;
+    return next;
   }, [doSave]);
 
-  return { loadFromGitHub, saveToGitHub };
+  return { loadFile, saveFile };
 }

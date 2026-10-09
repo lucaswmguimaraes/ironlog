@@ -1,6 +1,6 @@
 // src/data/exercises.js
 
-export const EXERCISE_DB = {
+const BASE_DB = {
   "Peito": [
     { name: "Supino reto com barra", desc: "Exercício multiarticular para peitoral médio/inferior. Permite alta carga.", alts: ["Supino reto com halteres", "Peck deck", "Fly na máquina"] },
     { name: "Supino reto com halteres", desc: "Maior amplitude e trabalho estabilizador vs barra. Ótimo para hipertrofia.", alts: ["Supino reto com barra", "Crucifixo com halteres", "Peck deck"] },
@@ -248,9 +248,168 @@ export const EXERCISE_DB = {
   ],
 };
 
+// ── Exercícios adicionados na v3 (variações por implemento, unilaterais, lombar, abdômen) ──
+// aka = apelidos usados na busca (não mudam o nome salvo no histórico)
+const EXTRA_DB = {
+  "Peito": [
+    { name: "Supino reto no smith", desc: "Trajetória guiada, permite focar no peitoral com segurança em cargas altas.", alts: ["Supino reto com barra", "Chest Press máquina"] },
+    { name: "Supino inclinado no smith", desc: "Peitoral superior com trajetória guiada. Bom para progressão de carga estável.", alts: ["Supino inclinado com barra", "Supino inclinado na máquina"] },
+    { name: "Supino declinado no smith", desc: "Ênfase esternal com barra guiada.", alts: ["Supino declinado com barra"] },
+    { name: "Supino inclinado na máquina", desc: "Máquina convergente para peitoral superior. Estável e fácil de levar perto da falha.", alts: ["Supino inclinado no smith", "Supino inclinado com halteres"] },
+    { name: "Supino reto máquina articulada", desc: "Máquina articulada (hammer). Braços independentes, boa amplitude.", alts: ["Chest Press máquina", "Supino reto com halteres"], aka: ["hammer strength", "supino articulado"] },
+    { name: "Supino inclinado máquina articulada", desc: "Articulada inclinada para peitoral superior, braços independentes.", alts: ["Supino inclinado na máquina"], aka: ["hammer inclinado"] },
+    { name: "Supino inclinado unilateral com halter", desc: "Um braço por vez no banco inclinado. Corrige assimetrias e exige estabilidade.", alts: ["Supino inclinado com halteres"] },
+    { name: "Crucifixo reto na polia (banco)", desc: "Deitado no banco entre polias. Tensão constante no alongamento.", alts: ["Crucifixo com halteres", "Peck deck"] },
+    { name: "Crucifixo inclinado na polia (banco)", desc: "Banco inclinado entre polias. Peitoral superior com tensão constante.", alts: ["Crucifixo inclinado com halteres", "Crossover (cabo baixo)"] },
+    { name: "Crossover (cabo médio)", desc: "Polias na altura do peito, cruzamento horizontal. Peitoral médio.", alts: ["Peck deck", "Crossover (cabo alto)"] },
+    { name: "Flexão de braço inclinada", desc: "Mãos elevadas (banco). Versão mais leve da flexão.", alts: ["Flexão de braço"] },
+    { name: "Flexão de braço declinada", desc: "Pés elevados. Mais carga no peitoral superior e ombro anterior.", alts: ["Flexão de braço", "Supino inclinado com halteres"] },
+  ],
+  "Costas": [
+    { name: "Puxada alta pegada aberta", desc: "Barra longa, pegada bem aberta. Ênfase em grande dorsal (largura).", alts: ["Puxada alta com barra reta", "Barra fixa pronada"], aka: ["pulldown aberto"] },
+    { name: "Puxada alta com barra W", desc: "Pegada semi-supinada na barra W. Conforto para punhos e cotovelos.", alts: ["Puxada alta com pegada supinada", "Puxada alta com barra triângulo"] },
+    { name: "Puxada alta máquina articulada", desc: "Puxada em máquina articulada, braços independentes.", alts: ["Pulldown máquina", "Puxada alta com barra reta"], aka: ["hammer puxada"] },
+    { name: "Puxada alta unilateral na polia", desc: "Um braço por vez com manopla. Maior amplitude e correção de assimetria.", alts: ["Pulldown unilateral", "Puxada alta com pegada neutra"] },
+    { name: "Puxada com braços estendidos (barra)", desc: "Pulldown com braços estendidos usando barra. Isola o grande dorsal.", alts: ["Pullover com corda na polia", "Pullover na máquina"], aka: ["straight arm pulldown"] },
+    { name: "Barra fixa assistida (graviton)", desc: "Barra fixa com contrapeso. Permite volume com boa técnica.", alts: ["Barra fixa pronada", "Puxada alta com barra reta"], aka: ["graviton", "gravitron"] },
+    { name: "Remada baixa pegada aberta (barra)", desc: "Remada sentada com barra larga. Ênfase em parte alta das costas e deltoide posterior.", alts: ["Remada baixa com barra", "Remada na máquina"] },
+    { name: "Remada baixa unilateral", desc: "Remada sentada um braço por vez. Amplitude e rotação controlada.", alts: ["Remada unilateral no cabo", "Remada serrote unilateral"] },
+    { name: "Remada curvada supinada (barra)", desc: "Pegada supinada. Mais ativação de dorsal inferior e bíceps.", alts: ["Remada curvada com barra"], aka: ["remada yates"] },
+    { name: "Remada no smith", desc: "Remada curvada com barra guiada. Estabilidade para focar nas costas.", alts: ["Remada curvada com barra", "Remada cavalinho"] },
+    { name: "Remada cavalinho com apoio de peito", desc: "T-bar em máquina com apoio no peito. Tira a lombar da equação.", alts: ["Remada cavalinho", "Remada t-bar"], aka: ["t-bar apoiado"] },
+    { name: "Remada seal (banco)", desc: "Deitado de bruços num banco alto. Remada estrita sem roubo.", alts: ["Remada cavalinho com apoio de peito", "Remada curvada com halteres"] },
+    { name: "Remada meadows", desc: "Remada unilateral na ponta da barra (landmine). Grande amplitude.", alts: ["Remada serrote unilateral", "Remada t-bar"] },
+    { name: "Remada invertida", desc: "Peso corporal na barra do smith ou TRX. Costas média e escápulas.", alts: ["Remada baixa com triângulo"], aka: ["trx"] },
+    { name: "Extensão lombar no banco romano", desc: "Banco romano 45°. Eretores da espinha, glúteos e posteriores. Controle na volta.", alts: ["Hiperextensão", "Good morning"], aka: ["flexão lombar no banco romano", "lombar banco romano", "banco romano 45", "hiperextensão 45"] },
+    { name: "Extensão lombar no banco romano com carga", desc: "Banco romano 45° segurando anilha/halter. Progressão de carga para a lombar.", alts: ["Extensão lombar no banco romano", "Levantamento terra romeno"], aka: ["flexão lombar com carga", "banco romano com anilha"] },
+    { name: "Extensão lombar na máquina", desc: "Máquina de lombar sentado. Isolamento dos eretores com carga controlada.", alts: ["Extensão lombar no banco romano"], aka: ["lombar máquina"] },
+    { name: "Hiperextensão reversa", desc: "Tronco apoiado, pernas sobem. Glúteo e lombar com pouca compressão.", alts: ["Extensão lombar no banco romano"] },
+  ],
+  "Ombros": [
+    { name: "Desenvolvimento militar em pé (barra)", desc: "Desenvolvimento em pé com barra. Ombro anterior + estabilidade de core.", alts: ["Desenvolvimento com barra", "Push press"] },
+    { name: "Desenvolvimento com halteres sentado", desc: "Banco a 80–90°. Deltoide anterior e medial com boa amplitude.", alts: ["Desenvolvimento com halteres", "Arnold press"] },
+    { name: "Desenvolvimento landmine", desc: "Barra apoiada no chão, empurrando em diagonal. Amigável ao ombro.", alts: ["Desenvolvimento unilateral"] },
+    { name: "Elevação lateral sentado com halteres", desc: "Sentado, elimina impulso. Deltoide medial estrito.", alts: ["Elevação lateral com halteres", "Elevação lateral máquina"] },
+    { name: "Elevação lateral inclinada (deitado de lado)", desc: "Deitado de lado no banco inclinado. Tensão no início do movimento.", alts: ["Elevação lateral unilateral cabo"] },
+    { name: "Elevação lateral no cabo atrás do corpo", desc: "Cabo passando por trás. Tensão no alongamento do deltoide medial.", alts: ["Elevação lateral unilateral cabo", "Elevação lateral na polia"] },
+    { name: "Crucifixo invertido na máquina", desc: "Peck deck invertido. Deltoide posterior e romboides.", alts: ["Posterior de ombro com halteres", "Posterior de ombro no cross"], aka: ["voador invertido", "peck deck invertido", "posterior na máquina"] },
+    { name: "Posterior de ombro deitado (banco inclinado)", desc: "De bruços no banco inclinado com halteres. Posterior sem roubo.", alts: ["Crucifixo invertido na máquina", "Posterior de ombro com halteres"] },
+    { name: "Remada alta com barra", desc: "Puxada vertical até o peito. Deltoide medial e trapézio. Pegada mais aberta preserva o ombro.", alts: ["Remada alta no cabo", "Elevação lateral com halteres"] },
+    { name: "Remada alta no cabo", desc: "Remada alta na polia baixa com barra/corda. Tensão constante.", alts: ["Remada alta com barra"] },
+    { name: "Elevação Y no banco inclinado", desc: "De bruços, braços em Y. Trapézio inferior e deltoide.", alts: ["Face pull"] },
+    { name: "Encolhimento na máquina", desc: "Trapézio superior em máquina. Carga estável.", alts: ["Encolhimento com barra (trapézio)", "Encolhimento com halteres"] },
+    { name: "Encolhimento no smith", desc: "Trapézio superior com barra guiada.", alts: ["Encolhimento com barra (trapézio)"] },
+  ],
+  "Bíceps": [
+    { name: "Rosca direta com barra W", desc: "Barra W reduz estresse no punho. Base para progressão de carga.", alts: ["Rosca direta com barra", "Rosca Scott com barra W"] },
+    { name: "Rosca bayesiana (cabo atrás)", desc: "De costas para a polia, braço atrás do tronco. Bíceps em alongamento.", alts: ["Rosca inclinada", "Rosca unilateral no cabo"], aka: ["bayesian curl"] },
+    { name: "Rosca Scott na máquina", desc: "Scott em máquina. Isolamento do bíceps com resistência estável.", alts: ["Rosca Scott com barra W", "Rosca máquina"] },
+    { name: "Rosca Scott unilateral com halter", desc: "Um braço no banco Scott. Foco na porção curta e correção de assimetria.", alts: ["Rosca Scott com halteres", "Rosca concentrada"] },
+    { name: "Rosca spider", desc: "De bruços no banco inclinado. Bíceps encurtado, sem roubo.", alts: ["Rosca concentrada", "Rosca Scott com halteres"] },
+    { name: "Rosca martelo na corda", desc: "Pegada neutra na corda. Braquial e braquiorradial com tensão constante.", alts: ["Rosca martelo", "Rosca na corda"] },
+    { name: "Rosca 21", desc: "7 parciais baixas + 7 altas + 7 completas. Técnica de intensidade.", alts: ["Rosca direta com barra"] },
+    { name: "Rosca concentrada no cabo", desc: "Concentrada usando polia. Tensão no pico de contração.", alts: ["Rosca concentrada", "Rosca unilateral no cabo"] },
+  ],
+  "Tríceps": [
+    { name: "Tríceps testa com barra W", desc: "Testa com barra W. Cabeça longa e lateral, punho confortável.", alts: ["Tríceps testa com barra", "Skull crusher"] },
+    { name: "Tríceps francês unilateral com halter", desc: "Overhead com um braço. Cabeça longa em alongamento.", alts: ["Tríceps francês com halteres", "Overhead tricep extension"] },
+    { name: "Tríceps na polia com barra V", desc: "Pushdown com barra V. Permite carga alta.", alts: ["Tríceps na polia com barra reta", "Tríceps na polia com corda"] },
+    { name: "Tríceps na polia pegada supinada", desc: "Pushdown com palmas para cima. Ênfase na cabeça medial.", alts: ["Tríceps na polia com barra reta"], aka: ["tríceps inverso"] },
+    { name: "Tríceps francês na polia com barra", desc: "Overhead na polia com barra. Cabeça longa com tensão constante.", alts: ["Tríceps francês no cross com corda", "Overhead tricep extension"] },
+    { name: "Mergulho na máquina", desc: "Dips em máquina sentado. Tríceps com carga controlada.", alts: ["Mergulho em paralelas (tríceps)", "Tríceps no banco"] },
+    { name: "JM press", desc: "Híbrido de supino fechado e testa. Tríceps com carga alta.", alts: ["Supino fechado", "Tríceps testa com barra"] },
+  ],
+  "Quadríceps": [
+    { name: "Agachamento frontal", desc: "Barra à frente. Tronco mais vertical, mais quadríceps.", alts: ["Agachamento livre", "Hack squat"] },
+    { name: "Agachamento hack com barra", desc: "Barra atrás das pernas. Quadríceps com o tronco mais vertical.", alts: ["Hack squat"] },
+    { name: "Pendulum squat", desc: "Máquina pendular. Quadríceps com grande amplitude e costas apoiadas.", alts: ["Hack squat", "Leg press 45°"] },
+    { name: "Agachamento na máquina (V-squat)", desc: "Agachamento guiado com apoio nos ombros.", alts: ["Hack squat", "Agachamento no smith"], aka: ["v squat"] },
+    { name: "Belt squat", desc: "Carga no quadril pelo cinto. Quadríceps e glúteos sem carga na coluna.", alts: ["Agachamento livre", "Leg press 45°"] },
+    { name: "Sissy squat", desc: "Joelhos à frente, tronco reto. Isola reto femoral.", alts: ["Extensora"] },
+    { name: "Afundo no smith", desc: "Afundo com barra guiada. Estável para progredir carga.", alts: ["Afundo", "Agachamento búlgaro com halteres"] },
+    { name: "Agachamento búlgaro no smith", desc: "Búlgaro com barra guiada. Carga alta com equilíbrio facilitado.", alts: ["Agachamento búlgaro com halteres", "Agachamento búlgaro com barra"] },
+    { name: "Passada com halteres (caminhando)", desc: "Afundos em deslocamento. Quadríceps e glúteo.", alts: ["Avanço com halteres", "Afundo"], aka: ["walking lunge"] },
+    { name: "Agachamento sumô com halter", desc: "Halter entre as pernas, base larga. Adutores e glúteos.", alts: ["Agachamento sumo", "Agachamento goblet"] },
+  ],
+  "Posterior de Coxa": [
+    { name: "Stiff no smith", desc: "Stiff com barra guiada. Posteriores com estabilidade.", alts: ["Stiff com barra", "Levantamento terra romeno"] },
+    { name: "Levantamento terra romeno com halteres", desc: "RDL com halteres. Posteriores e glúteos em alongamento.", alts: ["Stiff com halteres", "Levantamento terra romeno"] },
+    { name: "Stiff na polia", desc: "Stiff com cabo baixo. Tensão constante em toda a amplitude.", alts: ["Stiff com barra"] },
+    { name: "Mesa flexora unilateral", desc: "Uma perna por vez na mesa flexora. Corrige assimetria.", alts: ["Mesa flexora", "Flexora unilateral"] },
+    { name: "Cadeira flexora unilateral", desc: "Sentado, uma perna. Posteriores em posição alongada.", alts: ["Cadeira flexora", "Flexora unilateral"] },
+    { name: "Levantamento terra com barra hexagonal", desc: "Barra hexagonal (trap bar). Padrão de dobradiça com menos estresse lombar.", alts: ["Levantamento terra", "Levantamento terra romeno"], aka: ["trap bar"] },
+  ],
+  "Glúteos": [
+    { name: "Hip thrust no smith", desc: "Hip thrust com barra guiada. Fácil de montar e progredir.", alts: ["Hip thrust com barra", "Hip thrust na máquina"], aka: ["elevação pélvica smith"] },
+    { name: "Hip thrust com halter", desc: "Hip thrust com halter no quadril.", alts: ["Hip thrust com barra", "Glute bridge"] },
+    { name: "Glúteo 4 apoios na máquina", desc: "Extensão de quadril em 4 apoios na máquina.", alts: ["Glúteo máquina (kickback)", "Kickback na polia"], aka: ["coice máquina"] },
+    { name: "Coice no smith", desc: "Extensão de quadril empurrando a barra do smith com o pé.", alts: ["Kickback na polia", "Donkey kick"] },
+    { name: "Abdutora com tronco inclinado", desc: "Abdutora inclinando o tronco à frente. Mais glúteo máximo superior.", alts: ["Abdutora na máquina"] },
+    { name: "Pull-through na polia", desc: "De costas para a polia, dobradiça de quadril. Glúteo e posteriores.", alts: ["Hip thrust com barra", "Stiff na polia"] },
+    { name: "Step-up no banco alto", desc: "Subida em banco alto com halteres. Glúteo e quadríceps.", alts: ["Step up com halteres", "Agachamento búlgaro com halteres"] },
+    { name: "Frog pump", desc: "Glute bridge com plantas dos pés unidas. Ativação de glúteo.", alts: ["Glute bridge"] },
+  ],
+  "Panturrilha": [
+    { name: "Panturrilha no smith", desc: "Em pé sobre step com barra guiada.", alts: ["Panturrilha em pé (máquina)"] },
+    { name: "Panturrilha no hack", desc: "Flexão plantar na máquina hack.", alts: ["Panturrilha em pé (máquina)", "Leg Press panturrilha"] },
+    { name: "Panturrilha burrinho", desc: "Tronco inclinado à frente (donkey calf). Gastrocnêmio alongado.", alts: ["Panturrilha em pé (máquina)"], aka: ["donkey calf"] },
+  ],
+  "Core / Abdômen": [
+    { name: "Abdominal no banco declinado", desc: "Crunch no banco declinado. Reto abdominal com mais amplitude e carga.", alts: ["Abdominal supra", "Crunch máquina"] },
+    { name: "Abdominal com carga (anilha)", desc: "Crunch segurando anilha no peito. Progressão de carga no abdômen.", alts: ["Abdominal supra", "Abdominal no cabo"] },
+    { name: "Elevação de pernas na paralela", desc: "Apoiado nos antebraços (captain's chair). Abdômen inferior e flexores do quadril.", alts: ["Leg raise", "Elevação de pernas na barra fixa"], aka: ["captain's chair", "cadeira romana abdominal"] },
+    { name: "Elevação de pernas na barra fixa", desc: "Pendurado na barra, eleva pernas/joelhos. Abdômen com alta exigência.", alts: ["Elevação de pernas na paralela", "Leg raise"], aka: ["hanging leg raise"] },
+    { name: "Abdominal infra no banco", desc: "Deitado no banco, eleva o quadril (crunch reverso).", alts: ["Abdominal infra", "Leg raise"], aka: ["crunch reverso", "reverse crunch"] },
+    { name: "Abdominal bicicleta", desc: "Alterna cotovelo-joelho. Reto abdominal e oblíquos.", alts: ["Crunch oblíquo", "Russian twist"] },
+    { name: "Abdominal canivete (V-up)", desc: "Tronco e pernas sobem juntos. Abdômen total.", alts: ["Hollow hold", "Abdominal supra"] },
+    { name: "Abdominal remador", desc: "Flexão de tronco e quadril simultânea, sentado.", alts: ["Abdominal canivete (V-up)"] },
+    { name: "Abdominal na bola suíça", desc: "Crunch sobre a bola. Maior amplitude em extensão.", alts: ["Abdominal supra"] },
+    { name: "Pallof press", desc: "Anti-rotação no cabo. Core e oblíquos.", alts: ["Prancha lateral"] },
+    { name: "Lenhador no cabo", desc: "Rotação diagonal no cabo (woodchopper). Oblíquos e core.", alts: ["Russian twist", "Oblíquo cabo unilateral"], aka: ["woodchopper"] },
+    { name: "Oblíquo no banco romano", desc: "De lado no banco romano 45°. Flexão lateral para oblíquos.", alts: ["Flexão lateral com halter", "Crunch oblíquo"], aka: ["lateral banco romano"] },
+    { name: "Flexão lateral com halter", desc: "Em pé, inclina o tronco para o lado. Oblíquos e quadrado lombar.", alts: ["Oblíquo no banco romano"] },
+    { name: "Mountain climber", desc: "Prancha alternando joelhos ao peito. Core + condicionamento.", alts: ["Prancha"] },
+  ],
+  "Adutores / Abdutores": [
+    { name: "Adutora unilateral no cabo", desc: "Adução em pé com tornozeleira na polia.", alts: ["Adução de quadril com cabo", "Adutora na máquina"] },
+    { name: "Prancha copenhagen", desc: "Prancha lateral com perna de cima apoiada no banco. Adutores.", alts: ["Adutora na máquina"], aka: ["copenhagen"] },
+  ],
+};
+
+export const EXERCISE_DB = Object.fromEntries(
+  [...new Set([...Object.keys(BASE_DB), ...Object.keys(EXTRA_DB)])].map((cat) => {
+    const base = BASE_DB[cat] || [];
+    const names = new Set(base.map((e) => e.name));
+    return [cat, [...base, ...(EXTRA_DB[cat] || []).filter((e) => !names.has(e.name))]];
+  })
+);
+
 export const ALL_EXERCISES = Object.entries(EXERCISE_DB).flatMap(([cat, exs]) =>
   exs.map((e) => ({ ...e, category: cat }))
 );
 
 export const findExercise = (name) =>
   ALL_EXERCISES.find((e) => e.name === name) || { name, desc: "", alts: [], category: "" };
+
+// Busca sem acento, por nome e apelidos (todas as palavras precisam aparecer)
+const fold = (t) => (t || "").normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+export const matchesExercise = (ex, q) => {
+  const f = fold(q).trim();
+  if (!f) return true;
+  return f.split(/\s+/).every((w) => fold(ex.name).includes(w) || (ex.aka || []).some((a) => fold(a).includes(w)));
+};
+
+// Músculos trabalhados INDIRETAMENTE (contam fração da série no volume semanal)
+export function secondaryMuscles(name, category) {
+  const n = fold(name);
+  const out = [];
+  if (category === "Costas" && /puxada|remada|barra fixa|pulldown|serrote|cavalinho|t-bar|pendlay|meadows|seal|invertida/.test(n) && !/bracos estendidos|pullover/.test(n)) out.push("Bíceps");
+  if (category === "Costas" && /terra|lombar|hiperext|good morning/.test(n)) out.push("Glúteos", "Posterior de Coxa");
+  if (category === "Peito" && /supino|flexao de braco|mergulho|chest press/.test(n)) out.push("Tríceps");
+  if (category === "Ombros" && /desenvolvimento|arnold|push press|landmine/.test(n)) out.push("Tríceps");
+  if (category === "Tríceps" && /supino fechado|mergulho|jm press/.test(n)) out.push("Peito");
+  if (category === "Quadríceps" && /agachamento|leg press|hack|avanco|afundo|passada|step|bulgaro|belt|pendulum|squat/.test(n) && !/sissy|extensora/.test(n)) out.push("Glúteos");
+  if (category === "Posterior de Coxa" && /stiff|terra|romeno|good morning|deadlift/.test(n)) out.push("Glúteos");
+  if (category === "Glúteos" && /avanco|step/.test(n)) out.push("Quadríceps");
+  return out;
+}

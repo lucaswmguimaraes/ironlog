@@ -100,3 +100,13 @@ export const detectTrainType = (name) => {
   if (n.includes("TREINO E") || n.includes("POST") || n.includes("LOWER")) return "E";
   return null;
 };
+
+// ── Datas no fuso LOCAL (toISOString usa UTC e vira o dia após as 21h no Brasil) ──
+export const toISO = (d) =>
+  `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+export const todayISO = () => toISO(new Date());
+export const addDays = (iso, n) => { const d = new Date(iso + "T12:00:00"); d.setDate(d.getDate() + n); return toISO(d); };
+// Segunda-feira da semana de uma data ISO
+export const weekStartISO = (iso) => { const d = new Date(iso + "T12:00:00"); const dow = (d.getDay() + 6) % 7; d.setDate(d.getDate() - dow); return toISO(d); };
+
+export const UNKNOWN_GYM = "Academia não informada";

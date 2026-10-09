@@ -18,7 +18,9 @@ export const VOLUME_LANDMARKS = {
   "Trapézio":            { mev: 4,  mavMin: 8,  mavMax: 12, mrv: 16 },
 };
 
-export function getAdjustedLandmarks(muscleGroup, profileConfig) {
+// overrides: ajustes manuais do usuário { [grupo]: {mev, mavMin, mavMax, mrv} } — vencem o cálculo
+export function getAdjustedLandmarks(muscleGroup, profileConfig, overrides = {}) {
+  if (overrides && overrides[muscleGroup]) return { ...overrides[muscleGroup], custom: true };
   const base = VOLUME_LANDMARKS[muscleGroup];
   if (!base) return null;
   const { experienceLevel = "intermediate", sex = "male" } = profileConfig || {};
@@ -34,8 +36,8 @@ export function getAdjustedLandmarks(muscleGroup, profileConfig) {
   };
 }
 
-export function classifyVolume(weeklySets, muscleGroup, profileConfig) {
-  const l = getAdjustedLandmarks(muscleGroup, profileConfig);
+export function classifyVolume(weeklySets, muscleGroup, profileConfig, overrides = {}) {
+  const l = getAdjustedLandmarks(muscleGroup, profileConfig, overrides);
   if (!l) return "in_mav";
   if (weeklySets < l.mev) return "below_mev";
   if (weeklySets < l.mavMin) return "below_mav";
