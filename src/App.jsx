@@ -6,6 +6,7 @@ import {
   SortableContext, verticalListSortingStrategy, useSortable, arrayMove,
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
+import { Cloud, CloudOff, RefreshCw, Settings, Home, CalendarDays, Plus, HeartPulse, ChartNoAxesColumn } from "lucide-react";
 
 import { EXERCISE_DB, ALL_EXERCISES, findExercise, matchesExercise } from "./data/exercises";
 import {
@@ -345,27 +346,25 @@ export default function App(){
       <div style={S.grain} />
       <header style={S.header}>
         <div style={S.headerInner}>
-          <div><div style={S.logo}>⚡ IRON LOG</div><div style={S.logoSub}>Diário de Hipertrofia</div></div>
-          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-            <button onClick={retryAll} title="Sincronização" style={{ background: "none", border: "none", cursor: "pointer", fontSize: 11, padding: "4px 2px",
-              color: syncState === "error" ? C.danger : syncState === "saving" ? C.warn : C.sub }}>
-              {syncState === "error" ? "⚠️ não salvo" : syncState === "saving" ? "⟳" : syncState === "offline" ? "📴" : "☁️✓"}
+          <div style={{ display: "flex", alignItems: "center", gap: 8, minWidth: 0 }}>
+            <img src={`${import.meta.env.BASE_URL}icon.svg`} alt="" width="30" height="30" style={{ borderRadius: 8 }} />
+            <div style={{ minWidth: 0 }}>
+              <div style={S.logo}>IRON LOG</div>
+              <button onClick={retryAll} title="Sincronização" style={{ display: "flex", alignItems: "center", gap: 4, background: "none", border: "none", padding: 0, cursor: "pointer", fontSize: 10,
+                color: syncState === "error" ? C.danger : syncState === "saving" ? C.warn : C.sub }}>
+                {syncState === "error" ? <CloudOff size={11} /> : syncState === "saving" ? <RefreshCw size={11} /> : <Cloud size={11} />}
+                {syncState === "error" ? "não salvo · tocar" : syncState === "saving" ? "salvando…" : syncState === "offline" ? "só neste aparelho" : "sincronizado"}
+              </button>
+            </div>
+          </div>
+          <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+            <button className="press" style={{ ...S.profileChip, borderColor: `${profile.color}66`, color: profile.color }} onClick={handleSwitchProfile}>
+              {profile.emoji} {profile.name}
             </button>
-            <button style={{ ...S.profileChip, borderColor: `${profile.color}66`, color: profile.color }} onClick={handleSwitchProfile}>
-              {profile.emoji} {profile.name} ↩
-            </button>
-            <button style={{ background: "none", border: "none", color: C.sub, fontSize: 18, cursor: "pointer", padding: "4px 6px" }} onClick={() => setShowSettings(true)}>⚙️</button>
-            <button style={S.newBtn} onClick={startNew}>+ Treino</button>
+            <button className="press" aria-label="Configurações" style={S.iconBtn} onClick={() => setShowSettings(true)}><Settings size={18} /></button>
           </div>
         </div>
       </header>
-      <div style={S.tabBar}>
-        {[["home", "🏠", "Início"], ["calendar", "📅", "Calendário"], ["cardio", "🏃", "Cardio"], ["analysis", "📊", "Análise"]].map(([t, icon, label]) => (
-          <button key={t} style={{ ...S.tab, ...(tab === t ? S.tabActive : {}) }} onClick={() => setTab(t)}>
-            <span style={{ fontSize: 18 }}>{icon}</span><span style={{ fontSize: 10 }}>{label}</span>
-          </button>
-        ))}
-      </div>
       {syncState === "error" && (
         <div style={{ margin: "10px 16px 0", padding: "8px 12px", borderRadius: 10, fontSize: 12, background: "rgba(255,68,85,.08)", border: "1px solid rgba(255,68,85,.3)", color: "#ff6677" }}>
           Há alterações guardadas neste aparelho que ainda não subiram para o GitHub. Elas não serão perdidas — tentaremos de novo automaticamente.
@@ -379,6 +378,15 @@ export default function App(){
       {tab === "cardio" && <CardioTab cardio={cardio} update={cardioSync.update} body={body} onOpenSettings={() => setShowSettings(true)} />}
       {tab === "analysis" && <AnalysisTab sessions={sessions} profileConfig={profileConfig} prefs={analysisPrefs} landmarkOverrides={meta.landmarks || {}} gyms={gyms}
         onOpenExercise={(n) => goTo("ex-hist", { ex: n })} />}
+      <nav style={S.bottomNav}>
+        {[["home", Home, "Início"], ["calendar", CalendarDays, "Calendário"], ["new", Plus, "Treino"], ["cardio", HeartPulse, "Cardio"], ["analysis", ChartNoAxesColumn, "Análise"]].map(([t, Icon, label]) => t === "new" ? (
+          <button key={t} className="press" onClick={startNew} aria-label="Novo treino" style={S.fab}><Icon size={24} strokeWidth={2.6} /></button>
+        ) : (
+          <button key={t} className="press" style={{ ...S.navBtn, color: tab === t ? C.accent : C.sub }} onClick={() => setTab(t)}>
+            <Icon size={21} strokeWidth={tab === t ? 2.4 : 1.8} /><span style={{ fontSize: 10, fontWeight: tab === t ? 700 : 500 }}>{label}</span>
+          </button>
+        ))}
+      </nav>
     </div>
   );
 }
@@ -1000,16 +1008,20 @@ function SC({ icon, label, value }) {
 const S = {
   app: { minHeight: "100vh", background: C.bg, fontFamily: "'DM Sans','Segoe UI',sans-serif", color: C.text, maxWidth: 680, margin: "0 auto", position: "relative" },
   grain: { position: "fixed", inset: 0, pointerEvents: "none", zIndex: 0, opacity: .03, backgroundImage: "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")", backgroundSize: "150px" },
-  header: { position: "sticky", top: 0, zIndex: 100, background: "rgba(10,10,12,.96)", backdropFilter: "blur(14px)", borderBottom: `1px solid ${C.border}`, padding: "12px 18px" },
+  header: { position: "sticky", top: 0, zIndex: 100, background: "rgba(11,11,15,.85)", backdropFilter: "blur(18px)", WebkitBackdropFilter: "blur(18px)", borderBottom: `1px solid ${C.border}`, padding: "calc(10px + env(safe-area-inset-top)) 16px 10px" },
+  iconBtn: { background: C.surface, border: `1px solid ${C.border}`, borderRadius: 10, color: C.sub, width: 36, height: 36, display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" },
+  bottomNav: { position: "fixed", bottom: 0, left: 0, right: 0, maxWidth: 680, margin: "0 auto", zIndex: 150, display: "flex", alignItems: "center", justifyContent: "space-around", background: "rgba(16,17,22,.92)", backdropFilter: "blur(18px)", WebkitBackdropFilter: "blur(18px)", borderTop: `1px solid ${C.border}`, padding: "6px 6px calc(6px + env(safe-area-inset-bottom))" },
+  navBtn: { flex: 1, display: "flex", flexDirection: "column", alignItems: "center", gap: 2, background: "none", border: "none", cursor: "pointer", padding: "4px 0" },
+  fab: { width: 52, height: 52, marginTop: -22, borderRadius: 18, border: "none", background: "linear-gradient(135deg,#ffb547,#f07d12)", color: "#000", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", boxShadow: "0 6px 20px rgba(245,140,30,.35)" },
   headerInner: { display: "flex", alignItems: "center", justifyContent: "space-between" },
-  logo: { fontSize: 22, fontWeight: 800, letterSpacing: "-.5px", color: C.accent },
+  logo: { fontSize: 17, fontWeight: 800, letterSpacing: ".5px", color: C.text, whiteSpace: "nowrap", lineHeight: 1.1 },
   logoSub: { fontSize: 11, color: C.sub, letterSpacing: ".5px", marginTop: 1 },
   newBtn: { background: C.accent, color: "#000", border: "none", borderRadius: 8, padding: "8px 16px", fontWeight: 700, fontSize: 13, cursor: "pointer" },
   profileChip: { background: "transparent", border: `1px solid`, borderRadius: 20, padding: "5px 12px", fontSize: 12, fontWeight: 600, cursor: "pointer" },
   tabBar: { display: "flex", background: C.surface, borderBottom: `1px solid ${C.border}` },
   tab: { flex: 1, display: "flex", flexDirection: "column", alignItems: "center", gap: 2, padding: "10px 4px", background: "none", border: "none", color: C.sub, cursor: "pointer" },
   tabActive: { color: C.accent, borderBottom: `2px solid ${C.accent}` },
-  body: { padding: "16px 16px 60px", position: "relative", zIndex: 1 },
+  body: { padding: "16px 16px 110px", position: "relative", zIndex: 1 },
   statsBar: { display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10, marginBottom: 16 },
   statCard: { background: C.surface, border: `1px solid ${C.border}`, borderRadius: 12, padding: "12px 8px", textAlign: "center" },
   section: { marginBottom: 20 },

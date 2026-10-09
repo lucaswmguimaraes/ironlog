@@ -2,14 +2,34 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b0b0f" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Iron Log" />
+    <link rel="icon" type="image/svg+xml" href="/ironlog/icon.svg" />
+    <link rel="apple-touch-icon" href="/ironlog/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
     <title>Iron Log</title>
     <style>
       *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-      html, body {
-        min-height: 100%;
-        background: #0a0a0c;
-      }
+      html, body { min-height: 100%; background: #0b0b0f; overflow-x: hidden; }
+      body { font-family: 'DM Sans', 'Segoe UI', sans-serif; -webkit-font-smoothing: antialiased; -webkit-tap-highlight-color: transparent; }
+      button { font-family: inherit; }
+      /* Safari dá largura mínima intrínseca a number/date — isso fazia os campos vazarem da tela */
+      input, select, textarea { font-family: inherit; min-width: 0; max-width: 100%; }
+      input[type="date"] { -webkit-appearance: none; appearance: none; display: block; width: 100%; min-height: 40px; }
+      input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+      input[type="number"] { -moz-appearance: textfield; }
+      .num { font-family: 'Space Grotesk', 'DM Sans', sans-serif; font-variant-numeric: tabular-nums; }
+      .noscroll::-webkit-scrollbar { display: none; }
+      .noscroll { scrollbar-width: none; }
+      .press { transition: transform .12s ease, background .2s ease, border-color .2s ease; }
+      .press:active { transform: scale(.97); }
+      @keyframes fadeUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+      .fade { animation: fadeUp .25s ease both; }
     </style>
   </head>
   <body>

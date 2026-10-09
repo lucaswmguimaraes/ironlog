@@ -8,7 +8,7 @@ import { getAdjustedLandmarks } from "../data/volumeLandmarks";
 
 const box = { background: C.surface, border: `1px solid ${C.border}`, borderRadius: 12, padding: 16, marginBottom: 16 };
 const title = { fontSize: 13, fontWeight: 700, color: C.text, marginBottom: 8 };
-const inp = { background: C.surfaceHigh, border: `1px solid ${C.border}`, borderRadius: 8, padding: "8px 10px", color: C.text, fontSize: 16, outline: "none", minWidth: 0 };
+const inp = { background: C.surfaceHigh, border: `1px solid ${C.border}`, borderRadius: 8, padding: "8px 10px", color: C.text, fontSize: 16, outline: "none", minWidth: 0, width: "100%" };
 const btn = (on) => ({ padding: "6px 12px", borderRadius: 8, fontSize: 12, cursor: "pointer", border: `1px solid ${on ? C.accent : C.border}`, background: on ? C.accentD : "transparent", color: on ? C.accent : C.sub });
 
 const LANDMARK_MUSCLES = ["Peito", "Costas", "Ombros", "Bíceps", "Tríceps", "Quadríceps", "Posterior de Coxa", "Glúteos", "Panturrilha", "Core / Abdômen"];
@@ -93,9 +93,9 @@ export function GymBodySettings({ meta, updateMeta, sessions, onAssignGym, profi
       <div style={box}>
         <div style={title}>🧍 Dados corporais (cardio)</div>
         <div style={{ fontSize: 12, color: C.sub, marginBottom: 12 }}>Usados para estimar calorias do cardio. Ficam salvos no seu backup do GitHub.</div>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 8, marginBottom: 10 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: 8, marginBottom: 10 }}>
           {[["weightKg", "Peso (kg)", "0.1"], ["heightCm", "Altura (cm)", "1"], ["birthYear", "Ano nasc.", "1"]].map(([k, l, step]) => (
-            <label key={k} style={{ display: "flex", flexDirection: "column", gap: 4, fontSize: 11, color: C.sub }}>
+            <label key={k} style={{ display: "flex", flexDirection: "column", gap: 4, fontSize: 11, color: C.sub, minWidth: 0 }}>
               {l}
               <input type="number" inputMode="decimal" step={step} style={inp} value={body[k] ?? ""} onChange={(e) => setBody(k, e.target.value === "" ? "" : +e.target.value)} />
             </label>
@@ -133,14 +133,14 @@ export function GymBodySettings({ meta, updateMeta, sessions, onAssignGym, profi
         {showLandmarks && (
           <div style={{ marginTop: 10 }}>
             <div style={{ fontSize: 10, color: C.sub, marginBottom: 8, lineHeight: 1.5 }}>Referências aproximadas (séries/semana). Ajuste conforme sua experiência, objetivo e recuperação. Vazio = padrão pelo seu nível.</div>
-            <div style={{ display: "grid", gridTemplateColumns: "1.4fr repeat(4, 1fr) 24px", gap: 4, fontSize: 10, color: C.sub, marginBottom: 4 }}>
+            <div style={{ display: "grid", gridTemplateColumns: "minmax(0,1.4fr) repeat(4, minmax(0,1fr)) 24px", gap: 4, fontSize: 10, color: C.sub, marginBottom: 4 }}>
               <span /> <span>MEV</span><span>MAV mín</span><span>MAV máx</span><span>MRV</span><span />
             </div>
             {LANDMARK_MUSCLES.map((m) => {
               const def = getAdjustedLandmarks(m, profileConfig, {});
               const cur = landmarks[m];
               return (
-                <div key={m} style={{ display: "grid", gridTemplateColumns: "1.4fr repeat(4, 1fr) 24px", gap: 4, alignItems: "center", marginBottom: 4 }}>
+                <div key={m} style={{ display: "grid", gridTemplateColumns: "minmax(0,1.4fr) repeat(4, minmax(0,1fr)) 24px", gap: 4, alignItems: "center", marginBottom: 4 }}>
                   <span style={{ fontSize: 11, color: cur ? C.accent : C.text }}>{m.replace(" / Abdômen", "").replace(" de Coxa", "")}</span>
                   {["mev", "mavMin", "mavMax", "mrv"].map((k) => (
                     <input key={k} type="number" inputMode="numeric" style={{ ...inp, padding: "4px", fontSize: 14, textAlign: "center" }}
