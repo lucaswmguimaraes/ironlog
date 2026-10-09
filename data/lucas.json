@@ -1,5 +1,165 @@
 [
   {
+    "id": "ki3rfxq",
+    "date": "2026-10-09",
+    "name": "Treino A - Pull",
+    "trainType": "A",
+    "exercises": [
+      {
+        "id": "qtk5kt7",
+        "name": "Puxada alta com barra triângulo",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 39
+          },
+          {
+            "reps": 8,
+            "weight": 73
+          },
+          {
+            "reps": 10,
+            "weight": 59
+          },
+          {
+            "reps": 8,
+            "weight": 59
+          }
+        ]
+      },
+      {
+        "id": "4q8z1x5",
+        "name": "Rosca na polia (cabo baixo)",
+        "category": "Bíceps",
+        "notes": "Unilateral no Cross maior (mais leve)",
+        "sets": [
+          {
+            "reps": 15,
+            "weight": 9
+          },
+          {
+            "reps": 10,
+            "weight": 18
+          },
+          {
+            "reps": 8,
+            "weight": 18
+          },
+          {
+            "reps": 9,
+            "weight": 14
+          }
+        ]
+      },
+      {
+        "id": "qp8f51r",
+        "name": "Remada baixa com triângulo",
+        "category": "Costas",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 39
+          },
+          {
+            "reps": 10,
+            "weight": 39
+          },
+          {
+            "reps": 10,
+            "weight": 34.3
+          }
+        ]
+      },
+      {
+        "id": "myu2zbv",
+        "name": "Rosca Scott com barra W",
+        "category": "Bíceps",
+        "notes": "Na mesa scott + drop na última",
+        "sets": [
+          {
+            "reps": 12,
+            "weight": 36
+          },
+          {
+            "reps": 9,
+            "weight": 36
+          },
+          {
+            "reps": 9,
+            "weight": 29
+          },
+          {
+            "reps": 10,
+            "weight": 18
+          }
+        ]
+      },
+      {
+        "id": "jeo003a",
+        "name": "Posterior de ombro no cross",
+        "category": "Ombros",
+        "notes": "Unilateral",
+        "sets": [
+          {
+            "reps": 8,
+            "weight": 6.8
+          },
+          {
+            "reps": 12,
+            "weight": 4.5
+          },
+          {
+            "reps": 9,
+            "weight": 4.5
+          }
+        ]
+      },
+      {
+        "id": "ap47htm",
+        "name": "Rosca inversa (barra)",
+        "category": "Bíceps",
+        "notes": "Drop na última série",
+        "sets": [
+          {
+            "reps": 7,
+            "weight": 15.9
+          },
+          {
+            "reps": 11,
+            "weight": 13.6
+          },
+          {
+            "reps": 10,
+            "weight": 13.6
+          }
+        ]
+      },
+      {
+        "id": "6zucwbp",
+        "name": "Flexão de punho (polia alta)",
+        "category": "Antebraço",
+        "notes": "",
+        "sets": [
+          {
+            "reps": 10,
+            "weight": 13.6
+          },
+          {
+            "reps": 9,
+            "weight": 13.6
+          },
+          {
+            "reps": 9,
+            "weight": 11.3
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "rv9ingc",
     "date": "2026-10-01",
     "name": "Treino C - Quadríceps",
