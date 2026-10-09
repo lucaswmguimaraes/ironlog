@@ -14,5 +14,8 @@
     }
   ],
   "defaultGymId": "z39vx9u",
-  "updatedAt": 1791588387408
+  "updatedAt": 1791588394590,
+  "body": {
+    "weightKg": 78.8
+  }
 }
