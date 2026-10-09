@@ -14,5 +14,8 @@
     }
   ],
   "defaultGymId": "gu1qzht",
-  "updatedAt": 1791588414865
+  "updatedAt": 1791588422512,
+  "body": {
+    "weightKg": 60
+  }
 }
