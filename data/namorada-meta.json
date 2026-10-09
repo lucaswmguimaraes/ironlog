@@ -14,9 +14,10 @@
     }
   ],
   "defaultGymId": "gu1qzht",
-  "updatedAt": 1791588427114,
+  "updatedAt": 1791588429349,
   "body": {
     "weightKg": 60,
-    "heightCm": 156
+    "heightCm": 156,
+    "birthYear": 2004
   }
 }
