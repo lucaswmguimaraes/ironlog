@@ -17,6 +17,7 @@ import { DEFAULT_ANALYSIS_PREFS, lastComparable, warmupFlags } from "./data/prog
 import { useSupabaseStorage } from "./hooks/useSupabaseStorage";
 import { supabase } from "./lib/supabase";
 import { AuthScreen } from "./components/AuthScreen";
+import { LegacyImport } from "./components/LegacyImport";
 import { useSyncedData } from "./hooks/useSyncedData";
 import { useProfile } from "./hooks/useProfile";
 import { ProfileSetup } from "./components/ProfileSetup";
@@ -148,6 +149,20 @@ export default function App(){
     });
   };
 
+  // Migração do app antigo: junta por id (sessões e cardio) e traz academias/corpo/regras sem mexer no questionário atual
+  const stamp = (arr) => arr.map((x) => ({ ...x, updatedAt: x.updatedAt || 1 }));
+  const importLegacy = ({ sessions: old, meta: oldMeta, cardio: oldCardio }) => {
+    sessSync.update((prev) => { const m = new Map(stamp(old).map((s) => [s.id, s])); prev.forEach((s) => m.set(s.id, s)); return [...m.values()]; });
+    if (oldCardio.length) cardioSync.update((prev) => { const m = new Map(stamp(oldCardio).map((c) => [c.id, c])); prev.forEach((c) => m.set(c.id, c)); return [...m.values()]; });
+    if (oldMeta) updateMeta((cur) => ({
+      gyms: [...(oldMeta.gyms || []).filter((g) => !(cur.gyms || []).some((x) => x.id === g.id)), ...(cur.gyms || [])],
+      defaultGymId: cur.defaultGymId || oldMeta.defaultGymId || null,
+      body: { ...(oldMeta.body || {}), ...(cur.body || {}) },
+      analysis: { ...(oldMeta.analysis || {}), ...(cur.analysis || {}) },
+      landmarks: { ...(oldMeta.landmarks || {}), ...(cur.landmarks || {}) },
+    }));
+  };
+
   const signOut = async () => { setShowSettings(false); setTab("home"); await supabase.auth.signOut(); };
 
   if (session === undefined) return <Splash />;
@@ -217,6 +232,7 @@ export default function App(){
     <div style={{ background: C.bg, minHeight: "100vh" }}>
       <div style={S.grain} />
       <ProfileSettings
+        extraTop={<LegacyImport onImport={importLegacy} />}
         profileId={profile.id}
         profileName={profile.name}
         currentConfig={profileConfig}

@@ -13,7 +13,7 @@ const ERR = {
   "User already registered": "Já existe uma conta com este e-mail. Tente entrar ou recuperar a senha.",
   "Password should be at least 6 characters.": "A senha precisa ter pelo menos 6 caracteres.",
 };
-const tr = (m) => ERR[m] || (/rate limit/i.test(m) ? "Muitas tentativas por e-mail agora. Aguarde alguns minutos e tente de novo." : m);
+const tr = (m) => ERR[m] || (/sending confirmation|sending recovery|send email|smtp/i.test(m) ? "Não conseguimos enviar o e-mail agora. Avise o Lucas — é configuração do servidor, não algo que você fez." : null) || (/rate limit/i.test(m) ? "Muitas tentativas por e-mail agora. Aguarde alguns minutos e tente de novo." : m);
 
 const field = { display: "flex", alignItems: "center", gap: 10, background: C.surface, border: `1px solid ${C.border}`, borderRadius: 12, padding: "0 14px", marginBottom: 10 };
 const input = { flex: 1, background: "transparent", border: "none", outline: "none", color: C.text, fontSize: 16, padding: "14px 0", minWidth: 0 };

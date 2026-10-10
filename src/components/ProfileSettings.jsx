@@ -3,7 +3,7 @@ import { useState } from "react";
 import { C, MUSCLE_GROUPS } from "../data/constants";
 import { supabase } from "../lib/supabase";
 
-export function ProfileSettings({ profileId, profileName, currentConfig, onSave, onBack, account, children }) {
+export function ProfileSettings({ profileId, profileName, currentConfig, onSave, onBack, account, extraTop, children }) {
   const [config, setConfig] = useState({ ...currentConfig });
   const [pw, setPw] = useState("");
   const [pwOpen, setPwOpen] = useState(false);
@@ -149,6 +149,8 @@ export function ProfileSettings({ profileId, profileName, currentConfig, onSave,
       {children}
 
       {/* GitHub PAT */}
+      {extraTop}
+
       {account && (
         <div style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: 12, padding: 16, marginBottom: 16 }}>
           <div style={{ fontSize: 13, fontWeight: 700, color: C.text, marginBottom: 4 }}>👤 Conta</div>
