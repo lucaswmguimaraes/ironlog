@@ -53,7 +53,7 @@ export function ProfileSettings({ profileId, profileName, currentConfig, current
   };
 
   return (
-    <div style={{ padding: "0 16px 80px", maxWidth: 480, margin: "0 auto" }}>
+    <div style={{ padding: "env(safe-area-inset-top) 16px 80px", maxWidth: 480, margin: "0 auto" }}>
       <div style={{ display: "flex", alignItems: "center", gap: 12, padding: "16px 0" }}>
         <button onClick={onBack} style={{ background: "none", border: "none", color: C.sub, fontSize: 20, cursor: "pointer" }}>←</button>
         <div style={{ fontSize: 16, fontWeight: 700, color: C.text }}>Configurações — {profileName}</div>

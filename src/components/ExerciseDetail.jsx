@@ -77,7 +77,7 @@ export function ExerciseDetail({ exName, sessions, gyms, prefs, onBack }) {
 
   return (
     <div style={{ minHeight: "100vh", background: C.bg, fontFamily: "'DM Sans','Segoe UI',sans-serif", color: C.text, maxWidth: 680, margin: "0 auto" }}>
-      <header style={{ position: "sticky", top: 0, zIndex: 100, background: "rgba(10,10,12,.96)", backdropFilter: "blur(14px)", borderBottom: `1px solid ${C.border}`, display: "flex", alignItems: "center", padding: "12px 14px", gap: 8 }}>
+      <header style={{ position: "sticky", top: 0, zIndex: 100, background: "rgba(10,10,12,.96)", backdropFilter: "blur(14px)", borderBottom: `1px solid ${C.border}`, display: "flex", alignItems: "center", padding: "calc(12px + env(safe-area-inset-top)) 14px 12px", gap: 8 }}>
         <button style={{ background: "none", border: "none", color: C.sub, fontSize: 13, cursor: "pointer", padding: "4px 8px" }} onClick={onBack}>← Voltar</button>
         <div style={{ flex: 1, textAlign: "center", fontSize: 13, fontWeight: 700 }}>Histórico e progressão</div>
         <div style={{ width: 70 }} />

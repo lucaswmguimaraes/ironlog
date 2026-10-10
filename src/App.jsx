@@ -1066,7 +1066,7 @@ const S = {
   tipPh: { fontSize: 12, fontWeight: 700, color: C.accent, marginBottom: 6 },
   tipTx: { fontSize: 13, color: C.text, lineHeight: 1.6 },
   pNote: { background: "rgba(245,166,35,.06)", border: "1px solid rgba(245,166,35,.2)", borderRadius: 10, padding: "12px", fontSize: 12, color: C.sub, lineHeight: 1.6, marginTop: 12 },
-  sessHdr: { position: "sticky", top: 0, zIndex: 100, background: "rgba(10,10,12,.96)", backdropFilter: "blur(14px)", borderBottom: `1px solid ${C.border}`, display: "flex", alignItems: "center", padding: "12px 14px", gap: 8 },
+  sessHdr: { position: "sticky", top: 0, zIndex: 100, background: "rgba(10,10,12,.96)", backdropFilter: "blur(14px)", borderBottom: `1px solid ${C.border}`, display: "flex", alignItems: "center", padding: "calc(12px + env(safe-area-inset-top)) 14px 12px", gap: 8 },
   back: { background: "none", border: "none", color: C.sub, fontSize: 13, cursor: "pointer", padding: "4px 8px" },
   saveB: { background: C.accent, color: "#000", border: "none", borderRadius: 8, padding: "7px 14px", fontWeight: 700, fontSize: 13, cursor: "pointer" },
   metaCard: { background: C.surface, border: `1px solid ${C.border}`, borderRadius: 12, padding: "14px", marginBottom: 14 },
