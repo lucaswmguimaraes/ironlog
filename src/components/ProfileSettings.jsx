@@ -1,11 +1,13 @@
 // src/components/ProfileSettings.jsx
 import { useState } from "react";
 import { C, MUSCLE_GROUPS } from "../data/constants";
+import { supabase } from "../lib/supabase";
 
-export function ProfileSettings({ profileId, profileName, currentConfig, currentPAT, onSave, onSavePAT, onBack, children }) {
+export function ProfileSettings({ profileId, profileName, currentConfig, onSave, onBack, account, children }) {
   const [config, setConfig] = useState({ ...currentConfig });
-  const [patValue, setPatValue] = useState("");
-  const [patSection, setPatSection] = useState(false);
+  const [pw, setPw] = useState("");
+  const [pwOpen, setPwOpen] = useState(false);
+  const [pwMsg, setPwMsg] = useState(null);
   const [importError, setImportError] = useState(null);
 
   const set = (key, value) => setConfig((p) => ({ ...p, [key]: value }));
@@ -147,31 +149,23 @@ export function ProfileSettings({ profileId, profileName, currentConfig, current
       {children}
 
       {/* GitHub PAT */}
-      <div style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: 12, padding: 16, marginBottom: 16 }}>
-        <div style={{ fontSize: 13, fontWeight: 700, color: C.text, marginBottom: 8 }}>🔐 Backup GitHub</div>
-        <div style={{ fontSize: 12, color: C.sub, marginBottom: 12 }}>
-          {currentPAT ? "✅ Token configurado — backup automático ativo" : "⚠️ Sem token — dados ficam só no navegador"}
+      {account && (
+        <div style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: 12, padding: 16, marginBottom: 16 }}>
+          <div style={{ fontSize: 13, fontWeight: 700, color: C.text, marginBottom: 4 }}>👤 Conta</div>
+          <div style={{ fontSize: 12, color: C.sub, marginBottom: 12, wordBreak: "break-all" }}>{account.email} · treinos salvos na nuvem</div>
+          {pwMsg && <div style={{ fontSize: 12, color: pwMsg.ok ? C.success : C.error, marginBottom: 8 }}>{pwMsg.text}</div>}
+          {pwOpen ? (
+            <div style={{ display: "flex", gap: 8, marginBottom: 8 }}>
+              <input type="password" placeholder="Nova senha (mín. 6)" value={pw} onChange={(e) => setPw(e.target.value)} style={{ flex: 1, minWidth: 0, padding: "10px 12px", borderRadius: 8, background: C.surfaceHigh, border: `1px solid ${C.border}`, color: C.text, fontSize: 16, outline: "none" }} />
+              <button disabled={pw.length < 6} onClick={async () => { const { error } = await supabase.auth.updateUser({ password: pw }); setPwMsg(error ? { ok: false, text: error.message } : { ok: true, text: "Senha alterada." }); if (!error) { setPwOpen(false); setPw(""); } }}
+                style={{ padding: "0 14px", borderRadius: 8, border: "none", background: pw.length >= 6 ? C.accent : C.surfaceHigh, color: "#000", fontWeight: 700, cursor: "pointer" }}>Salvar</button>
+            </div>
+          ) : (
+            <button onClick={() => setPwOpen(true)} style={{ width: "100%", padding: 10, borderRadius: 8, marginBottom: 8, border: `1px solid ${C.border}`, background: "transparent", color: C.text, fontSize: 12, cursor: "pointer" }}>🔑 Trocar senha</button>
+          )}
+          <button onClick={account.onSignOut} style={{ width: "100%", padding: 10, borderRadius: 8, border: "1px solid rgba(255,68,85,.4)", background: "transparent", color: C.danger, fontSize: 12, cursor: "pointer" }}>Sair da conta</button>
         </div>
-        {!patSection ? (
-          <button onClick={() => setPatSection(true)} style={{
-            width: "100%", padding: 10, borderRadius: 8, border: `1px solid ${C.border}`,
-            background: "transparent", color: C.sub, fontSize: 12, cursor: "pointer",
-          }}>{currentPAT ? "Trocar token" : "Configurar token"}</button>
-        ) : (
-          <>
-            <input type="password" placeholder="ghp_..." value={patValue} onChange={(e) => setPatValue(e.target.value)} style={{
-              width: "100%", padding: "10px 12px", borderRadius: 8, boxSizing: "border-box",
-              background: C.surfaceHigh, border: `1px solid ${C.border}`, color: C.text, fontSize: 13, marginBottom: 8, outline: "none",
-            }}/>
-            <button onClick={() => { onSavePAT(patValue.trim()); setPatSection(false); setPatValue(""); }}
-              disabled={patValue.trim().length < 10} style={{
-              width: "100%", padding: 10, borderRadius: 8, border: "none",
-              background: patValue.trim().length >= 10 ? C.accent : C.surfaceHigh,
-              color: "#000", fontWeight: 700, cursor: "pointer", fontSize: 13,
-            }}>Salvar token</button>
-          </>
-        )}
-      </div>
+      )}
 
       {/* Export/Import */}
       <div style={{ background: C.surface, border: `1px solid ${C.border}`, borderRadius: 12, padding: 16, marginBottom: 16 }}>
