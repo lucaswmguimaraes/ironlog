@@ -40,6 +40,7 @@ export function useSyncedData({ profileId, pat, file, lsKey, kind = "array", loa
 
   const [data, setData] = useState(() => (profileId ? read(lsKey, fallback) : fallback));
   const [status, setStatus] = useState("idle"); // idle | saving | saved | pending | error | offline
+  const [ready, setReady] = useState(false); // 1ª carga do servidor concluída (ou impossível)
   const version = useRef(0);
   const timer = useRef(null);
   const dataRef = useRef(data);
@@ -94,11 +95,13 @@ export function useSyncedData({ profileId, pat, file, lsKey, kind = "array", loa
   useEffect(() => {
     if (!profileId) return;
     setData(read(lsKey, fallback));
-    if (!pat) { setStatus("offline"); return; }
+    setReady(false);
+    if (!pat) { setStatus("offline"); setReady(true); return; }
     let cancelled = false;
     const firstRunKey = `${lsKey}__synced_once`;
     loadFile(file, pat, fallback).then((remote) => {
       if (cancelled) return;
+      setReady(true);
       if (remote === null) { setStatus(read(dirtyKey, false) ? "error" : "idle"); return; }
       const local = read(lsKey, fallback);
       const hasLocal = kind === "array" ? local.length > 0 : !!local;
@@ -135,5 +138,5 @@ export function useSyncedData({ profileId, pat, file, lsKey, kind = "array", loa
     };
   }, [profileId, save, dirtyKey, status]);
 
-  return { data, update, status, retry: save };
+  return { data, update, status, ready, retry: save };
 }

@@ -14,16 +14,25 @@ import {
   uid, fmtDate, dayName, calcVolume, detectTrainType, todayISO, UNKNOWN_GYM,
 } from "./data/constants";
 import { DEFAULT_ANALYSIS_PREFS, lastComparable, warmupFlags } from "./data/progression";
-import { useGitHubStorage } from "./hooks/useGitHubStorage";
+import { useSupabaseStorage } from "./hooks/useSupabaseStorage";
+import { supabase } from "./lib/supabase";
+import { AuthScreen } from "./components/AuthScreen";
 import { useSyncedData } from "./hooks/useSyncedData";
 import { useProfile } from "./hooks/useProfile";
 import { ProfileSetup } from "./components/ProfileSetup";
-import { GitHubSetup } from "./components/GitHubSetup";
 import { AnalysisTab } from "./components/AnalysisTab";
 import { ProfileSettings } from "./components/ProfileSettings";
 import { GymBodySettings } from "./components/GymBodySettings";
 import { CardioTab } from "./components/CardioTab";
 import { ExerciseDetail } from "./components/ExerciseDetail";
+
+function Splash() {
+  return (
+    <div style={{ minHeight: "100vh", background: C.bg, display: "flex", alignItems: "center", justifyContent: "center" }}>
+      <img src={`${import.meta.env.BASE_URL}icon.svg`} alt="" width="56" height="56" style={{ borderRadius: 14, opacity: .9 }} className="pulse" />
+    </div>
+  );
+}
 
 // ── SORTABLE EXERCISE ITEM (drag & drop) ───────────────────────────────────────
 function SortableExerciseItem({ id, children }) {
@@ -47,94 +56,34 @@ function SortableExerciseItem({ id, children }) {
   );
 }
 
-// ── PROFILE SELECTOR ───────────────────────────────────────────────────────────
-function ProfileScreen({ onSelect }) {
-  const exportBackup = (profileId, profileName) => {
-    try {
-      const raw = localStorage.getItem(`wkv3_${profileId}`);
-      if (!raw || raw === "[]" || raw === "null") {
-        alert(`Nenhum dado encontrado para ${profileName} neste dispositivo.`);
-        return;
-      }
-      const data = JSON.parse(raw);
-      if (!data || data.length === 0) {
-        alert(`Nenhum treino encontrado para ${profileName} neste dispositivo.`);
-        return;
-      }
-      const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = `ironlog-backup-${profileId}-${new Date().toISOString().slice(0,10)}.json`;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
-      alert(`✅ Backup de ${profileName} exportado com ${data.length} treinos!`);
-    } catch (e) {
-      alert(`Erro ao exportar: ${e.message}`);
-    }
-  };
-
-  return (
-    <div style={S.app}>
-      <div style={S.grain}/>
-      <div style={{
-        minHeight:"100vh", display:"flex", flexDirection:"column",
-        alignItems:"center", justifyContent:"center", padding:24, gap:32
-      }}>
-        <div style={{textAlign:"center"}}>
-          <div style={S.logo}>⚡ IRON LOG</div>
-          <div style={S.logoSub}>Diário de Hipertrofia</div>
-        </div>
-        <div style={{fontSize:15, color:C.sub, textAlign:"center"}}>Quem vai treinar hoje?</div>
-        <div style={{display:"flex", gap:16, flexWrap:"wrap", justifyContent:"center"}}>
-          {PROFILES.map(p=>(
-            <button key={p.id} onClick={()=>onSelect(p)} style={{
-              background:C.surface, border:`2px solid ${p.color}44`,
-              borderRadius:20, padding:"28px 36px", cursor:"pointer",
-              display:"flex", flexDirection:"column", alignItems:"center", gap:12,
-              minWidth:140,
-            }}>
-              <span style={{fontSize:48}}>{p.emoji}</span>
-              <span style={{fontSize:18, fontWeight:800, color:p.color}}>{p.name}</span>
-            </button>
-          ))}
-        </div>
-        {/* Botão de emergência para exportar dados antes do onboarding */}
-        <div style={{textAlign:"center"}}>
-          <div style={{fontSize:12, color:C.sub, marginBottom:10}}>💾 Exportar backup deste dispositivo</div>
-          <div style={{display:"flex", gap:10, justifyContent:"center"}}>
-            {PROFILES.map(p=>(
-              <button key={p.id} onClick={()=>exportBackup(p.id, p.name)} style={{
-                background:"transparent", border:`1px solid ${C.border}`,
-                borderRadius:10, padding:"8px 16px", cursor:"pointer",
-                fontSize:12, color:C.sub,
-              }}>
-                ⬇️ {p.name}
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 // ── MAIN APP ───────────────────────────────────────────────────────────────────
 const gymName = (gyms, id) => (id ? (gyms.find((g) => g.id === id)?.name || UNKNOWN_GYM) : UNKNOWN_GYM);
 const hasFilledSets = (s) => (s?.exercises || []).some((e) => e.sets.some((x) => x.reps !== "" || x.weight !== ""));
 
 export default function App(){
-  const { profile, selectProfile, getPAT, setPAT, getConfig, saveConfig } = useProfile();
-  const { loadFile, saveFile } = useGitHubStorage();
+  const { getConfig, saveConfig } = useProfile();
+  const { loadFile, saveFile } = useSupabaseStorage();
+
+  // Sessão de login (Supabase Auth). undefined = ainda verificando.
+  const [session, setSession] = useState(undefined);
+  const [recovery, setRecovery] = useState(false);
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data }) => setSession(data.session || null));
+    const { data: sub } = supabase.auth.onAuthStateChange((event, s) => {
+      if (event === "PASSWORD_RECOVERY") setRecovery(true);
+      setSession(s || null);
+    });
+    return () => sub.subscription.unsubscribe();
+  }, []);
+  const user = session?.user || null;
+  const um = user?.user_metadata || {};
+  const profile = user ? { id: user.id, name: um.name || user.email.split("@")[0], emoji: um.emoji || "⚡", color: um.color || "#f5a623", email: user.email } : null;
   const pid = profile?.id || null;
-  const [patTick, setPatTick] = useState(0);
-  const pat = pid ? getPAT(pid) : null;
+  const pat = user ? "auth" : null;
   const sync = { profileId: pid, pat, loadFile, saveFile };
-  const sessSync = useSyncedData({ ...sync, file: `${pid}.json`, lsKey: `wkv3_${pid}` });
-  const cardioSync = useSyncedData({ ...sync, file: `${pid}-cardio.json`, lsKey: `ironlog_cardio_${pid}` });
-  const metaSync = useSyncedData({ ...sync, file: `${pid}-meta.json`, lsKey: `ironlog_meta_${pid}`, kind: "object" });
+  const sessSync = useSyncedData({ ...sync, file: "session", lsKey: `wkv3_${pid}` });
+  const cardioSync = useSyncedData({ ...sync, file: "cardio", lsKey: `ironlog_cardio_${pid}` });
+  const metaSync = useSyncedData({ ...sync, file: "meta", lsKey: `ironlog_meta_${pid}`, kind: "object" });
 
   const sessions = Array.isArray(sessSync.data) ? sessSync.data : [];
   const cardio = Array.isArray(cardioSync.data) ? cardioSync.data : [];
@@ -143,8 +92,6 @@ export default function App(){
   const analysisPrefs = { ...DEFAULT_ANALYSIS_PREFS, ...(meta.analysis || {}) };
   const updateMeta = (patch) => metaSync.update((prev) => ({ ...(prev || {}), ...(typeof patch === "function" ? patch(prev || {}) : patch), updatedAt: Date.now() }));
 
-  const [onboardingDone, setOnboardingDone] = useState(() => (profile ? getConfig(profile.id).completedOnboarding : true));
-  const [githubSetupDone, setGithubSetupDone] = useState(() => (profile ? !!getPAT(profile.id) : true));
   const [tab, setTab] = useState("home");
   const [histEx, setHistEx] = useState(null);
   const [swapEx, setSwapEx] = useState(null);
@@ -201,48 +148,21 @@ export default function App(){
     });
   };
 
-  const handleSelectProfile = (p) => {
-    sessionStorage.setItem("ironlog_profile", JSON.stringify(p));
-    setTab("home");
-    selectProfile(p);
-    const cfg = getConfig(p.id);
-    setOnboardingDone(cfg.completedOnboarding);
-    setGithubSetupDone(!!getPAT(p.id));
-  };
+  const signOut = async () => { setShowSettings(false); setTab("home"); await supabase.auth.signOut(); };
 
-  const handleSwitchProfile = () => {
-    sessionStorage.removeItem("ironlog_profile");
-    selectProfile(null);
-    setTab("home");
-  };
+  if (session === undefined) return <Splash />;
+  if (!user || recovery) return <AuthScreen recovery={recovery} onRecovered={() => setRecovery(false)} />;
+  if (!metaSync.ready && !meta.config) return <Splash />;
 
-  if (!profile) return <ProfileScreen onSelect={handleSelectProfile} />;
+  // Questionário inicial: salvo na conta (meta.config), vale em qualquer aparelho
+  const profileConfig = meta.config || getConfig(pid);
+  const saveProfileConfig = (config) => { saveConfig(pid, config); updateMeta({ config }); };
 
-  if (profile && !onboardingDone) {
+  if (!profileConfig.completedOnboarding) {
     return (
       <div style={{ background: C.bg, minHeight: "100vh" }}>
         <div style={S.grain} />
-        <ProfileSetup
-          profileName={profile.name}
-          onComplete={(config) => {
-            saveConfig(profile.id, config);
-            setOnboardingDone(true);
-          }}
-        />
-      </div>
-    );
-  }
-
-  if (profile && onboardingDone && !githubSetupDone) {
-    return (
-      <div style={{ background: C.bg, minHeight: "100vh" }}>
-        <div style={S.grain} />
-        <GitHubSetup
-          profileId={profile.id}
-          profileName={profile.name}
-          onSave={(p) => { setPAT(profile.id, p); setPatTick((t) => t + 1); setGithubSetupDone(true); }}
-          onSkip={() => setGithubSetupDone(true)}
-        />
+        <ProfileSetup profileName={profile.name} onComplete={(config) => saveProfileConfig({ ...config, completedOnboarding: true })} />
       </div>
     );
   }
@@ -291,7 +211,6 @@ export default function App(){
     setTab("session");
   };
 
-  const profileConfig = getConfig(profile.id);
   const body = { ...(meta.body || {}), sex: (meta.body && meta.body.sex) || profileConfig.sex };
 
   if (showSettings) return (
@@ -301,9 +220,8 @@ export default function App(){
         profileId={profile.id}
         profileName={profile.name}
         currentConfig={profileConfig}
-        currentPAT={pat}
-        onSave={(config) => { saveConfig(profile.id, { ...config, completedOnboarding: true }); setShowSettings(false); }}
-        onSavePAT={(p) => { setPAT(profile.id, p); setPatTick((t) => t + 1); }}
+        onSave={(config) => { saveProfileConfig({ ...config, completedOnboarding: true }); setShowSettings(false); }}
+        account={{ email: profile.email, onSignOut: signOut }}
         onBack={() => setShowSettings(false)}
       >
         <GymBodySettings meta={meta} updateMeta={updateMeta} sessions={sessions}
@@ -358,7 +276,7 @@ export default function App(){
             </div>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-            <button className="press" style={{ ...S.profileChip, borderColor: `${profile.color}66`, color: profile.color }} onClick={handleSwitchProfile}>
+            <button className="press" style={{ ...S.profileChip, borderColor: `${profile.color}66`, color: profile.color }} onClick={() => setShowSettings(true)}>
               {profile.emoji} {profile.name}
             </button>
             <button className="press" aria-label="Configurações" style={S.iconBtn} onClick={() => setShowSettings(true)}><Settings size={18} /></button>
